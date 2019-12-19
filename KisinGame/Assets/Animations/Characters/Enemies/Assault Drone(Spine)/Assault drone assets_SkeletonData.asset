@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+  m_Name: Assault drone assets_SkeletonData
+  m_EditorClassIdentifier: 
+  atlasAssets:
+  - {fileID: 11400000, guid: c41ffeb5cf678fc489c75dea064a307f, type: 2}
+  scale: 0.00127
+  skeletonJSON: {fileID: 4900000, guid: 58df1957f1631a049984918e0da984c4, type: 3}
+  skeletonDataModifiers: []
+  fromAnimation:
+  - ADAttackPreparation1
+  - ADAttack1
+  - ADAttackPreparation2
+  - ADAttack2
+  - ADStunstart
+  - ADStunRecovery
+  toAnimation:
+  - ADAttack1
+  - ADAttackPreparation2
+  - ADAttack2
+  - ADIdle
+  - ADStunLoop
+  - ADIdle
+  duration:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  defaultMix: 0.2
+  controller: {fileID: 0}

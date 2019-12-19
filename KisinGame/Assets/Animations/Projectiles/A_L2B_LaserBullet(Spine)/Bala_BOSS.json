@@ -1,0 +1,85 @@
+{
+"skeleton": { "hash": "C/dS0MSLRL8rO40lPfiIzAqtLPM", "spine": "3.8.75", "images": "./images/", "audio": "" },
+"bones": [
+	{ "name": "root", "scaleX": 1.1151, "scaleY": 1.1151 },
+	{ "name": "bone", "parent": "root", "length": 100 },
+	{ "name": "disparo", "parent": "root" }
+],
+"slots": [
+	{ "name": "BALA", "bone": "bone" },
+	{ "name": "disparo", "bone": "disparo" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"BALA": {
+				"balaBOSS_00000": { "width": 1882, "height": 818 },
+				"balaBOSS_00001": { "width": 1882, "height": 818 },
+				"balaBOSS_00002": { "width": 1882, "height": 818 },
+				"balaBOSS_00003": { "width": 1882, "height": 818 },
+				"balaBOSS_00004": { "width": 1882, "height": 818 },
+				"balaBOSS_00005": { "width": 1882, "height": 818 },
+				"balaBOSS_00006": { "width": 1882, "height": 818 },
+				"balaBOSS_00007": { "width": 1882, "height": 818 },
+				"balaBOSS_00008": { "width": 1882, "height": 818 },
+				"balaBOSS_00009": { "width": 1882, "height": 818 },
+				"balaBOSS_00010": { "width": 1882, "height": 818 },
+				"balaBOSS_00011": { "width": 1882, "height": 818 }
+			},
+			"disparo": {
+				"disparo/disparo_00005": { "width": 1882, "height": 1232 },
+				"disparo/disparo_00006": { "width": 1882, "height": 1232 },
+				"disparo/disparo_00007": { "width": 1882, "height": 1232 },
+				"disparo/disparo_00008": { "width": 1882, "height": 1232 },
+				"disparo/disparo_00009": { "width": 1882, "height": 1232 },
+				"disparo/disparo_00010": { "width": 1882, "height": 1232 },
+				"disparo/disparo_00011": { "width": 1882, "height": 1232 },
+				"disparo/disparo_00012": { "width": 1882, "height": 1232 },
+				"disparo/disparo_00013": { "width": 1882, "height": 1232 }
+			}
+		}
+	}
+],
+"animations": {
+	"LB_Disparo": {
+		"slots": {
+			"disparo": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.0333, "name": "disparo/disparo_00005" },
+					{ "time": 0.0667, "name": "disparo/disparo_00006" },
+					{ "time": 0.1, "name": "disparo/disparo_00007" },
+					{ "time": 0.1333, "name": "disparo/disparo_00008" },
+					{ "time": 0.1667, "name": "disparo/disparo_00009" },
+					{ "time": 0.2, "name": "disparo/disparo_00010" },
+					{ "time": 0.2333, "name": "disparo/disparo_00011" },
+					{ "time": 0.2667, "name": "disparo/disparo_00012" },
+					{ "time": 0.3, "name": "disparo/disparo_00013" },
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		}
+	},
+	"LB_Idle": {
+		"slots": {
+			"BALA": {
+				"attachment": [
+					{ "name": "balaBOSS_00000" },
+					{ "time": 0.0333, "name": "balaBOSS_00001" },
+					{ "time": 0.0667, "name": "balaBOSS_00002" },
+					{ "time": 0.1, "name": "balaBOSS_00003" },
+					{ "time": 0.1333, "name": "balaBOSS_00004" },
+					{ "time": 0.1667, "name": "balaBOSS_00005" },
+					{ "time": 0.2, "name": "balaBOSS_00006" },
+					{ "time": 0.2333, "name": "balaBOSS_00007" },
+					{ "time": 0.2667, "name": "balaBOSS_00008" },
+					{ "time": 0.3, "name": "balaBOSS_00009" },
+					{ "time": 0.3333, "name": "balaBOSS_00010" },
+					{ "time": 0.3667, "name": "balaBOSS_00011" }
+				]
+			}
+		}
+	}
+}
+}
