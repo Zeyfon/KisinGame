@@ -96,9 +96,6 @@ namespace HutongGames.PlayMaker.Actions
 		{
 			try{
 				switch (sceneReference) {
-                case SceneReferenceOptions.SceneAtBuildIndex:
-                    _scene = SceneManager.GetSceneByBuildIndex(sceneAtBuildIndex.Value);
-                    break;
 				case SceneReferenceOptions.SceneAtIndex:
 					_scene = SceneManager.GetSceneAt (sceneAtIndex.Value);	
 					break;

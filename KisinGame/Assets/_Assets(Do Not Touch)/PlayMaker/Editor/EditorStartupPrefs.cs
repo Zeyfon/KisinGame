@@ -42,7 +42,7 @@ namespace HutongGames.PlayMakerEditor
                         // There are too many edge cases where Unity isn't ready to load resources
                         // E.g., after importing a unitypackage
                         // So we won't log a message to avoid support spam.
-                        UnityEngine.Debug.Log("PlayMaker: Missing EditorStartupPrefs asset!");
+                        //UnityEngine.Debug.Log("PlayMaker: Missing EditorStartupPrefs asset!");
                     }
                 }
                 return instance;

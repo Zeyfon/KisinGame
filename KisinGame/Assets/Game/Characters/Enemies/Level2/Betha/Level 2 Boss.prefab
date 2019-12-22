@@ -1502,7 +1502,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -3345,7 +3345,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: playerFinder
+            name: playerSpotter
             tooltip: 
             showInInspector: 1
             networkSync: 0
@@ -3353,7 +3353,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: playerFinder
+            name: tilesManager
             tooltip: 
             showInInspector: 1
             networkSync: 0
@@ -3483,7 +3483,7 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - FunctionName: StartDisableWalls
+        - FunctionName: BossDead
           parameterType: None
           BoolParameter:
             useVariable: 0
@@ -7670,7 +7670,7 @@ MonoBehaviour:
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: playerFinder
+        name: playerSpotter
         tooltip: 
         showInInspector: 1
         networkSync: 0
@@ -7705,6 +7705,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: tilesManager
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -7714,7 +7720,7 @@ MonoBehaviour:
       - 
       - Behavior
       - Set GameObjects
-      variableCategoryIDs: 00000000010000000100000000000000010000000000000001000000000000000000000001000000000000000100000001000000000000000000000000000000000000000200000000000000000000000000000000000000020000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000001000000010000000000000001000000000000000100000000000000000000000100000000000000010000000100000000000000000000000000000000000000020000000000000000000000000000000000000002000000000000000000000000000000000000000000000002000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -7729,7 +7735,7 @@ MonoBehaviour:
     RestartOnEnable: 1
     EnableDebugFlow: 0
     EnableBreakpoints: 1
-    editorFlags: 2
+    editorFlags: 1
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0

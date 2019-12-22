@@ -24,7 +24,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 969.71875
+        x: 1193.7188
         y: 387.4453
         width: 199
         height: 32
@@ -184,7 +184,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 960.22656
+        x: 1184.2266
         y: 529.58594
         width: 145
         height: 32
@@ -361,7 +361,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 955.0781
+        x: 1179.0781
         y: 600.66406
         width: 178
         height: 32
@@ -471,7 +471,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 420.32812
+        x: 644.3281
         y: 103.734375
         width: 103
         height: 32
@@ -531,7 +531,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 415.29688
+        x: 639.2969
         y: 166.41406
         width: 137
         height: 32
@@ -641,7 +641,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1150.7891
+        x: 1374.7891
         y: 1286.3047
         width: 100
         height: 16
@@ -693,19 +693,19 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 382.97656
-        y: 770.7422
-        width: 135
+        x: 612.97656
+        y: 697.7422
+        width: 153
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: CameraIsNotBlack
+          isSystemEvent: 0
           isGlobal: 0
-        toState: UpdateMap
+        toState: Enable Player Control
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -803,7 +803,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1494.6719
+        x: 1718.6719
         y: 1784.9375
         width: 227
         height: 32
@@ -913,7 +913,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 111.609375
+        x: 335.60938
         y: 1293.8438
         width: 190
         height: 32
@@ -1124,7 +1124,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 147.38281
+        x: 371.3828
         y: 1568.3438
         width: 127
         height: 32
@@ -1184,7 +1184,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 338.6953
+        x: 562.6953
         y: 1090.2656
         width: 243
         height: 16
@@ -1309,7 +1309,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1796.25
+        x: 2020.25
         y: 1786.625
         width: 133
         height: 32
@@ -1484,7 +1484,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 598.09375
+        x: 822.09375
         y: 1189.625
         width: 201
         height: 32
@@ -1678,7 +1678,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 613.1172
+        x: 837.1172
         y: 1578.125
         width: 138
         height: 32
@@ -1738,7 +1738,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1500.6172
+        x: 1724.6172
         y: 1594.1406
         width: 173
         height: 32
@@ -1864,7 +1864,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1496.0078
+        x: 1720.0078
         y: 1705.75
         width: 160
         height: 48
@@ -2053,7 +2053,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1778.3125
+        x: 2002.3125
         y: 1592.3672
         width: 134
         height: 32
@@ -2213,7 +2213,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 678.2344
+        x: 902.2344
         y: 712.8203
         width: 153
         height: 32
@@ -2286,7 +2286,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 675.6875
+        x: 899.6875
         y: 783.72656
         width: 100
         height: 32
@@ -2402,7 +2402,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 403.4297
+        x: 627.4297
         y: 367.6172
         width: 209
         height: 32
@@ -2512,7 +2512,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 389.4375
+        x: 613.4375
         y: 532.7422
         width: 194
         height: 48
@@ -2601,7 +2601,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 236.59375
+        x: 460.59375
         y: 536.47656
         width: 100
         height: 32
@@ -2670,7 +2670,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 386.92188
+        x: 610.9219
         y: 618.66406
         width: 150
         height: 48
@@ -2690,7 +2690,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Enable Player Control
+        toState: Camera Fade In
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2759,7 +2759,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 232.89844
+        x: 456.89844
         y: 620.5547
         width: 100
         height: 32
@@ -2831,7 +2831,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 98.953125
+        x: 322.95312
         y: 1405.125
         width: 195
         height: 48
@@ -2840,18 +2840,18 @@ MonoBehaviour:
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: Loop
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Get uiHealth GO
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
         toState: Update Health Variables
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Loop
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Get uiHealth GO
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2920,7 +2920,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 379.01562
+        x: 603.0156
         y: 1409.4531
         width: 137
         height: 32
@@ -3012,7 +3012,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 603.6328
+        x: 827.6328
         y: 1276.8281
         width: 210
         height: 48
@@ -3101,7 +3101,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 344.58594
+        x: 568.58594
         y: 1287.0469
         width: 148
         height: 32
@@ -3193,7 +3193,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 672.6328
+        x: 896.6328
         y: 842.4453
         width: 100
         height: 32
@@ -3303,7 +3303,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1513.1406
+        x: 1737.1406
         y: 435.5078
         width: 168
         height: 32
@@ -3522,7 +3522,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1509.4922
+        x: 1733.4922
         y: 503.66406
         width: 142
         height: 32
@@ -3651,7 +3651,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1506.5078
+        x: 1730.5078
         y: 594.4375
         width: 178
         height: 32
@@ -3761,7 +3761,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1500.5391
+        x: 1724.5391
         y: 652.96875
         width: 140
         height: 16
@@ -3836,7 +3836,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1742.1406
+        x: 1966.1406
         y: 1054.3594
         width: 116
         height: 32
@@ -4161,7 +4161,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1524.7734
+        x: 1748.7734
         y: 1057.7656
         width: 100
         height: 32
@@ -4244,7 +4244,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 945.46875
+        x: 1169.4688
         y: 758.28906
         width: 191
         height: 32
@@ -4454,7 +4454,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 942.14844
+        x: 1166.1484
         y: 846.3594
         width: 192
         height: 32
@@ -4668,7 +4668,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1737.8516
+        x: 1961.8516
         y: 1191.2031
         width: 166
         height: 32
@@ -4903,7 +4903,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1505.7031
+        x: 1729.7031
         y: 1188.9688
         width: 139
         height: 32
@@ -5114,7 +5114,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 170.46875
+        x: 394.46875
         y: 1189.7969
         width: 121
         height: 32
@@ -5399,7 +5399,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 965.14844
+        x: 1189.1484
         y: 453.23438
         width: 208
         height: 48
@@ -5538,7 +5538,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1224.9062
+        x: 1448.9062
         y: 455.14062
         width: 150
         height: 32
@@ -5630,7 +5630,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1511.375
+        x: 1735.375
         y: 1390.5078
         width: 116
         height: 32
@@ -5790,7 +5790,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1522.3516
+        x: 1746.3516
         y: 1489.3672
         width: 109
         height: 32
@@ -5900,7 +5900,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1847.0156
+        x: 2071.0156
         y: 421.96094
         width: 154
         height: 32
@@ -6119,7 +6119,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1844.0234
+        x: 2068.0234
         y: 491.29688
         width: 100
         height: 16
@@ -6173,7 +6173,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 406.14062
+        x: 630.1406
         y: 229.08594
         width: 236.5
         height: 32
@@ -6266,7 +6266,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 382.25
+        x: 606.25
         y: 826.6094
         width: 104
         height: 32
@@ -6376,7 +6376,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1151.1797
+        x: 1375.1797
         y: 1703.2422
         width: 100
         height: 32
@@ -6436,7 +6436,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 404.85938
+        x: 628.8594
         y: 305.51562
         width: 110
         height: 32
@@ -6564,7 +6564,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 395.02344
+        x: 619.02344
         y: 418.5547
         width: 122
         height: 32
@@ -6674,7 +6674,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 393.02344
+        x: 617.02344
         y: 476.5547
         width: 100
         height: 32
@@ -6834,7 +6834,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 970.7969
+        x: 1194.7969
         y: 316.09375
         width: 202
         height: 32
@@ -6944,7 +6944,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 953.9922
+        x: 1177.9922
         y: 680.35156
         width: 197
         height: 32
@@ -7054,7 +7054,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1518.1484
+        x: 1742.1484
         y: 1919.7656
         width: 126
         height: 32
@@ -7164,7 +7164,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1517.7578
+        x: 1741.7578
         y: 321.5078
         width: 153
         height: 32
@@ -7286,7 +7286,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2167.8047
+        x: 2391.8047
         y: 525.6328
         width: 150
         height: 32
@@ -7396,8 +7396,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 54.8125
-        y: 751.21875
+        x: 214.32812
+        y: 562.6328
         width: 179
         height: 32
       isBreakpoint: 0
@@ -7408,7 +7408,7 @@ MonoBehaviour:
           name: LoadingActionFinished
           isSystemEvent: 0
           isGlobal: 0
-        toState: Camera Fade In
+        toState: Check Camera GO 2
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -7506,8 +7506,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 386.0625
-        y: 706.9219
+        x: 611.0625
+        y: 755.9219
         width: 173
         height: 32
       isBreakpoint: 0
@@ -7518,7 +7518,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Camera Fade In
+        toState: UpdateMap
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -7616,7 +7616,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1158.7656
+        x: 1382.7656
         y: 1174.5625
         width: 183.5
         height: 32
@@ -7942,7 +7942,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2179.2188
+        x: 2403.2188
         y: 470.5625
         width: 196
         height: 32
@@ -8062,8 +8062,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2144.4922
-        y: 604.2578
+        x: 2422.1016
+        y: 721.78125
         width: 106
         height: 32
       isBreakpoint: 0
@@ -8074,7 +8074,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Enable Player Controller
+        toState: Camera Fade In2
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -8134,8 +8134,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2142.461
-        y: 667.97656
+        x: 2386.0547
+        y: 888.59375
         width: 191
         height: 32
       isBreakpoint: 0
@@ -8146,7 +8146,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Camera Fade In2
+        toState: Transition Finished
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -8221,19 +8221,19 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2137.7422
-        y: 724.4297
-        width: 144
+        x: 2415.3516
+        y: 790.40625
+        width: 153
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: CameraIsNotBlack
+          isSystemEvent: 0
           isGlobal: 0
-        toState: Transition Finished
+        toState: Enable Player Controller
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -8331,7 +8331,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2193.4219
+        x: 2417.4219
         y: 397.75
         width: 175
         height: 32
@@ -8583,7 +8583,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2527.5625
+        x: 2751.5625
         y: 470.29688
         width: 172.5
         height: 32
@@ -8835,7 +8835,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2517.1797
+        x: 2741.1797
         y: 540.2031
         width: 177
         height: 32
@@ -9267,7 +9267,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2513.6953
+        x: 2737.6953
         y: 643.02344
         width: 176
         height: 32
@@ -9699,7 +9699,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2513.3984
+        x: 2737.3984
         y: 748.6797
         width: 231
         height: 48
@@ -9781,8 +9781,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2318.2656
-        y: 881.34375
+        x: 2729.8906
+        y: 883.40625
         width: 155
         height: 16
       isBreakpoint: 0
@@ -9833,7 +9833,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2324.086
+        x: 2548.086
         y: 1051.8594
         width: 225
         height: 32
@@ -10008,7 +10008,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2320.3828
+        x: 2544.3828
         y: 1124.0859
         width: 219
         height: 32
@@ -10271,7 +10271,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2312.961
+        x: 2536.961
         y: 1180.2734
         width: 232
         height: 32
@@ -10534,7 +10534,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2308.0078
+        x: 2532.0078
         y: 1235.5391
         width: 234
         height: 16
@@ -10586,7 +10586,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 788.33594
+        x: 1012.33594
         y: 1732.2266
         width: 141
         height: 16
@@ -10798,6 +10798,511 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000000000000000000000000000010000000100000000000000000000000000000001000000000000000200000000000000020000000100000000000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+    - name: Check if a Conversation must be done
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 204.46094
+        y: 765.77344
+        width: 278
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: DoNothing
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: UpdateMap
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: StartsConversation
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Start Conversation
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmInt
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 081bbf0509faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: PlayerData
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: lastSavePointScene
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: nextScene
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 5
+        - useVariable: 1
+          name: nextScene
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - StartsConversation
+        - DoNothing
+        - DoNothing
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000012000000120000001000000001000000100000001000000017000000170000001700000001000000
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000010000000200000000000000010000000200000001000000
+        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
+    - name: Camera Fade In 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 207.72656
+        y: 700.0156
+        width: 153
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: CameraIsNotBlack
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Check if a Conversation must be done
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: camera
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: CameraActions
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FadeIn
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Start Conversation
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 198
+        y: 864
+        width: 154
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: UpdateMap
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 1
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: dialogue
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: StartConversation
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Check Camera GO 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 204.97656
+        y: 627.64844
+        width: 163
+        height: 48
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Loop
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Loop3 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Camera Fade In 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GameObjectIsNull
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 15656205
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: camera
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Loop
+        - 
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1300000017000000170000001100000001000000
+        paramName:
+        - gameObject
+        - isNull
+        - isNotNull
+        - storeResult
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
+    - name: Loop3 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 50.953125
+        y: 629.53906
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Check Camera GO 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 48c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.1
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 01
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -10811,10 +11316,16 @@ MonoBehaviour:
     - name: CameraIsBlack
       isSystemEvent: 0
       isGlobal: 0
+    - name: CameraIsNotBlack
+      isSystemEvent: 0
+      isGlobal: 0
     - name: CloseSavingPointMenu
       isSystemEvent: 0
       isGlobal: 0
     - name: DataReceived
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: DoNothing
       isSystemEvent: 0
       isGlobal: 0
     - name: FinalBossDefeated
@@ -10890,6 +11401,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: StaminaLevelUp
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: StartsConversation
       isSystemEvent: 0
       isGlobal: 0
     - name: UpdateActiveScene
@@ -11321,6 +11835,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: dialogue
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables:
       - useVariable: 1
         name: newEdgesTransform
@@ -11329,13 +11849,20 @@ MonoBehaviour:
         networkSync: 0
         typeName: UnityEngine.Transform
         value: {fileID: 0}
+      - useVariable: 1
+        name: startConversation
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        typeName: StartConversation
+        value: {fileID: 0}
       materialVariables: []
       textureVariables: []
       arrayVariables: []
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

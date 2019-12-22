@@ -1,4 +1,4 @@
-﻿// (c) Copyright HutongGames, LLC 2010-2018. All rights reserved.
+﻿// (c) Copyright HutongGames, LLC. All rights reserved.
 
 #if (UNITY_4_3 || UNITY_4_5 || UNITY_4_6 || UNITY_4_7 || UNITY_5_0) 
 #define UNITY_PRE_5_1
@@ -19,7 +19,7 @@ namespace HutongGames.PlayMakerEditor
     {
         // Remember to update version info since it's used by export scripts!
         public const string InstallCurrentVersion = "1.9.0";
-        public const string InstallAssemblyVersion = "1.9.0.p15";
+        public const string InstallAssemblyVersion = "1.9.0.p19";
         public const string InstallBetaVersion = "";
         public const string Version = InstallCurrentVersion + " " + InstallBetaVersion;
 
