@@ -6,7 +6,6 @@ public class Level3Boss : MonoBehaviour, BossStarter
 {
     [Header("Internal Values")]
     [SerializeField] BossRoomPlayerSpotter playerSpotter;
-    [SerializeField] GameObject thirdPhaseTransition;
     public int phase = 1;
 
     Rigidbody2D rb;
@@ -15,6 +14,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
     Level3BossControlTimers bossTimers;
     EnableBossUI bossUI;
     Transform playerTransform;
+    BossDialogues bossDialogues;
 
     int attackCounter = 0;
     public bool colorChange = false;
@@ -24,12 +24,16 @@ public class Level3Boss : MonoBehaviour, BossStarter
     // Start is called before the first frame update
     void Start()
     {
+
+        bossDialogues = GetComponent<BossDialogues>();
+        bossDialogues.SetPlayerSpotter(playerSpotter);
         bossTimers = GetComponent<Level3BossControlTimers>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         anim.SetInteger("Phase", phase);
 
         StartCoroutine(SetVariablesInDependencies());
+        if (phase != 3) playerSpotter.SetCurrentBoss(this);
     }
     IEnumerator SetVariablesInDependencies()
     {
@@ -38,7 +42,6 @@ public class Level3Boss : MonoBehaviour, BossStarter
         GetComponent<ComboAttackL3B>().GetPlayerTransform(playerTransform);
         GetComponent<BossesSupActions>().GetPlayerTransform(playerTransform);
         GetComponent<ThrustAttack>().GetPlayerTransform(playerTransform);
-        if(phase != 3) playerSpotter.SetCurrentBoss(this);
     }
 
     #region Control
@@ -248,7 +251,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
     //Animation Event
     void Dies()
     {
-        Destroy(gameObject);
+        bossDialogues.AfterBossDiesActions();
     }
 
     void StoppingOtherCoroutines()
@@ -258,11 +261,10 @@ public class Level3Boss : MonoBehaviour, BossStarter
         GetComponent<CrystalRainAttack>().Cancel();
     }
 
-    void ThirdPhaseTransition()
-    {
-        thirdPhaseTransition.transform.position = transform.position;
-        thirdPhaseTransition.SetActive(true);
-    }
+
+
+
+
     #endregion
 
     #region PhaseChange

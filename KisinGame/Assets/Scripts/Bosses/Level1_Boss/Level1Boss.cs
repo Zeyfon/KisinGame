@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class Level1Boss : MonoBehaviour, BossStarter
 {
@@ -8,6 +9,8 @@ public class Level1Boss : MonoBehaviour, BossStarter
     public int phase = 0;
     [SerializeField] BossRoomPlayerSpotter playerSpotter;
     [SerializeField] GameObject pixanDrops;
+    [SerializeField] Transform dialogue;
+    [SerializeField] Transform bossCamera;
 
     [Header("Control Timer Variables")]
     public bool canChangeWeakness = false;
@@ -210,7 +213,17 @@ public class Level1Boss : MonoBehaviour, BossStarter
     //Animation Event
     void Dies()
     {
+        StartCoroutine(AfterBossDiesActions());
+    }
+    IEnumerator AfterBossDiesActions()
+    {
+        DialogueManager.DisplaySettings.cameraSettings.sequencerCamera = bossCamera.GetComponent<Camera>();
+        dialogue.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        dialogue.GetComponent<ConversationStarter>().StartConversation(transform);
+        yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
+        yield return null;
     }
 
     void StoppingOtherCoroutines()

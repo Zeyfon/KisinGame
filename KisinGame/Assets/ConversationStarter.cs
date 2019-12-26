@@ -8,17 +8,18 @@ public class ConversationStarter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<DialogueSystemTrigger>().conversationActor = FindObjectOfType<PlayerIdentifer>().gameObject.transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        GetComponent<Collider2D>().enabled = false;
     }
-
-    void StartConversation()
+    public void StartConversation(Transform transform)
     {
+
+        GetComponent<DialogueSystemTrigger>().conversationConversant = transform;
         GetComponent<DialogueSystemTrigger>().OnUse();
+        print("Dialogue should appear");
     }
 }

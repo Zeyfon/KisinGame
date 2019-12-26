@@ -6153,6 +6153,137 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 11400000, guid: fd3dc4159049db7488e31c29773874a5, type: 2}
   eventHandlerComponentsAdded: 1
+--- !u!114 &4168044557795207241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3186950042098687205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: Itzel
+  persistentDataName: 
+  portrait: {fileID: 0}
+  spritePortrait: {fileID: 0}
+  barkUISettings:
+    barkUI: {fileID: 0}
+    barkUIOffset: {x: 0, y: 2, z: 0}
+  standardDialogueUISettings:
+    subtitlePanelNumber: 0
+    customSubtitlePanel: {fileID: 0}
+    customSubtitlePanelOffset: {x: 0, y: 0, z: 0}
+    menuPanelNumber: 0
+    customMenuPanel: {fileID: 0}
+    customMenuPanelOffset: {x: 0, y: 0, z: 0}
+    useMenuPanelFor: 0
+    portraitAnimatorController: {fileID: 0}
+    setSubtitleColor: 0
+    applyColorToPrependedName: 0
+    prependActorNameSeparator: ': '
+    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &7766334247330474621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3186950042098687205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationEvents:
+    onConversationStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onConversationEnd:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3186950042098687207}
+          m_MethodName: ConversationEnded
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onConversationCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+    onConversationLine:
+      m_PersistentCalls:
+        m_Calls: []
+    onConversationLineEnd:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3186950042098687207}
+          m_MethodName: TransitionToMitlan
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onConversationLineCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+    onConversationResponseMenu:
+      m_PersistentCalls:
+        m_Calls: []
+    onConversationResponseMenuTimeout:
+      m_PersistentCalls:
+        m_Calls: []
+    onLinkedConversationStart:
+      m_PersistentCalls:
+        m_Calls: []
+  barkEvents:
+    onBarkStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onBarkEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    onBarkLine:
+      m_PersistentCalls:
+        m_Calls: []
+  sequenceEvents:
+    onSequenceStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onSequenceEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  questEvents:
+    onQuestStateChange:
+      m_PersistentCalls:
+        m_Calls: []
+    onQuestTrackingEnabled:
+      m_PersistentCalls:
+        m_Calls: []
+    onQuestTrackingDisabled:
+      m_PersistentCalls:
+        m_Calls: []
+    onUpdateQuestTracker:
+      m_PersistentCalls:
+        m_Calls: []
+  pauseEvents:
+    onDialogueSystemPause:
+      m_PersistentCalls:
+        m_Calls: []
+    onDialogueSystemUnpause:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &204379913510921068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6252,6 +6383,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3513015330607246192, guid: b26f042092d08f642a8eaa1b277cf61e,
+        type: 3}
+      propertyPath: rainSlots.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513015330607246192, guid: b26f042092d08f642a8eaa1b277cf61e,
+        type: 3}
+      propertyPath: rainSlots.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513015330607246192, guid: b26f042092d08f642a8eaa1b277cf61e,
+        type: 3}
+      propertyPath: rainSlots.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513015330607246192, guid: b26f042092d08f642a8eaa1b277cf61e,
+        type: 3}
+      propertyPath: rainSlots.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513015330607246192, guid: b26f042092d08f642a8eaa1b277cf61e,
+        type: 3}
+      propertyPath: rainSlots.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513015330607246192, guid: b26f042092d08f642a8eaa1b277cf61e,
+        type: 3}
+      propertyPath: rainSlots.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513015330607246192, guid: b26f042092d08f642a8eaa1b277cf61e,
+        type: 3}
+      propertyPath: rainSlots.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513015330607246192, guid: b26f042092d08f642a8eaa1b277cf61e,
+        type: 3}
+      propertyPath: rainSlots.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513015330607246192, guid: b26f042092d08f642a8eaa1b277cf61e,
+        type: 3}
+      propertyPath: rainSlotInitialPosition
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b26f042092d08f642a8eaa1b277cf61e, type: 3}
 --- !u!1 &3186950042098687205 stripped
@@ -6260,3 +6436,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 204379913510921068}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3186950042098687207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3381156994319548299, guid: b26f042092d08f642a8eaa1b277cf61e,
+    type: 3}
+  m_PrefabInstance: {fileID: 204379913510921068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3186950042098687205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71661a79053631548b2244c11b468587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

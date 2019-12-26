@@ -24,12 +24,17 @@ public class BossRoomPlayerSpotter : MonoBehaviour
         if (initialized) return;
         if (collision.gameObject.GetComponent<PlayerIdentifer>())
         {
-            ActivateWalls();
-            BoxCollider2D collider = GetComponent<BoxCollider2D>();
-            collider.enabled = false;
-            StartCoroutine(ActivateBoss());
-            initialized = true;
+            StartFight();
         }
+    }
+
+    public void StartFight()
+    {
+        ActivateWalls();
+        BoxCollider2D collider = GetComponent<BoxCollider2D>();
+        collider.enabled = false;
+        StartCoroutine(ActivateBoss());
+        initialized = true;
     }
 
     IEnumerator ActivateBoss()

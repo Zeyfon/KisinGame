@@ -2313,7 +2313,7 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010100
+        actionEnabled: 01010101
         actionIsOpen: 01010101
         actionStartIndex: 00000000010000000200000005000000
         actionHashCodes: 5c0045058d4bb50348c01101798f5c04
@@ -6119,8 +6119,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2068.0234
-        y: 491.29688
+        x: 2062.5312
+        y: 512.1953
         width: 100
         height: 16
       isBreakpoint: 0
@@ -7166,7 +7166,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1741.7578
         y: 321.5078
-        width: 153
+        width: 148
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -7255,7 +7255,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 5
+          value: 3
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -8334,7 +8334,7 @@ MonoBehaviour:
         x: 2417.4219
         y: 397.75
         width: 175
-        height: 32
+        height: 48
       isBreakpoint: 0
       isSequence: 1
       hideUnused: 0
@@ -8344,6 +8344,14 @@ MonoBehaviour:
           isSystemEvent: 1
           isGlobal: 0
         toState: Disable Player Controller
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Failed
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Transition Faliled
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -8363,13 +8371,13 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: sceneTransitionGO
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: 
+          name: sceneTransitionGO
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8538,8 +8546,8 @@ MonoBehaviour:
           value: {x: 0, y: 0, z: 0, w: 0}
         stringParams:
         - FINISHED
-        - 
-        - 
+        - Failed
+        - Failed
         byteData: 0000000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -8586,7 +8594,7 @@ MonoBehaviour:
         x: 2751.5625
         y: 470.29688
         width: 172.5
-        height: 32
+        height: 48
       isBreakpoint: 0
       isSequence: 1
       hideUnused: 0
@@ -8596,6 +8604,14 @@ MonoBehaviour:
           isSystemEvent: 1
           isGlobal: 0
         toState: 'Update LL Cam Edges '
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Failed
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Transition Faliled
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -8791,7 +8807,7 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         - 
-        - 
+        - Failed
         byteData: 0000000000
         arrayParamSizes: 
         arrayParamTypes: []
@@ -10875,7 +10891,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: nextScene
+          name: currentActiveScene
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -10887,7 +10903,7 @@ MonoBehaviour:
           networkSync: 0
           value: 5
         - useVariable: 1
-          name: nextScene
+          name: currentActiveScene
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -10927,8 +10943,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 207.72656
-        y: 700.0156
+        x: 211.07031
+        y: 701.6953
         width: 153
         height: 32
       isBreakpoint: 0
@@ -11147,8 +11163,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 204.97656
-        y: 627.64844
+        x: 213.32031
+        y: 625.9922
         width: 163
         height: 48
       isBreakpoint: 0
@@ -11303,6 +11319,337 @@ MonoBehaviour:
         - realTime
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000001000000
+    - name: Transition Faliled
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 2660.1562
+        y: 364.23438
+        width: 144
+        height: 16
+      isBreakpoint: 1
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: LoadSingleScenes
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1125.4688
+        y: 1162.3125
+        width: 150
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Listener
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetSceneBuildIndex
+        - HutongGames.PlayMaker.Actions.IntAdd
+        - HutongGames.PlayMaker.Actions.SetEventData
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000090000000c00000019000000
+        actionHashCodes: 2975ee01603dd90527ffbc03ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 0
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: SceneTransition
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: LoadSingleScene
+        fsmObjectParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: 
+          value: {fileID: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: 
+          value: {fileID: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.Object
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 1
+          name: currentActiveScene
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: currentActiveScene
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: currentActiveScene
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0}
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {r: 0, g: 0, b: 0, a: 1}
+        fsmRectParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value:
+            serializedVersion: 2
+            x: 0
+            y: 0
+            width: 0
+            height: 0
+        fsmQuaternionParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0, w: 0}
+        stringParams:
+        - 
+        - 
+        byteData: 000000000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 10000000070000001000000012000000120000001400000011000000170000001700000010000000100000000100000013000000100000000f0000001200000011000000250000001c0000001e00000023000000190000002000000021000000180000001f000000120000000f00000001000000
+        paramName:
+        - buildIndex
+        - sceneReference
+        - sceneAtIndex
+        - sceneByName
+        - sceneByPath
+        - sceneByGameObject
+        - sceneFound
+        - sceneFoundEvent
+        - sceneNotFoundEvent
+        - intVariable
+        - add
+        - everyFrame
+        - setGameObjectData
+        - setIntData
+        - setFloatData
+        - setStringData
+        - setBoolData
+        - setVector2Data
+        - setVector3Data
+        - setRectData
+        - setQuaternionData
+        - setColorData
+        - setMaterialData
+        - setTextureData
+        - setObjectData
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000001000000000000000000000000000000010000000200000003000000040000000000000004000000000000000200000001000000000000000000000000000000000000000000000000000000010000000200000000000000030000000100000005000000
+        paramByteDataSize: 0000000004000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -11328,7 +11675,10 @@ MonoBehaviour:
     - name: DoNothing
       isSystemEvent: 0
       isGlobal: 0
-    - name: FinalBossDefeated
+    - name: Failed
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: GameHasFinished
       isSystemEvent: 0
       isGlobal: 0
     - name: HealthLevelUp
@@ -11344,6 +11694,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: LoadNextLevel
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: LoadSplashScene
       isSystemEvent: 0
       isGlobal: 0
     - name: LoadThankYouScene
@@ -11383,6 +11736,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: PlayerWantsToSave
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Quit
       isSystemEvent: 0
       isGlobal: 0
     - name: QuitGame
@@ -11537,7 +11893,7 @@ MonoBehaviour:
       linkConstraint: 0
       colorIndex: 0
     - fsmEvent:
-        name: FinalBossDefeated
+        name: GameHasFinished
         isSystemEvent: 0
         isGlobal: 0
       toState: State 9
@@ -11561,14 +11917,6 @@ MonoBehaviour:
       linkConstraint: 0
       colorIndex: 0
     - fsmEvent:
-        name: NextSceneTransition
-        isSystemEvent: 0
-        isGlobal: 0
-      toState: Update ActiveScene
-      linkStyle: 0
-      linkConstraint: 0
-      colorIndex: 0
-    - fsmEvent:
         name: UpdateCameraEdgesByOffset
         isSystemEvent: 0
         isGlobal: 0
@@ -11581,6 +11929,30 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: State 5
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: LoadSplashScene
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: LoadSingleScenes
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: NextSceneTransition
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: Update ActiveScene
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: Quit
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: AppQuit
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0

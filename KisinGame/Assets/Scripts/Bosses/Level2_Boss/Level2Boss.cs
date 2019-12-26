@@ -2,12 +2,15 @@
 using Spine.Unity;
 using System.Collections;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class Level2Boss : MonoBehaviour, BossStarter
 {
     #region Inspector
     [Header("Internal Values")]
     [SerializeField] BossRoomPlayerSpotter playerSpotter;
+    [SerializeField] Transform bossCamera;
+    [SerializeField] Transform dialogue;
     [UnityEngine.Tooltip("Current Boss Phase")]
     [SerializeField] int phase = 0;
     public int weakness = 1;
@@ -223,7 +226,17 @@ public class Level2Boss : MonoBehaviour, BossStarter
     //Animation Event
     void Dies()
     {
+        StartCoroutine(AfterBossDiesActions());
+    }
+    IEnumerator AfterBossDiesActions()
+    {
+        DialogueManager.DisplaySettings.cameraSettings.sequencerCamera = bossCamera.GetComponent<Camera>();
+        dialogue.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        dialogue.GetComponent<ConversationStarter>().StartConversation(transform);
+        yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
+        yield return null;
     }
 
     void StoppinpAllOtherActions()

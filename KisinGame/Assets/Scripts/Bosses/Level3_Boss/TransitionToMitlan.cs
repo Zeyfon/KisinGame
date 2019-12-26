@@ -3,29 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using HutongGames.PlayMaker;
 
-public class ThirdPhaseTransition : MonoBehaviour
+public class TransitionToMitlan : MonoBehaviour
 {
     [SerializeField] GameObject mitlanBoss;
 
-    private void Start()
+    public void StartMitlanPhase()
     {
-        StartCoroutine(PhaseThreeBossTimer());
+
+        StartCoroutine(ChangeToMitlan());
     }
 
-    IEnumerator PhaseThreeBossTimer()
+    IEnumerator ChangeToMitlan()
     {
-        yield return new WaitForSeconds(3);
+        transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(1);
         mitlanBoss.transform.position = transform.position;
         mitlanBoss.SetActive(true);
-        //GameObject clone = Instantiate(mitlanBoss, transform.position, Quaternion.identity, transform.parent.transform);
-        yield return new WaitForSeconds(3);
+    }
+
+    public void ConversationEnded()
+    {
         transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
         FsmEventData myfsmEventData = new FsmEventData();
         HutongGames.PlayMaker.Fsm.EventData = myfsmEventData;
         mitlanBoss.GetComponent<PlayMakerFSM>().Fsm.Event("ResetUI");
-        yield return new WaitForSeconds(2);
-
         mitlanBoss.GetComponent<Level3Boss>().StartActions();
-
+        return;
     }
+
+
 }
