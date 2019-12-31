@@ -80,6 +80,7 @@ public class HomingMissile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        print("Is checking the missile");
         StopCoroutine(coroutine);
         if (canDamage)
         {
@@ -99,6 +100,10 @@ public class HomingMissile : MonoBehaviour
         if (coll.CompareTag("Floor") || coll.CompareTag("Wall"))
         {
             animator.Play("FloorExplosion");
+        }
+        else
+        {
+            Debug.LogWarning(gameObject.name + "  is colliding with something not designed to");
         }
         yield return new WaitForSeconds(0.1f);
         rb.velocity = new Vector2(0, 0);

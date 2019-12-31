@@ -17,7 +17,6 @@ public class ConversationStarter : MonoBehaviour
     }
     public void StartConversation(Transform transform)
     {
-
         GetComponent<DialogueSystemTrigger>().conversationConversant = transform;
         GetComponent<DialogueSystemTrigger>().OnUse();
         print("Dialogue should appear");

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SetActiveSceneAction: MonoBehaviour
 {
-    [SerializeField] int sceneToActivate;
+    int sceneToActivate;
 
     //Method Called inside GameManager GameManager FSM
     public void SetActiveScene(int sceneToActivate)
