@@ -14,6 +14,7 @@ public class PlatformCollider : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerIdentifer>())
         {
             collision.gameObject.transform.SetParent(null);
+            DontDestroyOnLoad(collision.gameObject);
         }
     }
 }

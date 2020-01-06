@@ -9,14 +9,15 @@ public class EnemyActivater : MonoBehaviour
     PlayMakerFSM[] pFSMs;
     Rigidbody2D rb;
     bool canInteract = false;
+    bool isInsidePlayerDetection = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GetInformation());
+        StartCoroutine(SetInitialValues());
     }
 
-    IEnumerator GetInformation()
+    IEnumerator SetInitialValues()
     {
         yield return new WaitForSeconds(1);
         rb = transform.parent.GetComponent<Rigidbody2D>();
@@ -28,10 +29,11 @@ public class EnemyActivater : MonoBehaviour
             childrenGO[i] = transform.parent.GetChild(i).gameObject;
         }
         yield return new WaitForSeconds(1);
-        DisableActions();
+        if(!isInsidePlayerDetection) DisableEnemy();
+        canInteract = true;
     }
 
-    void DisableActions()
+    void DisableEnemy()
     {
 
         foreach (GameObject gameObject1 in childrenGO)
@@ -44,36 +46,39 @@ public class EnemyActivater : MonoBehaviour
             pFSM.enabled = false;
         }
         rb.Sleep();
-        canInteract = true;
+    }
+
+    private void ActivateEnemy()
+    {
+        print(gameObject.name + " is in player area");
+
+        foreach (GameObject gameObject1 in childrenGO)
+        {
+            gameObject1.SetActive(true);
+        }
+        foreach (PlayMakerFSM pFSM in pFSMs)
+        {
+            pFSM.enabled = true;
+        }
+        rb.WakeUp();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        isInsidePlayerDetection = true;
         if (!canInteract) return;
-        //print("Something is inside  " + collision.gameObject.name);
         if (collision.CompareTag("EnemyActivator"))
         {
-            
-            print(gameObject.name + " is in player area");
-
-            foreach(GameObject gameObject1 in childrenGO)
-            {
-                gameObject1.SetActive(true);
-            }
-            foreach(PlayMakerFSM pFSM in pFSMs)
-            {
-                pFSM.enabled = true;
-            }
-            rb.WakeUp();
+            ActivateEnemy();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        isInsidePlayerDetection = false;
         if (collision.CompareTag("EnemyActivator"))
         {
-            //print(gameObject.name + " is out of player area");
-            DisableActions();
+            DisableEnemy();
         }
     }
 

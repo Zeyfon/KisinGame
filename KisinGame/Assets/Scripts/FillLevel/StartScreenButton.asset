@@ -107,14 +107,14 @@ MonoBehaviour:
         serializedVersion: 2
         x: 65.64844
         y: 212.20312
-        width: 101
+        width: 157
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: StartGame
+          name: ThisButtonSelected
           isSystemEvent: 0
           isGlobal: 0
         toState: CameraAction
@@ -193,7 +193,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - StartGame
+        - ThisButtonSelected
         byteData: 
         arrayParamSizes: 
         arrayParamTypes: []
@@ -628,10 +628,7 @@ MonoBehaviour:
     - name: CameraActionFinished
       isSystemEvent: 0
       isGlobal: 0
-    - name: FadeOutFinished
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: StartGame
+    - name: ThisButtonSelected
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []

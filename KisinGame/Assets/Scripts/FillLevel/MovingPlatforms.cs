@@ -29,7 +29,7 @@ public class MovingPlatforms : MonoBehaviour
         float x = pos2.x - pos1.x;
         float y = pos2.y - pos1.y;
         float angle = Mathf.Atan2(y,x) * 180 / Mathf.PI;
-        print(angle + "  " + gameObject.name);
+        //print(angle + "  " + gameObject.name);
         line.eulerAngles = new Vector3(0, 0, angle);
         yield return null;
     }
