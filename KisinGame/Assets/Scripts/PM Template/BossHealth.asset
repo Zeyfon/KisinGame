@@ -25,7 +25,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 590.875
-        y: 193.44531
+        y: 225.44531
         width: 100
         height: 32
       isBreakpoint: 0
@@ -43,76 +43,26 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetIntValue
-        - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.IntOperator
         - HutongGames.PlayMaker.Actions.IntOperator
-        - HutongGames.PlayMaker.Actions.SetFsmInt
         customNames:
         - 
         - 
         - 
-        - 
-        - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 0000000003000000070000000c00000011000000
-        actionHashCodes: 603dd905184b57041418090314180903081bbf05
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000300000008000000
+        actionHashCodes: 603dd9051418090314180903
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: stunCircle
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 1
-            name: weakness
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: stunCircle
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: StunCircleBoss
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Untagged
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: StunCircle
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: circleThreshold
+        fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -167,12 +117,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: circleThreshold
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          value: 100
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -180,20 +124,16 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000300000000020000000000
+        byteData: 0003000000000200000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 10000000100000000100000014000000120000001200000013000000100000001000000007000000100000000100000010000000100000000700000010000000010000001400000012000000120000001000000001000000
+        paramDataType: 10000000100000000100000010000000100000000700000010000000010000001000000010000000070000001000000001000000
         paramName:
         - intVariable
         - intValue
         - everyFrame
-        - gameObject
-        - childName
-        - withTag
-        - storeResult
         - integer1
         - integer2
         - operation
@@ -204,20 +144,15 @@ MonoBehaviour:
         - operation
         - storeResult
         - everyFrame
-        - gameObject
-        - fsmName
-        - variableName
-        - setValue
-        - everyFrame
-        paramDataPos: 000000000100000000000000000000000000000001000000000000000200000003000000010000000400000005000000050000000600000006000000070000000a000000010000000200000003000000080000000b000000
-        paramByteDataSize: 00000000000000000100000000000000000000000000000000000000000000000000000004000000000000000100000000000000000000000400000000000000010000000000000000000000000000000000000001000000
+        paramDataPos: 0000000001000000000000000200000003000000010000000400000005000000050000000600000006000000070000000a000000
+        paramByteDataSize: 00000000000000000100000000000000000000000400000000000000010000000000000000000000040000000000000001000000
     - name: Listener
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 566.5625
-        y: 426.8828
+        y: 458.8828
         width: 145
         height: 32
       isBreakpoint: 0
@@ -277,7 +212,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 862.28906
-        y: 431.85938
+        y: 463.85938
         width: 125
         height: 32
       isBreakpoint: 0
@@ -485,7 +420,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1667.75
-        y: 819.4453
+        y: 851.4453
         width: 132
         height: 32
       isBreakpoint: 0
@@ -595,7 +530,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2337.9219
-        y: 441.10156
+        y: 473.10156
         width: 173
         height: 48
       isBreakpoint: 0
@@ -686,7 +621,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1658.8203
-        y: 936.8281
+        y: 968.8281
         width: 131
         height: 32
       isBreakpoint: 0
@@ -796,7 +731,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2390.7266
-        y: 1078.2266
+        y: 1110.2266
         width: 250.5
         height: 64
       isBreakpoint: 0
@@ -865,7 +800,7 @@ MonoBehaviour:
               useVariable: 1
               name: stunCircle
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -1023,7 +958,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1676.9062
-        y: 1037.5469
+        y: 1069.5469
         width: 118
         height: 32
       isBreakpoint: 0
@@ -1266,7 +1201,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2673.2422
-        y: 919.21875
+        y: 951.21875
         width: 146
         height: 48
       isBreakpoint: 0
@@ -1348,7 +1283,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1140.3125
-        y: 826.4531
+        y: 858.4531
         width: 192
         height: 32
       isBreakpoint: 0
@@ -1401,7 +1336,7 @@ MonoBehaviour:
               useVariable: 1
               name: healthBar
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -1559,7 +1494,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 869.9375
-        y: 818.08594
+        y: 850.08594
         width: 121
         height: 48
       isBreakpoint: 0
@@ -1650,7 +1585,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1407.7812
-        y: 822.2578
+        y: 854.2578
         width: 160
         height: 32
       isBreakpoint: 0
@@ -1775,7 +1710,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 620.65625
-        y: 709.28125
+        y: 741.28125
         width: 143
         height: 16
       isBreakpoint: 0
@@ -1786,15 +1721,13 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendMessage
         - HutongGames.PlayMaker.Actions.SendMessage
-        - HutongGames.PlayMaker.Actions.SendMessage
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000400000008000000
-        actionHashCodes: 91d45a0091d45a0091d45a00
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: 91d45a0091d45a00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1809,14 +1742,6 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: playerSpotter
-            tooltip: 
-            showInInspector: 1
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
             name: tilesManager
             tooltip: 
             showInInspector: 1
@@ -1825,129 +1750,6 @@ MonoBehaviour:
         animationCurveParams: []
         functionCallParams:
         - FunctionName: Dead
-          parameterType: None
-          BoolParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          FloatParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          IntParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          GameObjectParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-          ObjectParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            typeName: 
-            value: {fileID: 0}
-          StringParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 
-          Vector2Parameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {x: 0, y: 0}
-          Vector3Parameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {x: 0, y: 0, z: 0}
-          RectParamater:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value:
-              serializedVersion: 2
-              x: 0
-              y: 0
-              width: 0
-              height: 0
-          QuaternionParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {x: 0, y: 0, z: 0, w: 0}
-          MaterialParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            typeName: 
-            value: {fileID: 0}
-          TextureParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            typeName: 
-            value: {fileID: 0}
-          ColorParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {r: 0, g: 0, b: 0, a: 1}
-          EnumParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            enumName: HutongGames.PlayMaker.None
-            intValue: 0
-          ArrayParameter:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: UnityEngine.Object
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        - FunctionName: BossDead
           parameterType: None
           BoolParameter:
             useVariable: 0
@@ -2211,12 +2013,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000000100000000000000010000000000000001000000
+        byteData: 00000000010000000000000001000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000000700000007000000150000001400000007000000070000001500000014000000070000000700000015000000
+        paramDataType: 1400000007000000070000001500000014000000070000000700000015000000
         paramName:
         - gameObject
         - delivery
@@ -2226,19 +2028,15 @@ MonoBehaviour:
         - delivery
         - options
         - functionCall
-        - gameObject
-        - delivery
-        - options
-        - functionCall
-        paramDataPos: 0000000000000000040000000000000001000000080000000c0000000100000002000000100000001400000002000000
-        paramByteDataSize: 000000000400000004000000000000000000000004000000040000000000000000000000040000000400000000000000
+        paramDataPos: 0000000000000000040000000000000001000000080000000c00000001000000
+        paramByteDataSize: 0000000004000000040000000000000000000000040000000400000000000000
     - name: Update Enemy Health UI 2
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 1127.4219
-        y: 936.7344
+        y: 968.7344
         width: 205
         height: 32
       isBreakpoint: 0
@@ -2291,7 +2089,7 @@ MonoBehaviour:
               useVariable: 1
               name: healthBar
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -2449,7 +2247,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 855.58594
-        y: 891.8281
+        y: 923.8281
         width: 134
         height: 48
       isBreakpoint: 0
@@ -2540,7 +2338,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1396.3906
-        y: 935.46094
+        y: 967.46094
         width: 173
         height: 32
       isBreakpoint: 0
@@ -2665,7 +2463,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 603.8047
-        y: 1020.3281
+        y: 1052.3281
         width: 130
         height: 32
       isBreakpoint: 0
@@ -2862,7 +2660,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2572.3906
-        y: 642.6094
+        y: 674.6094
         width: 201
         height: 32
       isBreakpoint: 0
@@ -2982,7 +2780,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2072.6172
-        y: 604.9922
+        y: 636.9922
         width: 203.5
         height: 32
       isBreakpoint: 0
@@ -3102,7 +2900,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2103.2969
-        y: 680.375
+        y: 712.375
         width: 159
         height: 48
       isBreakpoint: 0
@@ -3184,7 +2982,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2084.0312
-        y: 773.1328
+        y: 805.1328
         width: 257
         height: 64
       isBreakpoint: 0
@@ -3253,7 +3051,7 @@ MonoBehaviour:
               useVariable: 1
               name: stunCircle
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -3411,7 +3209,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1130.0234
-        y: 1044.2422
+        y: 1076.2422
         width: 205
         height: 32
       isBreakpoint: 0
@@ -3464,7 +3262,7 @@ MonoBehaviour:
               useVariable: 1
               name: healthBar
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -3622,7 +3420,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1397.4922
-        y: 1040.0469
+        y: 1072.0469
         width: 173
         height: 32
       isBreakpoint: 0
@@ -3747,7 +3545,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 853.5156
-        y: 1030.0781
+        y: 1062.0781
         width: 134
         height: 48
       isBreakpoint: 0
@@ -3838,7 +3636,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 580.0078
-        y: 1148.2422
+        y: 1180.2422
         width: 180
         height: 32
       isBreakpoint: 0
@@ -4035,7 +3833,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 616.6328
-        y: 830.7344
+        y: 862.7344
         width: 118
         height: 32
       isBreakpoint: 0
@@ -4095,7 +3893,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 265.60938
-        y: 846.28906
+        y: 878.28906
         width: 187
         height: 64
       isBreakpoint: 0
@@ -4194,7 +3992,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 258.60938
-        y: 692.1797
+        y: 724.1797
         width: 188
         height: 48
       isBreakpoint: 0
@@ -4285,7 +4083,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 263.0547
-        y: 593.7422
+        y: 625.7422
         width: 201
         height: 48
       isBreakpoint: 0
@@ -4376,7 +4174,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1105.2578
-        y: 444.71094
+        y: 476.71094
         width: 148
         height: 48
       isBreakpoint: 0
@@ -4458,7 +4256,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1118.0625
-        y: 555.5547
+        y: 587.5547
         width: 106
         height: 32
       isBreakpoint: 0
@@ -4568,7 +4366,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1661.6953
-        y: 1132.3125
+        y: 1164.3125
         width: 144
         height: 32
       isBreakpoint: 0
@@ -4678,7 +4476,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1130.2969
-        y: 1132.2188
+        y: 1164.2188
         width: 205
         height: 32
       isBreakpoint: 0
@@ -4731,7 +4529,7 @@ MonoBehaviour:
               useVariable: 1
               name: healthBar
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -4889,7 +4687,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1399.2656
-        y: 1130.9453
+        y: 1162.9453
         width: 173
         height: 32
       isBreakpoint: 0
@@ -5014,7 +4812,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 859.8203
-        y: 1116.9922
+        y: 1148.9922
         width: 134
         height: 48
       isBreakpoint: 0
@@ -5105,7 +4903,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2179.7344
-        y: 939.9297
+        y: 971.9297
         width: 164
         height: 48
       isBreakpoint: 0
@@ -5196,7 +4994,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2432.2578
-        y: 872.08594
+        y: 904.08594
         width: 154
         height: 32
       isBreakpoint: 0
@@ -5281,7 +5079,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 58
-        y: 409
+        y: 441
         width: 119
         height: 32
       isBreakpoint: 0
@@ -5495,7 +5293,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 578.53125
-        y: 320.40625
+        y: 352.40625
         width: 162
         height: 48
       isBreakpoint: 0
@@ -5600,8 +5398,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 592.66406
-        y: 115.82031
+        x: 594.03125
+        y: 102.515625
         width: 100
         height: 48
       isBreakpoint: 0
@@ -5683,7 +5481,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 583.35156
-        y: 242.49219
+        y: 274.4922
         width: 284
         height: 32
       isBreakpoint: 0
@@ -5794,7 +5592,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 842.66406
-        y: 313.9922
+        y: 345.9922
         width: 100
         height: 32
       isBreakpoint: 0
@@ -5858,7 +5656,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2857.9531
-        y: 575.41406
+        y: 607.41406
         width: 253
         height: 32
       isBreakpoint: 0
@@ -6071,6 +5869,12 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: 1500
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables:
       - useVariable: 1
         name: invulnerability
@@ -6110,7 +5914,7 @@ MonoBehaviour:
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: animController
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -6130,11 +5934,11 @@ MonoBehaviour:
       - useVariable: 1
         name: stunCircle
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: playerSpotter
+        name: 
         tooltip: 
         showInInspector: 1
         networkSync: 0
@@ -6160,7 +5964,7 @@ MonoBehaviour:
       - useVariable: 1
         name: healthBar
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
@@ -6184,7 +5988,7 @@ MonoBehaviour:
       - 
       - Behavior
       - Set GameObjects
-      variableCategoryIDs: 0000000001000000010000000000000001000000000000000100000000000000000000000100000000000000010000000100000000000000000000000000000000000000020000000000000000000000000000000000000002000000000000000000000000000000000000000000000002000000
+      variableCategoryIDs: 000000000100000001000000000000000100000000000000010000000000000000000000010000000000000001000000010000000000000000000000000000000000000000000000020000000000000000000000000000000000000002000000000000000000000000000000000000000000000002000000
     description: 
     docUrl: 
     showStateLabel: 0

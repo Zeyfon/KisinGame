@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 874595598865553754}
   - component: {fileID: 1946974219161177291}
   m_Layer: 9
-  m_Name: Player_Proto
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
       - fsmEvent:
           name: _ChargeStand
           isSystemEvent: 0
-          isGlobal: 1
+          isGlobal: 0
         toState: Charge Stand
         linkStyle: 0
         linkConstraint: 0
@@ -11771,7 +11771,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: _ChargeStand
       isSystemEvent: 0
-      isGlobal: 1
+      isGlobal: 0
     - name: _ComboWindow
       isSystemEvent: 0
       isGlobal: 0

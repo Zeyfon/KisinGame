@@ -259,6 +259,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2630391906658802046, guid: 0d8e049e7a563cf42bfaff7c3047f770,
+        type: 3}
+      propertyPath: fsm.states.Array.data[0].position.x
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630391906658802046, guid: 0d8e049e7a563cf42bfaff7c3047f770,
+        type: 3}
+      propertyPath: fsm.states.Array.data[0].position.y
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630391906658802046, guid: 0d8e049e7a563cf42bfaff7c3047f770,
+        type: 3}
+      propertyPath: fsm.states.Array.data[1].position.x
+      value: 318
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630391906658802046, guid: 0d8e049e7a563cf42bfaff7c3047f770,
+        type: 3}
+      propertyPath: fsm.states.Array.data[1].position.y
+      value: 224
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630391906658802046, guid: 0d8e049e7a563cf42bfaff7c3047f770,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].position.x
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630391906658802046, guid: 0d8e049e7a563cf42bfaff7c3047f770,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].position.y
+      value: 226
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630391906658802046, guid: 0d8e049e7a563cf42bfaff7c3047f770,
+        type: 3}
+      propertyPath: fsm.states.Array.data[3].position.x
+      value: 510
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630391906658802046, guid: 0d8e049e7a563cf42bfaff7c3047f770,
+        type: 3}
+      propertyPath: fsm.states.Array.data[3].position.y
+      value: 228
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630391906658802046, guid: 0d8e049e7a563cf42bfaff7c3047f770,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].actionData.byteData.Array.data[0]
+      value: 107
+      objectReference: {fileID: 0}
     - target: {fileID: 4100305748169011279, guid: 0d8e049e7a563cf42bfaff7c3047f770,
         type: 3}
       propertyPath: m_Name
@@ -319,11 +364,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4446029052574641710, guid: 0d8e049e7a563cf42bfaff7c3047f770,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d8e049e7a563cf42bfaff7c3047f770, type: 3}
 --- !u!1 &1112632339
@@ -355,7 +395,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1112632341
 MonoBehaviour:
@@ -380,8 +420,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 71
-        y: 114.99219
+        x: 52
+        y: 105.99219
         width: 100
         height: 32
       isBreakpoint: 0
@@ -392,7 +432,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: SetToWhateverWeLike
+        toState: State 2
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -440,8 +480,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 65.77344
-        y: 222.21094
+        x: 210.77344
+        y: 187.21094
         width: 183
         height: 16
       isBreakpoint: 0
@@ -527,12 +567,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: staminaSpeedLevel
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: savedScene
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -562,7 +596,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 300
+          value: 200
         - useVariable: 0
           name: 
           tooltip: 
@@ -581,12 +615,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 4
-        - useVariable: 1
-          name: savedScene
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -595,7 +623,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00
-        arrayParamSizes: 01000000010000000600000006000000
+        arrayParamSizes: 01000000010000000500000005000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         - HutongGames.PlayMaker.FsmFloat
@@ -603,7 +631,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.FsmInt
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000001200000010000000010000000c000000120000000c0000000f0000000c0000001200000012000000120000001200000012000000120000000c000000100000001000000010000000100000001000000010000000
+        paramDataType: 14000000120000001200000010000000010000000c000000120000000c0000000f0000000c00000012000000120000001200000012000000120000000c0000001000000010000000100000001000000010000000
         paramName:
         - gameObject
         - fsmName
@@ -620,16 +648,76 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
         - values
         - 
         - 
         - 
         - 
         - 
+        paramDataPos: 000000000000000001000000000000000000000000000000020000000100000000000000020000000300000004000000050000000600000007000000030000000100000002000000030000000400000005000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    - name: State 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 214
+        y: 122
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: SetToWhateverWeLike
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.PlayerPrefsDeleteAll
+        customNames:
         - 
-        paramDataPos: 0000000000000000010000000000000000000000000000000200000001000000000000000200000003000000040000000500000006000000070000000800000003000000010000000200000003000000040000000500000006000000
-        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 00000000
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -985,7 +1073,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597850687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.780018, y: -2.9850154, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1089,24 +1177,16 @@ MonoBehaviour:
         x: 58
         y: 174
         width: 219
-        height: 64
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: LoadGameScene
+          name: LoadSingleScene
           isSystemEvent: 0
           isGlobal: 0
-        toState: State LoadInitialGameScene
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: LoadSplashScene
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Load SplashScene
+        toState: SingleSceneLoad
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1148,7 +1228,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 1
           networkSync: 0
-          value: 6
+          value: 3
         - useVariable: 0
           name: 
           tooltip: 
@@ -1163,8 +1243,8 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - CannotLoadUtilitySceneOnly
-        - LoadSplashScene
-        - LoadGameScene
+        - LoadSingleScene
+        - LoadSingleScene
         byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
@@ -1180,115 +1260,13 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000010000000200000000000000
         paramByteDataSize: 000000000000000000000000000000000000000001000000
-    - name: Load SplashScene
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 341
-        y: 193
-        width: 150
-        height: 16
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions: []
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: ba7ea101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: gameManager
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: GameManager
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: LoadSplashScene
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1f000000120000000f00000001000000
-        paramName:
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000001000000
     - name: Loading Utility Scene Alone
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 368
-        y: 274
+        x: 344
+        y: 206
         width: 211
         height: 16
       isBreakpoint: 1
@@ -1334,14 +1312,14 @@ MonoBehaviour:
         paramName: []
         paramDataPos: 
         paramByteDataSize: 
-    - name: State LoadInitialGameScene
+    - name: SingleSceneLoad
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 57
         y: 286.04688
-        width: 218
+        width: 143
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -1417,7 +1395,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: LoadFromThisGameScene
+          value: SingleSceneLoad
         fsmObjectParams:
         - useVariable: 1
           name: 
@@ -1462,7 +1440,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 1
           networkSync: 0
-          value: 6
+          value: 3
         fsmBoolParams:
         - useVariable: 1
           name: 
@@ -1544,7 +1522,7 @@ MonoBehaviour:
     - name: CannotLoadUtilitySceneOnly
       isSystemEvent: 0
       isGlobal: 0
-    - name: LoadGameScene
+    - name: LoadSingleScene
       isSystemEvent: 0
       isGlobal: 0
     - name: LoadSplashScene
@@ -1670,7 +1648,7 @@ PrefabInstance:
     - target: {fileID: 8304411251475973211, guid: b02300390ccc9354fb49453823614c4e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8304411251475973211, guid: b02300390ccc9354fb49453823614c4e,
         type: 3}
@@ -1689,201 +1667,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b02300390ccc9354fb49453823614c4e, type: 3}
---- !u!1001 &1776431502636948941
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1776431503945426472, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: displaySettings.inputSettings.cancelConversation.key
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503945426472, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: displaySettings.inputSettings.cancel.key
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503945426472, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: displaySettings.subtitleSettings.minSubtitleSeconds
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503945426472, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: displaySettings.inputSettings.alwaysForceResponseMenu
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503945426472, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: displaySettings.subtitleSettings.continueButton
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503945426472, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: displaySettings.dialogueUI
-      value: 
-      objectReference: {fileID: 8389794718801170107, guid: 4907e9cd83acad24f96fa0ee563831a5,
-        type: 3}
-    - target: {fileID: 1776431503945426472, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: persistentDataSettings.includeStatusAndRelationshipData
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503945426472, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: persistentDataSettings.includeActorData
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503945428056, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: detectMouseControl
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951184268, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776431503951353004, guid: 9a25d7a34b1810243988394302a4accd,
-        type: 3}
-      propertyPath: m_Name
-      value: Dialogue Manager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9a25d7a34b1810243988394302a4accd, type: 3}
---- !u!1 &1776431502636948942 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1776431503951353004, guid: 9a25d7a34b1810243988394302a4accd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1776431502636948941}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1776431502636948943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776431502636948942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []

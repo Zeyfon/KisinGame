@@ -1,16 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PixelCrushers.DialogueSystem;
+
 
 public class Level1Boss : MonoBehaviour, BossStarter
 {
     #region Inspector
     public int phase = 0;
-    [SerializeField] BossRoomPlayerSpotter playerSpotter;
+    [SerializeField] BossRoomController bossRoomController;
     [SerializeField] GameObject pixanDrops;
-    [SerializeField] Transform dialogue;
-    [SerializeField] Transform bossCamera;
 
     [Header("Control Timer Variables")]
     public bool canChangeWeakness = false;
@@ -38,7 +36,7 @@ public class Level1Boss : MonoBehaviour, BossStarter
         GetComponent<ComboAttackL1B>().GetPlayerTransform(playerTransform);
         GetComponent<FruitBombBarrageAttack>().GetPlayerTransform(playerTransform);
         GetComponent<ThrustAttack>().GetPlayerTransform(playerTransform);
-        playerSpotter.SetCurrentBoss(this);
+        bossRoomController.SetCurrentBoss(this);
     }
 
     #region Control
@@ -217,13 +215,17 @@ public class Level1Boss : MonoBehaviour, BossStarter
     }
     IEnumerator AfterBossDiesActions()
     {
-        DialogueManager.DisplaySettings.cameraSettings.sequencerCamera = bossCamera.GetComponent<Camera>();
-        dialogue.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        dialogue.GetComponent<ConversationStarter>().StartConversation(transform);
-        yield return new WaitForSeconds(0.1f);
-        Destroy(gameObject);
+        print("Wants to start dialogue");
+        bossRoomController.BossDead(0);
+        yield return new WaitForSeconds(5f);
+        DestroyBoss();
         yield return null;
+    }
+
+    public void DestroyBoss()
+    {
+        Destroy(gameObject);
     }
 
     void StoppingOtherCoroutines()

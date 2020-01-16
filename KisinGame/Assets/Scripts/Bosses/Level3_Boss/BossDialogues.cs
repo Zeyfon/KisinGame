@@ -6,73 +6,50 @@ using HutongGames.PlayMaker;
 
 public class BossDialogues : MonoBehaviour
 {
-    [SerializeField] bool isIzel = false;
-    [SerializeField] Transform transitionToMitlan;
-    [SerializeField] Transform currentDialogue;
-    [SerializeField] Transform bossCamera;
+    [SerializeField] GameObject mitlanCover;
+    [SerializeField] GameObject izelBoss;
+    [SerializeField] GameObject mitlanBoss;
     [SerializeField] int dialogueEntryNum = 5;
     [SerializeField] int conversationNum1 = 4;
     [SerializeField] int conversationNum2 = 5;
     [SerializeField] int conversationNum3 = 6;
 
-    BossRoomPlayerSpotter playerSpotter;
+    GameObject mitlanCoverClone;
 
-    private void Start()
+
+    public void ConversationEnded()
     {
-        DialogueManager.DisplaySettings.cameraSettings.sequencerCamera = bossCamera.GetComponent<Camera>();
-    }
-    public void SetPlayerSpotter(BossRoomPlayerSpotter spotter)
-    {
-        playerSpotter = spotter;
+        StartCoroutine(ConversationEndedActions());
     }
 
-    public void AfterBossDiesActions()
+    IEnumerator ConversationEndedActions()
     {
-        DialogueManager.DisplaySettings.cameraSettings.sequencerCamera = bossCamera.GetComponent<Camera>();
-        currentDialogue.GetComponent<ConversationStarter>().StartConversation(transform);
+        print(gameObject.name + "  Conversation Ended");
+        izelBoss.GetComponent<Level3Boss>().DestroyBoss();
+        yield return new WaitForSeconds(.5f);
+        Destroy(mitlanCoverClone);
+        FindObjectOfType<BossRoomController>().StartFight();
     }
 
-    //Dialoogue System Event Call. OnConversationLineEnd()
-    public void TransitionToMitlan()
-    {
+    public void ActivatePhaseThree()
+    {  
+
         DialogueEntry dialogueEntry = DialogueManager.CurrentConversationState.subtitle.dialogueEntry;
+
         int conversationID = dialogueEntry.conversationID; //<-- This is the conversation ID.
         if (conversationID != conversationNum2) return;
         int dialogueEntryID = dialogueEntry.id; //<-- This is the dialogue entry ID.
         if (dialogueEntryID != dialogueEntryNum) return;
-        transitionToMitlan.transform.position = transform.position;
-        transitionToMitlan.GetComponent<TransitionToMitlan>().StartMitlanPhase();
-        print("Mitlan was started");
+
+        StartCoroutine(ChangeToMitlan());
+        print("Mitlan was activated");
     }
-    //Dialoogue System Event Call. OnConversationEnd()
-    public void ConversationEnded()
+
+    IEnumerator ChangeToMitlan()
     {
-        DialogueEntry dialogueEntry = DialogueManager.CurrentConversationState.subtitle.dialogueEntry;
-        int conversationID = dialogueEntry.conversationID; //<-- This is the conversation ID.
-        if (isIzel)
-        {
-            if (conversationID == conversationNum1)
-            {
-                playerSpotter.StartFight();
-                return;
-            }
-            else
-            {
-                print("IsIzel");
-                transitionToMitlan.GetComponent<TransitionToMitlan>().ConversationEnded();
-                Destroy(gameObject);
-                return;
-            }
-
-        }
-        else
-        {
-            if (conversationID != conversationNum3) return;
-            print("isNotIzel");
-            FsmEventData myfsmEventData = new FsmEventData();
-            HutongGames.PlayMaker.Fsm.EventData = myfsmEventData;
-            GetComponent<PlayMakerFSM>().Fsm.Event("GameHasFinished");
-        }
-
+        mitlanCoverClone = Instantiate(mitlanCover, izelBoss.transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        yield return new WaitForSeconds(1);
+        mitlanBoss.transform.position = izelBoss.transform.position;
+        mitlanBoss.SetActive(true);
     }
 }

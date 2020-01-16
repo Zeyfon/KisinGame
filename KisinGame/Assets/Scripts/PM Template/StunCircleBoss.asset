@@ -43,7 +43,7 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetParent
-        - HutongGames.PlayMaker.Actions.GetChild
+        - HutongGames.PlayMaker.Actions.GetFsmInt
         - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
@@ -51,18 +51,12 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000000200000006000000
-        actionHashCodes: d97b7202184b570409faa102
+        actionStartIndex: 000000000200000007000000
+        actionHashCodes: d97b7202081bbf0509faa102
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
           name: enemy
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: animController
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -96,19 +90,25 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 
+          value: Health
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: AnimController
+          value: circleThreshold
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
+        - useVariable: 1
+          name: circleThreshold
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 1
           name: circleThreshold
           tooltip: 
@@ -131,27 +131,28 @@ MonoBehaviour:
         - 
         - 
         - ThresholdReceived
-        byteData: 01
+        byteData: 0101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001300000014000000120000001200000013000000100000001000000017000000170000001700000001000000
+        paramDataType: 14000000130000001400000012000000120000001000000001000000100000001000000017000000170000001700000001000000
         paramName:
         - gameObject
         - storeResult
         - gameObject
-        - childName
-        - withTag
-        - storeResult
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
         - integer1
         - integer2
         - equal
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000100000001000000000000000100000000000000010000000200000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 00000000000000000100000000000000010000000000000000000000010000000200000000000000010000000200000001000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: Listener
       description: 
       colorIndex: 0
@@ -2528,7 +2529,7 @@ MonoBehaviour:
             useVariable: 1
             name: stunCircleUI
             tooltip: 
-            showInInspector: 0
+            showInInspector: 1
             networkSync: 0
             value: {fileID: 0}
         - ownerOption: 1
@@ -3236,7 +3237,7 @@ MonoBehaviour:
             useVariable: 1
             name: stunCircleUI
             tooltip: 
-            showInInspector: 0
+            showInInspector: 1
             networkSync: 0
             value: {fileID: 0}
         - ownerOption: 1
@@ -3526,19 +3527,11 @@ MonoBehaviour:
         x: 207
         y: 732
         width: 242
-        height: 48
+        height: 32
       isBreakpoint: 0
       isSequence: 1
       hideUnused: 0
       transitions:
-      - fsmEvent:
-          name: Loop
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Loop
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
@@ -3549,41 +3542,17 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetFsmGameObject
-        - HutongGames.PlayMaker.Actions.GameObjectIsNull
-        - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.GetComponent
         customNames:
         - 
         - 
-        - 
-        - 
-        - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 00000000050000000a0000000e00000012000000
-        actionHashCodes: 5b66cf0015656205184b5704184b570404d81402
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: 184b570404d81402
         unityObjectParams: []
         fsmGameObjectParams:
-        - useVariable: 1
-          name: bossUI
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: bossUI
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: stunCircleUI
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
         - useVariable: 1
           name: currentCircle
           tooltip: 
@@ -3594,25 +3563,9 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: gameManager
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: bossUI
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
             name: stunCircleUI
             tooltip: 
-            showInInspector: 0
+            showInInspector: 1
             networkSync: 0
             value: {fileID: 0}
         - ownerOption: 1
@@ -3630,30 +3583,6 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: GameManager
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: bossUI
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: StunCircle
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Untagged
         - useVariable: 0
           name: 
           tooltip: 
@@ -3679,42 +3608,20 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - Loop
-        - 
-        byteData: 000000
+        stringParams: []
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000130000000100000013000000170000001700000011000000010000001400000012000000120000001300000014000000120000001200000013000000140000001800000001000000
+        paramDataType: 14000000120000001200000013000000140000001800000001000000
         paramName:
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
-        - everyFrame
-        - gameObject
-        - isNull
-        - isNotNull
-        - storeResult
-        - everyFrame
-        - gameObject
-        - childName
-        - withTag
-        - storeResult
         - gameObject
         - childName
         - withTag
@@ -3722,72 +3629,8 @@ MonoBehaviour:
         - gameObject
         - storeComponent
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000001000000000000000100000000000000010000000100000002000000030000000200000002000000040000000500000003000000030000000000000002000000
-        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
-    - name: Loop
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 51
-        y: 740
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Get Boss UI from GameManager
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.NextFrameEvent
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 88611604
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 17000000
-        paramName:
-        - sendEvent
-        paramDataPos: 00000000
-        paramByteDataSize: 00000000
+        paramDataPos: 00000000000000000100000000000000010000000000000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -3857,7 +3700,7 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: acumulationRemanent
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -3938,13 +3781,13 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: animController
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: bossUI
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -3964,7 +3807,7 @@ MonoBehaviour:
       - useVariable: 1
         name: stunCircleUI
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
         value: {fileID: 0}
       objectVariables:
@@ -3996,7 +3839,7 @@ MonoBehaviour:
     RestartOnEnable: 1
     EnableDebugFlow: 0
     EnableBreakpoints: 1
-    editorFlags: 1
+    editorFlags: 3
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0

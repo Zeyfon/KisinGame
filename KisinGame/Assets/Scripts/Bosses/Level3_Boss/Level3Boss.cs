@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Level3Boss : MonoBehaviour, BossStarter
 {
+    enum Bosses
+    {
+        Izel=1, Mitlan = 2
+    }
+
     [Header("Internal Values")]
-    [SerializeField] BossRoomPlayerSpotter playerSpotter;
+    [SerializeField] BossRoomController bossRoomController;
+    [SerializeField] Bosses bosses;
     public int phase = 1;
 
     Rigidbody2D rb;
     Animator anim;
     StressReceiver stressReceiver;
-    Level3BossControlTimers bossTimers;
-    EnableBossUI bossUI;
+    Level3BossControlTimers bossControlTimers;
     Transform playerTransform;
-    BossDialogues bossDialogues;
+    int bossType=0;
+
 
     int attackCounter = 0;
     public bool colorChange = false;
@@ -24,16 +30,17 @@ public class Level3Boss : MonoBehaviour, BossStarter
     // Start is called before the first frame update
     void Start()
     {
-
-        bossDialogues = GetComponent<BossDialogues>();
-        bossDialogues.SetPlayerSpotter(playerSpotter);
-        bossTimers = GetComponent<Level3BossControlTimers>();
+        if (bosses == Bosses.Izel)
+        {
+            bossType = 1;
+        }
+        else bossType = 2;
+        bossControlTimers = GetComponent<Level3BossControlTimers>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         anim.SetInteger("Phase", phase);
-
         StartCoroutine(SetVariablesInDependencies());
-        if (phase != 3) playerSpotter.SetCurrentBoss(this);
+        bossRoomController.SetCurrentBoss(this);
     }
     IEnumerator SetVariablesInDependencies()
     {
@@ -43,9 +50,9 @@ public class Level3Boss : MonoBehaviour, BossStarter
         GetComponent<BossesSupActions>().GetPlayerTransform(playerTransform);
         GetComponent<ThrustAttack>().GetPlayerTransform(playerTransform);
     }
-
+    
     #region Control
-
+    // Called from the Dialogue Level3Dialogue 1 Conversation Ended Event
     public void StartActions()
     {
         StartCoroutine(StartBossCoroutine());
@@ -53,15 +60,14 @@ public class Level3Boss : MonoBehaviour, BossStarter
 
     IEnumerator StartBossCoroutine()
     {
-        GetComponent<EnableBossUI>().ActivateBossUI();
         yield return new WaitForSeconds(1);
         if (phase == 3)
         {
-            bossTimers.TimerForNextCrystalRainAttack();
-            bossTimers.TimerForNextWeaknessChange();
+            bossControlTimers.TimerForNextCrystalRainAttack();
+            bossControlTimers.TimerForNextWeaknessChange();
         }
         DecideNextAction();
-        bossTimers.TimerForNextThrustAttack();
+        bossControlTimers.TimerForNextThrustAttack();
     }
 
     void DecideNextAction()
@@ -111,7 +117,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
             distance = GetComponent<ComboAttackL3B>().MoveTowardsPlayer();
             yield return new WaitForEndOfFrame();
         }
-        rb.velocity = new Vector2(0, 0);
+        //rb.velocity = new Vector2(0, 0);
         anim.Play("AttackPrep1");
         while (anim.GetInteger("Attack") != 100)
         {
@@ -139,7 +145,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
         GetComponent<ThrustAttack>().AdjustAttackTrigger();
         anim.SetInteger("Attack", 0);
         anim.Play("JumpToSide");
-        bossTimers.TimerForNextThrustAttack();
+        bossControlTimers.TimerForNextThrustAttack();
         while (anim.GetInteger("Attack") != 100)
         {
             yield return null;
@@ -153,7 +159,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
     {
         anim.SetInteger("Attack", 0);
         anim.Play("CrystalRainStarts");
-        bossTimers.TimerForNextCrystalRainAttack();
+        bossControlTimers.TimerForNextCrystalRainAttack();
         while (anim.GetInteger("Attack") != 100)
         {
             yield return null;
@@ -167,7 +173,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
     {
         anim.SetInteger("Attack", 0);
         anim.Play("WeaknessChange");
-        bossTimers.TimerForNextWeaknessChange();
+        bossControlTimers.TimerForNextWeaknessChange();
         while (anim.GetInteger("Attack") != 100)
         {
             yield return null;
@@ -251,7 +257,18 @@ public class Level3Boss : MonoBehaviour, BossStarter
     //Animation Event
     void Dies()
     {
-        bossDialogues.AfterBossDiesActions();
+        StartCoroutine(AfterBossDiesActions());
+    }
+
+    IEnumerator AfterBossDiesActions()
+    {
+        yield return new WaitForSeconds(0.5f);
+        bossRoomController.BossDead(bossType);
+        yield return new WaitForSeconds(5f);
+    }
+    public void DestroyBoss()
+    {
+        Destroy(gameObject);
     }
 
     void StoppingOtherCoroutines()
@@ -260,10 +277,6 @@ public class Level3Boss : MonoBehaviour, BossStarter
         GetComponent<CrystalBallAttack>().StoppingAllCoroutines();
         GetComponent<CrystalRainAttack>().Cancel();
     }
-
-
-
-
 
     #endregion
 
@@ -279,7 +292,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
             canCrystalRain = true;
         }
 
-        bossTimers.ReduceTimers(phase);
+        bossControlTimers.ReduceTimers(phase);
         //print("Phase Change");
     }
 

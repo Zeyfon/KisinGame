@@ -17,7 +17,7 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 11400000}
     name: SavePoint
-    startState: Setup1
+    startState: Setup
     states:
     - name: Player Outside Save Point
       description: Trigger
@@ -25,7 +25,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 138
-        y: 213
+        y: 229
         width: 203
         height: 32
       isBreakpoint: 0
@@ -169,12 +169,12 @@ MonoBehaviour:
         paramDataPos: 000000000000000001000000000000000000000001000000010000000200000000000000000000000200000005000000030000000100000001000000
         paramByteDataSize: 000000000000000000000000000000000100000000000000040000000000000000000000000000000000000004000000000000000000000000000000
     - name: Player In Save Point
-      description: Trigger
+      description: Menu Not Opened
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 456
-        y: 216
+        y: 232
         width: 191
         height: 48
       isBreakpoint: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 469
-        y: 147
+        y: 163
         width: 312
         height: 32
       isBreakpoint: 0
@@ -408,13 +408,13 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000000000000100000002000000030000000100000001000000
         paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000000000001000000
-    - name: Setup1
+    - name: Setup
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 150
-        y: 105.91406
+        x: 154
+        y: 108.91406
         width: 100
         height: 32
       isBreakpoint: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Player Outside Save Point
+        toState: Get Menus Manager
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -475,7 +475,7 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - FINISHED
+        - 
         byteData: 01
         arrayParamSizes: 
         arrayParamTypes: []
@@ -495,7 +495,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 54.71875
-        y: 349.3125
+        y: 365.3125
         width: 325
         height: 32
       isBreakpoint: 0
@@ -588,7 +588,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 765.8906
-        y: 216.54688
+        y: 232.54688
         width: 183
         height: 32
       isBreakpoint: 0
@@ -660,7 +660,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: GameManager
+            value: MenusController
           sendToChildren:
             useVariable: 0
             name: 
@@ -683,7 +683,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: PlayerWantsToSave
+          value: OpenSavingMenu
         fsmObjectParams:
         - useVariable: 1
           name: 
@@ -832,19 +832,27 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 767.8125
-        y: 281.23438
+        x: 771.8125
+        y: 294.23438
         width: 197
-        height: 32
+        height: 48
       isBreakpoint: 0
-      isSequence: 0
+      isSequence: 1
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: MenuNotActive
+          isSystemEvent: 0
           isGlobal: 0
         toState: Player In Save Point
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: MenuActive
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Player In Save Point 2
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -852,13 +860,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.GetFsmBool
+        - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: b2cf1000b2cf1000
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000050000000a0000000f000000
+        actionHashCodes: b2cf1000b2cf100068fece05a4c8bf00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -878,13 +890,33 @@ MonoBehaviour:
             showInInspector: 1
             networkSync: 0
             value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: menusManager
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: MenusManager
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: menuActive
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -916,18 +948,32 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 1
+        - useVariable: 1
+          name: menuActive
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: menuActive
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00000000
+        stringParams:
+        - MenuActive
+        - MenuNotActive
+        byteData: 000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000110000001100000001000000010000001400000011000000110000000100000001000000
+        paramDataType: 14000000110000001100000001000000010000001400000011000000110000000100000001000000140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
         - gameObject
         - activate
@@ -939,11 +985,262 @@ MonoBehaviour:
         - recursive
         - resetOnExit
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000010000000100000002000000030000000200000003000000
-        paramByteDataSize: 00000000000000000000000001000000010000000000000000000000000000000100000001000000
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000010000000100000002000000030000000200000003000000020000000000000001000000040000000400000005000000000000000100000005000000
+        paramByteDataSize: 00000000000000000000000001000000010000000000000000000000000000000100000001000000000000000000000000000000000000000100000000000000000000000000000001000000
+    - name: Get Menus Manager
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 140
+        y: 168
+        width: 160
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Player Outside Save Point
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5b66cf00
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: menusManager
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: gameManager
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: GameManager
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: menusManager
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000012000000120000001300000001000000
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
+    - name: Player In Save Point 2
+      description: Menu Opened
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 460.23438
+        y: 342.48438
+        width: 191
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: MenuNotActive
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Player In Save Point
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: PlayerOutsideSavePoint
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Set Current Saving Point in Game Manager 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Trigger2dEvent
+        - HutongGames.PlayMaker.Actions.GetFsmBool
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 00000000050000000a000000
+        actionHashCodes: 4949160468fece05a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: menusManager
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Player
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: MenusManager
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: menuActive
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: menuActive
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: menuActive
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - PlayerOutsideSavePoint
+        - 
+        - MenuNotActive
+        byteData: 020000000101
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000007000000120000001700000013000000140000001200000012000000110000000100000011000000170000001700000001000000
+        paramName:
+        - gameObject
+        - trigger
+        - collideTag
+        - sendEvent
+        - storeCollider
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 0000000000000000000000000000000000000000010000000100000002000000000000000400000001000000010000000200000005000000
+        paramByteDataSize: 0000000004000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
+      isGlobal: 0
+    - name: MenuActive
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: MenuNotActive
+      isSystemEvent: 0
       isGlobal: 0
     - name: OpenSavingMenu
       isSystemEvent: 0
@@ -967,7 +1264,13 @@ MonoBehaviour:
     variables:
       floatVariables: []
       intVariables: []
-      boolVariables: []
+      boolVariables:
+      - useVariable: 1
+        name: menuActive
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables: []
       vector2Variables:
       - useVariable: 1
@@ -1017,6 +1320,12 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: menusManager
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -1024,7 +1333,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

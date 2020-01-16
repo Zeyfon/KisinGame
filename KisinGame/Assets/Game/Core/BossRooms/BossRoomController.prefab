@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6618902115002595379}
   - component: {fileID: 6618902115002595380}
   m_Layer: 0
-  m_Name: BossRoom_PlayerSpotter
+  m_Name: BossRoomController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,12 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c9533026a326a4ba314dad161e7ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 0}
-  leftDoor: {fileID: 0}
-  rightDoor: {fileID: 0}
-  timeToActivateBoss: 1
+  bossName: '  '
+  backtrackingDoor: {fileID: 0}
+  otherDoor: {fileID: 0}
   bossUI: {fileID: 0}
-  pFSM: {fileID: 0}
+  timeToActivateBoss: 1
+  dialogue1: {fileID: 0}
+  dialogue2: {fileID: 0}
+  bossCamera: {fileID: 0}
 --- !u!61 &6618902115002595380
 BoxCollider2D:
   m_ObjectHideFlags: 0

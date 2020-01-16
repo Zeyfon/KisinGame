@@ -8,12 +8,9 @@ public class Level2Boss : MonoBehaviour, BossStarter
 {
     #region Inspector
     [Header("Internal Values")]
-    [SerializeField] BossRoomPlayerSpotter playerSpotter;
-    [SerializeField] Transform bossCamera;
-    [SerializeField] Transform dialogue;
+    [SerializeField] BossRoomController bossRoomController;
     [UnityEngine.Tooltip("Current Boss Phase")]
     [SerializeField] int phase = 0;
-    public int weakness = 1;
 
     [Header("Necessary Prefabs")]
     [SerializeField] GameObject pixanDrops;
@@ -47,7 +44,7 @@ public class Level2Boss : MonoBehaviour, BossStarter
         GetComponent<ComboAttackL2B>().GetPlayerTransform(playerTransform);
         GetComponent<MissilesAttackL2B>().GetPlayerTransform(playerTransform);
         GetComponent<LaserAttackL2B>().GetPlayerTransform(playerTransform);
-        playerSpotter.SetCurrentBoss(this);
+        bossRoomController.SetCurrentBoss(this);
     }
 
     #region Control
@@ -230,13 +227,16 @@ public class Level2Boss : MonoBehaviour, BossStarter
     }
     IEnumerator AfterBossDiesActions()
     {
-        DialogueManager.DisplaySettings.cameraSettings.sequencerCamera = bossCamera.GetComponent<Camera>();
-        dialogue.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        dialogue.GetComponent<ConversationStarter>().StartConversation(transform);
-        yield return new WaitForSeconds(0.1f);
+        print("Wants to start dialogue");
+        bossRoomController.BossDead(0);
+        yield return new WaitForSeconds(5f);
+        DestroyBoss();
+    }
+
+    public void DestroyBoss()
+    {
         Destroy(gameObject);
-        yield return null;
     }
 
     void StoppinpAllOtherActions()
