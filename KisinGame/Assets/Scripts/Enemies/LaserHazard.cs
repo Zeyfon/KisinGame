@@ -51,7 +51,7 @@ public class LaserHazard : MonoBehaviour
         yield return new WaitForSeconds(idleTime);
         animator.Play("PrepareAttack");
     }
-
+    //Animation Event
     void LaserShot_Create()
     {
         LaserShot laserShot2;

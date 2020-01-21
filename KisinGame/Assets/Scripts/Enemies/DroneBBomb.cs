@@ -37,24 +37,29 @@ public class DroneBBomb : MonoBehaviour
         Debug.Log("Starts detonation");
         animator.Play("Detonation");
     }
-
+    
+    //Animation Event
     void Explosion_Sound()
     {
         print("Explosion Sound " + gameObject);
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.PlayOneShot(explosionClip, volume);
+        GetComponent<AudioSource>().PlayOneShot(explosionClip, volume);
     }
 
+    //Animation Event
     void ExplosionCollider_Enable()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.WakeUp();
         playerDetector.enabled = true;
     }
+
+    //Animation Event
     void ExplosionCollider_Disable()
     {
         playerDetector.enabled = false;
     }
+
+    //Animation Event
     void GameObject_Destroy()
     {
         Destroy(gameObject);

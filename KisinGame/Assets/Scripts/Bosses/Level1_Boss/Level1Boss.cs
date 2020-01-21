@@ -204,6 +204,7 @@ public class Level1Boss : MonoBehaviour, BossStarter
 
     IEnumerator DeadStarts()
     {
+
         anim.Play("Dead");
         yield return null;
     }
@@ -215,10 +216,10 @@ public class Level1Boss : MonoBehaviour, BossStarter
     }
     IEnumerator AfterBossDiesActions()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(5f);
         print("Wants to start dialogue");
         bossRoomController.BossDead(0);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1.5f);
         DestroyBoss();
         yield return null;
     }

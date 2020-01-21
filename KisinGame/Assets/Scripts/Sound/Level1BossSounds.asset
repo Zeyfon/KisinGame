@@ -24,7 +24,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 461.1875
+        x: 445.1875
         y: 270.29688
         width: 100
         height: 32
@@ -84,7 +84,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 451.125
+        x: 435.125
         y: 346.79688
         width: 100
         height: 16
@@ -136,7 +136,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 135.39062
+        x: 119.390625
         y: 103.3125
         width: 174
         height: 32
@@ -231,7 +231,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 133.39062
+        x: 117.390625
         y: 225.3125
         width: 173
         height: 32
@@ -326,7 +326,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 150.52344
+        x: 134.52344
         y: 339.33594
         width: 156
         height: 32
@@ -421,7 +421,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 718.22656
+        x: 702.22656
         y: 212.57812
         width: 117
         height: 32
@@ -516,7 +516,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 727.5469
+        x: 711.5469
         y: 622.8828
         width: 117
         height: 32
@@ -611,7 +611,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 146.73438
+        x: 130.73438
         y: 532.46875
         width: 114
         height: 32
@@ -706,7 +706,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 133.85938
+        x: 117.859375
         y: 651.59375
         width: 100
         height: 32
@@ -801,7 +801,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 717.5547
+        x: 701.5547
         y: 109.703125
         width: 209
         height: 32
@@ -896,7 +896,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 724.625
+        x: 708.625
         y: 407.27344
         width: 117
         height: 32
@@ -991,7 +991,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 723.9531
+        x: 707.9531
         y: 302.76562
         width: 209
         height: 32
@@ -1086,7 +1086,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 724.71094
+        x: 708.71094
         y: 513.4844
         width: 209
         height: 32
@@ -1181,7 +1181,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 71.22656
+        x: 55.226562
         y: 441.21875
         width: 235
         height: 32
@@ -1276,9 +1276,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 735.15625
+        x: 719.15625
         y: 719.2422
-        width: 143
+        width: 144
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1371,7 +1371,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 113.375
+        x: 97.375
         y: 741.7031
         width: 147
         height: 32
@@ -1466,7 +1466,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 82.28906
+        x: 66.28906
         y: 941.27344
         width: 151
         height: 32
@@ -1561,8 +1561,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 64.421875
-        y: 852.8906
+        x: 54.1875
+        y: 858.65625
         width: 160
         height: 32
       isBreakpoint: 0
@@ -1694,7 +1694,7 @@ MonoBehaviour:
     - name: JumpAttackPreparation_Sound
       isSystemEvent: 0
       isGlobal: 0
-    - name: NoDamageSound
+    - name: NoDamageAttack
       isSystemEvent: 0
       isGlobal: 0
     - name: ThrustAttack
@@ -1705,7 +1705,7 @@ MonoBehaviour:
       isGlobal: 0
     globalTransitions:
     - fsmEvent:
-        name: NoDamageSound
+        name: NoDamageAttack
         isSystemEvent: 0
         isGlobal: 0
       toState: State 10
@@ -1956,13 +1956,27 @@ MonoBehaviour:
         networkSync: 0
         typeName: UnityEngine.AudioClip
         value: {fileID: 8300000, guid: 90ad4a1002cca9348b5e8078994b0c6d, type: 3}
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: 
+        value: {fileID: 0}
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: 
+        value: {fileID: 0}
       materialVariables: []
       textureVariables: []
       arrayVariables: []
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

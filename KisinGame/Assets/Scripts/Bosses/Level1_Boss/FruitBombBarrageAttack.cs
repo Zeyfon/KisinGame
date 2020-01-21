@@ -7,8 +7,8 @@ public class FruitBombBarrageAttack : MonoBehaviour
 {
     [SerializeField] Transform middleSpot;
     [SerializeField] float jumpToMiddleTime = 1f;
-    [SerializeField] Transform bombBarrage;
 
+    Transform bombBarrage;
     PlayMakerFSM myHealthListenerFSM;
     Transform playerTransform;
 
@@ -16,6 +16,7 @@ public class FruitBombBarrageAttack : MonoBehaviour
     void Start()
     {
         myHealthListenerFSM = GetComponent<PlayMakerFSM>();
+        bombBarrage = FindObjectOfType<BombBarrage>().transform;
     }
     public void GetPlayerTransform(Transform transform)
     {
