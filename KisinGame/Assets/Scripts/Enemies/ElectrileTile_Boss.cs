@@ -12,6 +12,7 @@ public class ElectrileTile_Boss : MonoBehaviour
     GameObject player;
     PlayMakerFSM[] pmFSMs;
     Collider2D coll;
+    AudioSource audioSource;
 
     public void StartAttack_Signal()
     {
@@ -60,7 +61,9 @@ public class ElectrileTile_Boss : MonoBehaviour
 
     void Electric_Sound()
     {
-
+        if(audioSource == null) audioSource = transform.parent.parent.GetComponent<AudioSource>();
+        print(audioSource.gameObject.name);
+        audioSource.Play();
     }
 
 }

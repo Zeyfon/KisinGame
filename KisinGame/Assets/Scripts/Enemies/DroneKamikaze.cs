@@ -4,7 +4,6 @@ using UnityEngine;
 using HutongGames.PlayMaker;
 using Spine;
 using Spine.Unity;
-using HutongGames.PlayMaker;
 
 
 public class DroneKamikaze : MonoBehaviour
@@ -18,10 +17,7 @@ public class DroneKamikaze : MonoBehaviour
     [SerializeField] int damage = 15;
     [SerializeField] float yOffset = 0;
     [SerializeField] GameObject pixanDrops;
-
-    [Header("DiegoSounds")]
-    [SerializeField] AudioClip explosionSound;
-    [SerializeField] float volume = 0.35f;
+    [SerializeField] Transform sounds;
 
     Transform projectilePool;
     Transform target;
@@ -101,20 +97,16 @@ public class DroneKamikaze : MonoBehaviour
     //Events coming from the animations
     #region Animation Events
 
-    /*The explosion trigger will only be enabled by this script, but the disable part can be done by to sides
-     * 1.- If the player enters in contact with the explosion collider the collider will send the message Damage Player
-     * and will disabled the collider
-     * 2.- The explosion will disable the trigger by An animation Event shown below*/
      void Explosion_Sound()
     {
-        PlayMakerFSM pFSM = transform.GetChild(4).GetComponent<PlayMakerFSM>();
-        FsmEventData myfsmEventData = new FsmEventData();
-        Fsm.EventData = myfsmEventData;
+        PlayMakerFSM pFSM = sounds.GetComponent<PlayMakerFSM>();
+        //FsmEventData myfsmEventData = new FsmEventData();
+        //Fsm.EventData = myfsmEventData;
         pFSM.Fsm.Event("Explosion_Sound");
 
         print("Explosion Sound " + gameObject);
-        AudioSource audioSource = GetComponent<AudioSource>();
-        audioSource.PlayOneShot(explosionSound, volume);
+        //AudioSource audioSource = GetComponent<AudioSource>();
+        //audioSource.PlayOneShot(explosionSound, volume);
     }
 
     void ExplosionTrigger_Enable()

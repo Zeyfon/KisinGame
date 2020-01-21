@@ -10,12 +10,13 @@ public class DroneBomber : MonoBehaviour
     [SerializeField] float xLerp = 0;
     [Range(0f, .1f)]
     [SerializeField] float yLerp = 0;
+    [Tooltip("This damage will be passed to the bomb when created")]
     [SerializeField] int bombDamage = 15;
     [Tooltip("The target to reach above the player")]
     [SerializeField] float yOffset = 0;
     [SerializeField] GameObject bomb;
     [SerializeField] GameObject pixanDrops;
-
+    [SerializeField] Transform sounds;
 
     Transform projectilePool;
     Transform target;
@@ -89,18 +90,23 @@ public class DroneBomber : MonoBehaviour
         animator.Play("Dead");
     }
 
+    //Animation Event
     void GameObject_Destroy()
     {
         Destroy(gameObject);
     }
 
+    //Animation Event
     void PixanDrops_Create()
     {
         Instantiate(pixanDrops, transform.position, Quaternion.identity, transform.parent.GetChild(0));
     }
 
+    //Animation Event
     void Bomb_Drop()
     {
+        PlayMakerFSM pFSM = sounds.GetComponent<PlayMakerFSM>();
+        pFSM.Fsm.Event("DropBombSound");
         GameObject bombClone = Instantiate(bomb, transform.position, Quaternion.identity, projectilePool);
         DroneBBomb droneBBomb = bombClone.GetComponent<DroneBBomb>();
         droneBBomb.SetDamage(bombDamage);

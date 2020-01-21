@@ -15,7 +15,7 @@ public class HomingMissile : MonoBehaviour
     [SerializeField] int damage = 20;                    [UnityEngine.Tooltip("Damage done to the player")]
     public Transform bossTransform = null;
     public Transform playerTransform = null;
-                
+    [SerializeField] AudioClip explosionSound;                
 
     Rigidbody2D rb;
     Animator animator;
@@ -92,6 +92,7 @@ public class HomingMissile : MonoBehaviour
 
     IEnumerator MissileExplosion(Collider2D coll  )
     {
+        GetComponent<AudioSource>().PlayOneShot(explosionSound);
         if (coll.CompareTag("PlayerBody"))
         {
             animator.Play("PlayerExplosion");

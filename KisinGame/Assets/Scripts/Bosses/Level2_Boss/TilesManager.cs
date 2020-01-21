@@ -36,6 +36,8 @@ public class TilesManager : MonoBehaviour
         intervalTime = intervalSlowTime;
     }
 
+
+
     public void StartTileLoop()
     {
         if (!startedLooping)
