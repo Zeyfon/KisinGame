@@ -80,10 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e3f148508ca134db8af81ba57ba081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isIzel: 0
-  transitionToMitlan: {fileID: 0}
-  currentDialogue: {fileID: 0}
-  bossCamera: {fileID: 0}
+  mitlanCover: {fileID: 0}
+  izelBoss: {fileID: 0}
   mitlanBoss: {fileID: 0}
   dialogueEntryNum: 5
   conversationNum1: 4
@@ -107,7 +105,18 @@ MonoBehaviour:
         m_Calls: []
     onConversationEnd:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2172713163915501731}
+          m_MethodName: ConversationEnded
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onConversationCancelled:
       m_PersistentCalls:
         m_Calls: []

@@ -10,7 +10,7 @@ public class AnimationEvents_FruitBomb : MonoBehaviour
     void Start()
     {
         pFSM = GetComponent<PlayMakerFSM>();
-        Debug.Log("AnimController: " + pFSM.name);
+        //Debug.Log("AnimController: " + pFSM.name);
     }
 
     void BombCreated_Inform()

@@ -4,37 +4,35 @@ using UnityEngine;
 
 public class Level3Boss : MonoBehaviour, BossStarter
 {
-    enum Bosses
+    enum Dialogues
     {
-        Izel=1, Mitlan = 2
+        Dialogue1=1, Dialogue2=2
     }
-
     [Header("Internal Values")]
     [SerializeField] BossRoomController bossRoomController;
-    [SerializeField] Bosses bosses;
+    [SerializeField] Dialogues dialogues;
     public int phase = 1;
+    public bool colorChange = false;
+    public bool canThrustAttack = false;
+    public bool canCrystalRain = false;
+
 
     Rigidbody2D rb;
     Animator anim;
     StressReceiver stressReceiver;
     Level3BossControlTimers bossControlTimers;
     Transform playerTransform;
-    int bossType=0;
+    int dialogueID;
 
 
     int attackCounter = 0;
-    public bool colorChange = false;
-    public bool canThrustAttack = false;
-    public bool canCrystalRain = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        if (bosses == Bosses.Izel)
-        {
-            bossType = 1;
-        }
-        else bossType = 2;
+        dialogueID = (int)dialogues;
+        print(dialogueID);
         bossControlTimers = GetComponent<Level3BossControlTimers>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -55,6 +53,11 @@ public class Level3Boss : MonoBehaviour, BossStarter
     // Called from the Dialogue Level3Dialogue 1 Conversation Ended Event
     public void StartActions()
     {
+        if (phase > 1)
+        {
+            canCrystalRain = true;
+
+        }
         StartCoroutine(StartBossCoroutine());
     }
 
@@ -263,7 +266,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
     IEnumerator AfterBossDiesActions()
     {
         yield return new WaitForSeconds(0.5f);
-        bossRoomController.BossDead(bossType);
+        bossRoomController.BossDead(dialogueID);
         yield return new WaitForSeconds(5f);
     }
     public void DestroyBoss()

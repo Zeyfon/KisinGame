@@ -8,7 +8,12 @@ public class ConversationStarter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GetComponent<Collider2D>().enabled = false;
+        if (collision.CompareTag("Player"))
+        {
+            print("Dialogue starts by trigger contact");
+            GetComponent<Collider2D>().enabled = false;
+        }
+
     }
 
     public void StartConversation()

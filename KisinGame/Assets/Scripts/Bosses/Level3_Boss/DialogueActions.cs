@@ -4,15 +4,14 @@ using UnityEngine;
 using PixelCrushers.DialogueSystem;
 using HutongGames.PlayMaker;
 
-public class BossDialogues : MonoBehaviour
+public class DialogueActions : MonoBehaviour
 {
     [SerializeField] GameObject mitlanCover;
     [SerializeField] GameObject izelBoss;
     [SerializeField] GameObject mitlanBoss;
-    [SerializeField] int dialogueEntryNum = 5;
-    [SerializeField] int conversationNum1 = 4;
-    [SerializeField] int conversationNum2 = 5;
-    [SerializeField] int conversationNum3 = 6;
+    [SerializeField] int conversationNum = 5;
+    [SerializeField] int dialogueEntryNum = 6;
+
 
     GameObject mitlanCoverClone;
 
@@ -25,19 +24,16 @@ public class BossDialogues : MonoBehaviour
     IEnumerator ConversationEndedActions()
     {
         print(gameObject.name + "  Conversation Ended");
+        FindObjectOfType<BossRoomController>().StartFightDelayed(mitlanCoverClone);
         izelBoss.GetComponent<Level3Boss>().DestroyBoss();
-        yield return new WaitForSeconds(.5f);
-        Destroy(mitlanCoverClone);
-        FindObjectOfType<BossRoomController>().StartFight();
+        yield return null;
     }
 
     public void ActivatePhaseThree()
-    {  
-
+    {
         DialogueEntry dialogueEntry = DialogueManager.CurrentConversationState.subtitle.dialogueEntry;
-
         int conversationID = dialogueEntry.conversationID; //<-- This is the conversation ID.
-        if (conversationID != conversationNum2) return;
+        if (conversationID != conversationNum) return;
         int dialogueEntryID = dialogueEntry.id; //<-- This is the dialogue entry ID.
         if (dialogueEntryID != dialogueEntryNum) return;
 

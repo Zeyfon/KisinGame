@@ -45,6 +45,7 @@ public class Level2Boss : MonoBehaviour, BossStarter
         GetComponent<MissilesAttackL2B>().GetPlayerTransform(playerTransform);
         GetComponent<LaserAttackL2B>().GetPlayerTransform(playerTransform);
         bossRoomController.SetCurrentBoss(this);
+
     }
 
     #region Control
@@ -53,12 +54,12 @@ public class Level2Boss : MonoBehaviour, BossStarter
         anim.SetInteger("Phase", phase);
         DecideNextAction();
         bossControlTimers.TimerforNextLaserAttack();
-
+        if(phase>1) tileManager.StartTileLoop();
     }
 
     void DecideNextAction()
     {
-        print("CanLaserAttack  " + canLaserAttack);
+        //print("CanLaserAttack  " + canLaserAttack);
         if (!canChangeWeakness && !canLaserAttack && closeAttackCounter < 3)
         {
             print("Close Attack Combo");
@@ -227,9 +228,12 @@ public class Level2Boss : MonoBehaviour, BossStarter
     }
     IEnumerator AfterBossDiesActions()
     {
+        //This int is to tell the BossRoomController 
+        //to run the item in the index dialogue0 = 0
+        int dialogue0 = 0;
         yield return new WaitForSeconds(2.8f);
         print("Wants to start dialogue");
-        bossRoomController.BossDead(0);
+        bossRoomController.BossDead(dialogue0);
         yield return new WaitForSeconds(0.5f);
         DestroyBoss();
     }

@@ -36,7 +36,7 @@ public class ComboAttackL3B : MonoBehaviour, IAction
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        stressReceiver = GameObject.FindGameObjectWithTag("BossCamera").GetComponent<StressReceiver>();
+        stressReceiver = Camera.main.GetComponent<StressReceiver>();
         GetComponent<BossesSupActions>().SetThisMonobehavior(this);
     }
 

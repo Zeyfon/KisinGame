@@ -12,13 +12,13 @@ public class DamageSender : MonoBehaviour
         if (pFSMs == null)
         {
             pFSMs = target.GetComponents<PlayMakerFSM>();
-            print("Found Player's Health");
+            //print("Found Player's Health");
         }
         FsmEventData myfsmEventData = new FsmEventData();
         myfsmEventData.IntData = damage;
         myfsmEventData.GameObjectData = gameObject;
         HutongGames.PlayMaker.Fsm.EventData = myfsmEventData;
         pFSMs[1].Fsm.Event("_PlayerDamaged");
-        print("PlayerDamaged");
+        //print("PlayerDamaged");
     }
 }

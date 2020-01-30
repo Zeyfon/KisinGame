@@ -10,7 +10,7 @@ public class AnimationEvents_FD : MonoBehaviour
     void Start()
     {
         pFSMs = GetComponents<PlayMakerFSM>();
-        Debug.Log("AnimEvents: " + pFSMs[1].name);
+        //Debug.Log("AnimEvents: " + pFSMs[1].name);
     }
 
     void Attack_Sound()
