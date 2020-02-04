@@ -12,10 +12,7 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] Transform otherDoor = null;
     [SerializeField] Transform bossUI = null;
     [SerializeField] float timeToActivateBoss = 1;
-
-    [SerializeField] Transform dialogue1;
-    [SerializeField] Transform dialogue2;
-    [SerializeField] Transform bossCamera;
+    [SerializeField] Transform dialogueList;
 
     bool initialized = false;
     BossStarter currentBoss;
@@ -36,7 +33,7 @@ public class BossRoomController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (initialized) return;
+        //if (initialized) return;
         if (collision.gameObject.GetComponent<PlayerIdentifer>())
         {
             StartFight();
@@ -45,13 +42,23 @@ public class BossRoomController : MonoBehaviour
             initialized = true;
         }
     }
-
+    //Called from the Dialogue Event in the Dialogue System Trigger
     public void StartFight()
     {
-        print(gameObject.name + "  StartFight");
+        print(currentBoss + "  StartFight");
         ActivateDoors();
         ActivateUI();
         StartCoroutine(ActivateBoss());
+    }
+    public void StartFightDelayed(GameObject mitlanCover)
+    {
+        StartCoroutine(StartFightDelayedC(mitlanCover));
+    }
+    IEnumerator StartFightDelayedC(GameObject mitlanCover)
+    {
+        Destroy(mitlanCover);
+        yield return new WaitForSeconds(1);
+        StartFight();
     }
 
     void ActivateDoors()
@@ -72,48 +79,48 @@ public class BossRoomController : MonoBehaviour
     }
 
     //Called from the Boss Script when Dies Events happens
-    public void BossDead(int i)
+    public void BossDead( int dialogueID)
     {
-
-        StartCoroutine(BossDeadC(i));
+        print("Messave received Boss Died  " + dialogueID);
+        StartCoroutine(BossDeadC(dialogueID));
     }
 
-    IEnumerator BossDeadC(int bossType)
+    IEnumerator BossDeadC(int dialogueID)
     {
-        print("Wants to start dialogue");
-        DialogueManager.DisplaySettings.cameraSettings.sequencerCamera = bossCamera.GetComponent<Camera>();
-        if (bossType == (int)Bosses.levelBoss)
-        {
-            print("LevelBoss defeated");
-            PlayerPrefs.SetInt(bossName, 1);
-            BossDefeated();
-            GameObject gameManager = GameObject.FindObjectOfType<SetActiveSceneAction>().gameObject;
-            gameManager.GetComponent<PlayMakerFSM>().Fsm.Event("BossDefeated");
-            EnableDialogue1();
-        }
+        PlayerPrefs.SetInt(bossName, 1);
+        BossDefeated();
+        GameObject gameManager = GameObject.FindObjectOfType<SetActiveSceneAction>().gameObject;
+        gameManager.GetComponent<PlayMakerFSM>().Fsm.Event("SaveGame");
+        //if (bossType == (int)Bosses.levelBoss)
+        //{
+        //    print("LevelBoss defeated");
+
+        //}
 
         yield return new WaitForSeconds(.5f);
         DisableUI();
         yield return new WaitForSeconds(.5f);
 
-        if (bossType == (int)Bosses.izelBoss)
-        {
-            print("Izel Boss defeated");
-            //dialogue1.GetComponent<ConversationStarter>().StartConversation();
-            EnableDialogue1();
+        //if (bossType == (int)Bosses.izelBoss)
+        //{
+        //    print("Izel Boss defeated");
+        //}
 
-        }
-
-        if (bossType == (int)Bosses.mitlaBoss)
+        //if (bossType == (int)Bosses.mitlaBoss)
+        //{
+        //    print("Mitlan Boss defetead");
+        //}
+        if(dialogueID != 10)
         {
-            print("Mitlan Boss defetead");
-            dialogue2.GetComponent<DialogueSystemTrigger>().OnUse();
+            RunDialogue(dialogueID);
+
         }
     }
 
-    private void EnableDialogue1()
+    private void RunDialogue(int dialogueID)
     {
-        dialogue1.GetComponent<DialogueSystemTrigger>().OnUse();
+        Transform dialogue = dialogueList.GetComponent<DialoguesList>().GetDialogue(dialogueID);
+        dialogue.GetComponent<DialogueSystemTrigger>().OnUse();
     }
 
     private void DisableUI()

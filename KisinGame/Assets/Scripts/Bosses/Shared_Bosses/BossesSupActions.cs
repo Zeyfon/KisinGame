@@ -54,7 +54,7 @@ public class BossesSupActions : MonoBehaviour
     {
         rb.drag = 0;
         float adjuster = 1;
-        print(targetPosition);
+        //print(targetPosition);
         Vector3 jumpVector = CalculateJumpSpeed(targetPosition, time);
         if (adjust)
         {
@@ -68,7 +68,7 @@ public class BossesSupActions : MonoBehaviour
             }
 
         }
-        print("Jump Vector "+jumpVector);
+        //print("Jump Vector "+jumpVector);
         rb.velocity = jumpVector;
         StartCoroutine(CheckForGround());
         return;
@@ -79,13 +79,13 @@ public class BossesSupActions : MonoBehaviour
         targetPosition = new Vector3(targetPosition.x, targetPosition.y , targetPosition.z);
         //print("Calculating Speed");
         Vector3 toTarget = targetPosition - transform.position;
-        print("Target Position " + targetPosition + "My Position  " + transform.position);
-        print("ToTarget Vector3  "+  toTarget  + "time   " + time);
+        //print("Target Position " + targetPosition + "My Position  " + transform.position);
+        //print("ToTarget Vector3  "+  toTarget  + "time   " + time);
 
         float y = toTarget.y;
         float x = toTarget.x;
         float t = time;
-        print("Gravity Scale " + rb.gravityScale);
+        //print("Gravity Scale " + rb.gravityScale);
         float v0y = y / t + 0.5f * Physics2D.gravity.magnitude * (rb.gravityScale) * t;
         float v0x = x / t;
 
@@ -94,7 +94,7 @@ public class BossesSupActions : MonoBehaviour
         result.x = v0x;
         result.y = v0y;
         result.z = 0;
-        print("Calculated speed  " + result);
+        //print("Calculated speed  " + result);
         return result;
     }
 

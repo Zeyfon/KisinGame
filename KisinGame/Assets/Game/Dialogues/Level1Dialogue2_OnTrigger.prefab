@@ -117,10 +117,10 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 64
-        y: 110
+        x: 62
+        y: 106
         width: 236
-        height: 48
+        height: 64
       isBreakpoint: 0
       isSequence: 1
       hideUnused: 0
@@ -141,6 +141,14 @@ MonoBehaviour:
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Listener
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.PlayerPrefsGetInt
@@ -148,8 +156,8 @@ MonoBehaviour:
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
+        actionEnabled: 0100
+        actionIsOpen: 0100
         actionStartIndex: 0000000004000000
         actionHashCodes: e2703a0409faa102
         unityObjectParams: []

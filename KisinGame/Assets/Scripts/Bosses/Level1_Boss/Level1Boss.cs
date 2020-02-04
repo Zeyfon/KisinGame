@@ -214,12 +214,15 @@ public class Level1Boss : MonoBehaviour, BossStarter
     {
         StartCoroutine(AfterBossDiesActions());
     }
+
     IEnumerator AfterBossDiesActions()
-    {
-        yield return new WaitForSeconds(5f);
+    {   //This int is used by the BossRoomController to know which dialogue
+        //in the Dialogue List will get. It uses the int as an index for the List
+        int dialogue1 = 1;
+        yield return new WaitForSeconds(2f);
         print("Wants to start dialogue");
-        bossRoomController.BossDead(0);
-        yield return new WaitForSeconds(1.5f);
+        bossRoomController.BossDead(dialogue1);
+        yield return new WaitForSeconds(.5f);
         DestroyBoss();
         yield return null;
     }

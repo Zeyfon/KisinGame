@@ -38,7 +38,7 @@ public class ComboAttackL1B : MonoBehaviour,IAction
         attackCollider = weapon.GetComponent<BoxCollider2D>();
         attackTrigger = weapon.GetComponent<AttackTrigger>();
         rb = GetComponent<Rigidbody2D>();
-        stressReceiver = GameObject.FindGameObjectWithTag("BossCamera").GetComponent<StressReceiver>();
+        stressReceiver = Camera.main.GetComponent<StressReceiver>();
         GetComponent<BossesSupActions>().SetThisMonobehavior(this);
     }
 
@@ -46,7 +46,7 @@ public class ComboAttackL1B : MonoBehaviour,IAction
     public void GetPlayerTransform(Transform target)
     {
         playerTransform = target;
-        print("Player Transform passed  " + playerTransform);
+        //("Player Transform passed  " + playerTransform);
     }
 
     public float DistanceFromPlayer()

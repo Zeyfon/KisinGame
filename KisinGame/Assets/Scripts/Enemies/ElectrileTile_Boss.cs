@@ -61,9 +61,7 @@ public class ElectrileTile_Boss : MonoBehaviour
 
     void Electric_Sound()
     {
-        if(audioSource == null) audioSource = transform.parent.parent.GetComponent<AudioSource>();
-        print(audioSource.gameObject.name);
-        audioSource.Play();
+        transform.parent.parent.GetComponent<TilesManager>().StartElectric_Sound();
     }
 
 }

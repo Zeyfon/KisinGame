@@ -122,7 +122,7 @@ public class AnimationEventListener : MonoBehaviour
     {
         int a = 9;
         FsmVariables.GlobalVariables.GetFsmInt("effects").Value = a;
-        Debug.Log("Si Dañó");
+        //Debug.Log("Si Dañó");
     }
 
     void DeadSound()

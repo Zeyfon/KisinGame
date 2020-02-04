@@ -21,7 +21,7 @@ public class FruitBombBarrageAttack : MonoBehaviour
     public void GetPlayerTransform(Transform transform)
     {
         playerTransform = transform;
-        print(playerTransform);
+        //print(playerTransform);
     }
 
     //Animation Event.

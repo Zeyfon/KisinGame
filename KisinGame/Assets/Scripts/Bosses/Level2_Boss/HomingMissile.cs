@@ -93,6 +93,7 @@ public class HomingMissile : MonoBehaviour
     IEnumerator MissileExplosion(Collider2D coll  )
     {
         GetComponent<AudioSource>().PlayOneShot(explosionSound);
+        print("Missile Exploded sound played");
         if (coll.CompareTag("PlayerBody"))
         {
             animator.Play("PlayerExplosion");

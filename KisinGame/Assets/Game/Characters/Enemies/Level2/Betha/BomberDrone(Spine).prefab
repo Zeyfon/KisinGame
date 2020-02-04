@@ -165,6 +165,7 @@ MonoBehaviour:
   bomb: {fileID: 7578880529943495116, guid: 4097e1c2926776d4d86680075eea4485, type: 3}
   pixanDrops: {fileID: 6102026041918234060, guid: 82c831037622a3f4fafcc62f82cd4a37,
     type: 3}
+  sounds: {fileID: 0}
 --- !u!114 &6573940536850204476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6551,6 +6552,101 @@ MonoBehaviour:
         - finishedEvent
         paramDataPos: 0000000000000000000000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000
+    - name: State 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 408.02344
+        y: 558.96094
+        width: 140
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Listener
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.AudioPlay
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 81294e04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams:
+        - useVariable: 1
+          name: dropBombSound
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          typeName: UnityEngine.AudioClip
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.5
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 140000000f000000180000001100000017000000
+        paramName:
+        - gameObject
+        - volume
+        - oneShotClip
+        - WaitForEndOfClip
+        - finishedEvent
+        paramDataPos: 0000000000000000000000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -6562,6 +6658,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: DamageStunAttack
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: DropBombSound
       isSystemEvent: 0
       isGlobal: 0
     - name: Growl
@@ -6592,32 +6691,40 @@ MonoBehaviour:
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0
+    - fsmEvent:
+        name: DropBombSound
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: State 1
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
     variables:
       floatVariables:
       - useVariable: 1
-        name: time
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: criticalDamageVolume
+        name: 
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 1
+        value: 0
       - useVariable: 1
-        name: normalDamageVolume
+        name: 
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 1
+        value: 0
       - useVariable: 1
-        name: stunDamageVolume
+        name: 
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 1
+        value: 0
       intVariables: []
       boolVariables: []
       stringVariables: []
@@ -6647,7 +6754,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        typeName: 
+        typeName: UnityEngine.Object
         value: {fileID: 0}
       - useVariable: 1
         name: normalDamageSound
@@ -6668,14 +6775,21 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        typeName: 
+        typeName: UnityEngine.Object
         value: {fileID: 0}
       - useVariable: 1
         name: 
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        typeName: 
+        typeName: UnityEngine.Object
+        value: {fileID: 0}
+      - useVariable: 1
+        name: dropBombSound
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
         value: {fileID: 0}
       materialVariables: []
       textureVariables: []
@@ -6683,7 +6797,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

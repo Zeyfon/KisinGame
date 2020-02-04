@@ -150,7 +150,6 @@ GameObject:
   - component: {fileID: 152201205023851700}
   - component: {fileID: 7584630287891052339}
   - component: {fileID: 3077826959640663643}
-  - component: {fileID: 8269919278165516839}
   m_Layer: 11
   m_Name: Boss_Level3
   m_TagString: Untagged
@@ -259,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossRoomController: {fileID: 0}
-  bosses: 0
+  dialogues: 0
   phase: 1
   colorChange: 0
   canThrustAttack: 0
@@ -1224,25 +1223,6 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
---- !u!114 &8269919278165516839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3381156994319548297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e3f148508ca134db8af81ba57ba081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mitlanCover: {fileID: 0}
-  izelBoss: {fileID: 0}
-  mitlanBoss: {fileID: 0}
-  dialogueEntryNum: 5
-  conversationNum1: 4
-  conversationNum2: 5
-  conversationNum3: 6
 --- !u!1 &3381156994660806412
 GameObject:
   m_ObjectHideFlags: 0
@@ -3968,7 +3948,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 73.58594
+        x: 217.58594
         y: 645.3594
         width: 155
         height: 32
@@ -4102,7 +4082,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 344
+        x: 488
         y: 971.4219
         width: 100
         height: 16
@@ -4154,7 +4134,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 636.8672
+        x: 780.8672
         y: 115.13281
         width: 185
         height: 32
@@ -4329,7 +4309,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 624.25
+        x: 768.25
         y: 340.76562
         width: 241
         height: 48
@@ -4452,7 +4432,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 937.5625
+        x: 1081.5625
         y: 398.17188
         width: 249
         height: 32
@@ -4546,7 +4526,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 615.7031
+        x: 759.7031
         y: 658.8906
         width: 225
         height: 32
@@ -4618,7 +4598,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 348.8125
+        x: 492.8125
         y: 779.3203
         width: 180
         height: 32
@@ -4887,7 +4867,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 327.3125
+        x: 471.3125
         y: 887.4531
         width: 137
         height: 32
@@ -5083,7 +5063,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 991.0625
+        x: 1135.0625
         y: 808.8281
         width: 193
         height: 32
@@ -5344,7 +5324,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 533.58594
+        x: 677.58594
         y: 1002.7578
         width: 252
         height: 32
@@ -5574,7 +5554,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 57.585938
+        x: 201.58594
         y: 825.4375
         width: 214
         height: 32
@@ -5651,7 +5631,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 359
+        x: 503
         y: 625
         width: 183
         height: 32
@@ -5847,7 +5827,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 358
+        x: 502
         y: 710
         width: 114
         height: 32
@@ -6043,7 +6023,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 636
+        x: 780
         y: 210
         width: 269
         height: 32
@@ -6155,7 +6135,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 619
+        x: 763
         y: 510
         width: 169
         height: 48
@@ -6398,7 +6378,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 935.1094
+        x: 1079.1094
         y: 548.9375
         width: 232
         height: 48
@@ -6861,7 +6841,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1015.72656
+        x: 1159.7266
         y: 726.25
         width: 100
         height: 32
@@ -7004,7 +6984,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 615.97656
+        x: 759.97656
         y: 604.6406
         width: 202
         height: 32
@@ -7114,7 +7094,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 980.8672
+        x: 1124.8672
         y: 905.33594
         width: 218
         height: 48
@@ -7468,7 +7448,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 63
+        x: 207
         y: 732
         width: 242
         height: 32

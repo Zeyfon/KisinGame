@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayerIdentifer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] VirtualCamera activeVCamera;
+
+    public VirtualCamera GetVCamera()
     {
-        
+        return activeVCamera;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetVCamera(VirtualCamera cam)
     {
-        
+        activeVCamera = cam;
     }
 }

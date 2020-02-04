@@ -39,7 +39,7 @@ public class ComboAttackL2B : MonoBehaviour, IAction
         attackCollider = weapon.GetComponent<BoxCollider2D>();
         attackTrigger = weapon.GetComponent<AttackTrigger>();
         rb = GetComponent<Rigidbody2D>();
-        stressReceiver = GameObject.FindGameObjectWithTag("BossCamera").GetComponent<StressReceiver>();
+        stressReceiver = Camera.main.GetComponent<StressReceiver>();
         GetComponent<BossesSupActions>().SetThisMonobehavior(this);
     }
 

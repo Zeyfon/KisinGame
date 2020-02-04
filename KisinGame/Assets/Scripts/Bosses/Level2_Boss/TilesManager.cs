@@ -34,6 +34,7 @@ public class TilesManager : MonoBehaviour
             electricTiles[i] = tilesArray[i].transform.GetChild(0).GetComponent<ElectrileTile_Boss>();
         }
         intervalTime = intervalSlowTime;
+        print("Tiling Done");
     }
 
 
