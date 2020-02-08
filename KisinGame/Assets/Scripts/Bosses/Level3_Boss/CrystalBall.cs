@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using HutongGames.PlayMaker;
+using Spine;
+using Spine.Unity;
 
 public class CrystalBall : MonoBehaviour
 {
@@ -15,17 +17,36 @@ public class CrystalBall : MonoBehaviour
     PlayMakerFSM myHealthFSM;
     Rigidbody2D rb;
 
+    Skeleton skeleton;
+    bool settingFinished = false;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindObjectOfType<PlayerIdentifer>().transform;
         if (!myHealthFSM) myHealthFSM = GetComponent<PlayMakerFSM>();
         rb = GetComponent<Rigidbody2D>();
+        GetSpineInfo();
+        settingFinished = true;
+        gameObject.SetActive(false);
+    }
+
+    void GetSpineInfo()
+    {
+        SkeletonAnimation skeletonAnimation = GetComponent<SkeletonAnimation>();
+        if (skeletonAnimation == null)
+        {
+            Debug.LogWarning("No Spine Assets are used in  " + gameObject.name);
+            return;
+        }
+        Spine.AnimationState spineAnimationState = skeletonAnimation.AnimationState;
+        skeleton = skeletonAnimation.skeleton;
+        print(skeleton);
     }
 
     #region WeaknessUpdate
     private void OnEnable()
     {
+        if (!settingFinished) return;
         transform.GetChild(0).GetComponent<CircleCollider2D>().enabled = false;
         if(!myHealthFSM) myHealthFSM = GetComponent<PlayMakerFSM>();
         SetNewWeakness();
@@ -33,25 +54,43 @@ public class CrystalBall : MonoBehaviour
 
     void SetNewWeakness()
     {
-
         //Yellow
         if (weakness == 1)
         {
-            //Here goes the change in the Health FSM and the skin change for the Spine
-            transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(1, 1, 0, 1);
+            if(skeleton == null)
+            {
+                transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(1, 1, 0, 1);
+                return;
+            }
+            skeleton.SetSkin("AMARILLA");
+            print("Amarilla");
         }
         //Blue
         if (weakness == 2)
         {
-            //Here goes the change in the Health FSM and the skin change for the Spine
-            transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 1);
+
+            if (skeleton == null)
+            {
+                transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 1);
+                return;
+            }
+            skeleton.SetSkin("AZUL");
+            print("Azul");
+
         }
         //Yellow
         if (weakness == 3)
         {
-            //Here goes the change in the Health FSM and the skin change for the Spine
-            transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+            if (skeleton == null)
+            {
+                transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+                return;
+            }
+            skeleton.SetSkin("ROJA");
+            print("Roja");
+
         }
+        //Weakness Change in the Health FSM
         StartCoroutine(ChangeWeaknessEvent());
 
     }
@@ -63,16 +102,20 @@ public class CrystalBall : MonoBehaviour
         myfsmEventData.IntData = weakness;
         HutongGames.PlayMaker.Fsm.EventData = myfsmEventData;
         myHealthFSM.Fsm.Event("WeaknessChange");
-        //print("Event Sent");
     }
     #endregion
 
     public void SetInvulnerabilityToBalls()
     {
-        //print("Removing Weakness Process");
         weakness = 0;
         StartCoroutine(ChangeWeaknessEvent());
-        transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+        if(skeleton == null)
+        {
+            transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+            return;
+        }
+        skeleton.SetSkin("NEUTRA");
+
     }
     //Called from CrystalBallAttack in parent. 
     //This is to initiate the movement to the player 

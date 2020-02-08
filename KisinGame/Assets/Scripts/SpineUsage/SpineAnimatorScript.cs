@@ -7,11 +7,12 @@ public class SpineAnimatorScript : StateMachineBehaviour
 {
     public float speed;
     public string animationName;
+    public bool loop = true;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         SkeletonAnimation anim = animator.GetComponent<SkeletonAnimation>();
-        anim.state.SetAnimation(0, animationName, true).TimeScale = speed;
+        anim.state.SetAnimation(0, animationName, loop).TimeScale = speed;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

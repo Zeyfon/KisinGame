@@ -10,7 +10,7 @@ public class ComboAttackL3B : MonoBehaviour, IAction
     [SerializeField] AttackTrigger attackTrigger;
     [Tooltip("Movement Speed")]
     [SerializeField] float maxSpeed = 5;
-    public float airTimeAttack4 = 1;
+    public float jumpAttackAirTime = 1;
 
     [Header("Attack Impulses")]
     [SerializeField] float impulse1 = 40;
@@ -32,12 +32,17 @@ public class ComboAttackL3B : MonoBehaviour, IAction
     Transform playerTransform;
     StressReceiver stressReceiver;
     Rigidbody2D rb;
+    bool mitlanActive=false;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         stressReceiver = Camera.main.GetComponent<StressReceiver>();
-        GetComponent<BossesSupActions>().SetThisMonobehavior(this);
+        GetComponent<BossesSupActions>().SetThisMonobehavior(this);            
+        GetComponent<Animator>().SetFloat("jumpAttackAirTime", jumpAttackAirTime);
+        mitlanActive = GetComponent<Level3Boss>().MitlanIsActive();
+        if(mitlanActive) transform.GetChild(5).GetComponent<Animator>().SetFloat("jumpAttackAirTime", jumpAttackAirTime);
+
     }
 
     //Player Transform set from the Level3Boss Script
@@ -55,9 +60,10 @@ public class ComboAttackL3B : MonoBehaviour, IAction
         return checker;
     }
 
-    public float MoveTowardsPlayer()
+    public float MoveTowardsPlayer(bool mitlanActive)
     {
         GetComponent<Animator>().Play("Moving");
+        if (mitlanActive) transform.GetChild(5).GetComponent<Animator>().Play("Moving");
         rb.velocity = new Vector2(maxSpeed, 0);
         float distance = Mathf.Abs(playerTransform.position.x - transform.position.x);
         return distance;
@@ -70,36 +76,36 @@ public class ComboAttackL3B : MonoBehaviour, IAction
         {
             case 1:
                 attackTrigger.damage = damage1;
-                attackCollider.offset = new Vector2(1.14f, 0);
-                attackCollider.size = new Vector2(1.5f, 2);
+                attackCollider.offset = new Vector2(1.18f, 0);
+                attackCollider.size = new Vector2(2.63f, 2);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack1");
                 break;
             case 2:
                 attackTrigger.damage = damage2;
-                attackCollider.offset = new Vector2(1.52f, 0);
-                attackCollider.size = new Vector2(2, 2);
+                attackCollider.offset = new Vector2(1.57f, .47f);
+                attackCollider.size = new Vector2(2, 2.97f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack2");
                 break;
             case 3:
-                attackTrigger.damage = damage3;
-                attackCollider.offset = new Vector2(1.52f, 0);
-                attackCollider.size = new Vector2(2, 2);
+                attackTrigger.damage = damage4;
+                attackCollider.offset = new Vector2(1.95f, 0.35f);
+                attackCollider.size = new Vector2(2.83f, 2.63f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack3");
                 break;
             case 4:
-                attackTrigger.damage = damage4;
-                attackCollider.offset = new Vector2(1.52f, 0);
-                attackCollider.size = new Vector2(2, 2);
+                attackTrigger.damage = damage3;
+                attackCollider.offset = new Vector2(1.71f, .19f);
+                attackCollider.size = new Vector2(2.44f, 2.34f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack4");
                 break;
         }
     }
     //Animation Event
-    void AttackTrigger_Disabled()
+    void AttackTrigger_Disable()
     {
         attackCollider.enabled = false;
     }
@@ -115,10 +121,10 @@ public class ComboAttackL3B : MonoBehaviour, IAction
                 AddImpulse(impulseType);
                 break;
             case 3:
+                GetComponent<SoundsConnection>().SendSoundEventToFSM("Jump");
                 AddImpulse(impulseType);
                 break;
             case 4:
-                GetComponent<SoundsConnection>().SendSoundEventToFSM("Jump");
                 AddImpulse(impulseType);
                 break;
             default:
@@ -137,13 +143,13 @@ public class ComboAttackL3B : MonoBehaviour, IAction
                 rb.AddForce(new Vector2(impulse2 * 1.1f, 0), ForceMode2D.Impulse);
                 break;
             case 3:
-                rb.AddForce(new Vector2(impulse3 * .9f, 0), ForceMode2D.Impulse);
-                break;
-            case 4:
                 // the points is going to is the floor down the player. For when wants to check player positions and he is in the air.
                 RaycastHit2D hit = Physics2D.Raycast(playerTransform.transform.position, Vector2.down, 15, LayerMask.GetMask("Floor"));
-                GetComponent<BossesSupActions>().DoParabolicJump(hit.point, airTimeAttack4, true);
+                GetComponent<BossesSupActions>().DoParabolicJump(hit.point, jumpAttackAirTime, true);
                 StartCoroutine(CameraShake());
+                break;
+            case 4:
+                rb.AddForce(new Vector2(impulse3 * .9f, 0), ForceMode2D.Impulse);
                 break;
             default:
                 break;
@@ -152,7 +158,7 @@ public class ComboAttackL3B : MonoBehaviour, IAction
 
     IEnumerator CameraShake()
     {
-        yield return new WaitForSeconds(airTimeAttack4);
+        yield return new WaitForSeconds(jumpAttackAirTime);
         stressReceiver.InduceStress(cameraShake);
     }
 

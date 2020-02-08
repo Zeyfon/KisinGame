@@ -78,7 +78,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4985110063092355114
 Transform:
   m_ObjectHideFlags: 0
@@ -109,11 +109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99e165d780ebbf4f8d73531aca9b22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToDisable: 0.8
   upperLimit: {fileID: 72961371}
   lowerLimit: {fileID: 824996567}
   upwardLerp: 0.08
   downwardLerp: 0.115
-  timeToDisable: 0.8
   timeBetweenUpDown: 1
   slideDownSound: {fileID: 8300000, guid: 5ce3efc3493676343a7f67c4ae46e68a, type: 3}
 --- !u!114 &6257990345565760746
@@ -321,7 +321,7 @@ Transform:
   m_GameObject: {fileID: 8721171941650634150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 1, z: 1}
+  m_LocalScale: {x: 0.8925, y: 0.425, z: 1}
   m_Children: []
   m_Father: {fileID: 4985110063092355114}
   m_RootOrder: 0
@@ -351,6 +351,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -363,7 +364,7 @@ SpriteRenderer:
   m_SortingLayerID: 833086847
   m_SortingLayer: 3
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300002, guid: e8a1ce3b07faee645a12533967bc7587, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1d15853f5d433c4d843460dd30f6c06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

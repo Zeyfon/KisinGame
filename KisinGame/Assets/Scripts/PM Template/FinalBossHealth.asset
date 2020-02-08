@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1219815696, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
-  m_Name: FinalBossHealth_Mitlan
+  m_Name: FinalBossHealth
   m_EditorClassIdentifier: 
   category: General
   fsm:
@@ -24,8 +24,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 574.875
-        y: 193.44531
+        x: 568.7578
+        y: 190.91406
         width: 100
         height: 32
       isBreakpoint: 0
@@ -36,81 +36,31 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Get Damage Text from EnemyManager
+        toState: Set Initial UI Health
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetIntValue
-        - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.IntOperator
-        - HutongGames.PlayMaker.Actions.SetFsmInt
         customNames:
         - 
         - 
-        - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000003000000070000000c000000
-        actionHashCodes: 603dd905184b570414180903081bbf05
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 603dd90514180903
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: Sounds
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 1
-            name: enemyEffects
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: stunCircle
-            tooltip: 
-            showInInspector: 1
-            networkSync: 0
-            value: {fileID: 0}
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Sounds
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Untagged
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: StunCircle
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: circleThreshold
+        fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -147,12 +97,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: circleThreshold
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          value: 100
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -160,39 +104,30 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00030000000000
+        byteData: 000300000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1000000010000000010000001400000012000000120000001300000010000000100000000700000010000000010000001400000012000000120000001000000001000000
+        paramDataType: 1000000010000000010000001000000010000000070000001000000001000000
         paramName:
         - intVariable
         - intValue
         - everyFrame
-        - gameObject
-        - childName
-        - withTag
-        - storeResult
         - integer1
         - integer2
         - operation
         - storeResult
         - everyFrame
-        - gameObject
-        - fsmName
-        - variableName
-        - setValue
-        - everyFrame
-        paramDataPos: 0000000001000000000000000000000000000000010000000000000002000000030000000100000004000000050000000100000002000000030000000500000006000000
-        paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000000000000400000000000000010000000000000000000000000000000000000001000000
+        paramDataPos: 0000000001000000000000000200000003000000010000000400000005000000
+        paramByteDataSize: 0000000000000000010000000000000000000000040000000000000001000000
     - name: Listener
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 550.5625
-        y: 426.8828
+        y: 410.8828
         width: 145
         height: 32
       isBreakpoint: 0
@@ -252,7 +187,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 846.28906
-        y: 431.85938
+        y: 415.85938
         width: 125
         height: 32
       isBreakpoint: 0
@@ -460,7 +395,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1651.75
-        y: 819.4453
+        y: 803.4453
         width: 132
         height: 32
       isBreakpoint: 0
@@ -505,7 +440,7 @@ MonoBehaviour:
               useVariable: 1
               name: Sounds
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -570,7 +505,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2321.9219
-        y: 441.10156
+        y: 425.10156
         width: 173
         height: 48
       isBreakpoint: 0
@@ -661,7 +596,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1642.8203
-        y: 936.8281
+        y: 920.8281
         width: 131
         height: 32
       isBreakpoint: 0
@@ -706,7 +641,7 @@ MonoBehaviour:
               useVariable: 1
               name: Sounds
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -771,7 +706,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2374.7266
-        y: 1078.2266
+        y: 1062.2266
         width: 250.5
         height: 64
       isBreakpoint: 0
@@ -998,7 +933,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1660.9062
-        y: 1037.5469
+        y: 1021.5469
         width: 118
         height: 32
       isBreakpoint: 0
@@ -1073,7 +1008,7 @@ MonoBehaviour:
               useVariable: 1
               name: Sounds
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -1241,7 +1176,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2657.2422
-        y: 919.21875
+        y: 903.21875
         width: 146
         height: 48
       isBreakpoint: 0
@@ -1323,7 +1258,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1124.3125
-        y: 826.4531
+        y: 810.4531
         width: 192
         height: 32
       isBreakpoint: 0
@@ -1534,7 +1469,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 853.9375
-        y: 818.08594
+        y: 802.08594
         width: 121
         height: 48
       isBreakpoint: 0
@@ -1625,7 +1560,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1391.7812
-        y: 822.2578
+        y: 806.2578
         width: 160
         height: 32
       isBreakpoint: 0
@@ -1750,7 +1685,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 604.65625
-        y: 709.28125
+        y: 693.28125
         width: 143
         height: 16
       isBreakpoint: 0
@@ -1939,7 +1874,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1111.4219
-        y: 936.7344
+        y: 920.7344
         width: 205
         height: 32
       isBreakpoint: 0
@@ -2150,7 +2085,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 839.58594
-        y: 891.8281
+        y: 875.8281
         width: 134
         height: 48
       isBreakpoint: 0
@@ -2241,7 +2176,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1380.3906
-        y: 935.46094
+        y: 919.46094
         width: 173
         height: 32
       isBreakpoint: 0
@@ -2366,7 +2301,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 587.8047
-        y: 1020.3281
+        y: 1004.3281
         width: 130
         height: 32
       isBreakpoint: 0
@@ -2377,7 +2312,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Listener
+        toState: Compare Current Phase
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2563,7 +2498,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2556.3906
-        y: 642.6094
+        y: 626.6094
         width: 201
         height: 32
       isBreakpoint: 0
@@ -2683,7 +2618,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2056.6172
-        y: 604.9922
+        y: 588.9922
         width: 203.5
         height: 32
       isBreakpoint: 0
@@ -2803,7 +2738,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2087.2969
-        y: 680.375
+        y: 664.375
         width: 159
         height: 48
       isBreakpoint: 0
@@ -2885,7 +2820,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2068.0312
-        y: 773.1328
+        y: 757.1328
         width: 257
         height: 64
       isBreakpoint: 0
@@ -3112,7 +3047,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1114.0234
-        y: 1044.2422
+        y: 1028.2422
         width: 205
         height: 32
       isBreakpoint: 0
@@ -3323,7 +3258,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1381.4922
-        y: 1040.0469
+        y: 1024.0469
         width: 173
         height: 32
       isBreakpoint: 0
@@ -3448,7 +3383,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 837.5156
-        y: 1030.0781
+        y: 1014.0781
         width: 134
         height: 48
       isBreakpoint: 0
@@ -3539,7 +3474,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 564.0078
-        y: 1148.2422
+        y: 1132.2422
         width: 180
         height: 32
       isBreakpoint: 0
@@ -3550,7 +3485,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Listener
+        toState: Compare Current Phase
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -3735,8 +3670,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 603.41406
-        y: 839.0703
+        x: 600.6328
+        y: 814.7344
         width: 118
         height: 32
       isBreakpoint: 0
@@ -3747,7 +3682,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Listener
+        toState: Compare Current Phase
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -3796,9 +3731,9 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 249.60938
-        y: 846.28906
+        y: 830.28906
         width: 187
-        height: 48
+        height: 64
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -3813,6 +3748,14 @@ MonoBehaviour:
         colorIndex: 0
       - fsmEvent:
           name: SecondPhase
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Listener
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: DoNothing
           isSystemEvent: 0
           isGlobal: 0
         toState: Listener
@@ -3865,7 +3808,7 @@ MonoBehaviour:
         stringParams:
         - SecondPhase
         - FirstPhase
-        - 
+        - DoNothing
         byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
@@ -3887,7 +3830,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 241.05469
-        y: 719.7422
+        y: 703.7422
         width: 201
         height: 48
       isBreakpoint: 0
@@ -3978,7 +3921,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1089.2578
-        y: 444.71094
+        y: 428.71094
         width: 148
         height: 48
       isBreakpoint: 0
@@ -4060,7 +4003,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1102.0625
-        y: 555.5547
+        y: 539.5547
         width: 106
         height: 32
       isBreakpoint: 0
@@ -4105,7 +4048,7 @@ MonoBehaviour:
               useVariable: 1
               name: Sounds
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -4170,7 +4113,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1645.6953
-        y: 1132.3125
+        y: 1116.3125
         width: 144
         height: 32
       isBreakpoint: 0
@@ -4215,7 +4158,7 @@ MonoBehaviour:
               useVariable: 1
               name: Sounds
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
               value: {fileID: 0}
           fsmName:
@@ -4280,7 +4223,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1114.2969
-        y: 1132.2188
+        y: 1116.2188
         width: 205
         height: 32
       isBreakpoint: 0
@@ -4491,7 +4434,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1383.2656
-        y: 1130.9453
+        y: 1114.9453
         width: 173
         height: 32
       isBreakpoint: 0
@@ -4616,7 +4559,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 843.8203
-        y: 1116.9922
+        y: 1100.9922
         width: 134
         height: 48
       isBreakpoint: 0
@@ -4707,7 +4650,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2163.7344
-        y: 939.9297
+        y: 923.9297
         width: 164
         height: 48
       isBreakpoint: 0
@@ -4798,7 +4741,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2416.2578
-        y: 872.08594
+        y: 856.08594
         width: 154
         height: 32
       isBreakpoint: 0
@@ -4883,7 +4826,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 51
-        y: 431
+        y: 415
         width: 119
         height: 32
       isBreakpoint: 0
@@ -5091,119 +5034,13 @@ MonoBehaviour:
         - functionCall
         paramDataPos: 00000000010000000000000000000000010000000500000000000000
         paramByteDataSize: 00000000000000000100000000000000040000000400000000000000
-    - name: Set Initial UI Health
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 562.53125
-        y: 320.40625
-        width: 162
-        height: 48
-      isBreakpoint: 0
-      isSequence: 1
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: Loop
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Loop
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Listener
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GameObjectIsNull
-        - HutongGames.PlayMaker.Actions.SetBoolValue
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 1565620527fbe103
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: healthBar
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: initialized
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - Loop
-        - 
-        byteData: 0000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1300000017000000170000001100000001000000110000001100000001000000
-        paramName:
-        - gameObject
-        - isNull
-        - isNotNull
-        - storeResult
-        - everyFrame
-        - boolVariable
-        - boolValue
-        - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000010000000200000001000000
-        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000001000000
     - name: Initialized
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 576.66406
-        y: 115.82031
+        x: 569.10156
+        y: 101.265625
         width: 100
         height: 48
       isBreakpoint: 0
@@ -5279,170 +5116,13 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: Get Damage Text from EnemyManager
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 567.35156
-        y: 242.49219
-        width: 284
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Set Initial UI Health
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetFsmGameObject
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 5b66cf00
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: damageText
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: enemyManager
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: EnemyManager
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: damageText
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1400000012000000120000001300000001000000
-        paramName:
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
-        - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000001000000
-    - name: Loop
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 826.66406
-        y: 313.9922
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Set Initial UI Health
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.NextFrameEvent
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 88611604
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 17000000
-        paramName:
-        - sendEvent
-        paramDataPos: 00000000
-        paramByteDataSize: 00000000
     - name: Complete Circle Damage
       description: Event coming from CrystalBallAttack Script
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 2841.9531
-        y: 575.41406
+        y: 559.41406
         width: 253
         height: 32
       isBreakpoint: 0
@@ -5513,6 +5193,210 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000001000000
+    - name: Set Initial UI Health
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 562.4922
+        y: 271.28125
+        width: 162
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Get Damage Text from EnemyManager 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetFsmInt
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 081bbf05
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: healthBar
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: HealthBar
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: maxHealthInt
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: maxHealth
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 1500
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000012000000120000001000000001000000
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - setValue
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
+    - name: Get Damage Text from EnemyManager 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 555.3047
+        y: 337.73438
+        width: 297
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Listener
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetParent
+        - HutongGames.PlayMaker.Actions.GetFsmGameObject
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000002000000
+        actionHashCodes: d97b72025b66cf00
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: enemyManager
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: damageText
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: enemyManager
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: EnemyManager
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: damageText
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 14000000130000001400000012000000120000001300000001000000
+        paramName:
+        - gameObject
+        - storeResult
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000010000000100000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -5529,13 +5413,22 @@ MonoBehaviour:
     - name: Dead
       isSystemEvent: 0
       isGlobal: 0
+    - name: DoNothing
+      isSystemEvent: 0
+      isGlobal: 0
     - name: FirstPhase
       isSystemEvent: 0
       isGlobal: 0
     - name: Interrupted
       isSystemEvent: 0
       isGlobal: 0
+    - name: Izel
+      isSystemEvent: 0
+      isGlobal: 0
     - name: Loop
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Mitlan
       isSystemEvent: 0
       isGlobal: 0
     - name: No
@@ -5551,6 +5444,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: SecondPhase
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: StartFight
       isSystemEvent: 0
       isGlobal: 0
     - name: Stunned
@@ -5655,6 +5551,12 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: 1500
+      - useVariable: 1
+        name: oneThirdHealth
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables:
       - useVariable: 1
         name: invulnerability
@@ -5690,7 +5592,7 @@ MonoBehaviour:
       - useVariable: 1
         name: Sounds
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
@@ -5753,7 +5655,14 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
-      objectVariables: []
+      objectVariables:
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: 
+        value: {fileID: 0}
       materialVariables: []
       textureVariables: []
       arrayVariables: []
@@ -5761,7 +5670,7 @@ MonoBehaviour:
       categories:
       - 
       - Behavior
-      variableCategoryIDs: 00000000010000000100000000000000010000000000000000000000000000000000000001000000000000000100000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000100000001000000000000000100000000000000000000000000000000000000010000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

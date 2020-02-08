@@ -14,11 +14,14 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] float timeToActivateBoss = 1;
     [SerializeField] Transform dialogueList;
 
+    [SerializeField] bool overrideSave =false;
+
     bool initialized = false;
     BossStarter currentBoss;
 
     private void Start()
     {
+        if (overrideSave) return;
         if (PlayerPrefs.GetInt(bossName) == 1)
         {
             BossDefeated();
@@ -91,25 +94,11 @@ public class BossRoomController : MonoBehaviour
         BossDefeated();
         GameObject gameManager = GameObject.FindObjectOfType<SetActiveSceneAction>().gameObject;
         gameManager.GetComponent<PlayMakerFSM>().Fsm.Event("SaveGame");
-        //if (bossType == (int)Bosses.levelBoss)
-        //{
-        //    print("LevelBoss defeated");
-
-        //}
 
         yield return new WaitForSeconds(.5f);
         DisableUI();
         yield return new WaitForSeconds(.5f);
 
-        //if (bossType == (int)Bosses.izelBoss)
-        //{
-        //    print("Izel Boss defeated");
-        //}
-
-        //if (bossType == (int)Bosses.mitlaBoss)
-        //{
-        //    print("Mitlan Boss defetead");
-        //}
         if(dialogueID != 10)
         {
             RunDialogue(dialogueID);

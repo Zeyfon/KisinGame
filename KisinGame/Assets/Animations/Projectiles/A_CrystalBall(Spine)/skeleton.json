@@ -1,0 +1,66 @@
+{
+"skeleton": {
+	"hash": "7nov+MQbvCElrGB+WMw4DpEnDvU",
+	"spine": "3.8.83",
+	"x": -779,
+	"y": -591,
+	"width": 1559,
+	"height": 1182,
+	"images": "./images/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Cristal ball", "bone": "root", "attachment": "Cristal ball" }
+],
+"skins": [
+	{
+		"name": "AMARILLA",
+		"attachments": {
+			"Cristal ball": {
+				"Cristal ball": { "name": "AMARILLA/Comp 1_00000", "x": 0.5, "width": 1559, "height": 1182 }
+			}
+		}
+	},
+	{
+		"name": "AZUL",
+		"attachments": {
+			"Cristal ball": {
+				"Cristal ball": { "name": "AZUL/Comp 1_00000", "x": 0.5, "width": 1559, "height": 1182 }
+			}
+		}
+	},
+	{
+		"name": "NEUTRA",
+		"attachments": {
+			"Cristal ball": {
+				"Cristal ball": { "name": "Comp 1_00000", "x": 0.5, "width": 1559, "height": 1182 }
+			}
+		}
+	},
+	{
+		"name": "ROJA",
+		"attachments": {
+			"Cristal ball": {
+				"Cristal ball": { "name": "ROJA/Comp 1_00000", "x": 0.5, "width": 1559, "height": 1182 }
+			}
+		}
+	}
+],
+"animations": {
+	"CrsitalBall_Idle": {
+		"bones": {
+			"root": {
+				"rotate": [
+					{},
+					{ "time": 0.1667, "angle": 86.53 },
+					{ "time": 0.3333, "angle": -119.42 },
+					{ "time": 0.5, "angle": -0.38 }
+				]
+			}
+		}
+	}
+}
+}

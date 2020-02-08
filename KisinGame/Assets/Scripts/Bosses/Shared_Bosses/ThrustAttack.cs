@@ -7,9 +7,12 @@ public class ThrustAttack : MonoBehaviour
     [SerializeField] float attackTime = 0.5f;
     [SerializeField] float initialJumpTime = 1f;
 
+
     [Header("Objects")]
     [SerializeField] BoxCollider2D attackCollider;
+    [UnityEngine.Tooltip("Set at runtinme")]
     [SerializeField] Transform rightSpot;
+    [UnityEngine.Tooltip("Set at runtinme")]
     [SerializeField] Transform leftSpot;
 
     [Header("Trigger Values")]
@@ -21,6 +24,9 @@ public class ThrustAttack : MonoBehaviour
     Vector3 landingSpot;
     private void Start()
     {
+        BossRoomController bossRoomController = GetComponent<Level3Boss>().bossRoomController;
+        rightSpot = bossRoomController.transform.parent.GetChild(2);
+        leftSpot = bossRoomController.transform.parent.GetChild(3);
         GetComponent<BossesSupActions>().rightSpot = rightSpot;
         GetComponent<BossesSupActions>().leftSpot = leftSpot;
     }

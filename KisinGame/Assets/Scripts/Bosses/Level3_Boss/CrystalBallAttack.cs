@@ -9,6 +9,7 @@ public class CrystalBallAttack : MonoBehaviour
 {
     #region Inspector Variables
     [Header("Internal Variables")]
+    [UnityEngine.Tooltip("Set at runtinme")]
     [SerializeField] Transform middleSpot = null;
     [SerializeField] float jumpToInitialPositionTime = 1;
 
@@ -31,12 +32,16 @@ public class CrystalBallAttack : MonoBehaviour
     Coroutine ballTimerCoroutine;
     Coroutine rotationCoroutine;
     bool attack = false;
+    bool mitlanActive = false;
     int counter = 0;
     int currentActiveBalls = 0;
 
     private void Start()
     {
+        BossRoomController bossRoomController = GetComponent<Level3Boss>().bossRoomController;
+        middleSpot = bossRoomController.transform.parent.GetChild(1);
         myHealthListenerFSM = GetComponent<PlayMakerFSM>();
+        mitlanActive = GetComponent<Level3Boss>().MitlanIsActive();
     }
 
     //Called from Animation. Produce Sound 
@@ -127,7 +132,6 @@ public class CrystalBallAttack : MonoBehaviour
                         0);
         }
     }
-
     void EnableCrystalBalls()
     {
         foreach(Transform crystalball in crystalBalls)
@@ -166,6 +170,7 @@ public class CrystalBallAttack : MonoBehaviour
             if(timer > rotationTime && !flag)
             {
                 GetComponent<Animator>().SetInteger("Attack", 80);
+                if (mitlanActive) transform.GetChild(5).GetComponent<Animator>().SetInteger("Attack", 80);
                 flag = true;
             }
             yield return null;
@@ -253,6 +258,8 @@ public class CrystalBallAttack : MonoBehaviour
         if(counter == currentActiveBalls)
         {
             GetComponent<Animator>().SetInteger("Attack", 90);
+            if (mitlanActive) transform.GetChild(5).GetComponent<Animator>().SetInteger("Attack", 90);
+
         }
     }
 

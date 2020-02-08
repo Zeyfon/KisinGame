@@ -58,6 +58,7 @@ public class BossesSupActions : MonoBehaviour
         Vector3 jumpVector = CalculateJumpSpeed(targetPosition, time);
         if (adjust)
         {
+            print("Attack was Adjusted");
             if (jumpVector.x < 0)
             {
                 jumpVector = new Vector3(jumpVector.x + adjuster, jumpVector.y, 0);
