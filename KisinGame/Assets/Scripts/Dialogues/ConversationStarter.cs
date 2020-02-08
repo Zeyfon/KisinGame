@@ -5,13 +5,15 @@ using PixelCrushers.DialogueSystem;
 
 public class ConversationStarter : MonoBehaviour
 {
+    [SerializeField] BossRoomController bossRoomController;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            print("Dialogue starts by trigger contact");
+            //The collider is disabled to stop the dialogue to be activated again
             GetComponent<Collider2D>().enabled = false;
+            collision.GetComponent<PlayerIdentifer>().GetDialogueReference(transform);
         }
 
     }
@@ -19,6 +21,10 @@ public class ConversationStarter : MonoBehaviour
     public void StartConversation()
     {
         GetComponent<DialogueSystemTrigger>().OnUse();
-        print("Dialogue should appear");
+    }
+
+    public void StartBossFight()
+    {
+        bossRoomController.StartFight();
     }
 }

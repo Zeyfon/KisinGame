@@ -9,7 +9,8 @@ public class Level3Boss : MonoBehaviour, BossStarter
         Dialogue1=1, Dialogue2=2
     }
     [Header("Internal Values")]
-    [SerializeField] BossRoomController bossRoomController;
+    [SerializeField] bool mitlanActive = false;
+    public BossRoomController bossRoomController;
     [SerializeField] Dialogues dialogues;
     public int phase = 1;
     public bool colorChange = false;
@@ -18,7 +19,8 @@ public class Level3Boss : MonoBehaviour, BossStarter
 
 
     Rigidbody2D rb;
-    Animator anim;
+    Animator animIzel;
+    Animator animMitlan;
     StressReceiver stressReceiver;
     Level3BossControlTimers bossControlTimers;
     Transform playerTransform;
@@ -35,8 +37,14 @@ public class Level3Boss : MonoBehaviour, BossStarter
         print(dialogueID);
         bossControlTimers = GetComponent<Level3BossControlTimers>();
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        anim.SetInteger("Phase", phase);
+        animIzel = GetComponent<Animator>();
+        animIzel.SetInteger("Phase", phase);
+        if (mitlanActive)
+        {
+            animMitlan = transform.GetChild(5).GetComponent<Animator>();
+            animMitlan.SetInteger("Phase", phase);
+        }
+
         StartCoroutine(SetVariablesInDependencies());
         bossRoomController.SetCurrentBoss(this);
     }
@@ -49,6 +57,10 @@ public class Level3Boss : MonoBehaviour, BossStarter
         GetComponent<ThrustAttack>().GetPlayerTransform(playerTransform);
     }
     
+    public bool MitlanIsActive()
+    {
+        return mitlanActive;
+    }
     #region Control
     // Called from the Dialogue Level3Dialogue 1 Conversation Ended Event
     public void StartActions()
@@ -56,7 +68,6 @@ public class Level3Boss : MonoBehaviour, BossStarter
         if (phase > 1)
         {
             canCrystalRain = true;
-
         }
         StartCoroutine(StartBossCoroutine());
     }
@@ -113,28 +124,33 @@ public class Level3Boss : MonoBehaviour, BossStarter
     #region Actions
     IEnumerator CloseAttack()
     {
-        anim.SetInteger("Attack", 0);
+        animIzel.SetInteger("Attack", 0);
         float distance = GetComponent<ComboAttackL3B>().DistanceFromPlayer();
         while (distance > 1)
         {
-            distance = GetComponent<ComboAttackL3B>().MoveTowardsPlayer();
+            distance = GetComponent<ComboAttackL3B>().MoveTowardsPlayer(mitlanActive);
             yield return new WaitForEndOfFrame();
         }
-        //rb.velocity = new Vector2(0, 0);
-        anim.Play("AttackPrep1");
-        while (anim.GetInteger("Attack") != 100)
+        animIzel.Play("AttackPrep1");
+        if (mitlanActive) animMitlan.Play("AttackPrep1");
+        while (animIzel.GetInteger("Attack") != 100)
         {
             yield return null;
         }
-        anim.SetInteger("Attack", 0);
+        animIzel.SetInteger("Attack", 0);
         StartCoroutine(ActionFinished(1));
     }
 
     IEnumerator CrystalBallsAttack()
     {
-        anim.SetInteger("Attack", 0);
-        anim.Play("JumpToMiddle");
-        while (anim.GetInteger("Attack") != 100)
+        if(mitlanActive)
+        {
+            animMitlan.SetInteger("Attack", 0);
+            animMitlan.Play("JumpToMiddle");
+        }
+        animIzel.SetInteger("Attack", 0);
+        animIzel.Play("JumpToMiddle");
+        while (animIzel.GetInteger("Attack") != 100)
         {
             yield return null;
         }
@@ -146,24 +162,33 @@ public class Level3Boss : MonoBehaviour, BossStarter
     IEnumerator ThrustAttack()
     {
         GetComponent<ThrustAttack>().AdjustAttackTrigger();
-        anim.SetInteger("Attack", 0);
-        anim.Play("JumpToSide");
+        if (mitlanActive)
+        {
+            animMitlan.SetInteger("Attack", 0);
+            animMitlan.Play("JumpToSide");
+        }
+        animIzel.SetInteger("Attack", 0);
+        animIzel.Play("JumpToSide");
         bossControlTimers.TimerForNextThrustAttack();
-        while (anim.GetInteger("Attack") != 100)
+        while (animIzel.GetInteger("Attack") != 100)
         {
             yield return null;
         }
-        anim.SetInteger("Attack", 0);
         StartCoroutine(ActionFinished(.5f));
         yield return null;
     }
 
     IEnumerator CrystalRainAttack()
     {
-        anim.SetInteger("Attack", 0);
-        anim.Play("CrystalRainStarts");
+        if (mitlanActive)
+        {
+            animMitlan.SetInteger("Attack", 0);
+            animMitlan.Play("CrystalRainStarts");
+        }
+        animIzel.SetInteger("Attack", 0);
+        animIzel.Play("CrystalRainStarts");
         bossControlTimers.TimerForNextCrystalRainAttack();
-        while (anim.GetInteger("Attack") != 100)
+        while (animIzel.GetInteger("Attack") != 100)
         {
             yield return null;
         }
@@ -174,10 +199,10 @@ public class Level3Boss : MonoBehaviour, BossStarter
 
     IEnumerator WeaknessChange()
     {
-        anim.SetInteger("Attack", 0);
-        anim.Play("WeaknessChange");
+        animIzel.SetInteger("Attack", 0);
+        animIzel.Play("WeaknessChange");
         bossControlTimers.TimerForNextWeaknessChange();
-        while (anim.GetInteger("Attack") != 100)
+        while (animIzel.GetInteger("Attack") != 100)
         {
             yield return null;
         }
@@ -204,10 +229,15 @@ public class Level3Boss : MonoBehaviour, BossStarter
 
     IEnumerator InterruptionStarts()
     {
-        anim.SetInteger("Stun", 0);
-        anim.Play("Interruption");
+        if (mitlanActive)
+        {
+            animMitlan.SetInteger("Stun", 0);
+            animMitlan.Play("Interruption");
+        }
+        animIzel.SetInteger("Stun", 0);
+        animIzel.Play("Interruption");
         //print("Interruption Started");
-        while (anim.GetInteger("Stun") != 100)
+        while (animIzel.GetInteger("Stun") != 100)
         {
             yield return null;
         }
@@ -232,10 +262,15 @@ public class Level3Boss : MonoBehaviour, BossStarter
 
     IEnumerator StunStarts()
     {
-        anim.SetInteger("Stun", 0);
-        anim.Play("StunStarts");
+        if (mitlanActive)
+        {
+            animMitlan.SetInteger("Stun", 0);
+            animMitlan.Play("StunStarts");
+        }
+        animIzel.SetInteger("Stun", 0);
+        animIzel.Play("StunStarts");
         //print("Stun Starts");
-        while (anim.GetInteger("Stun") != 100)
+        while (animIzel.GetInteger("Stun") != 100)
         {
             yield return null;
         }
@@ -253,7 +288,11 @@ public class Level3Boss : MonoBehaviour, BossStarter
 
     IEnumerator DeadStarts()
     {
-        anim.Play("Dead");
+        if (mitlanActive)
+        {
+            animMitlan.Play("Dead");
+        }
+        animIzel.Play("Dead");
         yield return null;
     }
 
@@ -288,7 +327,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
     void PhaseChange(int nextPhase)
     {
         phase = nextPhase;
-        anim.SetInteger("Phase", phase);
+        animIzel.SetInteger("Phase", phase);
         colorChange = true;
         if(phase == 2)
         {

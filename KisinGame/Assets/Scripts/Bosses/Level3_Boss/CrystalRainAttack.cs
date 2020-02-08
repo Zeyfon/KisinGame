@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class CrystalRainAttack : MonoBehaviour
 {
+    [UnityEngine.Tooltip("Set at runtinme")]
     [SerializeField] List<Transform> rainSlots = new List<Transform>();
     [SerializeField] float timeBetweenRainSlotsAttack = 1f;
     [SerializeField] float timetoStartRainAttack = 1f;
-    [Tooltip("To get the initial y position")]
-    [SerializeField] Transform rainSlotInitialPosition;
 
     public int disabledRainSlotQuantity = 0;
 
     CrystalRainAttack thisAction;
     Vector3 initialPosition;
     int activeRainSlotsQuantity = 0;
+    bool mitlanActive = false;
+
 
     private void Start()
     {
-        initialPosition = rainSlotInitialPosition.position;
+        BossRoomController bossController= GetComponent<Level3Boss>().bossRoomController;
+        rainSlots = bossController.transform.parent.GetChild(4).GetComponent<CrystalRainAttackList>().crystalRainList;
+        initialPosition = rainSlots[0].transform.position;
+        mitlanActive = GetComponent<Level3Boss>().MitlanIsActive();
+
     }
 
     //Animation Event. Produce Sound
@@ -53,6 +58,8 @@ public class CrystalRainAttack : MonoBehaviour
         }
 
         GetComponent<Animator>().SetInteger("Attack", 90);
+        if (mitlanActive) transform.GetChild(5).GetComponent<Animator>().SetInteger("Attack", 90);
+
     }
 
 

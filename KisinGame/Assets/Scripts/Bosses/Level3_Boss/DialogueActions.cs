@@ -48,4 +48,11 @@ public class DialogueActions : MonoBehaviour
         mitlanBoss.transform.position = izelBoss.transform.position;
         mitlanBoss.SetActive(true);
     }
+
+    public void GameFinished()
+    {
+        print("Ending Game");
+        FindObjectOfType<BossRoomController>().GameFinished();
+        mitlanBoss.GetComponent<Level3Boss>().DestroyBoss();
+    }
 }
