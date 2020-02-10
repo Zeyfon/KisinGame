@@ -2700,7 +2700,7 @@ PrefabInstance:
     - target: {fileID: 1416310167943019998, guid: 1a2de342eeb563b47b7f24fb4ec743b8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.34
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 1416310167943019998, guid: 1a2de342eeb563b47b7f24fb4ec743b8,
         type: 3}
@@ -2712,6 +2712,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1416310168285298742, guid: 1a2de342eeb563b47b7f24fb4ec743b8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0279d31159dcd4844a51f6cb18a9aec8, type: 2}
     - target: {fileID: 5389417802761453890, guid: 1a2de342eeb563b47b7f24fb4ec743b8,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2755,7 +2760,7 @@ PrefabInstance:
     - target: {fileID: 5885235221440620974, guid: 1a2de342eeb563b47b7f24fb4ec743b8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.4640458
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5885235221440620974, guid: 1a2de342eeb563b47b7f24fb4ec743b8,
         type: 3}
@@ -2920,18 +2925,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5885235221840770635}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5885235221840770638 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2547789853926446112, guid: 1a2de342eeb563b47b7f24fb4ec743b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 5885235221840770635}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5885235221840770639 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5927474019154441727, guid: 1a2de342eeb563b47b7f24fb4ec743b8,
@@ -2950,5 +2943,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4a783a8a4f4654098f28dac14ac5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam1: {fileID: 5885235221840770638}
-  cam2: {fileID: 0}
