@@ -46,6 +46,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GetComponent
         - HutongGames.PlayMaker.Actions.GetParent
         - HutongGames.PlayMaker.Actions.GetChild
+        - HutongGames.PlayMaker.Actions.SetProperty
         - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
@@ -53,10 +54,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 000000000400000007000000090000000d000000
-        actionHashCodes: 184b570404d81402d97b7202184b570409faa102
+        - 
+        actionEnabled: 010101010101
+        actionIsOpen: 010101010101
+        actionStartIndex: 000000000400000007000000090000000d0000000f000000
+        actionHashCodes: 184b570404d81402d97b7202184b57045ac8520409faa102
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -114,7 +116,139 @@ MonoBehaviour:
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
-        fsmPropertyParams: []
+        fsmPropertyParams:
+        - TargetObject:
+            useVariable: 1
+            name: image
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            typeName: UnityEngine.UI.Image
+            value: {fileID: 0}
+          TargetTypeName: UnityEngine.UI.Image
+          PropertyName: fillAmount
+          BoolParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          FloatParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          IntParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          Vector2Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: System.Single
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            enumName: HutongGames.PlayMaker.None
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: UnityEngine.Object
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 1
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
@@ -145,7 +279,7 @@ MonoBehaviour:
         - useVariable: 1
           name: image
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
           typeName: UnityEngine.UI.Image
           value: {fileID: 0}
@@ -176,12 +310,12 @@ MonoBehaviour:
         - 
         - 
         - ThresholdReceived
-        byteData: 0001
+        byteData: 000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000001200000013000000140000001800000001000000140000001300000014000000120000001200000013000000100000001000000017000000170000001700000001000000
+        paramDataType: 140000001200000012000000130000001400000018000000010000001400000013000000140000001200000012000000130000002400000001000000100000001000000017000000170000001700000001000000
         paramName:
         - gameObject
         - childName
@@ -196,14 +330,16 @@ MonoBehaviour:
         - childName
         - withTag
         - storeResult
+        - targetProperty
+        - everyFrame
         - integer1
         - integer2
         - equal
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000010000000000000000000000020000000100000003000000020000000300000002000000000000000100000000000000010000000200000001000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000001000000000000000100000000000000000000000200000001000000030000000200000003000000020000000000000001000000000000000100000000000000010000000200000002000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: Listener
       description: 
       colorIndex: 0
@@ -1145,7 +1281,7 @@ MonoBehaviour:
             useVariable: 1
             name: image
             tooltip: 
-            showInInspector: 0
+            showInInspector: 1
             networkSync: 0
             typeName: UnityEngine.UI.Image
             value: {fileID: 0}
@@ -1373,7 +1509,7 @@ MonoBehaviour:
             useVariable: 1
             name: image
             tooltip: 
-            showInInspector: 0
+            showInInspector: 1
             networkSync: 0
             typeName: UnityEngine.UI.Image
             value: {fileID: 0}
@@ -2173,7 +2309,7 @@ MonoBehaviour:
             useVariable: 1
             name: image
             tooltip: 
-            showInInspector: 0
+            showInInspector: 1
             networkSync: 0
             typeName: UnityEngine.UI.Image
             value: {fileID: 0}
@@ -2670,7 +2806,7 @@ MonoBehaviour:
       - useVariable: 1
         name: image
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
         typeName: UnityEngine.UI.Image
         value: {fileID: 0}

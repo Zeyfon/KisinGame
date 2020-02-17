@@ -11,6 +11,7 @@ public class CrystalBall : MonoBehaviour
     [SerializeField] float rotateSpeed = 5;
     [SerializeField] float disablingTimer = 2;
     [SerializeField] float speed = 5;
+    [SerializeField] Transform soundsBoss = null;
     public int weakness;
 
     Transform player;
@@ -125,6 +126,7 @@ public class CrystalBall : MonoBehaviour
         LookAtPlayer();
         StartCoroutine(MoveTowardsPlayer());
         transform.GetChild(0).GetComponent<CircleCollider2D>().enabled = true;
+        soundsBoss.GetComponent<PlayMakerFSM>().SendEvent("CrystalBallStartMoving");
     }
 
     void LookAtPlayer()

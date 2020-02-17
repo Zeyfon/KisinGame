@@ -170,7 +170,7 @@ public class CrystalBallAttack : MonoBehaviour
             if(timer > rotationTime && !flag)
             {
                 GetComponent<Animator>().SetInteger("Attack", 80);
-                if (mitlanActive) transform.GetChild(5).GetComponent<Animator>().SetInteger("Attack", 80);
+                if (mitlanActive) transform.GetChild(4).GetComponent<Animator>().SetInteger("Attack", 80);
                 flag = true;
             }
             yield return null;

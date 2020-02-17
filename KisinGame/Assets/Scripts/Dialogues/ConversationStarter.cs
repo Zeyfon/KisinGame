@@ -13,7 +13,7 @@ public class ConversationStarter : MonoBehaviour
         {
             //The collider is disabled to stop the dialogue to be activated again
             GetComponent<Collider2D>().enabled = false;
-            collision.GetComponent<PlayerIdentifer>().GetDialogueReference(transform);
+            //collision.GetComponent<PlayerIdentifer>().GetDialogueReference(transform);
         }
 
     }

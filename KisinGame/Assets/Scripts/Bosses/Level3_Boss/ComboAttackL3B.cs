@@ -41,7 +41,7 @@ public class ComboAttackL3B : MonoBehaviour, IAction
         GetComponent<BossesSupActions>().SetThisMonobehavior(this);            
         GetComponent<Animator>().SetFloat("jumpAttackAirTime", jumpAttackAirTime);
         mitlanActive = GetComponent<Level3Boss>().MitlanIsActive();
-        if(mitlanActive) transform.GetChild(5).GetComponent<Animator>().SetFloat("jumpAttackAirTime", jumpAttackAirTime);
+        if(mitlanActive) transform.GetChild(4).GetComponent<Animator>().SetFloat("jumpAttackAirTime", jumpAttackAirTime);
 
     }
 
@@ -63,7 +63,7 @@ public class ComboAttackL3B : MonoBehaviour, IAction
     public float MoveTowardsPlayer(bool mitlanActive)
     {
         GetComponent<Animator>().Play("Moving");
-        if (mitlanActive) transform.GetChild(5).GetComponent<Animator>().Play("Moving");
+        if (mitlanActive) transform.GetChild(4).GetComponent<Animator>().Play("Moving");
         rb.velocity = new Vector2(maxSpeed, 0);
         float distance = Mathf.Abs(playerTransform.position.x - transform.position.x);
         return distance;

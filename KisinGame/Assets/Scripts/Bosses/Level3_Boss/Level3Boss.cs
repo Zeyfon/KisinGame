@@ -41,7 +41,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
         animIzel.SetInteger("Phase", phase);
         if (mitlanActive)
         {
-            animMitlan = transform.GetChild(5).GetComponent<Animator>();
+            animMitlan = transform.GetChild(4).GetComponent<Animator>();
             animMitlan.SetInteger("Phase", phase);
         }
 

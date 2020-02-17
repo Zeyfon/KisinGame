@@ -10655,7 +10655,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 845.7344
         y: 938.59375
-        width: 169
+        width: 153
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -10775,7 +10775,7 @@ MonoBehaviour:
     - name: ChargingStand
       isSystemEvent: 0
       isGlobal: 0
-    - name: ConversationEnabled
+    - name: ControllerDisabled
       isSystemEvent: 0
       isGlobal: 0
     - name: Damaged
@@ -10953,7 +10953,7 @@ MonoBehaviour:
       linkConstraint: 0
       colorIndex: 0
     - fsmEvent:
-        name: ConversationEnabled
+        name: ControllerDisabled
         isSystemEvent: 0
         isGlobal: 0
       toState: In Conversation
@@ -11290,7 +11290,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -11316,7 +11316,7 @@ MonoBehaviour:
     handleJointBreak: 0
     handleJointBreak2D: 0
     handleOnGUI: 0
-    handleFixedUpdate: 1
+    handleFixedUpdate: 0
     handleLateUpdate: 0
     handleApplicationEvents: 0
     handleUiEvents: 0
@@ -17187,7 +17187,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: ConversationEnabled
+            m_StringArgument: ControllerDisabled
             m_BoolArgument: 0
           m_CallState: 2
     onConversationEnd:

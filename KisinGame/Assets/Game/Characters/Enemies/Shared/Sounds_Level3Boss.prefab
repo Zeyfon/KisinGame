@@ -1,6 +1,326 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8630794503676814041
+--- !u!114 &4931232430264020133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104180026302812218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 0}
+    name: Sounds
+    startState: State 1
+    states:
+    - name: State 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    events: []
+    globalTransitions: []
+    variables:
+      floatVariables:
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      intVariables: []
+      boolVariables: []
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables:
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      objectVariables:
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: 
+        value: {fileID: 0}
+      - useVariable: 1
+        name: damage_Critical
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 24680ce04feecc04c86346e1adf72b05, type: 3}
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        typeName: UnityEngine.Object
+        value: {fileID: 0}
+      - useVariable: 1
+        name: damage_Normal
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 9a09e7821f4de184f803bcc686210b34, type: 3}
+      - useVariable: 1
+        name: damage_Stun
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 0d6e9438c49148649b730033947b4440, type: 3}
+      - useVariable: 1
+        name: closeAttack1
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 0992382b4c75e6741a123d6895946de2, type: 3}
+      - useVariable: 1
+        name: closeAttack3
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: db6f4bdd29134fa4684c9615fb6f50e9, type: 3}
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.Object
+        value: {fileID: 0}
+      - useVariable: 1
+        name: crystalBallsAttackStart
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 8dfb3b371c73aa74ebd075e345277d46, type: 3}
+      - useVariable: 1
+        name: thrustAttack
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 3f756a58f39ac3e4ba992be06771d27d, type: 3}
+      - useVariable: 1
+        name: damage_No
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 26fe0c61d3323304ab2ba0e9e668360f, type: 3}
+      - useVariable: 1
+        name: closeAttack2
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 0992382b4c75e6741a123d6895946de2, type: 3}
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.Object
+        value: {fileID: 0}
+      - useVariable: 1
+        name: crystalRainAttackStart
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 42f59bd243ac53b45b9d6274f74da869, type: 3}
+      - useVariable: 1
+        name: crystalBallsActivation
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 5d7f74134a3b63043b43bc5078b65641, type: 3}
+      - useVariable: 1
+        name: closeAttack4
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 4cf72da87dccf1d4ba90a569b8680d5f, type: 3}
+      - useVariable: 1
+        name: jump
+        tooltip: Sound used in all jumps done by the enemy
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 6bcd2cc7a7895fe4e9bb21c47fd253cb, type: 3}
+      - useVariable: 1
+        name: interrupted
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 6333c947213dd1d4e83ec8eff5410328, type: 3}
+      - useVariable: 1
+        name: stunned
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 8bfa8f7e92d4dc347a30467dd8182dda, type: 3}
+      - useVariable: 1
+        name: dead
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 5ce3efc3493676343a7f67c4ae46e68a, type: 3}
+      - useVariable: 1
+        name: weaknessChange
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: ef429a7f35c52b746b2d539001f88f49, type: 3}
+      - useVariable: 1
+        name: crystalBallDestroyed
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 29acaae1bdf509d4ba59025219149b2e, type: 3}
+      - useVariable: 1
+        name: crystalBallStarMoving
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: 5ba74f0056931d8439b7d20927a2ec5b, type: 3}
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      - Close Attack
+      - CrystalBalls Attack
+      - Damaged
+      - Shared
+      - States
+      - ThrustAttack
+      variableCategoryIDs: 0000000000000000000000000000000003000000000000000300000003000000010000000100000000000000020000000600000003000000010000000000000002000000020000000100000004000000050000000500000005000000040000000200000002000000
+    description: 
+    docUrl: 
+    showStateLabel: 0
+    maxLoopCount: 0
+    watermark: 
+    password: 
+    locked: 0
+    manualUpdate: 0
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 1
+    ExposedEvents: []
+    RestartOnEnable: 1
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 3
+    activeStateName: 
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
+    handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0
+  fsmTemplate: {fileID: 11400000, guid: e54f247ed8896ba49a40dddd98adc82d, type: 2}
+  eventHandlerComponentsAdded: 1
+--- !u!1001 &6046300817808791067
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -65,7 +385,13 @@ PrefabInstance:
     - target: {fileID: 5682216833640678945, guid: a8bd11a2d25876d43a63072017b0f3a3,
         type: 3}
       propertyPath: m_Name
-      value: Sounds
+      value: Sounds_Level3Boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8bd11a2d25876d43a63072017b0f3a3, type: 3}
+--- !u!1 &2104180026302812218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5682216833640678945, guid: a8bd11a2d25876d43a63072017b0f3a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6046300817808791067}
+  m_PrefabAsset: {fileID: 0}

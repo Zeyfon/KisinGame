@@ -9542,11 +9542,11 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 626.2969
-        y: 746.7344
+        x: 626.27344
+        y: 790.1328
         width: 153
         height: 32
-      isBreakpoint: 0
+      isBreakpoint: 1
       isSequence: 0
       hideUnused: 0
       transitions:
@@ -9672,7 +9672,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Camera Fade In 2
+        toState: Waiting for Music Transition
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -11572,6 +11572,66 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000000000000000000000000000000000000100000001000000010000000100000002000000
         paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000
+    - name: Waiting for Music Transition
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 627.5703
+        y: 740.7344
+        width: 215
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: MusicFadedOut
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Camera Fade In 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -11628,6 +11688,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: MenuOpened
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: MusicFadedOut
       isSystemEvent: 0
       isGlobal: 0
     - name: NextLevelTransition

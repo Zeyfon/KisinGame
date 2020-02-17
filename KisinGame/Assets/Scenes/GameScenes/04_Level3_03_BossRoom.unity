@@ -338,6 +338,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a2de342eeb563b47b7f24fb4ec743b8, type: 3}
+--- !u!4 &744224590 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2783533386055075676, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1421216971}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &783835883 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3070798679416080522, guid: 83d46856db018514d9ebe4d3ca4f7296,
@@ -354,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801897549}
   m_Layer: 0
-  m_Name: Section2_Stuff
+  m_Name: Section3_Stuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -563,6 +569,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2148529083431633335, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: soundsBoss
+      value: 
+      objectReference: {fileID: 744224590}
     - target: {fileID: 2196106697971980910, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
         type: 3}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[9].value
@@ -586,6 +597,11 @@ PrefabInstance:
     - target: {fileID: 2704911581146703612, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
         type: 3}
       propertyPath: canCrystalRain
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704911581146703612, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: canThrustAttack
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2704911581146703613, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
@@ -663,6 +679,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4569873432624439881, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: soundsBoss
+      value: 
+      objectReference: {fileID: 744224590}
     - target: {fileID: 6756168080705755260, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
         type: 3}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[9].value
@@ -683,6 +704,31 @@ PrefabInstance:
       propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6756168080705755260, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[9].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 1914046659}
+    - target: {fileID: 6756168080705755260, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[13].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 1914046659}
+    - target: {fileID: 6756168080705755260, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[21].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 1914046659}
+    - target: {fileID: 6756168080705755260, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[31].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 1914046659}
+    - target: {fileID: 6756168080705755260, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[39].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 1914046659}
     - target: {fileID: 7094325224446283878, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
         type: 3}
       propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.size
@@ -698,9 +744,29 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8848438259021058357, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: soundsBoss
+      value: 
+      objectReference: {fileID: 744224590}
     - target: {fileID: 9078350682911438306, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
         type: 3}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[4].value
+      value: 
+      objectReference: {fileID: 9884679}
+    - target: {fileID: 9078350682911438306, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[15].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 9884679}
+    - target: {fileID: 9078350682911438306, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[18].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 9884679}
+    - target: {fileID: 9078350682911438306, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[19].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
       value: 
       objectReference: {fileID: 9884679}
     m_RemovedComponents:
@@ -1449,6 +1515,36 @@ PrefabInstance:
       propertyPath: fsm.preprocessed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 744619521309060958, guid: 83d46856db018514d9ebe4d3ca4f7296,
+        type: 3}
+      propertyPath: fsm.states.Array.data[9].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 1914046659}
+    - target: {fileID: 744619521309060958, guid: 83d46856db018514d9ebe4d3ca4f7296,
+        type: 3}
+      propertyPath: fsm.states.Array.data[13].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 1914046659}
+    - target: {fileID: 744619521309060958, guid: 83d46856db018514d9ebe4d3ca4f7296,
+        type: 3}
+      propertyPath: fsm.states.Array.data[21].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 1914046659}
+    - target: {fileID: 744619521309060958, guid: 83d46856db018514d9ebe4d3ca4f7296,
+        type: 3}
+      propertyPath: fsm.states.Array.data[31].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 1914046659}
+    - target: {fileID: 744619521309060958, guid: 83d46856db018514d9ebe4d3ca4f7296,
+        type: 3}
+      propertyPath: fsm.states.Array.data[36].actionData.functionCallParams.Array.data[0].IntParameter.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 744619521309060958, guid: 83d46856db018514d9ebe4d3ca4f7296,
+        type: 3}
+      propertyPath: fsm.states.Array.data[39].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 1914046659}
     - target: {fileID: 2429097633260687629, guid: 83d46856db018514d9ebe4d3ca4f7296,
         type: 3}
       propertyPath: m_Mesh
@@ -1463,6 +1559,26 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.preprocessed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056562371723150016, guid: 83d46856db018514d9ebe4d3ca4f7296,
+        type: 3}
+      propertyPath: fsm.states.Array.data[15].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 9884679}
+    - target: {fileID: 3056562371723150016, guid: 83d46856db018514d9ebe4d3ca4f7296,
+        type: 3}
+      propertyPath: fsm.states.Array.data[18].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 9884679}
+    - target: {fileID: 3056562371723150016, guid: 83d46856db018514d9ebe4d3ca4f7296,
+        type: 3}
+      propertyPath: fsm.states.Array.data[19].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 9884679}
+    - target: {fileID: 3532611744400747356, guid: 83d46856db018514d9ebe4d3ca4f7296,
+        type: 3}
+      propertyPath: m_Name
+      value: Sounds_Level3Boss
       objectReference: {fileID: 0}
     - target: {fileID: 5093306244460577167, guid: 83d46856db018514d9ebe4d3ca4f7296,
         type: 3}
@@ -1725,7 +1841,7 @@ PrefabInstance:
     - target: {fileID: 2039628224561380429, guid: d10975d2368b4054ca32e2ae62513833,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2243793879774603174, guid: d10975d2368b4054ca32e2ae62513833,
         type: 3}
@@ -1866,6 +1982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level3BossRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404579442601078875, guid: d10975d2368b4054ca32e2ae62513833,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6212046427383556257, guid: d10975d2368b4054ca32e2ae62513833,
         type: 3}
