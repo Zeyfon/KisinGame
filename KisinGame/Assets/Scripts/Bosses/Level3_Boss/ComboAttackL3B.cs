@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComboAttackL3B : MonoBehaviour, IAction
+public class ComboAttackL3B : MonoBehaviour, IFlipValues
 {
     #region Inspector
     [Header("Variables")]

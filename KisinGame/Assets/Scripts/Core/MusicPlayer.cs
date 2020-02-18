@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayMusic : MonoBehaviour
+public class MusicPlayer : MonoBehaviour
 {
     [Tooltip("Index of the track to play in the Music List in MusicManager")]
     [SerializeField] int index = 0;
@@ -16,8 +16,9 @@ public class PlayMusic : MonoBehaviour
 
     static int currentIndexPlaying=1000;
 
-    private void Awake()
+    IEnumerator Start()
     {
+        yield return new WaitForSeconds(0.1f);
         if (playOnAwake)
         {
             PlayThisMusic();

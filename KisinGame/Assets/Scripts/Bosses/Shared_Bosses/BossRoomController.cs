@@ -17,7 +17,7 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] bool overrideSave =false;
 
     bool initialized = false;
-    BossStarter currentBoss;
+    IBossStarter currentBoss;
 
     private void Start()
     {
@@ -29,7 +29,7 @@ public class BossRoomController : MonoBehaviour
         }
     }
 
-    public void SetCurrentBoss(BossStarter boss)
+    public void SetCurrentBoss(IBossStarter boss)
     {
         currentBoss = boss;
     }
@@ -73,7 +73,7 @@ public class BossRoomController : MonoBehaviour
     IEnumerator ActivateBoss()
     {
         yield return new WaitForSeconds(timeToActivateBoss);
-        currentBoss.StartActions();
+        currentBoss.IStartActions();
     }
 
     private void ActivateUI()

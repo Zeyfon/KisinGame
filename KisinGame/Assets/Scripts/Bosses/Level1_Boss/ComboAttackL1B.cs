@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComboAttackL1B : MonoBehaviour,IAction
+public class ComboAttackL1B : MonoBehaviour, IFlipValues
 {
     #region Inspector
     [Header("Variables")]
@@ -38,7 +38,7 @@ public class ComboAttackL1B : MonoBehaviour,IAction
         attackCollider = weapon.GetComponent<BoxCollider2D>();
         attackTrigger = weapon.GetComponent<AttackTrigger>();
         rb = GetComponent<Rigidbody2D>();
-        stressReceiver = Camera.main.GetComponent<StressReceiver>();
+        //stressReceiver = Camera.main.GetComponent<StressReceiver>();
         GetComponent<BossesSupActions>().SetThisMonobehavior(this);
     }
 
@@ -60,7 +60,6 @@ public class ComboAttackL1B : MonoBehaviour,IAction
 
     public float MoveTowardsPlayer()
     {
-        GetComponent<Animator>().Play("Moving");
         rb.velocity = new Vector2(maxSpeed, 0);
         float distance = Mathf.Abs(playerTransform.position.x - transform.position.x);
         return distance;

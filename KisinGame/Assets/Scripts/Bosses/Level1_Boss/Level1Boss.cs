@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Level1Boss : MonoBehaviour, BossStarter
+public class Level1Boss : MonoBehaviour, IBossStarter
 {
     #region Inspector
     public int phase = 0;
@@ -36,11 +36,12 @@ public class Level1Boss : MonoBehaviour, BossStarter
         GetComponent<ComboAttackL1B>().GetPlayerTransform(playerTransform);
         GetComponent<FruitBombBarrageAttack>().GetPlayerTransform(playerTransform);
         GetComponent<ThrustAttack>().GetPlayerTransform(playerTransform);
+
         bossRoomController.SetCurrentBoss(this);
     }
 
     #region Control
-    public void StartActions()
+    public void IStartActions()
     {
         anim.SetInteger("Phase", phase);
         DecideNextAction();
@@ -84,6 +85,7 @@ public class Level1Boss : MonoBehaviour, BossStarter
     {
         anim.SetInteger("Attack", 0);
         float distance = GetComponent<ComboAttackL1B>().DistanceFromPlayer();
+        anim.Play("Moving");
         while (distance > 1)
         {
             distance = GetComponent<ComboAttackL1B>().MoveTowardsPlayer();

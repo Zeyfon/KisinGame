@@ -12,14 +12,14 @@ public class BossesSupActions : MonoBehaviour
     Transform flipToTarget;
     Rigidbody2D rb;
     bool lookingRight = true;
-    IAction currentMonobehaviour;
+    IFlipValues currentMonobehaviour;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void SetThisMonobehavior(IAction action)
+    public void SetThisMonobehavior(IFlipValues action)
     {
         currentMonobehaviour = action;
         //print("Boss set for Interface use");

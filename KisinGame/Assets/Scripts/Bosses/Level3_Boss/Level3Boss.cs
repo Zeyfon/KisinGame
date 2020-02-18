@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level3Boss : MonoBehaviour, BossStarter
+public class Level3Boss : MonoBehaviour, IBossStarter
 {
     enum Dialogues
     {
@@ -63,7 +63,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
     }
     #region Control
     // Called from the Dialogue Level3Dialogue 1 Conversation Ended Event
-    public void StartActions()
+    public void IStartActions()
     {
         if (phase > 1)
         {
