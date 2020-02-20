@@ -11,7 +11,8 @@ public class SpineAnimatorScript : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        SkeletonAnimation anim = animator.GetComponent<SkeletonAnimation>();
+        Debug.Log(animator.gameObject);
+        SkeletonAnimation anim = animator.transform.GetChild(7).GetComponent<SkeletonAnimation>();
         anim.state.SetAnimation(0, animationName, loop).TimeScale = speed;
     }
 

@@ -349,6 +349,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3553015623966282060, guid: 8281a6ed1bb249a4492bcb395e6e525b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4080772575198507506, guid: 8281a6ed1bb249a4492bcb395e6e525b,
         type: 3}
       propertyPath: m_Mesh
@@ -987,6 +992,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855634999865187351, guid: 8fb6ae81e99399d4687ddfa908882057,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4354697652554153129, guid: 8fb6ae81e99399d4687ddfa908882057,
         type: 3}
@@ -3206,6 +3216,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3553015623966282060, guid: 8281a6ed1bb249a4492bcb395e6e525b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4080772575198507506, guid: 8281a6ed1bb249a4492bcb395e6e525b,
         type: 3}
       propertyPath: m_Mesh
@@ -3895,6 +3910,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1704069983750305814, guid: c88333da6b02ab84a8457a5cec7a6526,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2182305682955901096, guid: c88333da6b02ab84a8457a5cec7a6526,
         type: 3}
       propertyPath: m_Mesh
@@ -4161,6 +4181,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1237522014338692340, guid: bd7755ea5f0affc4197f0fa13f8ba513,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784417610424816714, guid: bd7755ea5f0affc4197f0fa13f8ba513,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4503,6 +4528,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553015623966282060, guid: 8281a6ed1bb249a4492bcb395e6e525b,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4080772575198507506, guid: 8281a6ed1bb249a4492bcb395e6e525b,
         type: 3}
@@ -5110,6 +5140,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1704069983750305814, guid: c88333da6b02ab84a8457a5cec7a6526,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2182305682955901096, guid: c88333da6b02ab84a8457a5cec7a6526,
         type: 3}
       propertyPath: m_Mesh
@@ -5190,6 +5225,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1237522014338692340, guid: bd7755ea5f0affc4197f0fa13f8ba513,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784417610424816714, guid: bd7755ea5f0affc4197f0fa13f8ba513,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5398,8 +5438,73 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
         type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
       propertyPath: m_ImpulseDefinition.m_ImpulseChannel
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_SustainTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.data[1].value
+      value: 0.0070610046
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.data[0].inSlope
+      value: -2.1726656
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.data[0].outSlope
+      value: -2.1726656
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayShape.m_Curve.Array.data[0].outWeight
+      value: 0.27916667
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105975023547846562, guid: 4c1656a322d6ba5499f28655d95af76d,
+        type: 3}
+      propertyPath: m_ImpulseDefinition.m_TimeEnvelope.m_DecayTime
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4167365707189723712, guid: 4c1656a322d6ba5499f28655d95af76d,
         type: 3}

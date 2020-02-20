@@ -3,41 +3,53 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class BossRoomVCamera : MonoBehaviour
+public class BossRoomTransition : MonoBehaviour
 {
+    [SerializeField] CinemachineVirtualCamera bossRoomCamera;
     VirtualCamera followCamera;
+    AudioClip levelMusic;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Player entered boss room");
         if (collision.CompareTag("Player"))
         {
             print("Player entered boss room");
             followCamera = collision.GetComponent<PlayerIdentifer>().GetVCamera();
             followCamera.DisableVCameraForBossRoom();
             EnableBossCamera();
+            SwitchToBossRoomMusic();
         }
     }
 
     private void EnableBossCamera()
     {
-        transform.parent.GetComponent<CinemachineVirtualCamera>().Priority = 20;
+        bossRoomCamera.Priority = 20;
+    }
+
+    void SwitchToBossRoomMusic()
+    {
+        GetComponentInChildren<MusicPlayer>().PlayThisTrack();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        print("Player exited boss room");
+
         if (collision.CompareTag("Player"))
         {
-            print("Player entered boss room");
+            print("Player exited boss room");
             followCamera = collision.GetComponent<PlayerIdentifer>().GetVCamera();
             followCamera.EnableVCamera();
             DisableBossCamera();
+            SwitchToLevelMusic();
         }
     }
 
     private void DisableBossCamera()
     {
-        transform.parent.GetComponent<CinemachineVirtualCamera>().Priority = 5;
+        bossRoomCamera.Priority = 5;
+    }
+    void SwitchToLevelMusic()
+    {
+        GetComponentInChildren<MusicPlayer>().PlayAnotherTrack(1);
     }
 }

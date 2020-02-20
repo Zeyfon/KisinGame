@@ -34,11 +34,15 @@ public class MusicManager : MonoBehaviour
             StartCoroutine(FadeIn(index, volume, loop));
         }
     }
+    public void FadeOut()
+    {
+        StartCoroutine(FadeOutC());
+    }
 
     IEnumerator MusicChange(int index, float volume, bool loop)
     {
-        yield return FadeOut(volume);
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayMakerFSM>().SendEvent("MusicFadedOut");
+
+        yield return FadeOutC();
         yield return FadeIn(index, volume, loop);
     }
 
@@ -55,8 +59,9 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    IEnumerator FadeOut(float volume)
+    IEnumerator FadeOutC()
     {
+        float volume = audioSource.volume;
         float maxVolume = volume;
         while (volume > 0)
         {
@@ -65,6 +70,8 @@ public class MusicManager : MonoBehaviour
             audioSource.volume = volume;
             yield return new WaitForEndOfFrame();
         }
+        audioSource.Stop();
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayMakerFSM>().SendEvent("MusicFadedOut");
     }
 
     void ChangeTrack(int index, bool loop)

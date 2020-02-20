@@ -1,5 +1,110 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8880043099840731793
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.8
+  animationName: ZyanaJumping
+  loop: 0
+--- !u!114 &-7710967945067346992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.25
+  animationName: ZyanaChargeAttackY
+  loop: 0
+--- !u!114 &-6747524370508814795
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.6
+  animationName: ZyanaDead
+  loop: 0
+--- !u!114 &-5115843038774470749
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  animationName: ZyanaIdle
+  loop: 1
+--- !u!114 &-4582906437304720699
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  animationName: ZyanaAttackX1
+  loop: 0
+--- !u!114 &-578878698438535364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.45
+  animationName: ZyanaDash
+  loop: 0
+--- !u!114 &-492982854915590050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  animationName: ZyanaDamage
+  loop: 0
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -2707,21 +2812,6 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
---- !u!114 &114005328791364092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  animationName: ZyanaRunnig
-  loop: 1
 --- !u!114 &114007398139404094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2746,21 +2836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76293762fba166a4b82cccc5e9641bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114043892914532490
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  animationName: ZyanaFullyCharge
-  loop: 1
 --- !u!114 &114087096354724288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2773,36 +2848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5960ae92ac41474c9ebd9c9ac3e36f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114123919011800338
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  animationName: ZyanaIdle
-  loop: 1
---- !u!114 &114149114375055944
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.8
-  animationName: ZyanaJumping
-  loop: 1
 --- !u!114 &114157675365075966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2815,51 +2860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b075074daee3c442b769ae728800a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114227584339274440
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  animationName: ZyanaFalling
-  loop: 1
---- !u!114 &114228457483466916
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.6
-  animationName: ZyanaDead
-  loop: 0
---- !u!114 &114248498340189402
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.25
-  animationName: ZyanaChargeAttackX
-  loop: 0
 --- !u!114 &114252462824537796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2872,51 +2872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bbf9e12710e0746b9aa4aa2656206f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114321522259868404
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.45
-  animationName: ZyanaDash
-  loop: 0
---- !u!114 &114345919727119442
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.75
-  animationName: ZyanaCure
-  loop: 0
---- !u!114 &114396459482061088
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.25
-  animationName: ZyanaChargeAttackY
-  loop: 0
 --- !u!114 &114483393229823920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2929,21 +2884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5960ae92ac41474c9ebd9c9ac3e36f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114487104035431726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  animationName: ZyanaChargePhase
-  loop: 0
 --- !u!114 &114534283989259446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2956,21 +2896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6d9ff04c800e349b25c0c64b0768fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114581460278952388
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  animationName: ZyanaAttackX1
-  loop: 0
 --- !u!114 &114583039394606356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3007,51 +2932,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb8d1f7cfbcd324089cb7013f297a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114736662851856220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  animationName: ZyanaAttackX2
-  loop: 0
---- !u!114 &114815358379769648
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  animationName: ZyanaAttackY1
-  loop: 0
---- !u!114 &114889947444574262
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  animationName: ZyanaAttackY2
-  loop: 0
 --- !u!114 &114907329198025388
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3076,21 +2956,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6d9ff04c800e349b25c0c64b0768fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114930160978558870
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  animationName: ZyanaDamage
-  loop: 0
 --- !u!114 &114933030359064274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4217,7 +4082,7 @@ AnimatorState:
   - {fileID: 1101861271974476944}
   - {fileID: 1101823341325332480}
   m_StateMachineBehaviours:
-  - {fileID: 114487104035431726}
+  - {fileID: 3139347907287956439}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4248,7 +4113,7 @@ AnimatorState:
   - {fileID: 1101458078798568046}
   - {fileID: 1101646953217145758}
   m_StateMachineBehaviours:
-  - {fileID: 114815358379769648}
+  - {fileID: 1151142042839303656}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4276,7 +4141,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101173800569233534}
   m_StateMachineBehaviours:
-  - {fileID: 114149114375055944}
+  - {fileID: -8880043099840731793}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4334,7 +4199,7 @@ AnimatorState:
   - {fileID: 1101618840891962550}
   - {fileID: 1101194946054088814}
   m_StateMachineBehaviours:
-  - {fileID: 114581460278952388}
+  - {fileID: -4582906437304720699}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4364,7 +4229,7 @@ AnimatorState:
   - {fileID: 1101129463504525690}
   - {fileID: 1101814941274676356}
   m_StateMachineBehaviours:
-  - {fileID: 114736662851856220}
+  - {fileID: 7827149825599644148}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4392,7 +4257,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101441213714786934}
   m_StateMachineBehaviours:
-  - {fileID: 114321522259868404}
+  - {fileID: -578878698438535364}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4422,7 +4287,7 @@ AnimatorState:
   - {fileID: 1101329337012777868}
   - {fileID: 1101024214656753586}
   m_StateMachineBehaviours:
-  - {fileID: 114043892914532490}
+  - {fileID: 1427703131101235662}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4450,7 +4315,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101840110529403252}
   m_StateMachineBehaviours:
-  - {fileID: 114396459482061088}
+  - {fileID: -7710967945067346992}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4479,7 +4344,7 @@ AnimatorState:
   - {fileID: 1101427839527981508}
   - {fileID: 1101544689775626522}
   m_StateMachineBehaviours:
-  - {fileID: 114123919011800338}
+  - {fileID: -5115843038774470749}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4507,7 +4372,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101377634811623884}
   m_StateMachineBehaviours:
-  - {fileID: 114930160978558870}
+  - {fileID: -492982854915590050}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4535,7 +4400,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101542496805625106}
   m_StateMachineBehaviours:
-  - {fileID: 114248498340189402}
+  - {fileID: 1331083110126465169}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4563,7 +4428,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101106004492543770}
   m_StateMachineBehaviours:
-  - {fileID: 114345919727119442}
+  - {fileID: 3448144577978209498}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4591,7 +4456,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101715959009236652}
   m_StateMachineBehaviours:
-  - {fileID: 114227584339274440}
+  - {fileID: 3775472976631177326}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4619,7 +4484,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101272652954815776}
   m_StateMachineBehaviours:
-  - {fileID: 114228457483466916}
+  - {fileID: -6747524370508814795}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4647,7 +4512,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101968702385851208}
   m_StateMachineBehaviours:
-  - {fileID: 114005328791364092}
+  - {fileID: 2971900210406667129}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4704,7 +4569,7 @@ AnimatorState:
   - {fileID: 1101192830789251388}
   - {fileID: 1101700056710591230}
   m_StateMachineBehaviours:
-  - {fileID: 114889947444574262}
+  - {fileID: 2821673971802511998}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4851,7 +4716,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102089169436547204}
-    m_Position: {x: 228, y: 120, z: 0}
+    m_Position: {x: 220, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102476806305501768}
     m_Position: {x: 780, y: 120, z: 0}
@@ -4908,10 +4773,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102113317978105314}
-    m_Position: {x: 300, y: 108, z: 0}
+    m_Position: {x: 300, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102709266512363716}
-    m_Position: {x: 600, y: 108, z: 0}
+    m_Position: {x: 600, y: 110, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -4933,7 +4798,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102385398624894928}
-    m_Position: {x: 204, y: 180, z: 0}
+    m_Position: {x: 200, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102947916937029140}
     m_Position: {x: 204, y: 276, z: 0}
@@ -4946,7 +4811,7 @@ AnimatorStateMachine:
     m_Position: {x: 468, y: 216, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107418072338167960}
-    m_Position: {x: 468, y: 132, z: 0}
+    m_Position: {x: 470, y: 130, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107607298319980016}
     m_Position: {x: 468, y: 48, z: 0}
@@ -4983,7 +4848,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102489840164515120}
-    m_Position: {x: 300, y: 108, z: 0}
+    m_Position: {x: 300, y: 110, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -4995,3 +4860,138 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 324, y: 180, z: 0}
   m_ParentStateMachinePosition: {x: 300, y: -48, z: 0}
   m_DefaultState: {fileID: 1102489840164515120}
+--- !u!114 &1151142042839303656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  animationName: ZyanaAttackY1
+  loop: 0
+--- !u!114 &1331083110126465169
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.25
+  animationName: ZyanaChargeAttackX
+  loop: 0
+--- !u!114 &1427703131101235662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  animationName: ZyanaFullyCharge
+  loop: 0
+--- !u!114 &2821673971802511998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  animationName: ZyanaAttackY2
+  loop: 0
+--- !u!114 &2971900210406667129
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  animationName: ZyanaRunnig
+  loop: 1
+--- !u!114 &3139347907287956439
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  animationName: ZyanaChargePhase
+  loop: 0
+--- !u!114 &3448144577978209498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.75
+  animationName: ZyanaCure
+  loop: 0
+--- !u!114 &3775472976631177326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  animationName: ZyanaFalling
+  loop: 0
+--- !u!114 &7827149825599644148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011eb761f297f442bfded3376badbf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  animationName: ZyanaAttackX2
+  loop: 0
