@@ -1,27 +1,16 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using HutongGames.PlayMaker;
 
 public class EnemyActivater : MonoBehaviour
 {
     GameObject[] childrenGO;
-    PlayMakerFSM[] pFSMs;
-    Rigidbody2D rb;
     bool canInteract = false;
     bool isInsidePlayerDetection = false;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        StartCoroutine(SetInitialValues());
-    }
-
-    IEnumerator SetInitialValues()
-    {
-        yield return new WaitForSeconds(1);
-        rb = transform.parent.GetComponent<Rigidbody2D>();
-        pFSMs = transform.parent.GetComponents<PlayMakerFSM>();
+        yield return new WaitForSeconds(2);
         int childQuantity = transform.parent.childCount;
         childrenGO = new GameObject[childQuantity];
         for (int i = 0; i < childQuantity; i++)
@@ -29,38 +18,8 @@ public class EnemyActivater : MonoBehaviour
             childrenGO[i] = transform.parent.GetChild(i).gameObject;
         }
         yield return new WaitForSeconds(1);
-        if(!isInsidePlayerDetection) DisableEnemy();
+        if (!isInsidePlayerDetection) DisableEnemy();
         canInteract = true;
-    }
-
-    void DisableEnemy()
-    {
-
-        foreach (GameObject gameObject1 in childrenGO)
-        {
-            if (gameObject != gameObject1)
-                gameObject1.SetActive(false);
-        }
-        foreach (PlayMakerFSM pFSM in pFSMs)
-        {
-            pFSM.enabled = false;
-        }
-        rb.Sleep();
-    }
-
-    private void ActivateEnemy()
-    {
-        print(gameObject.name + " is in player area");
-
-        foreach (GameObject gameObject1 in childrenGO)
-        {
-            gameObject1.SetActive(true);
-        }
-        foreach (PlayMakerFSM pFSM in pFSMs)
-        {
-            pFSM.enabled = true;
-        }
-        rb.WakeUp();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -69,6 +28,7 @@ public class EnemyActivater : MonoBehaviour
         if (!canInteract) return;
         if (collision.CompareTag("EnemyActivator"))
         {
+            //print("Player in Range");
             ActivateEnemy();
         }
     }
@@ -76,9 +36,28 @@ public class EnemyActivater : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isInsidePlayerDetection = false;
+        if (!canInteract) return;
         if (collision.CompareTag("EnemyActivator"))
         {
+            //print("Player out of range");
             DisableEnemy();
+        }
+    }
+
+    void DisableEnemy()
+    {
+        foreach (GameObject tempGameObject in childrenGO)
+        {
+            if (this.gameObject != tempGameObject)
+                tempGameObject.SetActive(false);
+        }
+    }
+
+    private void ActivateEnemy()
+    {
+        foreach (GameObject tempGameObject in childrenGO)
+        {
+            tempGameObject.SetActive(true);
         }
     }
 

@@ -40,10 +40,6 @@ public class MusicPlayer : MonoBehaviour
             yield break;
         }
     }
-    private void Update()
-    {
-        print(currentIndexPlaying);
-    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<PlayerIdentifer>())

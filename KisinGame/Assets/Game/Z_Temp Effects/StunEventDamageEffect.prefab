@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2731096075044115579}
   - component: {fileID: 2731096075044115556}
   - component: {fileID: 2731096075044115557}
-  - component: {fileID: 6118842890444303356}
   m_Layer: 0
   m_Name: StunEventDamageEffect
   m_TagString: Untagged
@@ -76,9 +75,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 833086847
+  m_SortingLayer: 3
+  m_SortingOrder: 15
 --- !u!114 &2731096075044115557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,16 +112,4 @@ MonoBehaviour:
   disableRenderingOnOverride: 1
   _animationName: 
   loop: 0
-  timeScale: 0.7
---- !u!114 &6118842890444303356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2731096075044115558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea20e13ff73fbef4780cc7f8435c1b56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  timeScale: 1

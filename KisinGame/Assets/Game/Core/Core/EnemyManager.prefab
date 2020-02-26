@@ -1945,13 +1945,31 @@ MonoBehaviour:
         m_RotationOrder: 4
       m_DecayShape:
         serializedVersion: 2
-        m_Curve: []
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: -2.7361495
+          outSlope: -2.7361495
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.19707926
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0.0047490317
+          outSlope: 0.0047490317
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.32083333
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
       m_AttackTime: 0
-      m_SustainTime: 0.2
-      m_DecayTime: 0.7
+      m_SustainTime: 0.15
+      m_DecayTime: 0.5
       m_ScaleWithImpact: 0
       m_HoldForever: 0
     m_ImpactRadius: 100

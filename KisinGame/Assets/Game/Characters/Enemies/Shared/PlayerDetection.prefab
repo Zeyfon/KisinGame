@@ -113,8 +113,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 84
-        y: 100.99219
+        x: 87
+        y: 108.99219
         width: 100
         height: 32
       isBreakpoint: 0
@@ -191,8 +191,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 73
-        y: 153
+        x: 76
+        y: 161
         width: 145
         height: 48
       isBreakpoint: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Setup2
+        toState: PlayerFound
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 3
         - useVariable: 1
           name: 
           tooltip: 
@@ -433,11 +433,11 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 53
-        y: 421
+        y: 325
         width: 146
         height: 48
       isBreakpoint: 0
-      isSequence: 0
+      isSequence: 1
       hideUnused: 0
       transitions:
       - fsmEvent:
@@ -562,7 +562,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 375
-        y: 439
+        y: 343
         width: 123
         height: 32
       isBreakpoint: 0
@@ -655,7 +655,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 406
-        y: 500
+        y: 404
         width: 146
         height: 32
       isBreakpoint: 0
@@ -748,7 +748,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 491
-        y: 368
+        y: 272
         width: 100
         height: 32
       isBreakpoint: 0
@@ -821,166 +821,13 @@ MonoBehaviour:
         - realTime
         paramDataPos: 00000000010000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: Setup2
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 72
-        y: 242
-        width: 100
-        height: 48
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: loop
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Loop
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: PlayerFound
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GameObjectIsNull
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 15656205
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: gameManager
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - loop
-        - FINISHED
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1300000017000000170000001100000001000000
-        paramName:
-        - gameObject
-        - isNull
-        - isNotNull
-        - storeResult
-        - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000001000000
-    - name: Loop
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 220
-        y: 248
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Setup2
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.NextFrameEvent
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 88611604
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 17000000
-        paramName:
-        - sendEvent
-        paramDataPos: 00000000
-        paramByteDataSize: 00000000
     - name: PlayerFound
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 70
-        y: 342
+        y: 246
         width: 113
         height: 32
       isBreakpoint: 0
@@ -1039,8 +886,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 323
-        y: 166
+        x: 326
+        y: 174
         width: 100
         height: 32
       isBreakpoint: 0

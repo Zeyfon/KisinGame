@@ -11,7 +11,6 @@ public class PlayerFinder : MonoBehaviour
             transform.parent.gameObject.SendMessage("StartFollowingPlayer");
             BoxCollider2D col2d = GetComponent<BoxCollider2D>();
             col2d.enabled = false;
-
         }
     }
 }

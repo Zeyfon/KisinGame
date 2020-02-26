@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3275883334412026330}
   - component: {fileID: 6940903461273026756}
+  - component: {fileID: 6070065884118208714}
   m_Layer: 11
   m_Name: HealthBar
   m_TagString: Untagged
@@ -146,13 +147,13 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: enemy
+        name: 
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: healthBar
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -216,6 +217,19 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 11400000, guid: 426ca357d5428a545ae6a17f81a6ec81, type: 2}
   eventHandlerComponentsAdded: 1
+--- !u!114 &6070065884118208714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2879286868226526773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8956095fc427284584f8fe08367495e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: -0.79, y: 1.4}
 --- !u!1 &7719777871164190520
 GameObject:
   m_ObjectHideFlags: 0

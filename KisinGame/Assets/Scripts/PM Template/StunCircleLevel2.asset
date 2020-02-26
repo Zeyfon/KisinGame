@@ -25,7 +25,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 67.125
-        y: 509.53906
+        y: 541.53906
         width: 155
         height: 32
       isBreakpoint: 0
@@ -346,7 +346,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 57.015625
-        y: 667.6953
+        y: 699.6953
         width: 100
         height: 16
       isBreakpoint: 0
@@ -397,8 +397,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 643.8906
-        y: 112.55469
+        x: 641.1328
+        y: 102.89844
         width: 185
         height: 32
       isBreakpoint: 0
@@ -589,8 +589,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 640.4453
-        y: 175.89844
+        x: 637.6875
+        y: 166.24219
         width: 241
         height: 48
       isBreakpoint: 0
@@ -687,8 +687,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 637.0547
-        y: 259.90625
+        x: 634.2969
+        y: 250.25
         width: 249
         height: 32
       isBreakpoint: 0
@@ -765,7 +765,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 623.5078
-        y: 388.96094
+        y: 420.96094
         width: 182
         height: 48
       isBreakpoint: 0
@@ -790,47 +790,25 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetFsmBool
         - HutongGames.PlayMaker.Actions.Wait
         - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000500000008000000
-        actionHashCodes: 68fece0548c01101a4c8bf00
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 48c01101a4c8bf00
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: parent
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Health
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: stunned
+        fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -850,12 +828,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: stunned
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -865,18 +837,13 @@ MonoBehaviour:
         - NormalState
         - StunState
         - 
-        byteData: 010101
+        byteData: 0101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000001200000011000000010000000f000000170000000100000011000000170000001700000001000000
+        paramDataType: 0f000000170000000100000011000000170000001700000001000000
         paramName:
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
-        - everyFrame
         - time
         - finishEvent
         - realTime
@@ -884,15 +851,15 @@ MonoBehaviour:
         - isTrue
         - isFalse
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000000000000000000000100000001000000010000000200000002000000
-        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 00000000000000000000000000000000010000000200000001000000
+        paramByteDataSize: 00000000000000000100000000000000000000000000000001000000
     - name: Inform AnimController
       description: Inform stun has finished. Set stun variable to 5 in AnimController
       colorIndex: 4
       position:
         serializedVersion: 2
         x: 574.6875
-        y: 684.77344
+        y: 716.77344
         width: 318.5
         height: 32
       isBreakpoint: 0
@@ -924,7 +891,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: animController
+            name: parent
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -1018,7 +985,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 62.125
-        y: 582.6172
+        y: 614.6172
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1112,7 +1079,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 870.375
-        y: 416.70312
+        y: 448.70312
         width: 193
         height: 32
       isBreakpoint: 0
@@ -1189,7 +1156,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 856.8906
-        y: 561.08594
+        y: 593.08594
         width: 101
         height: 32
       isBreakpoint: 0
@@ -1266,7 +1233,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1019.58594
-        y: 662.7031
+        y: 694.7031
         width: 213
         height: 48
       isBreakpoint: 0
@@ -1503,8 +1470,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 633.5078
-        y: 321.3828
+        x: 630.75
+        y: 311.72656
         width: 126
         height: 32
       isBreakpoint: 0
@@ -1515,7 +1482,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Check if stunned or not
+        toState: State 1
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1725,7 +1692,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 869.4219
-        y: 477.97656
+        y: 509.97656
         width: 101
         height: 48
       isBreakpoint: 0
@@ -1971,7 +1938,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 354.3828
-        y: 471.29688
+        y: 503.29688
         width: 101
         height: 48
       isBreakpoint: 0
@@ -2217,7 +2184,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 349.67188
-        y: 552.6719
+        y: 584.6719
         width: 128
         height: 32
       isBreakpoint: 0
@@ -2294,7 +2261,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 584.7344
-        y: 600.35156
+        y: 632.35156
         width: 226
         height: 48
       isBreakpoint: 0
@@ -2532,7 +2499,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 354.46875
-        y: 402.97656
+        y: 434.97656
         width: 194
         height: 32
       isBreakpoint: 0
@@ -2609,7 +2576,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 73
-        y: 429
+        y: 461
         width: 100
         height: 48
       isBreakpoint: 0
@@ -2685,6 +2652,99 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
+    - name: State 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 627.375
+        y: 363.26562
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Check if stunned or not
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmBool
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 68fece05
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: parent
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Health
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: stunned
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: stunned
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000012000000120000001100000001000000
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1

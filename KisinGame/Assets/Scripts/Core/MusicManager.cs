@@ -24,7 +24,6 @@ public class MusicManager : MonoBehaviour
 
     public void WantsToPlayThisMusicNext(int index, float volume, bool loop)
     {
-        print(audioSource.isPlaying);
         if (audioSource.isPlaying)
         {
             StartCoroutine(MusicChange(index, volume, loop));
