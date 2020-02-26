@@ -32,7 +32,7 @@ public class TransitionToMitlan : MonoBehaviour
         FsmEventData myfsmEventData = new FsmEventData();
         HutongGames.PlayMaker.Fsm.EventData = myfsmEventData;
         mitlanBoss.GetComponent<PlayMakerFSM>().Fsm.Event("ResetUI");
-        mitlanBoss.GetComponent<Level3Boss>().StartActions();
+        mitlanBoss.GetComponent<Level3Boss>().IStartActions();
         return;
     }
 

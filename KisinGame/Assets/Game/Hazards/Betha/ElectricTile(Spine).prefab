@@ -51,8 +51,6 @@ MonoBehaviour:
   damage: 22
   startTime: 0
   idleTime: 7
-  electricShock: {fileID: 8300000, guid: fc39c5ad9665e3c4584655a2c54c99de, type: 3}
-  volume: 0.2
 --- !u!33 &7677620111723958694
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -86,6 +84,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

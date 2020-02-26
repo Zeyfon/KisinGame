@@ -18,13 +18,12 @@ public class DroneKamikaze : MonoBehaviour
     [SerializeField] float yOffset = 0;
     [SerializeField] GameObject pixanDrops;
     [SerializeField] Transform sounds;
+    [SerializeField] Transform explosionTrigger;
 
-    Transform projectilePool;
     Transform target;
     Coroutine coroutine;
     Animator animator;
     Rigidbody2D rb;
-    PlayMakerFSM[] pmFSMs;
     Skeleton skeleton;
 
     bool canMove = false;
@@ -41,11 +40,9 @@ public class DroneKamikaze : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        projectilePool = transform.parent.GetChild(1);
         target = GameObject.FindGameObjectWithTag("Player").transform;
         if (!target) Debug.LogWarning("Player is not found");
         animator = GetComponent<Animator>();
-        pmFSMs = target.gameObject.GetComponents<PlayMakerFSM>();
         GetSpineInfo();
     }
 
@@ -54,7 +51,6 @@ public class DroneKamikaze : MonoBehaviour
     {
         while (canMove)
         {
-
             transform.position = new Vector3(Mathf.Lerp(transform.position.x, target.position.x, xLerp), Mathf.Lerp(transform.position.y, target.position.y + yOffset, yLerp), 0);
             yield return new WaitForFixedUpdate();
         }
@@ -80,18 +76,6 @@ public class DroneKamikaze : MonoBehaviour
 
     }
 
-    // The Explosion Child Trigger sends this events via Send Message
-    // If the explosion gets the player it will initiate the method to send the event with the damage value
-    // to the Health_FSM
-    void SendDamageToPlayer()
-    {
-
-        FsmEventData myfsmEventData = new FsmEventData();
-        myfsmEventData.IntData = damage;
-        myfsmEventData.GameObjectData = gameObject;
-        HutongGames.PlayMaker.Fsm.EventData = myfsmEventData;
-        pmFSMs[1].Fsm.Event("_PlayerDamaged");
-    }
     #endregion
 
     //Events coming from the animations
@@ -99,27 +83,20 @@ public class DroneKamikaze : MonoBehaviour
 
      void Explosion_Sound()
     {
-        PlayMakerFSM pFSM = sounds.GetComponent<PlayMakerFSM>();
-        //FsmEventData myfsmEventData = new FsmEventData();
-        //Fsm.EventData = myfsmEventData;
-        pFSM.Fsm.Event("Explosion_Sound");
-
-        print("Explosion Sound " + gameObject);
-        //AudioSource audioSource = GetComponent<AudioSource>();
-        //audioSource.PlayOneShot(explosionSound, volume);
+        sounds.GetComponent<PlayMakerFSM>().SendEvent("Explosion_Sound");
     }
 
     void ExplosionTrigger_Enable()
     {
         rb.WakeUp();
         Collider2D coll;
-        coll = transform.Find("Explosion").GetComponent<Collider2D>();
+        coll = explosionTrigger.GetComponent<Collider2D>();
         coll.enabled = true;
     }
     void ExplosionTrigger_Disable()
     {
         Collider2D coll;
-        coll = transform.Find("Explosion").GetComponent<Collider2D>();
+        coll = explosionTrigger.GetComponent<Collider2D>();
         coll.enabled = false;
     }
 
@@ -134,7 +111,7 @@ public class DroneKamikaze : MonoBehaviour
     //The last two methods are called by the explosion animation or the dead animation
     void GameObject_Destroy()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
     void PixanDrops_Create()

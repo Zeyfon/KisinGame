@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HutongGames.PlayMaker;
 
 public class BombBarrage : MonoBehaviour
 {
     [SerializeField] List<Transform> bombSpawners = new List<Transform>();
-    [SerializeField] List<Transform> fruitBombs = new List<Transform>();
-    [SerializeField] Transform neutralBomb;
+    [SerializeField] List<GameObject> fruitBombs = new List<GameObject>();
+    [SerializeField] GameObject neutralBomb;
     public Transform bossTransform;
     int spawnersQuantity;
 
@@ -16,26 +17,45 @@ public class BombBarrage : MonoBehaviour
     }
     public void AttackStarts(int phase)
     {
-        List<Transform> temporal = new List<Transform>(bombSpawners);
-        Transform currentBomb;
-        for(int i = 0; i < 4-phase; i++)
-        {
-            currentBomb = temporal[Random.Range(0, temporal.Count)];
-            temporal.Remove(currentBomb);
-            currentBomb.GetComponent<BombSpawners>().currentFruitBomb = fruitBombs[Random.Range(0, fruitBombs.Count)];
-        }
-        foreach(Transform bomb in temporal)
-        {
-            bomb.GetComponent<BombSpawners>().currentFruitBomb = neutralBomb;
+        SetBombsToSpawn(phase);
+        Debug.Break();
+        SpawnBombs();
+    }
 
-        }
-        foreach(Transform spawners in bombSpawners)
+    private void SetBombsToSpawn(int phase)
+    {
+        List<Transform> temporalBombSpawnerList = new List<Transform>(bombSpawners);
+        Transform temporalSpawner;
+        for (int i = 0; i < 4 - phase; i++)
         {
-            spawners.GetComponent<BombSpawners>().CreateBomb();
-            print(spawners);
+            temporalSpawner = temporalBombSpawnerList[Random.Range(0, temporalBombSpawnerList.Count)];
+            temporalBombSpawnerList.Remove(temporalSpawner);
+            //currentBomb.GetComponent<BombSpawners>().currentFruitBomb = fruitBombs[Random.Range(0, fruitBombs.Count)];
+            FsmEventData myfsmEventData = new FsmEventData();
+            myfsmEventData.GameObjectData = fruitBombs[Random.Range(0, fruitBombs.Count)];
+            HutongGames.PlayMaker.Fsm.EventData = myfsmEventData;
+            temporalSpawner.GetComponent<PlayMakerFSM>().SendEvent("SetThisBomb");
+        }
+        foreach (Transform temporalSpawner2 in temporalBombSpawnerList)
+        {
+            //bomb.GetComponent<BombSpawners>().currentFruitBomb = neutralBomb;
+            FsmEventData myfsmEventData = new FsmEventData();
+            myfsmEventData.GameObjectData = neutralBomb;
+            HutongGames.PlayMaker.Fsm.EventData = myfsmEventData;
+            temporalSpawner2.GetComponent<PlayMakerFSM>().SendEvent("SetThisBomb");
         }
     }
 
+    private void SpawnBombs()
+    {
+        foreach (Transform spawners in bombSpawners)
+        {
+            //spawners.GetComponent<BombSpawners>().CreateBomb();
+            spawners.GetComponent<PlayMakerFSM>().SendEvent("SpawnBomb");
+        }
+    }
+
+    //Call from each SpawnerFSM
     public void AttackEnded()
     {
         bossTransform.GetComponent<FruitBombBarrageAttack>().AttackEnded();

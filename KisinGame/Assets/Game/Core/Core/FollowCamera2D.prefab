@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 8517344841931423995}
   - component: {fileID: 6998603927401184870}
   - component: {fileID: 9134497378408477969}
+  - component: {fileID: 2292758917185181475}
+  - component: {fileID: 1588396833777429007}
   m_Layer: 0
   m_Name: FollowCamera2D
   m_TagString: Untagged
@@ -170,3 +172,30 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1713403467672447540}
+--- !u!114 &2292758917185181475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564375994423493884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 290146170b8c848479186eb46e48d494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1588396833777429007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564375994423493884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: -1
+  m_Gain: 1
+  m_Use2DDistance: 0

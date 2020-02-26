@@ -285,26 +285,26 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetName
-        - HutongGames.PlayMaker.Actions.ConvertStringToInt
+        - HutongGames.PlayMaker.Actions.GetFsmInt
         - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000006000000
-        actionHashCodes: 71c75a0379de810009faa102
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 081bbf0509faa102
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: currentGO
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: currentGO
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -312,18 +312,18 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
-        - useVariable: 1
-          name: currentGOName
+        - useVariable: 0
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 
-        - useVariable: 1
-          name: currentGOName
+          value: LevelShower
+        - useVariable: 0
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 
+          value: myLevel
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -358,18 +358,17 @@ MonoBehaviour:
         - Activate
         - Activate
         - DoNothing
-        byteData: 000000
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 130000001200000001000000120000001000000001000000100000001000000017000000170000001700000001000000
+        paramDataType: 1400000012000000120000001000000001000000100000001000000017000000170000001700000001000000
         paramName:
         - gameObject
-        - storeName
-        - everyFrame
-        - stringVariable
-        - intVariable
+        - fsmName
+        - variableName
+        - storeValue
         - everyFrame
         - integer1
         - integer2
@@ -377,8 +376,8 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 000000000000000000000000010000000000000001000000010000000200000000000000010000000200000002000000
-        paramByteDataSize: 000000000000000001000000000000000000000001000000000000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000010000000000000000000000010000000200000000000000010000000200000001000000
+        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: Activate Sprite
       description: 
       colorIndex: 0

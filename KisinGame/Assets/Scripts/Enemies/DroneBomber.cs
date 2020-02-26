@@ -33,7 +33,6 @@ public class DroneBomber : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        projectilePool = transform.parent.GetChild(1);
         target = GameObject.FindGameObjectWithTag("Player").transform;
         if (!target) Debug.LogWarning("Player is not found");
         animator = GetComponent<Animator>();
@@ -48,6 +47,7 @@ public class DroneBomber : MonoBehaviour
         skeleton = skeletonAnimation.skeleton;
     }
 
+    //Method called from the child PlayerFinder to start following the Player
     public void StartFollowingPlayer()
     {
         playerInRange = true;
@@ -55,6 +55,9 @@ public class DroneBomber : MonoBehaviour
         coroutine = StartCoroutine(FollowPlayer());
 
     }
+    
+
+
 
     private void Update()
     {
@@ -68,7 +71,7 @@ public class DroneBomber : MonoBehaviour
                 {
                     canMove = false;
                     StopCoroutine(coroutine);
-                    coroutine = StartCoroutine(DeployBomb2());
+                    coroutine = StartCoroutine(DeployBomb());
                 }
             }
             else
@@ -93,20 +96,20 @@ public class DroneBomber : MonoBehaviour
     //Animation Event
     void GameObject_Destroy()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
     //Animation Event
     void PixanDrops_Create()
     {
-        Instantiate(pixanDrops, transform.position, Quaternion.identity, transform.parent.GetChild(0));
+        projectilePool = transform.parent.parent.GetChild(1);
+        Instantiate(pixanDrops, transform.position, Quaternion.identity, projectilePool);
     }
 
     //Animation Event
     void Bomb_Drop()
     {
-        PlayMakerFSM pFSM = sounds.GetComponent<PlayMakerFSM>();
-        pFSM.Fsm.Event("DropBombSound");
+        sounds.GetComponent<PlayMakerFSM>().SendEvent("DropBombSound");
         GameObject bombClone = Instantiate(bomb, transform.position, Quaternion.identity, projectilePool);
         DroneBBomb droneBBomb = bombClone.GetComponent<DroneBBomb>();
         droneBBomb.SetDamage(bombDamage);
@@ -123,7 +126,7 @@ public class DroneBomber : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator DeployBomb2()
+    IEnumerator DeployBomb()
     {
 
         while (!canMove)

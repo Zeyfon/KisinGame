@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 283181933914340318}
   - component: {fileID: 283181933914340129}
   - component: {fileID: 1087394962986284856}
-  - component: {fileID: 283181933914340304}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -44,8 +43,8 @@ Camera:
   m_GameObject: {fileID: 283181933914340319}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.1699448, g: 0.35151255, b: 0.5377358, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0.39811707, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -872,7 +871,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -921,18 +920,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 0}
---- !u!114 &283181933914340304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283181933914340319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ee1c62c905bb24ea7c9cf3d9d40b56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TraumaExponent: 0.3
-  MaximumAngularShake: {x: 3, y: 3, z: 2}
-  MaximumTranslationShake: {x: 0, y: 2, z: 0}

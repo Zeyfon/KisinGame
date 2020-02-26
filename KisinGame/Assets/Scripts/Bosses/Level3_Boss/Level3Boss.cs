@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level3Boss : MonoBehaviour, BossStarter
+public class Level3Boss : MonoBehaviour, IBossStarter
 {
     enum Dialogues
     {
@@ -41,7 +41,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
         animIzel.SetInteger("Phase", phase);
         if (mitlanActive)
         {
-            animMitlan = transform.GetChild(5).GetComponent<Animator>();
+            animMitlan = transform.GetChild(4).GetComponent<Animator>();
             animMitlan.SetInteger("Phase", phase);
         }
 
@@ -63,7 +63,7 @@ public class Level3Boss : MonoBehaviour, BossStarter
     }
     #region Control
     // Called from the Dialogue Level3Dialogue 1 Conversation Ended Event
-    public void StartActions()
+    public void IStartActions()
     {
         if (phase > 1)
         {

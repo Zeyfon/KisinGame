@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
 
-public class Level2Boss : MonoBehaviour, BossStarter
+public class Level2Boss : MonoBehaviour, IBossStarter
 {
     #region Inspector
     [Header("Internal Values")]
@@ -49,7 +49,7 @@ public class Level2Boss : MonoBehaviour, BossStarter
     }
 
     #region Control
-    public void StartActions()
+    public void IStartActions()
     {
         anim.SetInteger("Phase", phase);
         DecideNextAction();
