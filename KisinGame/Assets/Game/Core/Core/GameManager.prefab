@@ -23557,14 +23557,14 @@ MonoBehaviour:
         serializedVersion: 2
         x: 645
         y: 103.99219
-        width: 166
+        width: 129
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: ConversationEnded
+          name: MenusEnabled
           isSystemEvent: 0
           isGlobal: 0
         toState: Not in Saving Point
@@ -23617,13 +23617,13 @@ MonoBehaviour:
     - name: CloseMenu
       isSystemEvent: 0
       isGlobal: 0
-    - name: ConversationEnded
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: ConversationStarted
-      isSystemEvent: 0
-      isGlobal: 0
     - name: InSavePoint
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: MenusDisabled
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: MenusEnabled
       isSystemEvent: 0
       isGlobal: 0
     - name: NotInSavePoint
@@ -23652,7 +23652,7 @@ MonoBehaviour:
       isGlobal: 0
     globalTransitions:
     - fsmEvent:
-        name: ConversationStarted
+        name: MenusDisabled
         isSystemEvent: 0
         isGlobal: 0
       toState: Conversation

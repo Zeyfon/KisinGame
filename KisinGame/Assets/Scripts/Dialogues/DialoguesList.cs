@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
+using UnityEngine.UI;
 
 public class DialoguesList : MonoBehaviour
 {
     [SerializeField] List<Transform> dialogues;
 
-    private void Start()
+    public bool WillBeDialogueBeforeBossFight()
     {
-        dialogues = new List<Transform>(transform.childCount);
-        for (int i = 0; i < transform.childCount; i++)
+        if (dialogues[0] == null)
         {
-            dialogues.Add(transform.GetChild(i));
+            print("Will be no dialogue before figts");
+            return false;
+        }
+        else
+        {
+            print("Will be dialogue before boss fight");
+            return true;
         }
     }
 
@@ -20,5 +26,11 @@ public class DialoguesList : MonoBehaviour
     {
         print("Starting Dialogue  " + dialogues[i].name);
         return dialogues[i];
+    }
+
+    public void RunDialogue(int index)
+    {
+        print("Still before");
+        dialogues[index].GetComponent<DialogueSystemTrigger>().OnUse();
     }
 }
