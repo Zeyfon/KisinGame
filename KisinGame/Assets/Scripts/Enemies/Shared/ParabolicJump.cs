@@ -9,7 +9,6 @@ public class ParabolicJump : MonoBehaviour
         rb.drag = 0;
         //print(targetPosition);
         Vector3 jumpVector = CalculateJumpSpeed(rb, targetPosition, time);
-        print("Attack was Adjusted");
         if (jumpVector.x < 0)
         {
             jumpVector = new Vector3(jumpVector.x + xDistanceToAdjust, jumpVector.y, 0);

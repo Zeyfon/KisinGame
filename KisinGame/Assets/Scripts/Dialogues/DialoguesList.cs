@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DialoguesList : MonoBehaviour
 {
-    [SerializeField] List<Transform> dialogues;
+    public  List<GameObject> dialogues;
 
     public bool WillBeDialogueBeforeBossFight()
     {
@@ -25,12 +25,12 @@ public class DialoguesList : MonoBehaviour
     public Transform GetDialogue(int i)
     {
         print("Starting Dialogue  " + dialogues[i].name);
-        return dialogues[i];
+        return dialogues[i].transform;
     }
 
     public void RunDialogue(int index)
     {
-        print("Still before");
+        print("Wants To Run Dialogue");
         dialogues[index].GetComponent<DialogueSystemTrigger>().OnUse();
     }
 }

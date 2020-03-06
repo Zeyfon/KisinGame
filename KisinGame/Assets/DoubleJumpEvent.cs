@@ -8,8 +8,11 @@ using System;
 public class DoubleJumpEvent : MonoBehaviour
 {
     [SerializeField] float waitingTime = 5;
-    [SerializeField] Transform imageTransform;
-    [SerializeField] Transform buttonTransform;
+    private void Start()
+    {
+        DisableChildren();
+
+    }
 
     public void DoubleJumpSkillAcquiringEvent()
     {
@@ -20,17 +23,25 @@ public class DoubleJumpEvent : MonoBehaviour
     IEnumerator EnableDoubleJumpEventAssets()
     {
         yield return new WaitForSeconds(0.5f);
-        imageTransform.gameObject.SetActive(true);
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(1).gameObject.SetActive(true);
         yield return new WaitForSeconds(waitingTime);
-        buttonTransform.gameObject.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(buttonTransform.gameObject);
+        transform.GetChild(2).gameObject.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(transform.GetChild(2).gameObject);
     }
 
     public void EndDoubleJumpEvent()
     {
-        imageTransform.gameObject.SetActive(false);
-        buttonTransform.gameObject.SetActive(false);
+        DisableChildren();
         StartCoroutine(EnablePlayerController());
+    }
+
+    private void DisableChildren()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 
     IEnumerator EnablePlayerController()

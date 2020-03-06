@@ -1,0 +1,114 @@
+{
+"skeleton": {
+	"hash": "Z2Bif9ci/rJCFY8sIP+c6BOebCI",
+	"spine": "3.8.85",
+	"x": -150,
+	"y": -245,
+	"width": 300,
+	"height": 490,
+	"images": "./images/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "PuertaLVL1", "bone": "root", "attachment": "Illustration_00014" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"PuertaLVL1": {
+				"Illustration_00000": { "width": 300, "height": 490 },
+				"Illustration_00001": { "width": 300, "height": 490 },
+				"Illustration_00002": { "width": 300, "height": 490 },
+				"Illustration_00003": { "width": 300, "height": 490 },
+				"Illustration_00004": { "width": 300, "height": 490 },
+				"Illustration_00005": { "width": 300, "height": 490 },
+				"Illustration_00006": { "width": 300, "height": 490 },
+				"Illustration_00007": { "width": 300, "height": 490 },
+				"Illustration_00008": { "width": 300, "height": 490 },
+				"Illustration_00009": { "width": 300, "height": 490 },
+				"Illustration_00010": { "width": 300, "height": 490 },
+				"Illustration_00011": { "width": 300, "height": 490 },
+				"Illustration_00012": { "width": 300, "height": 490 },
+				"Illustration_00013": { "width": 300, "height": 490 },
+				"Illustration_00014": { "width": 300, "height": 490 }
+			}
+		}
+	}
+],
+"animations": {
+	"CloseDoor": {
+		"slots": {
+			"PuertaLVL1": {
+				"attachment": [
+					{ "name": "Illustration_00000" },
+					{ "time": 0.0333, "name": "Illustration_00001" },
+					{ "time": 0.0667, "name": "Illustration_00002" },
+					{ "time": 0.1, "name": "Illustration_00003" },
+					{ "time": 0.1333, "name": "Illustration_00004" },
+					{ "time": 0.1667, "name": "Illustration_00005" },
+					{ "time": 0.2, "name": "Illustration_00006" },
+					{ "time": 0.2333, "name": "Illustration_00007" },
+					{ "time": 0.2667, "name": "Illustration_00008" },
+					{ "time": 0.3, "name": "Illustration_00009" },
+					{ "time": 0.3333, "name": "Illustration_00010" },
+					{ "time": 0.3667, "name": "Illustration_00011" },
+					{ "time": 0.4, "name": "Illustration_00012" },
+					{ "time": 0.4333, "name": "Illustration_00013" },
+					{ "time": 0.4667, "name": "Illustration_00014" }
+				]
+			}
+		}
+	},
+	"ClosedLoop": {
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "curve": "stepped" },
+					{ "time": 0.3333 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.3333 }
+				]
+			}
+		}
+	},
+	"OpenDoor": {
+		"slots": {
+			"PuertaLVL1": {
+				"attachment": [
+					{ "name": "Illustration_00014" },
+					{ "time": 0.0333, "name": "Illustration_00013" },
+					{ "time": 0.0667, "name": "Illustration_00012" },
+					{ "time": 0.1, "name": "Illustration_00011" },
+					{ "time": 0.1333, "name": "Illustration_00010" },
+					{ "time": 0.1667, "name": "Illustration_00009" },
+					{ "time": 0.2, "name": "Illustration_00008" },
+					{ "time": 0.2333, "name": "Illustration_00007" },
+					{ "time": 0.2667, "name": "Illustration_00006" },
+					{ "time": 0.3, "name": "Illustration_00005" },
+					{ "time": 0.3333, "name": "Illustration_00004" },
+					{ "time": 0.3667, "name": "Illustration_00003" },
+					{ "time": 0.4, "name": "Illustration_00002" },
+					{ "time": 0.4333, "name": "Illustration_00001" },
+					{ "time": 0.4667, "name": "Illustration_00000" }
+				]
+			}
+		}
+	},
+	"OpenedLoop": {
+		"slots": {
+			"PuertaLVL1": {
+				"attachment": [
+					{ "name": "Illustration_00000" },
+					{ "time": 0.3333, "name": "Illustration_00000" }
+				]
+			}
+		}
+	}
+}
+}

@@ -9,6 +9,13 @@ public class SkillOrb : MonoBehaviour
     [SerializeField] float movingTime = 1;
     Rigidbody2D rb;
 
+    [Header("SkillGottenSound")]
+    [UnityEngine.Tooltip("Sound will do when the crystal touches Zyana")]
+    [SerializeField] AudioClip skillGottenSound;
+    [UnityEngine.Tooltip("The volume will have the sound")]
+    [SerializeField] float volume = 1;
+
+
     public int dialogueIndex = 0;
 
     IEnumerator Start()
@@ -16,7 +23,6 @@ public class SkillOrb : MonoBehaviour
         InitialSetup();
         yield return new WaitForSeconds(3);
         StartDoubleJumpEvent(dialogueIndex);
-        print("Double Jump Skill Event Started");
     }
 
     private void InitialSetup()
@@ -40,7 +46,7 @@ public class SkillOrb : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, target.position);
         yield return new WaitForSeconds(movingTime - 0.2f);
-        while (distance>0.4f)
+        while (distance > 0.4f)
         {
             distance = Vector3.Distance(transform.position, target.position);
             yield return new WaitForEndOfFrame();
@@ -49,13 +55,16 @@ public class SkillOrb : MonoBehaviour
         SkeletonAnimation skeletonAnimation = GetComponent<SkeletonAnimation>();
         skeletonAnimation.state.SetAnimation(0, "explosion", false);
         skeletonAnimation.AnimationState.End += ExplosionEnded;
+        PlaySkillUnlockedSound();
+    }
+
+    private void PlaySkillUnlockedSound()
+    {
+        GetComponent<AudioSource>().PlayOneShot(skillGottenSound, volume);
     }
 
     private void ExplosionEnded(Spine.TrackEntry trackEntry)
     {
-        print(trackEntry);
-        print("Explosion Ended");
-        print("Dialogue Index " + dialogueIndex);
         FindObjectOfType<BossRoomController>().BossDead(dialogueIndex);
     }
 }

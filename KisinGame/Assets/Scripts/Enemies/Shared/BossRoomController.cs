@@ -9,36 +9,42 @@ public class BossRoomController : MonoBehaviour
 {
     enum Bosses {levelBoss, izelBoss,mitlaBoss}
     [SerializeField] string bossName = "  ";
-    [SerializeField] Transform backtrackingDoor = null;
-    [SerializeField] Transform otherDoor = null;
+    [SerializeField] Transform backtrackingLimitDoor = null;
+    [SerializeField] Transform continueDoor = null;
     [SerializeField] Transform bossUI = null;
     [SerializeField] float timeToActivateBoss = 1;
     [SerializeField] Transform dialogueList;
 
-    [SerializeField] bool overrideSave =false;
+    [SerializeField] bool bossDefeated = false;
 
-    bool initialized = false;
+    [Header("Doors Sounds")]
+    [SerializeField] AudioClip closeDoor;
+    [SerializeField] float closeDoorsVolume = 1;
+    [SerializeField] AudioClip openDoor;
+    [SerializeField] float openDoorsVolume = 1;
+
     IBossStarter currentBoss;
 
-    private void Start()
+    void Start()
     {
-        InitialDoorSetup();
-        SetBossFightStartMethod();
-    }
-
-    private void SetBossFightStartMethod()
-    {
-        if (!transform.GetChild(4).GetComponent<DialoguesList>().WillBeDialogueBeforeBossFight())
+        if (!bossDefeated)
         {
-            return;
+            SetDoorsBeforeBossFight();
         }
-        GetComponent<Collider2D>().enabled = false;
+        else
+        {
+            SetDoorsAfterBossDefeated();
+        }
+        if (WillBeADialogueBeforeTheFight())
+        {
+            GetComponent<Collider2D>().enabled = false;
+        }
     }
 
-    private void InitialDoorSetup()
+    private bool WillBeADialogueBeforeTheFight()
     {
-        otherDoor.gameObject.SetActive(false);
-        backtrackingDoor.gameObject.SetActive(false);
+        if (dialogueList.GetComponent<DialoguesList>().dialogues[0] == null) return false;
+        return true;
     }
 
     public void SetCurrentBoss(IBossStarter boss)
@@ -46,22 +52,11 @@ public class BossRoomController : MonoBehaviour
         currentBoss = boss;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //if (initialized) return;
-        if (collision.gameObject.GetComponent<PlayerIdentifer>())
-        {
-            StartFight();
-            Collider2D collider = GetComponent<BoxCollider2D>();
-            collider.enabled = false;
-            initialized = true;
-        }
-    }
     //Called from the Dialogue Event in the Dialogue System Trigger
     public void StartFight()
     {
         print(currentBoss + "  StartFight");
-        ActivateDoors();
+        CloseDoors();
         ActivateUI();
         StartCoroutine(ActivateBoss());
     }
@@ -74,12 +69,6 @@ public class BossRoomController : MonoBehaviour
         Destroy(mitlanCover);
         yield return new WaitForSeconds(1);
         StartFight();
-    }
-
-    void ActivateDoors()
-    {
-        if (backtrackingDoor) backtrackingDoor.gameObject.SetActive(true);
-        if (otherDoor) otherDoor.gameObject.SetActive(true);
     }
 
     IEnumerator ActivateBoss()
@@ -97,24 +86,26 @@ public class BossRoomController : MonoBehaviour
     public void BossDead( int dialogueID)
     {
         StartCoroutine(BossDeadC(dialogueID));
+
     }
 
     IEnumerator BossDeadC(int dialogueID)
     {
-        SetDoorsAfterBossDefeated();
-        //GameObject gameManager = GameObject.FindObjectOfType<SetActiveSceneAction>().gameObject;
-
+        print("REaching 1");
+        OpenContinueDoor();
         yield return new WaitForSeconds(.5f);
+        print("REaching 2");
         DisableUI();
         yield return new WaitForSeconds(.5f);
+        print("REaching 3");
 
         AfterDefeatingBossDialogue(dialogueID);
+        print("Reached the dialogues");
     }
 
     private void AfterDefeatingBossDialogue(int dialogueID)
     {
-        transform.GetChild(4).GetComponent<DialoguesList>().RunDialogue(dialogueID);
-        print("Still before");
+        dialogueList.GetComponent<DialoguesList>().RunDialogue(dialogueID);
     }
 
     private void RunDialogue(int dialogueID)
@@ -128,16 +119,47 @@ public class BossRoomController : MonoBehaviour
         bossUI.GetComponent<PlayMakerFSM>().Fsm.Event("DisableBossUI");
     }
 
-    private void SetDoorsAfterBossDefeated()
-    {
-        backtrackingDoor.gameObject.SetActive(true);
-        otherDoor.gameObject.SetActive(false);
-    }
-
     public void GameFinished()
     {
         PlayMakerFSM gameManagerFSM = FindObjectOfType<SetActiveSceneAction>().GetComponent<PlayMakerFSM>();
         gameManagerFSM.Fsm.Event("GameHasFinished");
         DisableUI();
+    }
+
+    #region BossRoomDoors
+    void SetDoorsBeforeBossFight()
+    {
+        continueDoor.GetComponent<BossRoomDoor>().OpenedState();
+        backtrackingLimitDoor.GetComponent<BossRoomDoor>().OpenedState();
+    }
+
+    void CloseDoors()
+    {
+        backtrackingLimitDoor.GetComponent<BossRoomDoor>().CloseDoor();
+        continueDoor.GetComponent<BossRoomDoor>().CloseDoor();
+        GetComponent<AudioSource>().PlayOneShot(closeDoor, closeDoorsVolume);
+    }
+
+    void OpenContinueDoor()
+    {
+        continueDoor.GetComponent<BossRoomDoor>().OpenDoor();
+        GetComponent<AudioSource>().PlayOneShot(openDoor, openDoorsVolume);
+    }
+
+    private void SetDoorsAfterBossDefeated()
+    {
+        backtrackingLimitDoor.GetComponent<BossRoomDoor>().ClosedState();
+        continueDoor.GetComponent<BossRoomDoor>().OpenedState();
+    }
+    #endregion
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<PlayerIdentifer>())
+        {
+            Collider2D collider = GetComponent<BoxCollider2D>();
+            collider.enabled = false;
+            StartFight();
+        }
     }
 }
