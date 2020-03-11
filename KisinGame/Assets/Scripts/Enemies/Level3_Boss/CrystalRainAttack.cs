@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrystalRainAttack : MonoBehaviour
 {
     [UnityEngine.Tooltip("Set at runtinme")]
-    [SerializeField] List<Transform> rainSlots = new List<Transform>();
+     List<Transform> rainSlots = new List<Transform>();
     [SerializeField] float timeBetweenRainSlotsAttack = 1f;
     [SerializeField] float timetoStartRainAttack = 1f;
 
@@ -20,7 +20,7 @@ public class CrystalRainAttack : MonoBehaviour
     private void Start()
     {
         BossRoomController bossController= GetComponent<Level3Boss>().bossRoomController;
-        rainSlots = bossController.transform.parent.GetChild(4).GetComponent<CrystalRainAttackList>().crystalRainList;
+        rainSlots = bossController.transform.parent.GetChild(5).GetComponent<CrystalRainAttackList>().crystalRainList;
         initialPosition = rainSlots[0].transform.position;
         mitlanActive = GetComponent<Level3Boss>().MitlanIsActive();
 

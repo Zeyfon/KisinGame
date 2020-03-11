@@ -16,14 +16,14 @@ public class BossRoomDoor : MonoBehaviour
 
     public void CloseDoor()
     {
-        print("ClosingDoor");
+        //print("ClosingDoor");
         skeletonAnimation.state.SetAnimation(0, "CloseDoor", false);
 
     }
 
     public void OpenDoor()
     {
-        print("Opening door for " + gameObject.name);
+        //print("Opening door for " + gameObject.name);
         skeletonAnimation.state.SetAnimation(0, "OpenDoor", false);
 
     }
@@ -52,6 +52,6 @@ public class BossRoomDoor : MonoBehaviour
     public void ClosedState()
     {
         skeletonAnimation.state.SetAnimation(0, "ClosedLoop", false);
-        print("Set to Closed");
+        //print("Set to Closed");
     }
 }

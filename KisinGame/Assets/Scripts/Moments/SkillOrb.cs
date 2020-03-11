@@ -20,18 +20,20 @@ public class SkillOrb : MonoBehaviour
 
     IEnumerator Start()
     {
-        InitialSetup();
+        StartCoroutine(InitialSetup());
         yield return new WaitForSeconds(3);
         StartDoubleJumpEvent(dialogueIndex);
     }
 
-    private void InitialSetup()
+    IEnumerator InitialSetup()
     {
+        PlayMakerFSM fsm = FindObjectOfType<DialogueSystemController>().transform.GetComponent<PlayMakerFSM>();
         rb = GetComponent<Rigidbody2D>();
         FsmEventData myfsmEventData = new FsmEventData();
         myfsmEventData.BoolData = false;
-        HutongGames.PlayMaker.Fsm.EventData = myfsmEventData;
-        FindObjectOfType<DialogueSystemController>().transform.GetComponent<PlayMakerFSM>().SendEvent("DisablePlayerControl");
+        fsm.SendEvent("DisableAutomaticPlayerControlRecover");
+        yield return new WaitForEndOfFrame();
+        fsm.SendEvent("DisablePlayerControl");
     }
 
     public void StartDoubleJumpEvent(int i)

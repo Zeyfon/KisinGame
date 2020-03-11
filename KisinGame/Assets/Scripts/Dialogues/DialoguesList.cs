@@ -8,6 +8,14 @@ public class DialoguesList : MonoBehaviour
 {
     public  List<GameObject> dialogues;
 
+    private void Start()
+    {
+        if (dialogues[0] == null)
+        {
+            GetComponent<Collider2D>().enabled = false;
+        }
+    }
+
     public bool WillBeDialogueBeforeBossFight()
     {
         if (dialogues[0] == null)
@@ -22,15 +30,25 @@ public class DialoguesList : MonoBehaviour
         }
     }
 
-    public Transform GetDialogue(int i)
-    {
-        print("Starting Dialogue  " + dialogues[i].name);
-        return dialogues[i].transform;
-    }
-
     public void RunDialogue(int index)
     {
-        print("Wants To Run Dialogue");
+        print("DialogueList running dialogue");
         dialogues[index].GetComponent<DialogueSystemTrigger>().OnUse();
+        string conversation = dialogues[index].GetComponent<DialogueSystemTrigger>().conversation;
+        print(conversation);
+        if (conversation == "Level3/Dialogue2" || conversation == "Level3/Dialogue1")
+        {
+            FindObjectOfType<DialogueSystemController>().GetComponent<PlayMakerFSM>().SendEvent("StartBossFightAfterDialogue");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<PlayerIdentifer>())
+        {
+            RunDialogue(0);
+            GetComponent<Collider2D>().enabled = false;
+        }
+
     }
 }

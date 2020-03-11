@@ -25,7 +25,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1835.1094
-        y: 523.33594
+        y: 747.33594
         width: 209
         height: 32
       isBreakpoint: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1840.1172
-        y: 450.48438
+        y: 674.4844
         width: 115
         height: 32
       isBreakpoint: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1829.2812
-        y: 593.1875
+        y: 817.1875
         width: 217
         height: 32
       isBreakpoint: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1158.6406
-        y: 464.5078
+        y: 688.5078
         width: 137
         height: 32
       isBreakpoint: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1918.7891
-        y: 1030.3047
+        y: 1254.3047
         width: 100
         height: 16
       isBreakpoint: 0
@@ -517,7 +517,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2262.6719
-        y: 1528.9375
+        y: 1752.9375
         width: 227
         height: 32
       isBreakpoint: 0
@@ -627,7 +627,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 879.6094
-        y: 1037.8438
+        y: 1261.8438
         width: 190
         height: 32
       isBreakpoint: 0
@@ -838,7 +838,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 915.3828
-        y: 1312.3438
+        y: 1536.3438
         width: 127
         height: 32
       isBreakpoint: 0
@@ -898,7 +898,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1106.6953
-        y: 834.2656
+        y: 1058.2656
         width: 243
         height: 16
       isBreakpoint: 0
@@ -1023,7 +1023,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2564.25
-        y: 1530.625
+        y: 1754.625
         width: 133
         height: 32
       isBreakpoint: 0
@@ -1198,7 +1198,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1366.0938
-        y: 933.625
+        y: 1157.625
         width: 201
         height: 32
       isBreakpoint: 0
@@ -1392,7 +1392,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1381.1172
-        y: 1322.125
+        y: 1546.125
         width: 138
         height: 32
       isBreakpoint: 0
@@ -1452,7 +1452,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2268.6172
-        y: 1338.1406
+        y: 1562.1406
         width: 173
         height: 32
       isBreakpoint: 0
@@ -1578,7 +1578,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1466.0391
-        y: 439.4922
+        y: 663.4922
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1671,7 +1671,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1148.4609
-        y: 623.41406
+        y: 847.41406
         width: 178
         height: 32
       isBreakpoint: 0
@@ -1915,7 +1915,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 866.9531
-        y: 1149.125
+        y: 1373.125
         width: 195
         height: 48
       isBreakpoint: 0
@@ -2004,7 +2004,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1147.0156
-        y: 1153.4531
+        y: 1377.4531
         width: 137
         height: 32
       isBreakpoint: 0
@@ -2096,7 +2096,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1371.6328
-        y: 1020.8281
+        y: 1244.8281
         width: 210
         height: 48
       isBreakpoint: 0
@@ -2185,7 +2185,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1112.5859
-        y: 1031.0469
+        y: 1255.0469
         width: 148
         height: 32
       isBreakpoint: 0
@@ -2277,7 +2277,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1462.9844
-        y: 498.21094
+        y: 722.21094
         width: 227
         height: 32
       isBreakpoint: 0
@@ -2381,558 +2381,13 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: Camera FadeOut
-      description: 
-      colorIndex: 3
-      position:
-        serializedVersion: 2
-        x: 2292.1172
-        y: 400.2422
-        width: 168
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: CameraIsBlack
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Destroy Objects
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.GetChild
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.ActivateGameObject
-        customNames:
-        - 
-        - 
-        - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000004000000080000000c000000
-        actionHashCodes: ba7ea101184b5704ba7ea101b2cf1000
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: gameController
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: player
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: gameController
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: camera
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: CameraActions
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: player
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: PlayerActions
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: FinishGame
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: GameController
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: FinishGame
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1f000000120000000f00000001000000140000001200000012000000130000001f000000120000000f000000010000001400000011000000110000000100000001000000
-        paramName:
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        - gameObject
-        - childName
-        - withTag
-        - storeResult
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        - gameObject
-        - activate
-        - recursive
-        - resetOnExit
-        - everyFrame
-        paramDataPos: 0000000000000000000000000000000000000000010000000200000000000000010000000300000001000000010000000100000000000000010000000200000003000000
-        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000001000000
-    - name: Destroy Objects
-      description: Player, UI, Menus
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 2288.4688
-        y: 468.39844
-        width: 142
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Load Ending Scene
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.DestroyObject
-        - HutongGames.PlayMaker.Actions.DestroyObject
-        - HutongGames.PlayMaker.Actions.DestroyObject
-        customNames:
-        - 
-        - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000006000000
-        actionHashCodes: 9ff80c029ff80c029ff80c02
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: player
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: ui
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: menusManager
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 130000000f00000011000000130000000f00000011000000130000000f00000011000000
-        paramName:
-        - gameObject
-        - delay
-        - detachChildren
-        - gameObject
-        - delay
-        - detachChildren
-        - gameObject
-        - delay
-        - detachChildren
-        paramDataPos: 000000000000000000000000010000000100000001000000020000000200000002000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: Load Ending Scene
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 2285.4844
-        y: 559.1719
-        width: 178
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: LoadingActionFinished
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: DesstroyCamera
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: ba7ea101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 0
-            gameObject:
-              useVariable: 0
-              name: 
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: SceneTransition
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: LoadEndingScene
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1f000000120000000f00000001000000
-        paramName:
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000001000000
-    - name: DesstroyCamera
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 2279.5156
-        y: 617.7031
-        width: 140
-        height: 16
-      isBreakpoint: 0
-      isSequence: 1
-      hideUnused: 0
-      transitions: []
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.Wait
-        - HutongGames.PlayMaker.Actions.DestroyObject
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 48c011019ff80c02
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: camera
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.5
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - 
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000001700000001000000130000000f00000011000000
-        paramName:
-        - time
-        - finishEvent
-        - realTime
-        - gameObject
-        - delay
-        - detachChildren
-        paramDataPos: 000000000000000000000000000000000100000000000000
-        paramByteDataSize: 000000000000000001000000000000000000000000000000
     - name: State 3
       description: 
       colorIndex: 3
       position:
         serializedVersion: 2
         x: 2510.1406
-        y: 798.3594
+        y: 1022.3594
         width: 116
         height: 32
       isBreakpoint: 0
@@ -3257,7 +2712,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2292.7734
-        y: 801.7656
+        y: 1025.7656
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3340,7 +2795,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 938.46875
-        y: 933.7969
+        y: 1157.7969
         width: 121
         height: 32
       isBreakpoint: 0
@@ -3625,7 +3080,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2625.9922
-        y: 386.6953
+        y: 610.6953
         width: 154
         height: 32
       isBreakpoint: 0
@@ -3844,7 +3299,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2617.5078
-        y: 476.9297
+        y: 700.9297
         width: 100
         height: 16
       isBreakpoint: 0
@@ -3898,7 +3353,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1154.9062
-        y: 564.8281
+        y: 788.8281
         width: 172
         height: 32
       isBreakpoint: 0
@@ -4007,8 +3462,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 2296.7344
-        y: 286.2422
+        x: 2323.0703
+        y: 109.4375
         width: 148
         height: 32
       isBreakpoint: 0
@@ -4019,7 +3474,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Camera FadeOut
+        toState: CameraFadeOut 3
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -4080,7 +3535,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2935.8047
-        y: 269.6328
+        y: 493.6328
         width: 150
         height: 32
       isBreakpoint: 0
@@ -4190,7 +3645,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1926.7656
-        y: 918.5625
+        y: 1142.5625
         width: 183.5
         height: 32
       isBreakpoint: 0
@@ -4516,7 +3971,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2947.2188
-        y: 214.5625
+        y: 438.5625
         width: 196
         height: 32
       isBreakpoint: 0
@@ -4636,7 +4091,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2966.1016
-        y: 465.78125
+        y: 689.78125
         width: 106
         height: 32
       isBreakpoint: 0
@@ -4708,7 +4163,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2930.0547
-        y: 632.59375
+        y: 856.59375
         width: 191
         height: 32
       isBreakpoint: 0
@@ -4795,7 +4250,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2959.3516
-        y: 534.40625
+        y: 758.40625
         width: 153
         height: 32
       isBreakpoint: 0
@@ -4905,7 +4360,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2966.0781
-        y: 114.375
+        y: 338.375
         width: 175
         height: 32
       isBreakpoint: 0
@@ -5176,7 +4631,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 3295.5625
-        y: 214.29688
+        y: 438.29688
         width: 172.5
         height: 32
       isBreakpoint: 0
@@ -5415,7 +4870,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 3285.1797
-        y: 284.20312
+        y: 508.20312
         width: 177
         height: 32
       isBreakpoint: 0
@@ -5847,7 +5302,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 3281.6953
-        y: 387.02344
+        y: 611.02344
         width: 176
         height: 32
       isBreakpoint: 0
@@ -6279,7 +5734,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 3281.3984
-        y: 492.6797
+        y: 716.6797
         width: 231
         height: 48
       isBreakpoint: 0
@@ -6361,7 +5816,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 3273.8906
-        y: 627.40625
+        y: 851.40625
         width: 155
         height: 16
       isBreakpoint: 0
@@ -6413,7 +5868,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 3092.086
-        y: 795.8594
+        y: 1019.8594
         width: 225
         height: 32
       isBreakpoint: 0
@@ -6588,7 +6043,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 3088.3828
-        y: 868.08594
+        y: 1092.0859
         width: 219
         height: 32
       isBreakpoint: 0
@@ -6851,7 +6306,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 3080.961
-        y: 924.27344
+        y: 1148.2734
         width: 232
         height: 32
       isBreakpoint: 0
@@ -7114,7 +6569,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 3076.0078
-        y: 979.53906
+        y: 1203.5391
         width: 234
         height: 16
       isBreakpoint: 0
@@ -7166,7 +6621,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1556.3359
-        y: 1476.2266
+        y: 1700.2266
         width: 141
         height: 16
       isBreakpoint: 0
@@ -7383,7 +6838,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 626.27344
-        y: 534.1328
+        y: 758.1328
         width: 153
         height: 32
       isBreakpoint: 0
@@ -7493,7 +6948,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 628.5469
-        y: 415.03125
+        y: 639.03125
         width: 163
         height: 48
       isBreakpoint: 0
@@ -7582,7 +7037,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 849.09375
-        y: 418.5703
+        y: 642.5703
         width: 100
         height: 32
       isBreakpoint: 0
@@ -7654,7 +7109,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2095.6797
-        y: 737.4375
+        y: 961.4375
         width: 150
         height: 32
       isBreakpoint: 0
@@ -7865,7 +7320,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 633.3672
-        y: 311.91406
+        y: 535.91406
         width: 239.5
         height: 32
       isBreakpoint: 0
@@ -7925,7 +7380,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 373.4297
-        y: 331.32812
+        y: 555.3281
         width: 178
         height: 32
       isBreakpoint: 0
@@ -8136,7 +7591,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2096.4219
-        y: 647.3047
+        y: 871.3047
         width: 143
         height: 32
       isBreakpoint: 0
@@ -8334,7 +7789,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 127.41406
-        y: 151.28125
+        y: 375.28125
         width: 141
         height: 32
       isBreakpoint: 0
@@ -8444,7 +7899,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 118.77344
-        y: 266.22656
+        y: 490.22656
         width: 141
         height: 32
       isBreakpoint: 0
@@ -8554,7 +8009,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 2567.4688
-        y: 1333.6094
+        y: 1557.6094
         width: 101
         height: 32
       isBreakpoint: 0
@@ -8664,7 +8119,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 55.867188
-        y: 446.59375
+        y: 670.59375
         width: 141
         height: 32
       isBreakpoint: 0
@@ -8774,7 +8229,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 375
-        y: 271
+        y: 495
         width: 100
         height: 32
       isBreakpoint: 0
@@ -8834,7 +8289,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1452.9844
-        y: 598.21094
+        y: 822.21094
         width: 153
         height: 48
       isBreakpoint: 0
@@ -9023,7 +8478,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 379.95312
-        y: 207.75
+        y: 431.75
         width: 215
         height: 32
       isBreakpoint: 0
@@ -9335,7 +8790,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1458.7656
-        y: 550.58594
+        y: 774.58594
         width: 100
         height: 32
       isBreakpoint: 0
@@ -9418,7 +8873,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1846.875
-        y: 366.35938
+        y: 590.3594
         width: 191
         height: 32
       isBreakpoint: 0
@@ -9643,7 +9098,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1160.4922
-        y: 416.5547
+        y: 640.5547
         width: 144
         height: 32
       isBreakpoint: 0
@@ -9753,7 +9208,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1155.9688
-        y: 513.7031
+        y: 737.7031
         width: 228
         height: 32
       isBreakpoint: 0
@@ -9950,7 +9405,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1829.0703
-        y: 661.875
+        y: 885.875
         width: 203
         height: 32
       isBreakpoint: 0
@@ -10010,7 +9465,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1823.8984
-        y: 734.03906
+        y: 958.03906
         width: 115
         height: 32
       isBreakpoint: 0
@@ -10120,7 +9575,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1821.4141
-        y: 801.6406
+        y: 1025.6406
         width: 261
         height: 32
       isBreakpoint: 0
@@ -10224,6 +9679,626 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
+    - name: CameraFadeOut 3
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 2318.9453
+        y: 168.42188
+        width: 150
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: CameraIsBlack
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Destroy Core Objects 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: camera
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: CameraActions
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: FadeOut
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Waiting for Music Transition 3
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 2310.0312
+        y: 294.83594
+        width: 228
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: MusicFadedOut
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Load Ending Scene 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendMessage
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 91d45a00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: musicManager
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams:
+        - FunctionName: FadeOut
+          parameterType: None
+          BoolParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          FloatParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          IntParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          ObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          StringParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          Vector2Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            enumName: HutongGames.PlayMaker.None
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: UnityEngine.Object
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000000001000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 14000000070000000700000015000000
+        paramName:
+        - gameObject
+        - delivery
+        - options
+        - functionCall
+        paramDataPos: 00000000000000000400000000000000
+        paramByteDataSize: 00000000040000000400000000000000
+    - name: Destroy Core Objects 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 2314.3828
+        y: 224.44531
+        width: 185
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Waiting for Music Transition 3
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FindGameObject
+        - HutongGames.PlayMaker.Actions.DestroyObject
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000300000006000000
+        actionHashCodes: 786b39029ff80c0288611604
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: coreObjects
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: coreObjects
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Core
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 120000001200000013000000130000000f0000001100000017000000
+        paramName:
+        - objectName
+        - withTag
+        - store
+        - gameObject
+        - delay
+        - detachChildren
+        - sendEvent
+        paramDataPos: 00000000010000000000000001000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
+    - name: Load Ending Scene 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 2308.2656
+        y: 356.82812
+        width: 178
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: LoadingActionFinished
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Destroy Persistant Objects
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ba7ea101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 0
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: SceneTransition
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: LoadEndingScene
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Destroy Persistant Objects
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 2303.8516
+        y: 423.32812
+        width: 208
+        height: 16
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetParent
+        - HutongGames.PlayMaker.Actions.DestroyObject
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000002000000
+        actionHashCodes: d97b72029ff80c02
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: persistantObjects
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: persistantObjects
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000013000000130000000f00000011000000
+        paramName:
+        - gameObject
+        - storeResult
+        - gameObject
+        - delay
+        - detachChildren
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -10357,14 +10432,6 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: Get EventInfo
-      linkStyle: 0
-      linkConstraint: 0
-      colorIndex: 0
-    - fsmEvent:
-        name: LoadThankYouScene
-        isSystemEvent: 0
-        isGlobal: 0
-      toState: Camera FadeOut
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0
@@ -10793,6 +10860,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: persistantObjects
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables:
       - useVariable: 1
         name: newEdgesTransform
@@ -10821,7 +10894,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

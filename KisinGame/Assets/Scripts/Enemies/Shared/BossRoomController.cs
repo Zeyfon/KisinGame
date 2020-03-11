@@ -25,21 +25,25 @@ public class BossRoomController : MonoBehaviour
 
     IBossStarter currentBoss;
 
-    void Start()
+    IEnumerator Start()
     {
+        yield return new WaitForSeconds(1);
         if(ES3.FileExists()) bossDefeated = (bool)ES3.Load<object>(bossName, bossDefeated);
 
         if (!bossDefeated)
         {
+            print("Boss Alive");
             SetDoorsBeforeBossFight();
         }
         else
         {
+            print ("BossDefeated");
             SetDoorsAfterBossDefeated();
             GetComponent<Collider2D>().enabled = false;
         }
         if (WillBeADialogueBeforeTheFight())
         {
+            print("Boss Alive");
             GetComponent<Collider2D>().enabled = false;
         }
     }
@@ -76,6 +80,7 @@ public class BossRoomController : MonoBehaviour
 
     IEnumerator ActivateBoss()
     {
+        print(currentBoss);
         yield return new WaitForSeconds(timeToActivateBoss);
         currentBoss.IStartActions();
     }
@@ -111,12 +116,6 @@ public class BossRoomController : MonoBehaviour
         dialogueList.GetComponent<DialoguesList>().RunDialogue(dialogueID);
     }
 
-    private void RunDialogue(int dialogueID)
-    {
-        Transform dialogue = dialogueList.GetComponent<DialoguesList>().GetDialogue(dialogueID);
-        dialogue.GetComponent<DialogueSystemTrigger>().OnUse();
-    }
-
     private void DisableUI()
     {
         bossUI.GetComponent<PlayMakerFSM>().Fsm.Event("DisableBossUI");
@@ -124,7 +123,7 @@ public class BossRoomController : MonoBehaviour
 
     public void GameFinished()
     {
-        PlayMakerFSM gameManagerFSM = FindObjectOfType<SetActiveSceneAction>().GetComponent<PlayMakerFSM>();
+        PlayMakerFSM gameManagerFSM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayMakerFSM>();
         gameManagerFSM.Fsm.Event("GameHasFinished");
         DisableUI();
     }
