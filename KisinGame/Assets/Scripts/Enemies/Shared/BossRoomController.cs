@@ -15,7 +15,7 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] float timeToActivateBoss = 1;
     [SerializeField] Transform dialogueList;
 
-    [SerializeField] bool bossDefeated = false;
+    bool bossDefeated = false;
 
     [Header("Doors Sounds")]
     [SerializeField] AudioClip closeDoor;
@@ -27,6 +27,8 @@ public class BossRoomController : MonoBehaviour
 
     void Start()
     {
+        if(ES3.FileExists()) bossDefeated = (bool)ES3.Load<object>(bossName, bossDefeated);
+
         if (!bossDefeated)
         {
             SetDoorsBeforeBossFight();
@@ -34,6 +36,7 @@ public class BossRoomController : MonoBehaviour
         else
         {
             SetDoorsAfterBossDefeated();
+            GetComponent<Collider2D>().enabled = false;
         }
         if (WillBeADialogueBeforeTheFight())
         {

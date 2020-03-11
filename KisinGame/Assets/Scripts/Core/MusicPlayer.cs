@@ -16,16 +16,13 @@ public class MusicPlayer : MonoBehaviour
     [Tooltip("If the track will be looped or not")]
     [SerializeField] bool loop = false;
 
-    static int currentIndexPlaying=1000;
-
     IEnumerator Start()
     {
         int triggerID = (int)triggerType;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(1f);
         
         if (triggerID == 0)
         {
-
             PlayThisTrack();
             DisableCollider();
         }
@@ -50,9 +47,7 @@ public class MusicPlayer : MonoBehaviour
 
     public void PlayThisTrack()
     {
-        if (currentIndexPlaying == index) return;
         GameObject.FindObjectOfType<MusicManager>().WantsToPlayThisMusicNext(index, volume, loop);
-        currentIndexPlaying = index;
     }
 
     void DisableCollider()
@@ -61,9 +56,8 @@ public class MusicPlayer : MonoBehaviour
     }
 
     //Called from the BossRoomTransitiion script
-    public void PlayAnotherTrack(int i)
+    public void PlayerLevelTrack()
     {
         GameObject.FindObjectOfType<MusicManager>().WantsToPlayThisMusicNext(index-1, volume, loop);
-        currentIndexPlaying = index-1;
     }
 }

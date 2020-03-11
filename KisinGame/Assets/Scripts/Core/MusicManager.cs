@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HutongGames.PlayMaker;
 
 public class MusicManager : MonoBehaviour
 {
@@ -10,44 +8,43 @@ public class MusicManager : MonoBehaviour
     [SerializeField] float fadeInTime = 3;
     [SerializeField] float fadeOutTime = 3;
 
-    public static MusicManager musicManagerInstance;
-
     AudioSource audioSource;
+    int currentAudioClipIndexPlaying = 0;
 
-    private void Awake()
+    private void Start()
     {
-        if (musicManagerInstance != null && musicManagerInstance != this) Destroy(this.gameObject);
-        musicManagerInstance = this;
-        DontDestroyOnLoad(gameObject);
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void WantsToPlayThisMusicNext(int index, float volume, bool loop)
+    public void WantsToPlayThisMusicNext(int newAudioClipIndex, float volume, bool loop)
     {
+        if (currentAudioClipIndexPlaying == newAudioClipIndex) return;
         if (audioSource.isPlaying)
         {
-            StartCoroutine(MusicChange(index, volume, loop));
+            StartCoroutine(MusicChange(newAudioClipIndex, volume, loop));
         }
         else
         {
-            StartCoroutine(FadeIn(index, volume, loop));
+            StartCoroutine(FadeIn(newAudioClipIndex, volume, loop));
         }
+        currentAudioClipIndexPlaying = newAudioClipIndex;
     }
     public void FadeOut()
     {
         StartCoroutine(FadeOutC());
+        currentAudioClipIndexPlaying = 0;
     }
 
-    IEnumerator MusicChange(int index, float volume, bool loop)
+    IEnumerator MusicChange(int newAudioClipIndex, float volume, bool loop)
     {
 
         yield return FadeOutC();
-        yield return FadeIn(index, volume, loop);
+        yield return FadeIn(newAudioClipIndex, volume, loop);
     }
 
-    IEnumerator FadeIn(int index, float maxVolume, bool loop)
+    IEnumerator FadeIn(int newAudioClipIndex, float maxVolume, bool loop)
     {
-        ChangeTrack(index,loop);
+        ChangeTrack(newAudioClipIndex,loop);
         float volume = 0;
         while (volume < maxVolume)
         {
@@ -73,10 +70,10 @@ public class MusicManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayMakerFSM>().SendEvent("MusicFadedOut");
     }
 
-    void ChangeTrack(int index, bool loop)
+    void ChangeTrack(int newAudioClipIndex, bool loop)
     {
         audioSource.volume = 0;
-        audioSource.clip = musicList[index];
+        audioSource.clip = musicList[newAudioClipIndex];
         audioSource.loop = loop;
         audioSource.Play();
     }

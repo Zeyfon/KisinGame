@@ -468,7 +468,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 675.59375
-        y: 681.90625
+        y: 761.90625
         width: 272.5
         height: 48
       isBreakpoint: 0
@@ -627,7 +627,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 416
-        y: 460
+        y: 540
         width: 100
         height: 32
       isBreakpoint: 0
@@ -733,7 +733,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 671.53125
-        y: 804.1094
+        y: 884.1094
         width: 250
         height: 48
       isBreakpoint: 0
@@ -856,7 +856,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 684.1719
-        y: 608.8047
+        y: 688.8047
         width: 229
         height: 48
       isBreakpoint: 0
@@ -955,7 +955,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 661.6719
-        y: 964.1875
+        y: 1044.1875
         width: 189
         height: 32
       isBreakpoint: 0
@@ -993,7 +993,7 @@ MonoBehaviour:
         fsmPropertyParams:
         - TargetObject:
             useVariable: 1
-            name: levelUpShardsText
+            name: inSkillMenuPixanShardsText
             tooltip: 
             showInInspector: 1
             networkSync: 0
@@ -1143,7 +1143,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: levelUpShards
+          name: inSkillMenuPixanShards
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1155,7 +1155,7 @@ MonoBehaviour:
           networkSync: 0
           value: 1
         - useVariable: 1
-          name: levelUpShards
+          name: inSkillMenuPixanShards
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1193,7 +1193,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 916.02344
-        y: 1051.5
+        y: 1131.5
         width: 344
         height: 48
       isBreakpoint: 0
@@ -1334,7 +1334,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 687.9453
-        y: 526.39844
+        y: 606.39844
         width: 252
         height: 48
       isBreakpoint: 0
@@ -1432,7 +1432,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1035.2031
-        y: 516.41406
+        y: 596.41406
         width: 211
         height: 32
       isBreakpoint: 0
@@ -1632,7 +1632,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1368.1172
-        y: 1066.2266
+        y: 1146.2266
         width: 238
         height: 48
       isBreakpoint: 0
@@ -1907,7 +1907,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1356.4219
-        y: 1168.8594
+        y: 1248.8594
         width: 179
         height: 32
       isBreakpoint: 0
@@ -1984,7 +1984,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 426.9922
-        y: 390.875
+        y: 470.875
         width: 163
         height: 32
       isBreakpoint: 0
@@ -2101,7 +2101,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 444.7578
-        y: 288.2422
+        y: 368.2422
         width: 195
         height: 32
       isBreakpoint: 0
@@ -2354,7 +2354,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 268.20312
-        y: 104.15625
+        y: 184.15625
         width: 103
         height: 48
       isBreakpoint: 0
@@ -2365,7 +2365,7 @@ MonoBehaviour:
           name: No
           isSystemEvent: 0
           isGlobal: 0
-        toState: Set Level Up Shards
+        toState: Looking For GameManager
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2436,7 +2436,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 65.25
-        y: 457.41406
+        y: 537.41406
         width: 252
         height: 32
       isBreakpoint: 0
@@ -2771,7 +2771,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 690.59375
-        y: 474.21875
+        y: 554.21875
         width: 209
         height: 32
       isBreakpoint: 0
@@ -2848,7 +2848,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 369.5078
-        y: 545.34375
+        y: 625.34375
         width: 160
         height: 32
       isBreakpoint: 0
@@ -2958,7 +2958,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1448.4375
-        y: 723.5781
+        y: 803.5781
         width: 157
         height: 32
       isBreakpoint: 0
@@ -3144,7 +3144,7 @@ MonoBehaviour:
           setProperty: 1
         - TargetObject:
             useVariable: 1
-            name: levelUpShardsText
+            name: inSkillMenuPixanShardsText
             tooltip: 
             showInInspector: 1
             networkSync: 0
@@ -3299,14 +3299,14 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: levelUpShards
+          value: inSkillMenuPixanShards
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: levelUpShards
+          name: inSkillMenuPixanShards
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3324,19 +3324,19 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: levelUpShards
+          name: inSkillMenuPixanShards
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: levelUpShards
+          name: inSkillMenuPixanShards
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: levelUpShards
+          name: inSkillMenuPixanShards
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3385,7 +3385,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 451.70312
-        y: 174.14062
+        y: 254.14062
         width: 251
         height: 32
       isBreakpoint: 0
@@ -3571,7 +3571,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: levelUpThreshold
+          name: inSkillMenuPixanShardsThreshold
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3605,7 +3605,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 447.4922
-        y: 233.15625
+        y: 313.15625
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3779,13 +3779,13 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: levelUpShards
+          name: inSkillMenuPixanShards
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: levelUpThreshold
+          name: inSkillMenuPixanShardsThreshold
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3826,7 +3826,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 454.60156
-        y: 112.86719
+        y: 192.86719
         width: 164
         height: 32
       isBreakpoint: 0
@@ -3872,7 +3872,7 @@ MonoBehaviour:
         fsmPropertyParams:
         - TargetObject:
             useVariable: 1
-            name: levelUpShardsText
+            name: inSkillMenuPixanShardsText
             tooltip: 
             showInInspector: 1
             networkSync: 0
@@ -4015,7 +4015,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: levelUpShards
+          value: inSkillMenuPixanShards
         - useVariable: 1
           name: currenString
           tooltip: 
@@ -4034,13 +4034,13 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: levelUpShards
+          name: inSkillMenuPixanShards
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: levelUpShards
+          name: inSkillMenuPixanShards
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4079,7 +4079,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 435.33594
-        y: 344.35156
+        y: 424.35156
         width: 164
         height: 32
       isBreakpoint: 0
@@ -4127,7 +4127,7 @@ MonoBehaviour:
           networkSync: 0
           value: 1
         - useVariable: 1
-          name: levelUpThreshold
+          name: inSkillMenuPixanShardsThreshold
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4145,7 +4145,7 @@ MonoBehaviour:
           networkSync: 0
           value: 3
         - useVariable: 1
-          name: levelUpThreshold
+          name: inSkillMenuPixanShardsThreshold
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4189,7 +4189,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 669
-        y: 888
+        y: 968
         width: 218.5
         height: 32
       isBreakpoint: 0
@@ -4303,7 +4303,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1455.875
-        y: 539.58594
+        y: 619.58594
         width: 267
         height: 16
       isBreakpoint: 0
@@ -4506,7 +4506,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 660.8906
-        y: 1038.5
+        y: 1118.5
         width: 181
         height: 32
       isBreakpoint: 0
@@ -4559,14 +4559,14 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: levelUpShards
+          value: inSkillMenuPixanShards
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: levelUpShards
+          name: inSkillMenuPixanShards
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4599,7 +4599,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1448.6406
-        y: 656.71875
+        y: 736.71875
         width: 210
         height: 32
       isBreakpoint: 0
@@ -4686,6 +4686,159 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000010000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000001000000
+    - name: Looking For GameManager
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 456.27344
+        y: 108.77344
+        width: 207
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Loop
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Loop
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Set Level Up Shards
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GameObjectIsNull
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 15656205
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: gameManager
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Loop
+        - 
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1300000017000000170000001100000001000000
+        paramName:
+        - gameObject
+        - isNull
+        - isNotNull
+        - storeResult
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
+    - name: Loop
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 730.4375
+        y: 120.19531
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Looking For GameManager
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 88611604
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 17000000
+        paramName:
+        - sendEvent
+        paramDataPos: 00000000
+        paramByteDataSize: 00000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -4720,6 +4873,9 @@ MonoBehaviour:
     - name: Yes
       isSystemEvent: 0
       isGlobal: 0
+    - name: Loop
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: UpdateSkillPointsAvailable
@@ -4732,7 +4888,7 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: levelUpThreshold
+        name: inSkillMenuPixanShardsThreshold
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -4798,7 +4954,7 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: levelUpShards
+        name: inSkillMenuPixanShards
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -4906,7 +5062,7 @@ MonoBehaviour:
         typeName: UnityEngine.UI.Text
         value: {fileID: 2114433635074326096}
       - useVariable: 1
-        name: levelUpShardsText
+        name: inSkillMenuPixanShardsText
         tooltip: 
         showInInspector: 1
         networkSync: 0
@@ -5612,8 +5768,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 67
-        y: 237
+        x: 61
+        y: 175
         width: 307
         height: 32
       isBreakpoint: 0
@@ -5624,7 +5780,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Send event to SoundManager
+        toState: Update SkillPointsAvailable in Player Data
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -6084,6 +6240,99 @@ MonoBehaviour:
         - gameObject
         paramDataPos: 00000000
         paramByteDataSize: 00000000
+    - name: Update SkillPointsAvailable in Player Data
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 57.976562
+        y: 245
+        width: 310
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Send event to SoundManager
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetFsmInt
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 081bbf05
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: gameManager
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: PlayerData
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: skillPointsAvailable
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: skillPointsAvailable
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000012000000120000001000000001000000
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - setValue
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -6234,7 +6483,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        typeName: 
+        typeName: UnityEngine.Object
         value: {fileID: 0}
       materialVariables: []
       textureVariables: []
@@ -7674,6 +7923,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8123345294527402536}
     m_Modifications:
+    - target: {fileID: 1455734351865643121, guid: ad75fb16a3f50204e8ec991a08ee173b,
+        type: 3}
+      propertyPath: fsm.variables.stringVariables.Array.data[3].value
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1455734351865643124, guid: ad75fb16a3f50204e8ec991a08ee173b,
         type: 3}
       propertyPath: m_LocalPosition.x

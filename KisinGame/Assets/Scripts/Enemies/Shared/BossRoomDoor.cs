@@ -31,8 +31,6 @@ public class BossRoomDoor : MonoBehaviour
 
     void IdleState(Spine.TrackEntry trackEntry)
     {
-        print(trackEntry.Animation.Name+ "  Animation Ended");
-        //Debug.Break();
         if(trackEntry.Animation.Name == "CloseDoor")
         {
             skeletonAnimation.state.SetAnimation(0, "ClosedLoop", false);

@@ -6,6 +6,7 @@ using Cinemachine;
 public class VirtualCamera : MonoBehaviour
 {
     static bool firstCamera= false;
+    static GameObject camera;
     [SerializeField] SpriteRenderer foreground;
 
     
@@ -26,10 +27,7 @@ public class VirtualCamera : MonoBehaviour
 
     public void EnableVCamera()
     {
-        //print("Enabling this camera " + gameObject.name);
         Transform playerTransform = FindObjectOfType<PlayerIdentifer>().transform;
-        if (!playerTransform) Debug.LogWarning("PlayerNotFound");
-        playerTransform.GetComponent<PlayerIdentifer>().SetVCamera(GetComponent<VirtualCamera>());
         CinemachineVirtualCamera cam = GetComponent<CinemachineVirtualCamera>();
         cam.Priority = 20;
         cam.Follow = playerTransform;

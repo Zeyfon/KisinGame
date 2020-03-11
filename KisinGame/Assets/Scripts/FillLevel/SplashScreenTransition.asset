@@ -371,7 +371,7 @@ MonoBehaviour:
         - useVariable: 1
           name: scene
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
           value: 0
         - useVariable: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
         - useVariable: 1
           name: scene
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
           value: 0
         - useVariable: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
         - useVariable: 1
           name: scene
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
           value: 0
         fsmBoolParams:
@@ -514,54 +514,22 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.LoadScene
         - HutongGames.PlayMaker.Actions.DrawFullscreenColor
-        - HutongGames.PlayMaker.Actions.SendEventByName
         customNames:
         - 
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000001000000
-        actionHashCodes: 6fa53600ba7ea101
+        actionStartIndex: 0000000007000000
+        actionHashCodes: 20a9b1006fa53600
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: gameManager
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: GameManager
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
+        fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
@@ -570,20 +538,33 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: SingleSceneLoad
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
+        fsmEnumParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          enumName: UnityEngine.SceneManagement.LoadSceneMode
+          intValue: 0
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: scene
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams:
@@ -595,21 +576,26 @@ MonoBehaviour:
           value: {r: 0, g: 0, b: 0, a: 1}
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
+        stringParams:
+        - 
+        - 
+        byteData: 00000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 190000001f000000120000000f00000001000000
+        paramDataType: 0700000012000000100000002a00000011000000170000001700000019000000
         paramName:
+        - sceneReference
+        - sceneByName
+        - sceneAtIndex
+        - loadSceneMode
+        - success
+        - successEvent
+        - failureEvent
         - color
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 0000000000000000000000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000000000000000000000000000000000000100000000000000
+        paramByteDataSize: 0400000000000000000000000000000000000000000000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -621,7 +607,7 @@ MonoBehaviour:
       - useVariable: 1
         name: scene
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
         value: 0
       boolVariables: []
@@ -654,7 +640,7 @@ MonoBehaviour:
     RestartOnEnable: 1
     EnableDebugFlow: 0
     EnableBreakpoints: 1
-    editorFlags: 1
+    editorFlags: 3
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
