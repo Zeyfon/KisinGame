@@ -184,6 +184,7 @@ public class Level1Boss : MonoBehaviour, IBossStarter
     //StunCircle EventCall
     void StunFinished()
     {
+        print("StunCircleFinished");
         GetComponent<Animator>().SetInteger("Stun", 90);
     }
 

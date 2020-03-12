@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 2123119315269737945}
   - component: {fileID: 6257520784130236151}
   - component: {fileID: 3774352900758369475}
+  - component: {fileID: 7443986014185123575}
   m_Layer: 11
   m_Name: Level1Boss_Character
   m_TagString: Enemy
@@ -1386,7 +1387,7 @@ MonoBehaviour:
     RestartOnEnable: 1
     EnableDebugFlow: 0
     EnableBreakpoints: 1
-    editorFlags: 3
+    editorFlags: 1
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
@@ -1508,6 +1509,12 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: 4
+      - useVariable: 1
+        name: damageFloat
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       intVariables:
       - useVariable: 1
         name: damage
@@ -1575,6 +1582,30 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: fillAmountAcumulated
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: fillAmountToAdd
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: myWeaknessProperty
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: stunThreshold
+        tooltip: Damage
+        showInInspector: 1
+        networkSync: 0
+        value: 36
       boolVariables:
       - useVariable: 1
         name: invulnerability
@@ -1691,6 +1722,12 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: effects
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -1701,7 +1738,7 @@ MonoBehaviour:
       - Behavior
       - saveKeyName
       - Set GameObjects
-      variableCategoryIDs: 0000000001000000010000000000000001000000000000000100000000000000000000000100000000000000010000000100000000000000000000000000000000000000000000000000000002000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000
+      variableCategoryIDs: 0000000001000000010000000000000000000000010000000000000001000000000000000000000001000000000000000100000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000300000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -1756,6 +1793,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 148426c28e4242a41acfb36e1085d572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7443986014185123575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6257520784130236157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95dc5f2b7f4644d4f89aa4098b3f901d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6257520784197073044
@@ -2087,7 +2136,7 @@ PrefabInstance:
     - target: {fileID: 8934697214929684440, guid: ba9e3dbb2706d214997846d9c05e87e1,
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[16].name
-      value: invulnerabilityOff
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8934697214929684440, guid: ba9e3dbb2706d214997846d9c05e87e1,
         type: 3}
@@ -2097,7 +2146,7 @@ PrefabInstance:
     - target: {fileID: 8934697214929684440, guid: ba9e3dbb2706d214997846d9c05e87e1,
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[16].typeName
-      value: UnityEngine.AudioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8934697214929684440, guid: ba9e3dbb2706d214997846d9c05e87e1,
         type: 3}
@@ -2107,7 +2156,7 @@ PrefabInstance:
     - target: {fileID: 8934697214929684440, guid: ba9e3dbb2706d214997846d9c05e87e1,
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[17].name
-      value: invulnerabilityOn
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8934697214929684440, guid: ba9e3dbb2706d214997846d9c05e87e1,
         type: 3}
@@ -2117,12 +2166,12 @@ PrefabInstance:
     - target: {fileID: 8934697214929684440, guid: ba9e3dbb2706d214997846d9c05e87e1,
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[17].typeName
-      value: UnityEngine.AudioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8934697214929684440, guid: ba9e3dbb2706d214997846d9c05e87e1,
         type: 3}
       propertyPath: fsm.preprocessed
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8934697214929684440, guid: ba9e3dbb2706d214997846d9c05e87e1,
         type: 3}

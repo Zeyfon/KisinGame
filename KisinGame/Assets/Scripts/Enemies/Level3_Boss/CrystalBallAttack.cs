@@ -39,7 +39,7 @@ public class CrystalBallAttack : MonoBehaviour
     private void Start()
     {
         BossRoomController bossRoomController = GetComponent<Level3Boss>().bossRoomController;
-        middleSpot = bossRoomController.transform.parent.GetChild(1);
+        middleSpot = bossRoomController.transform.parent.GetChild(2);
         myHealthListenerFSM = GetComponent<PlayMakerFSM>();
         mitlanActive = GetComponent<Level3Boss>().MitlanIsActive();
     }

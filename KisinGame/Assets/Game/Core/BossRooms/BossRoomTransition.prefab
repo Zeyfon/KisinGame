@@ -53,6 +53,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3232146966735945606}
   - component: {fileID: 2606762245404019308}
+  - component: {fileID: 1901027846310775404}
   m_Layer: 20
   m_Name: BossRoomVCamera
   m_TagString: Untagged
@@ -110,6 +111,21 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 5561505646391268681}
+--- !u!114 &1901027846310775404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754742941280123777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
 --- !u!1 &8644055238316611812
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,4 +197,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ccb8ccdf05dce64c8eda8f89f790a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossRoomCamera: {fileID: 2606762245404019308}

@@ -18,7 +18,6 @@ public class BombBarrage : MonoBehaviour
     public void AttackStarts(int phase)
     {
         SetBombsToSpawn(phase);
-        Debug.Break();
         SpawnBombs();
     }
 
@@ -53,11 +52,18 @@ public class BombBarrage : MonoBehaviour
             //spawners.GetComponent<BombSpawners>().CreateBomb();
             spawners.GetComponent<PlayMakerFSM>().SendEvent("SpawnBomb");
         }
+        StartCoroutine(TimeTillAttackEnds());
     }
 
+    IEnumerator TimeTillAttackEnds()
+    {
+        yield return new WaitForSeconds(4.5f);
+        AttackEnded();
+    }
     //Call from each SpawnerFSM
     public void AttackEnded()
     {
+        print("BombExploded");
         bossTransform.GetComponent<FruitBombBarrageAttack>().AttackEnded();
     }
 }
