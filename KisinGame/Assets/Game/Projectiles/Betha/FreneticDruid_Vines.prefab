@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7270109115782612477}
   - component: {fileID: 327993072312009807}
   - component: {fileID: 2348737535809850757}
+  - component: {fileID: 3562872831830885267}
   m_Layer: 0
   m_Name: FreneticDruid_Vines
   m_TagString: AnimController
@@ -1066,7 +1067,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents:
     - name: Continue
       isSystemEvent: 0
@@ -1096,7 +1097,7 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
-    handleLateUpdate: 0
+    handleLateUpdate: 1
     handleApplicationEvents: 0
     handleUiEvents: 0
     handleLegacyNetworking: 0
@@ -1201,6 +1202,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3562872831830885267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270109115782612448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1079068393, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 327993072312009807}
 --- !u!1 &7270109115782612451
 GameObject:
   m_ObjectHideFlags: 0

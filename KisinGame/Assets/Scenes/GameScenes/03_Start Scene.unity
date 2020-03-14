@@ -359,34 +359,34 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: Button
-    startState: Setup
+    startState: Does File Exist?
     states:
-    - name: Setup
+    - name: Does File Exist?
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 67
-        y: 123
-        width: 161
+        x: 78.46094
+        y: 106.515625
+        width: 134
         height: 48
       isBreakpoint: 0
       isSequence: 1
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: DoNothing
+          name: Yes
           isSystemEvent: 0
           isGlobal: 0
-        toState: Get Main Camera
+        toState: Listener
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       - fsmEvent:
-          name: DisableGameObject
+          name: No
           isSystemEvent: 0
           isGlobal: 0
-        toState: Player does not have saved game
+        toState: Disable Continue Button
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -414,7 +414,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: SaveData
+          value: Save
         - useVariable: 0
           name: 
           tooltip: 
@@ -442,28 +442,28 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: 
+          enumName: ES3+Location
           intValue: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: 
+          enumName: ES3+EncryptionType
           intValue: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: 
+          enumName: ES3+Directory
           intValue: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: 
+          enumName: ES3+Format
           intValue: 0
         fsmFloatParams: []
         fsmIntParams:
@@ -492,8 +492,8 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - DoNothing
-        - DisableGameObject
+        - Yes
+        - No
         - 
         byteData: 
         arrayParamSizes: 
@@ -518,14 +518,14 @@ MonoBehaviour:
         - errorMessage
         paramDataPos: 0000000000000000000000000100000001000000010000000000000001000000020000000200000003000000000000000200000003000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: Player does not have saved game
+    - name: Disable Continue Button
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 50
-        y: 243
-        width: 252
+        x: 61.460938
+        y: 226.51562
+        width: 188
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -602,8 +602,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 443.8828
-        y: 161.29688
+        x: 399.64844
+        y: 122.02344
         width: 157
         height: 32
       isBreakpoint: 0
@@ -703,14 +703,14 @@ MonoBehaviour:
         - sendEvent
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000000000000
-    - name: StartGame
+    - name: Continue Game
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 689.7344
-        y: 311.64844
-        width: 101
+        x: 645.5
+        y: 272.375
+        width: 130
         height: 16
       isBreakpoint: 0
       isSequence: 1
@@ -760,7 +760,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 
+          value: Cant find path
         - useVariable: 0
           name: 
           tooltip: 
@@ -793,12 +793,12 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
-        - variableName: 
+        - variableName: initialScene
           objectType: UnityEngine.Object
           useVariable: 1
-          type: -1
+          type: 1
           floatValue: 0
-          intValue: 0
+          intValue: 5
           boolValue: 0
           stringValue: 
           vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -824,28 +824,28 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: HutongGames.PlayMaker.None
+          enumName: ES3+Location
           intValue: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: HutongGames.PlayMaker.None
+          enumName: ES3+EncryptionType
           intValue: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: HutongGames.PlayMaker.None
+          enumName: ES3+Directory
           intValue: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: HutongGames.PlayMaker.None
+          enumName: ES3+Format
           intValue: 0
         - useVariable: 0
           name: 
@@ -924,39 +924,47 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 428.23438
-        y: 296.09375
+        x: 384
+        y: 256.8203
         width: 177
         height: 32
       isBreakpoint: 0
-      isSequence: 0
+      isSequence: 1
       hideUnused: 0
       transitions:
       - fsmEvent:
           name: CameraActionFinished
           isSystemEvent: 0
           isGlobal: 0
-        toState: StartGame
+        toState: Continue Game
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetOwner
+        - HutongGames.PlayMaker.Actions.GetMainCamera
         - HutongGames.PlayMaker.Actions.SetEventData
         - HutongGames.PlayMaker.Actions.SendEventByName
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000010000000e000000
-        actionHashCodes: 5c00450527ffbc03ba7ea101
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 0000000001000000020000000f000000
+        actionHashCodes: 5c0045055c00450527ffbc03ba7ea101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
           name: button
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: camera
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1117,8 +1125,9 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1300000013000000100000000f0000001200000011000000250000001c0000001e00000023000000190000002000000021000000180000001f000000120000000f00000001000000
+        paramDataType: 130000001300000013000000100000000f0000001200000011000000250000001c0000001e00000023000000190000002000000021000000180000001f000000120000000f00000001000000
         paramName:
+        - storeGameObject
         - storeGameObject
         - setGameObjectData
         - setIntData
@@ -1137,92 +1146,29 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000200000000000000010000000100000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
-    - name: Get Main Camera
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 448.22656
-        y: 112.09375
-        width: 143
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Listener
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetMainCamera
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 5c004505
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: camera
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 13000000
-        paramName:
-        - storeGameObject
-        paramDataPos: 00000000
-        paramByteDataSize: 00000000
+        paramDataPos: 00000000010000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000200000000000000010000000100000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     events:
+    - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
+    - name: CameraActionFinished
+      isSystemEvent: 0
+      isGlobal: 0
     - name: DisableGameObject
       isSystemEvent: 0
       isGlobal: 0
     - name: DoNothing
       isSystemEvent: 0
       isGlobal: 0
+    - name: No
+      isSystemEvent: 0
+      isGlobal: 0
     - name: ThisButtonSelected
       isSystemEvent: 0
       isGlobal: 0
-    - name: CameraActionFinished
+    - name: Yes
       isSystemEvent: 0
-      isGlobal: 0
-    - name: FINISHED
-      isSystemEvent: 1
       isGlobal: 0
     globalTransitions: []
     variables:
@@ -1234,6 +1180,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: initialScene
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 5
       boolVariables: []
       stringVariables: []
       vector2Variables: []
@@ -1261,7 +1213,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -5457,13 +5409,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.DrawFullscreenColor
         - HutongGames.PlayMaker.Actions.Wait
+        - HutongGames.PlayMaker.Actions.SetMouseCursor
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000001000000
-        actionHashCodes: 6fa5360048c01101
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000100000004000000
+        actionHashCodes: 6fa5360048c01101798f5c04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -5474,7 +5428,14 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams: []
-        fsmObjectParams: []
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: 
+          value: {fileID: 0}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
@@ -5486,7 +5447,19 @@ MonoBehaviour:
           networkSync: 0
           value: 0.1
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams:
@@ -5505,14 +5478,17 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 190000000f0000001700000001000000
+        paramDataType: 190000000f0000001700000001000000210000001100000011000000
         paramName:
         - color
         - time
         - finishEvent
         - realTime
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000001000000
+        - cursorTexture
+        - hideCursor
+        - lockCursor
+        paramDataPos: 00000000000000000000000000000000000000000000000001000000
+        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000
     - name: Fade In
       description: 
       colorIndex: 0
@@ -6261,6 +6237,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662527423}
   m_CullTransparentMesh: 0
+--- !u!1001 &1785097483
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2812431135561815438, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_Name
+      value: Easy Save 3 Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812431135561815442, guid: e482cf80672257748abacd3039dad6bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e482cf80672257748abacd3039dad6bb, type: 3}
 --- !u!1 &1889592977
 GameObject:
   m_ObjectHideFlags: 0

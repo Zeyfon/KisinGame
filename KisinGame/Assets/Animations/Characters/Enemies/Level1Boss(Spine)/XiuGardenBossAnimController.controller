@@ -37,11 +37,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.19999994
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0.93002295
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -59,11 +59,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.19999997
   m_TransitionOffset: 0
-  m_ExitTime: 0.9166667
+  m_ExitTime: 0.88459915
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -81,6 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossFrontalJumpAttackPreparation
+  loop: 0
 --- !u!114 &-2652082270442541821
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossInterruption
+  loop: 0
 --- !u!114 &-2372354887601850643
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,11 +123,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.2
   m_TransitionOffset: 0
-  m_ExitTime: 0.8333333
+  m_ExitTime: 0.9
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -136,7 +138,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New State
+  m_Name: Frontal Jump Attack Preparation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -171,11 +173,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.2000001
   m_TransitionOffset: 0
-  m_ExitTime: 0.9166667
+  m_ExitTime: 0.8920534
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3016,6 +3018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossInterruption
+  loop: 0
 --- !u!114 &114074274927504392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3030,6 +3033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossFruitBombBarrageInvulnerabilityLoop
+  loop: 1
 --- !u!114 &114104066242629608
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3056,6 +3060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   animationName: XGBossHit1AttackPreparation
+  loop: 0
 --- !u!114 &114279785809506248
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3070,6 +3075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   animationName: XGBossHit2AttackPreparation
+  loop: 1
 --- !u!114 &114307529909340936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3084,6 +3090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.9
   animationName: XGBossHit2Attack
+  loop: 1
 --- !u!114 &114308638166667438
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3098,6 +3105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossStunLoop
+  loop: 1
 --- !u!114 &114335708192822590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3124,6 +3132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossStunEnding
+  loop: 1
 --- !u!114 &114438551611644400
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3138,6 +3147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   animationName: XGBossFruitBombBarrageJumpToMiddle
+  loop: 0
 --- !u!114 &114449191672147208
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3152,6 +3162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   animationName: XGBossFrontalJumpAttack
+  loop: 0
 --- !u!114 &114460528026703318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3166,6 +3177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossFruitBombBarrageEnding
+  loop: 0
 --- !u!114 &114479101387134430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3180,6 +3192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossFruitBombBarrageJumpToMiddle
+  loop: 0
 --- !u!114 &114482626593767890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3194,6 +3207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossIdle
+  loop: 1
 --- !u!114 &114507624685770856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3208,6 +3222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.9
   animationName: XGBossHit1Attack
+  loop: 0
 --- !u!114 &114577646361456112
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3234,6 +3249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   animationName: XGBossHit3AttackPreparation
+  loop: 1
 --- !u!114 &114664186459134876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3248,6 +3264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.9
   animationName: XGBossHit3Attack
+  loop: 1
 --- !u!114 &114699555355779472
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3262,6 +3279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBoosDead
+  loop: 0
 --- !u!114 &114742367638144834
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3276,6 +3294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.2
   animationName: XGBossMoving
+  loop: 1
 --- !u!114 &114745669093850586
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3290,6 +3309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossFruitBombBarrageAttackPreparation
+  loop: 0
 --- !u!114 &114798197715872574
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3304,6 +3324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossFruitBombBarrageInvulnerabilityStart
+  loop: 0
 --- !u!114 &114800644774976964
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3330,6 +3351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   animationName: XGBossStunStart
+  loop: 0
 --- !u!1101 &1101019042212662522
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -3344,11 +3366,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.19999997
   m_TransitionOffset: 0
-  m_ExitTime: 0.95
+  m_ExitTime: 0.89228475
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3369,11 +3391,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.2
   m_TransitionOffset: 0
-  m_ExitTime: 1
+  m_ExitTime: 0.9
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3391,11 +3413,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: 0.95
+  m_ExitTime: 0.9
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3416,11 +3438,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.2000001
   m_TransitionOffset: 0
-  m_ExitTime: 1
+  m_ExitTime: 0.94475704
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3438,11 +3460,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: 1
+  m_ExitTime: 0.9
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3460,11 +3482,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.2
   m_TransitionOffset: 0
-  m_ExitTime: 1
+  m_ExitTime: 0.9
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3485,11 +3507,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.051476806
+  m_TransitionDuration: 0.19999994
   m_TransitionOffset: 0
-  m_ExitTime: 0.9021941
+  m_ExitTime: 0.9430125
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3507,11 +3529,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.07538676
+  m_TransitionDuration: 0.19999999
   m_TransitionOffset: 0
-  m_ExitTime: 0.94974214
+  m_ExitTime: 0.9611657
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3532,11 +3554,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.0630098
+  m_TransitionDuration: 0.20000006
   m_TransitionOffset: 0
-  m_ExitTime: 0.8802814
+  m_ExitTime: 0.9347059
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3576,11 +3598,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.20000005
   m_TransitionOffset: 0
-  m_ExitTime: 1
+  m_ExitTime: 0.914347
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3598,11 +3620,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.05965805
+  m_TransitionDuration: 0.19999997
   m_TransitionOffset: 0
-  m_ExitTime: 0.94630885
+  m_ExitTime: 0.91945523
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3645,11 +3667,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.2
   m_TransitionOffset: 0
-  m_ExitTime: 1
+  m_ExitTime: 0.9
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3667,11 +3689,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.19999996
   m_TransitionOffset: 0
-  m_ExitTime: 1
+  m_ExitTime: 0.9296658
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3689,11 +3711,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: 1
+  m_ExitTime: 0.9
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3714,11 +3736,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.2000001
   m_TransitionOffset: 0
-  m_ExitTime: 1
-  m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_ExitTime: 0.88481015
+  m_HasExitTime: 0
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3736,11 +3758,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.06300986
+  m_TransitionDuration: 0.19999993
   m_TransitionOffset: 0
-  m_ExitTime: 0.95274264
+  m_ExitTime: 0.9384204
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -3758,11 +3780,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: 1
+  m_ExitTime: 0.9
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -4573,7 +4595,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102727923130064636}
-    m_Position: {x: 240, y: 120, z: 0}
+    m_Position: {x: 240, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102418122836928146}
     m_Position: {x: 240, y: 180, z: 0}

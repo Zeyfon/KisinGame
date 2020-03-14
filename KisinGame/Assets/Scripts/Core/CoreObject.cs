@@ -3,6 +3,7 @@
 public class CoreObject : MonoBehaviour
 {
     [SerializeField] GameObject persistantObject;
+    [SerializeField] GameObject easySaveGameObject;
     static GameObject coreObject;
     // Start is called before the first frame update
     void Start()
@@ -10,12 +11,17 @@ public class CoreObject : MonoBehaviour
         if (coreObject == null)
         {
             coreObject = this.gameObject;
-            GameObject persistantObjectClone = Instantiate(persistantObject);
+            Instantiate(persistantObject);
             DontDestroyOnLoad(gameObject);
+            if (EasySave.easySave == null)
+            {
+                Instantiate(easySaveGameObject);
+            }
         }
         else
         {
             Destroy(gameObject);
         }
+
     }
 }

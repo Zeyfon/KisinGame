@@ -92,16 +92,16 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: KisinShard
-    startState: State 1
+    startState: Check if already Used
     states:
-    - name: State 2
+    - name: TRigger2DEvent
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 64
         y: 223
-        width: 127
+        width: 137
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
           name: PlayerLevelUp
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 3
+        toState: Use Kisin Shard
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -182,33 +182,49 @@ MonoBehaviour:
         - storeCollider
         paramDataPos: 0000000000000000000000000000000000000000
         paramByteDataSize: 0000000004000000000000000000000000000000
-    - name: State 3
+    - name: Use Kisin Shard
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 271
         y: 238
-        width: 100
-        height: 16
+        width: 134
+        height: 32
       isBreakpoint: 0
-      isSequence: 0
+      isSequence: 1
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Destroy if already used
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEventByName
-        - ES3PlayMaker.Save
+        - HutongGames.PlayMaker.Actions.SetFsmBool
         customNames:
         - 
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
         actionStartIndex: 0000000004000000
-        actionHashCodes: ba7ea10173940005
+        actionHashCodes: ba7ea10168fece05
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: gameManager
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -236,7 +252,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: GameManager
+            value: MenusController
           sendToChildren:
             useVariable: 0
             name: 
@@ -253,87 +269,23 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: KisinShardFound
+          value: OpenKisinShardsMenu
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: PlayerData
         - useVariable: 1
           name: kisinShardKey
           tooltip: 
           showInInspector: 1
           networkSync: 0
           value: kisinShard1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: SaveData.es3
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: password
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
         fsmObjectParams: []
-        fsmVarParams:
-        - variableName: used
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 2
-          floatValue: 0
-          intValue: 0
-          boolValue: 1
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
+        fsmVarParams: []
         fsmArrayParams: []
-        fsmEnumParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          enumName: 
-          intValue: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          enumName: 
-          intValue: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          enumName: 
-          intValue: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          enumName: 
-          intValue: 0
+        fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
           name: 
@@ -341,60 +293,46 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmIntParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 2048
+        fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - 
-        byteData: 00
+        stringParams: []
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000120000000f00000001000000120000002700000011000000120000002a0000002a000000120000002a0000002a000000100000001700000012000000
+        paramDataType: 1f000000120000000f000000010000001400000012000000120000001100000001000000
         paramName:
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
-        - key
-        - value
-        - overrideDefaultSettings
-        - path
-        - location
-        - encryptionType
-        - encryptionPassword
-        - directory
-        - format
-        - bufferSize
-        - errorEvent
-        - errorMessage
-        paramDataPos: 00000000000000000000000000000000010000000000000000000000020000000000000001000000030000000200000003000000000000000000000004000000
-        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: State 1
+        - gameObject
+        - fsmName
+        - variableName
+        - setValue
+        - everyFrame
+        paramDataPos: 000000000000000000000000000000000000000001000000020000000000000001000000
+        paramByteDataSize: 000000000000000000000000010000000000000000000000000000000000000001000000
+    - name: Check if already Used
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 67
         y: 115
-        width: 150
+        width: 174
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -404,7 +342,7 @@ MonoBehaviour:
           name: KeyExists
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 4
+        toState: Destroy if already used
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -412,7 +350,7 @@ MonoBehaviour:
           name: KeyDoesNotExists
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 2
+        toState: TRigger2DEvent
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -544,14 +482,14 @@ MonoBehaviour:
         - errorMessage
         paramDataPos: 0000000000000000000000000100000001000000010000000000000001000000020000000200000003000000000000000200000003000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: State 4
+    - name: Destroy if already used
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 277
         y: 132
-        width: 100
+        width: 184
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -630,11 +568,11 @@ MonoBehaviour:
       intVariables: []
       boolVariables:
       - useVariable: 1
-        name: used
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: 1
+        value: 0
       stringVariables:
       - useVariable: 1
         name: 
@@ -671,7 +609,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -680,7 +618,7 @@ MonoBehaviour:
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
-    handleTriggerEnter2D: 0
+    handleTriggerEnter2D: 1
     handleTriggerExit2D: 0
     handleTriggerStay2D: 0
     handleCollisionEnter2D: 0

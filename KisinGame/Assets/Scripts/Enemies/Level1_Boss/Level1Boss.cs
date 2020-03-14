@@ -225,7 +225,7 @@ public class Level1Boss : MonoBehaviour, IBossStarter
         //in the Dialogue List will get. It uses the int as an index for the List
         int dialogueIndex = 1;
         yield return new WaitForSeconds(2);
-        GameObject skillOrbClone = Instantiate(skillOrb, transform.position + new Vector3(0,1.5f,0), Quaternion.identity, transform.parent);
+        GameObject skillOrbClone = Instantiate(skillOrb, transform.position + new Vector3(0,1.5f,0), Quaternion.identity, transform.parent.parent);
         skillOrbClone.GetComponent<SkillOrb>().dialogueIndex = dialogueIndex;
         yield return new WaitForSeconds(2);
         DestroyBoss();
@@ -234,7 +234,7 @@ public class Level1Boss : MonoBehaviour, IBossStarter
 
     public void DestroyBoss()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
     void StoppingOtherCoroutines()
