@@ -68,7 +68,7 @@ public class LaserAttackL2B : MonoBehaviour
         angle = GetAngle(targetDirection);
         GetComponent<SoundsConnection>().SendSoundEventToFSM("LaserSpawn");
 
-        GameObject laserBulletClone = Instantiate(laserBulletGO, laserSpawnPosition.position, Quaternion.Euler(0, 0, angle), transform.parent.transform.GetChild(1));
+        GameObject laserBulletClone = Instantiate(laserBulletGO, laserSpawnPosition.position, Quaternion.Euler(0, 0, angle), transform.parent.parent.transform.GetChild(1));
         LaserBullet laserBullet = laserBulletClone.GetComponent<LaserBullet>();
         laserBullet.SetParameters(laserBulletDamage, laserBulletSpeed, targetDirection);
     }

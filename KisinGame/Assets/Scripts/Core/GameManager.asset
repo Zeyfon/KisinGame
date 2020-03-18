@@ -24,7 +24,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1835.1094
+        x: 1595.1094
         y: 747.33594
         width: 209
         height: 32
@@ -134,7 +134,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1840.1172
+        x: 1600.1172
         y: 674.4844
         width: 115
         height: 32
@@ -244,7 +244,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1829.2812
+        x: 1589.2812
         y: 817.1875
         width: 217
         height: 32
@@ -354,7 +354,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1158.6406
+        x: 918.6406
         y: 688.5078
         width: 137
         height: 32
@@ -464,7 +464,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1918.7891
+        x: 1678.7891
         y: 1254.3047
         width: 100
         height: 16
@@ -516,7 +516,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2262.6719
+        x: 2022.6719
         y: 1752.9375
         width: 227
         height: 32
@@ -626,7 +626,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 984.6094
+        x: 744.6094
         y: 1459.3438
         width: 247
         height: 32
@@ -726,7 +726,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1360.6562
+        x: 1120.6562
         y: 1510.8203
         width: 105
         height: 16
@@ -828,7 +828,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 2564.25
+        x: 2324.25
         y: 1754.625
         width: 133
         height: 32
@@ -1003,7 +1003,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 953.25
+        x: 713.25
         y: 1250.4141
         width: 201
         height: 48
@@ -1243,7 +1243,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 959.39844
+        x: 719.39844
         y: 1196.8047
         width: 258
         height: 32
@@ -1337,7 +1337,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2268.6172
+        x: 2028.6172
         y: 1562.1406
         width: 173
         height: 32
@@ -1463,7 +1463,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 1463.0391
+        x: 1223.0391
         y: 566.4219
         width: 100
         height: 32
@@ -1525,13 +1525,13 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -1556,7 +1556,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1148.4609
+        x: 908.46094
         y: 847.41406
         width: 178
         height: 32
@@ -1568,23 +1568,25 @@ MonoBehaviour:
           name: LoadingActionFinished
           isSystemEvent: 0
           isGlobal: 0
-        toState: Listener
+        toState: Check Camera GO 2
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetFsmInt
+        - HutongGames.PlayMaker.Actions.FsmArrayRemoveAll
         - HutongGames.PlayMaker.Actions.SetEventData
         - HutongGames.PlayMaker.Actions.SendEventByName
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000500000012000000
-        actionHashCodes: 081bbf0527ffbc03ba7ea101
+        - 
+        actionEnabled: 01000101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000050000000a00000017000000
+        actionHashCodes: 081bbf05f2b1da0527ffbc03ba7ea101
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1594,6 +1596,14 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -1653,6 +1663,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: lastSavedScene
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: SceneTransition
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: loadedScenesArray
         - useVariable: 1
           name: 
           tooltip: 
@@ -1763,19 +1785,26 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0, w: 0}
-        stringParams: []
+        stringParams:
+        - 
+        - 
         byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000100000000100000013000000100000000f0000001200000011000000250000001c0000001e00000023000000190000002000000021000000180000001f000000120000000f00000001000000
+        paramDataType: 1400000012000000120000001000000001000000140000001200000012000000170000001700000013000000100000000f0000001200000011000000250000001c0000001e00000023000000190000002000000021000000180000001f000000120000000f00000001000000
         paramName:
         - gameObject
         - fsmName
         - variableName
         - storeValue
         - everyFrame
+        - gameObject
+        - fsmName
+        - variableName
+        - fsmNotFound
+        - variableNotFound
         - setGameObjectData
         - setIntData
         - setFloatData
@@ -1793,14 +1822,14 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000000000000000000001000000000000000200000000000000000000000000000000000000000000000000000000000000010000000200000000000000030000000100000001000000
-        paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000001000000000000000000000001000000020000000300000000000000010000000000000001000000000000000400000000000000000000000000000000000000000000000000000000000000010000000200000000000000050000000100000001000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: Update UIHealth
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 974.9922
+        x: 734.9922
         y: 1570.3047
         width: 140
         height: 48
@@ -2040,7 +2069,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 781.4219
+        x: 541.4219
         y: 1582.3281
         width: 137
         height: 32
@@ -2132,7 +2161,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 959.8906
+        x: 719.8906
         y: 1314.5391
         width: 210
         height: 48
@@ -2372,7 +2401,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 737.40625
+        x: 497.40625
         y: 1324.0156
         width: 148
         height: 32
@@ -2464,7 +2493,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1454.9844
+        x: 1214.9844
         y: 760.21094
         width: 296
         height: 32
@@ -2591,7 +2620,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 2510.1406
+        x: 2270.1406
         y: 1022.3594
         width: 116
         height: 32
@@ -2916,7 +2945,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2292.7734
+        x: 2052.7734
         y: 1025.7656
         width: 100
         height: 32
@@ -2999,7 +3028,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 978.375
+        x: 738.375
         y: 1511.0234
         width: 187
         height: 32
@@ -3210,7 +3239,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 2625.9922
+        x: 2385.9922
         y: 610.6953
         width: 154
         height: 32
@@ -3429,7 +3458,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2617.5078
+        x: 2377.5078
         y: 700.9297
         width: 100
         height: 16
@@ -3483,7 +3512,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1154.9062
+        x: 914.90625
         y: 788.8281
         width: 172
         height: 32
@@ -3593,7 +3622,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 2323.0703
+        x: 2083.0703
         y: 109.4375
         width: 148
         height: 32
@@ -3665,7 +3694,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2935.8047
+        x: 2695.8047
         y: 493.6328
         width: 150
         height: 32
@@ -3775,7 +3804,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1926.7656
+        x: 1686.7656
         y: 1142.5625
         width: 183.5
         height: 32
@@ -4101,7 +4130,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2947.2188
+        x: 2707.2188
         y: 438.5625
         width: 196
         height: 32
@@ -4221,7 +4250,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2966.1016
+        x: 2726.1016
         y: 689.78125
         width: 106
         height: 32
@@ -4293,7 +4322,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2930.0547
+        x: 2690.0547
         y: 856.59375
         width: 191
         height: 32
@@ -4380,7 +4409,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2959.3516
+        x: 2719.3516
         y: 758.40625
         width: 153
         height: 32
@@ -4490,7 +4519,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2966.0781
+        x: 2726.0781
         y: 338.375
         width: 175
         height: 32
@@ -4761,7 +4790,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 3295.5625
+        x: 3055.5625
         y: 438.29688
         width: 172.5
         height: 32
@@ -5000,7 +5029,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 3285.1797
+        x: 3045.1797
         y: 508.20312
         width: 177
         height: 32
@@ -5432,7 +5461,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 3281.6953
+        x: 3041.6953
         y: 611.02344
         width: 176
         height: 32
@@ -5864,7 +5893,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 3281.3984
+        x: 3041.3984
         y: 716.6797
         width: 231
         height: 48
@@ -5946,7 +5975,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 3273.8906
+        x: 3033.8906
         y: 851.40625
         width: 155
         height: 16
@@ -5998,7 +6027,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 3092.086
+        x: 2852.086
         y: 1019.8594
         width: 225
         height: 32
@@ -6173,7 +6202,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 3088.3828
+        x: 2848.3828
         y: 1092.0859
         width: 219
         height: 32
@@ -6436,7 +6465,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 3080.961
+        x: 2840.961
         y: 1148.2734
         width: 232
         height: 32
@@ -6699,7 +6728,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 3076.0078
+        x: 2836.0078
         y: 1203.5391
         width: 234
         height: 16
@@ -6751,8 +6780,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 626.27344
-        y: 758.1328
+        x: 875.72656
+        y: 1011.47656
         width: 153
         height: 32
       isBreakpoint: 0
@@ -6861,8 +6890,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 628.5469
-        y: 639.03125
+        x: 888.3203
+        y: 943.89844
         width: 163
         height: 48
       isBreakpoint: 0
@@ -6950,8 +6979,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 849.09375
-        y: 642.5703
+        x: 1165.3828
+        y: 957.4453
         width: 100
         height: 32
       isBreakpoint: 0
@@ -7022,7 +7051,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2095.6797
+        x: 1855.6797
         y: 961.4375
         width: 150
         height: 32
@@ -7233,8 +7262,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 633.3672
-        y: 535.91406
+        x: 560.0078
+        y: 869.22656
         width: 239.5
         height: 32
       isBreakpoint: 0
@@ -7293,8 +7322,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 373.4297
-        y: 555.3281
+        x: 300.0703
+        y: 888.6406
         width: 178
         height: 32
       isBreakpoint: 0
@@ -7504,7 +7533,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 2096.4219
+        x: 1856.4219
         y: 871.3047
         width: 143
         height: 32
@@ -7702,8 +7731,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 127.41406
-        y: 375.28125
+        x: 90.71094
+        y: 651.9219
         width: 141
         height: 32
       isBreakpoint: 0
@@ -7812,8 +7841,8 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 118.77344
-        y: 490.22656
+        x: 82.07031
+        y: 766.8672
         width: 141
         height: 32
       isBreakpoint: 0
@@ -7922,7 +7951,7 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 2567.4688
+        x: 2327.4688
         y: 1557.6094
         width: 101
         height: 32
@@ -8032,8 +8061,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 55.867188
-        y: 670.59375
+        x: 65.82031
+        y: 893.89844
         width: 141
         height: 32
       isBreakpoint: 0
@@ -8142,8 +8171,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 375
-        y: 495
+        x: 301.64844
+        y: 828.3125
         width: 100
         height: 32
       isBreakpoint: 0
@@ -8202,7 +8231,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1452.9844
+        x: 1212.9844
         y: 822.21094
         width: 153
         height: 48
@@ -8391,8 +8420,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 379.95312
-        y: 431.75
+        x: 306.60156
+        y: 765.0625
         width: 215
         height: 32
       isBreakpoint: 0
@@ -8703,7 +8732,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1461.7656
+        x: 1221.7656
         y: 615.5156
         width: 155
         height: 48
@@ -8815,7 +8844,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1846.875
+        x: 1606.875
         y: 590.3594
         width: 191
         height: 32
@@ -9040,7 +9069,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 1160.4922
+        x: 920.4922
         y: 640.5547
         width: 144
         height: 32
@@ -9150,7 +9179,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1155.9688
+        x: 915.96875
         y: 737.7031
         width: 228
         height: 32
@@ -9347,7 +9376,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1829.0703
+        x: 1589.0703
         y: 885.875
         width: 203
         height: 32
@@ -9407,7 +9436,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1823.8984
+        x: 1583.8984
         y: 958.03906
         width: 115
         height: 32
@@ -9517,7 +9546,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1821.4141
+        x: 1581.4141
         y: 1025.6406
         width: 261
         height: 32
@@ -9627,7 +9656,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2318.9453
+        x: 2078.9453
         y: 168.42188
         width: 150
         height: 32
@@ -9737,7 +9766,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2310.0312
+        x: 2070.0312
         y: 294.83594
         width: 228
         height: 32
@@ -9934,7 +9963,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2314.3828
+        x: 2074.3828
         y: 224.44531
         width: 185
         height: 32
@@ -10044,7 +10073,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2308.2656
+        x: 2068.2656
         y: 356.82812
         width: 178
         height: 32
@@ -10154,7 +10183,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2303.8516
+        x: 2063.8516
         y: 423.32812
         width: 208
         height: 16
@@ -10247,7 +10276,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1364.9062
+        x: 1124.9062
         y: 1442.5703
         width: 170
         height: 32
@@ -10357,7 +10386,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 693.9297
+        x: 453.9297
         y: 1250.0312
         width: 183
         height: 32
@@ -10449,7 +10478,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1460.9766
+        x: 1220.9766
         y: 690.46875
         width: 155
         height: 48
@@ -10561,7 +10590,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1701.5625
+        x: 1461.5625
         y: 640.625
         width: 100
         height: 32
@@ -10625,7 +10654,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1703.3438
+        x: 1463.3438
         y: 693
         width: 100
         height: 32

@@ -281,11 +281,31 @@ PrefabInstance:
       propertyPath: tileManager
       value: 
       objectReference: {fileID: 45117857}
+    - target: {fileID: 881655529560708451, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: phase
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[9].value
       value: 
       objectReference: {fileID: 888598928}
+    - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: fsm.variables.intVariables.Array.data[9].value
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: fsm.variables.intVariables.Array.data[6].value
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: fsm.variables.stringVariables.Array.data[0].value
+      value: level2BossDefeated
+      objectReference: {fileID: 0}
     - target: {fileID: 881971143706807475, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
       propertyPath: m_Mesh
@@ -296,6 +316,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level2Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 3005842614075435936, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: rightSpot
+      value: 
+      objectReference: {fileID: 1260227044}
+    - target: {fileID: 3005842614075435936, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: leftSpot
+      value: 
+      objectReference: {fileID: 996643296}
     - target: {fileID: 3822735821599533170, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
       propertyPath: m_Mesh
@@ -903,6 +933,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6399057805694268022}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &996643296 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6399057805881243520, guid: 324d486c245e8ad4a9427293c4c3f583,
+    type: 3}
+  m_PrefabInstance: {fileID: 6399057805694268022}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1199604998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1433,6 +1469,12 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 6331447814206459477, guid: 598f95a60d1f9f44b9a4b99b97e76325,
     type: 3}
   m_PrefabInstance: {fileID: 1199604998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1260227044 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6399057805118539204, guid: 324d486c245e8ad4a9427293c4c3f583,
+    type: 3}
+  m_PrefabInstance: {fileID: 6399057805694268022}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1317023200
 GameObject:

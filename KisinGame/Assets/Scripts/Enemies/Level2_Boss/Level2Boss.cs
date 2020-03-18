@@ -240,7 +240,7 @@ public class Level2Boss : MonoBehaviour, IBossStarter
 
     public void DestroyBoss()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
     void StoppinpAllOtherActions()

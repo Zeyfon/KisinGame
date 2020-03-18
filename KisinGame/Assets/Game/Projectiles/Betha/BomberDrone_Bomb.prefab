@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7578880529943495152}
   - component: {fileID: 2019777734765143619}
   m_Layer: 19
-  m_Name: BomberDrone_Bomb(Spine)
+  m_Name: BomberDrone_Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,9 +156,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -2076466581
+  m_SortingLayer: 1
+  m_SortingOrder: 9
 --- !u!114 &7021374478330985094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  explosionClip: {fileID: 8300000, guid: c14f41c17f09c7942b8683c19019c7ef, type: 3}
+  explosionClip: {fileID: 8300000, guid: f17391b664b50af429aad6755ba52c65, type: 3}
   volume: 1
 --- !u!82 &2019777734765143619
 AudioSource:
@@ -276,7 +276,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

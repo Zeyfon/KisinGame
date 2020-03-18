@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 679409144}
   - component: {fileID: 679409140}
   - component: {fileID: 679409139}
+  - component: {fileID: 679409141}
   m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
@@ -350,7 +351,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679409138}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: 
@@ -414,7 +415,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: Save
+          value: SaveData
         - useVariable: 0
           name: 
           tooltip: 
@@ -527,7 +528,7 @@ MonoBehaviour:
         y: 226.51562
         width: 188
         height: 16
-      isBreakpoint: 0
+      isBreakpoint: 1
       isSequence: 0
       hideUnused: 0
       transitions: []
@@ -748,7 +749,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: SaveData
+          value: SaveData.es3
         - useVariable: 0
           name: 
           tooltip: 
@@ -1258,6 +1259,18 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &679409141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679409138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0706daa39f9fc4da849935c239fbce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &679409142
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1331,7 +1344,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 679409139}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 679409141}
+        m_MethodName: LoadLastSavedScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &754441753 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7441416210274412822, guid: 80ead27812b4edb47b8756f866b423e9,
@@ -1831,7 +1855,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: SaveData
+          value: SaveData.es3
         - useVariable: 0
           name: 
           tooltip: 
@@ -1865,28 +1889,28 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: HutongGames.PlayMaker.None
+          enumName: ES3+Location
           intValue: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: HutongGames.PlayMaker.None
+          enumName: ES3+EncryptionType
           intValue: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: HutongGames.PlayMaker.None
+          enumName: ES3+Directory
           intValue: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          enumName: HutongGames.PlayMaker.None
+          enumName: ES3+Format
           intValue: 0
         - useVariable: 0
           name: 
@@ -5459,7 +5483,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams:
