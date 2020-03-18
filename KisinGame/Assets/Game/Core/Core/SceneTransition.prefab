@@ -89,6 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6331447813691455422}
+  - component: {fileID: 6846588970708282515}
   m_Layer: 0
   m_Name: SceneTransition
   m_TagString: Untagged
@@ -114,6 +115,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6846588970708282515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6331447813691455423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80693fb728f3e4647b684a59d25a56ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foreground: {fileID: 1678126649}
+  mySceneIndex: 0
 --- !u!1 &6331447814206459479
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,19 +311,6 @@ CompositeCollider2D:
       - {x: 5.0000057, y: 1.5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.000005
---- !u!114 &6331447814392542445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7397979500732503381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35ff5cb3c267c7845b82cca50ccfdd59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foreground: {fileID: 1678126649}
 --- !u!1001 &6331447814433968553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -388,12 +390,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ac88335e9c787b43ab07f3d4cbf397c, type: 3}
---- !u!1 &7397979500732503381 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3564375994423493884, guid: 2ac88335e9c787b43ab07f3d4cbf397c,
-    type: 3}
-  m_PrefabInstance: {fileID: 6331447814433968553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2444999658109833554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8517344841931423995, guid: 2ac88335e9c787b43ab07f3d4cbf397c,

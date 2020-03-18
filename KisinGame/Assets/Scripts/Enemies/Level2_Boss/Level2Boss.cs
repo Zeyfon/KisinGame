@@ -30,6 +30,7 @@ public class Level2Boss : MonoBehaviour, IBossStarter
 
     void Start()
     {
+        bossRoomController = FindObjectOfType<BossRoomController>();
         bossControlTimers = GetComponent<Level2BossControlTimers>();
         anim = GetComponent<Animator>();
         anim.SetInteger("Phase", phase);
@@ -230,17 +231,16 @@ public class Level2Boss : MonoBehaviour, IBossStarter
     {
         //This int is to tell the BossRoomController 
         //to run the item in the index dialogue0 = 0
-        int dialogue0 = 0;
         yield return new WaitForSeconds(2.8f);
         print("Wants to start dialogue");
-        bossRoomController.BossDead(dialogue0);
+        bossRoomController.BossDead(1);
         yield return new WaitForSeconds(0.5f);
         DestroyBoss();
     }
 
     public void DestroyBoss()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
     void StoppinpAllOtherActions()

@@ -7,6 +7,9 @@ public class CameraShakeController : MonoBehaviour
 {
     public void ShakeCamera()
     {
-        GetComponent<CinemachineImpulseSource>().GenerateImpulse();
+        print("CameraWantsToShake");
+        CinemachineImpulseSource cameraShake = GetComponent<CinemachineImpulseSource>();
+        print(cameraShake);
+        cameraShake.GenerateImpulse();
     }
 }

@@ -5,25 +5,16 @@ using Cinemachine;
 
 public class BossRoomTransition : MonoBehaviour
 {
-    [SerializeField] CinemachineVirtualCamera bossRoomCamera;
-    VirtualCamera followCamera;
-    AudioClip levelMusic;
+    CinemachineVirtualCamera bossRoomCamera;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
     {
-        if (collision.CompareTag("Player"))
-        {
-            print("Player entered boss room");
-            followCamera = collision.GetComponent<PlayerIdentifer>().GetVCamera();
-            followCamera.DisableVCameraForBossRoom();
-            EnableBossCamera();
-            SwitchToBossRoomMusic();
-        }
+        bossRoomCamera = GetComponentInChildren<CinemachineVirtualCamera>();
     }
 
     private void EnableBossCamera()
     {
-        bossRoomCamera.Priority = 20;
+        bossRoomCamera.Priority = 100;
     }
 
     void SwitchToBossRoomMusic()
@@ -31,25 +22,37 @@ public class BossRoomTransition : MonoBehaviour
         GetComponentInChildren<MusicPlayer>().PlayThisTrack();
     }
 
+    private void DisableBossCamera()
+    {
+        bossRoomCamera.Priority = 0;
+    }
+
+    void SwitchToLevelMusic()
+    {
+        GetComponentInChildren<MusicPlayer>().PlayerLevelTrack();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            print("Player entered boss room");
+            EnableBossCamera();
+            SwitchToBossRoomMusic();
+        }
+    }
+
+
     private void OnTriggerExit2D(Collider2D collision)
     {
 
         if (collision.CompareTag("Player"))
         {
             print("Player exited boss room");
-            followCamera = collision.GetComponent<PlayerIdentifer>().GetVCamera();
-            followCamera.EnableVCamera();
             DisableBossCamera();
             SwitchToLevelMusic();
         }
     }
 
-    private void DisableBossCamera()
-    {
-        bossRoomCamera.Priority = 5;
-    }
-    void SwitchToLevelMusic()
-    {
-        GetComponentInChildren<MusicPlayer>().PlayAnotherTrack(1);
-    }
+
 }

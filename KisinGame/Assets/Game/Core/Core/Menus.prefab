@@ -216,7 +216,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!1 &4791595113503095009
 GameObject:
   m_ObjectHideFlags: 0
@@ -3297,7 +3297,7 @@ PrefabInstance:
     - target: {fileID: 1131240412926037357, guid: bc8197e240fe58041b343e4efcf30ab7,
         type: 3}
       propertyPath: m_Name
-      value: MainMenu_Proto
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2502033792699912794, guid: bc8197e240fe58041b343e4efcf30ab7,
         type: 3}
@@ -3506,6 +3506,51 @@ PrefabInstance:
       propertyPath: fsm.states.Array.data[24].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2717494062295506805, guid: 164fa0e45d2ac6742aafee9ec5953eda,
+        type: 3}
+      propertyPath: fsm.states.Array.data[0].actionData.fsmOwnerDefaultParams.Array.data[1].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717494062295506805, guid: 164fa0e45d2ac6742aafee9ec5953eda,
+        type: 3}
+      propertyPath: fsm.states.Array.data[0].actionData.fsmOwnerDefaultParams.Array.data[2].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717494062295506805, guid: 164fa0e45d2ac6742aafee9ec5953eda,
+        type: 3}
+      propertyPath: fsm.states.Array.data[12].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5999322669572756912, guid: 164fa0e45d2ac6742aafee9ec5953eda,
+        type: 3}
+      propertyPath: fsm.states.Array.data[0].actionData.fsmOwnerDefaultParams.Array.data[1].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5999322669572756912, guid: 164fa0e45d2ac6742aafee9ec5953eda,
+        type: 3}
+      propertyPath: fsm.states.Array.data[0].actionData.fsmOwnerDefaultParams.Array.data[2].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5999322669572756912, guid: 164fa0e45d2ac6742aafee9ec5953eda,
+        type: 3}
+      propertyPath: fsm.states.Array.data[12].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252687769715372375, guid: 164fa0e45d2ac6742aafee9ec5953eda,
+        type: 3}
+      propertyPath: fsm.states.Array.data[0].actionData.fsmOwnerDefaultParams.Array.data[1].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252687769715372375, guid: 164fa0e45d2ac6742aafee9ec5953eda,
+        type: 3}
+      propertyPath: fsm.states.Array.data[0].actionData.fsmOwnerDefaultParams.Array.data[2].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252687769715372375, guid: 164fa0e45d2ac6742aafee9ec5953eda,
+        type: 3}
+      propertyPath: fsm.states.Array.data[12].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8123345294335252956, guid: 164fa0e45d2ac6742aafee9ec5953eda,
         type: 3}
       propertyPath: fsm.states.Array.data[0].actionData.fsmOwnerDefaultParams.Array.data[1].gameObject.value
@@ -3524,6 +3569,11 @@ PrefabInstance:
     - target: {fileID: 8123345294527402539, guid: 164fa0e45d2ac6742aafee9ec5953eda,
         type: 3}
       propertyPath: fsm.states.Array.data[4].actionData.fsmOwnerDefaultParams.Array.data[2].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123345294527402539, guid: 164fa0e45d2ac6742aafee9ec5953eda,
+        type: 3}
+      propertyPath: fsm.states.Array.data[9].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8123345294871508983, guid: 164fa0e45d2ac6742aafee9ec5953eda,
@@ -3800,7 +3850,7 @@ PrefabInstance:
     - target: {fileID: 3563846661258319132, guid: 33420e9fd925f29419f83eebf6be364d,
         type: 3}
       propertyPath: m_Name
-      value: ShardsMenu_Proto
+      value: ShardsMenu
       objectReference: {fileID: 0}
     - target: {fileID: 3563846661258319132, guid: 33420e9fd925f29419f83eebf6be364d,
         type: 3}

@@ -6,7 +6,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
 {
     enum Dialogues
     {
-        Dialogue1=1, Dialogue2=2
+        IzelDialogue=1, MitlanDialogue=2
     }
     [Header("Internal Values")]
     [SerializeField] bool mitlanActive = false;
@@ -34,7 +34,6 @@ public class Level3Boss : MonoBehaviour, IBossStarter
     void Start()
     {
         dialogueID = (int)dialogues;
-        print(dialogueID);
         bossControlTimers = GetComponent<Level3BossControlTimers>();
         rb = GetComponent<Rigidbody2D>();
         animIzel = GetComponent<Animator>();
@@ -46,6 +45,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
         }
 
         StartCoroutine(SetVariablesInDependencies());
+        print("Setting " + gameObject.name + "  " + bossRoomController);
         bossRoomController.SetCurrentBoss(this);
     }
     IEnumerator SetVariablesInDependencies()

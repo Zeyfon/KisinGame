@@ -32,6 +32,7 @@ public class ComboAttackL1B : MonoBehaviour, IFlipValues
     Rigidbody2D rb;
     AttackTrigger attackTrigger;
     BoxCollider2D attackCollider;
+    CameraShakeController cameraShaker;
 
     private void Start()
     {
@@ -90,12 +91,20 @@ public class ComboAttackL1B : MonoBehaviour, IFlipValues
                 attackCollider.size = new Vector2(3, 2.5f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack3");
-                StartCoroutine(CameraShake());
+                CameraShake();
+
                 break;
             default:
                 break;
         }
     }
+
+    private void CameraShake()
+    {
+        if (!cameraShaker) cameraShaker = transform.parent.transform.parent.GetComponent<CameraShakeController>();
+        cameraShaker.ShakeCamera();
+    }
+
     //Animation Event
     void AttackTrigger_Disabled()
     {
@@ -142,12 +151,6 @@ public class ComboAttackL1B : MonoBehaviour, IFlipValues
             default:
                 break;
         }
-    }
-
-    IEnumerator CameraShake()
-    {
-        yield return new WaitForSeconds(0.1f);
-        stressReceiver.InduceStress(cameraShake);
     }
 
     public void FlipValues()

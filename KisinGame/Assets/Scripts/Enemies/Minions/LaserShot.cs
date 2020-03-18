@@ -11,6 +11,17 @@ public class LaserShot : MonoBehaviour
     float speed = 5;
     Rigidbody2D rb;
 
+    private void Start()
+    {
+        StartCoroutine(TimerToDestroy());
+    }
+
+    IEnumerator TimerToDestroy()
+    {
+        yield return new WaitForSeconds(10);
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         StopCoroutine(coroutine);

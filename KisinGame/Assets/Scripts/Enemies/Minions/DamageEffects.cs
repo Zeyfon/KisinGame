@@ -1,10 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Spine.Unity;
+using System.Collections;
 using UnityEngine;
-using Spine.Unity;
-using Cinemachine;
-using HutongGames.PlayMaker;
-using System;
 
 public class DamageEffects : MonoBehaviour
 {
@@ -24,7 +20,7 @@ public class DamageEffects : MonoBehaviour
 
     public void SameColorEffect(int weakness)
     {
-        CheckLocalScale();
+        FlipProcess();
         SkeletonAnimation skeletonAnimation = sameColorTransform.GetComponent<SkeletonAnimation>();
         SetSkin(weakness, skeletonAnimation);
         damageSoundsFSM.SendEvent("SameColor");
@@ -33,7 +29,7 @@ public class DamageEffects : MonoBehaviour
 
     public void StunEventEffect(int weakness)
     {
-        CheckLocalScale();
+        FlipProcess();
         if (!cameraShaker) cameraShaker = transform.parent.transform.parent.GetComponent<CameraShakeController>();
         cameraShaker.ShakeCamera();
         SkeletonAnimation skeletonAnimation = stunEventTransform.GetComponent<SkeletonAnimation>();
@@ -50,7 +46,7 @@ public class DamageEffects : MonoBehaviour
 
     public void StunStateEffect(int weakness)
     {
-        CheckLocalScale();
+        FlipProcess();
         SkeletonAnimation skeletonAnimation = stunStateTransform.GetComponent<SkeletonAnimation>();
         SetSkin(weakness, skeletonAnimation);
         damageSoundsFSM.SendEvent("StunState");
@@ -75,11 +71,11 @@ public class DamageEffects : MonoBehaviour
         }
     }
 
-    private void CheckLocalScale()
+    private void FlipProcess()
     {
         float parentLocalScaleX = GetParentScale();
         float playerRelativePosition = GetPlayerRelativeXPosition();
-        UpdateMyLocalScale(playerRelativePosition, parentLocalScaleX);
+        Flip(playerRelativePosition, parentLocalScaleX);
     }
     private float GetParentScale()
     {
@@ -90,7 +86,7 @@ public class DamageEffects : MonoBehaviour
     {
         return playerTransform.position.x - transform.position.x;
     }
-    private void UpdateMyLocalScale(float playerRelativePosition, float parentLocalScaleX)
+    private void Flip(float playerRelativePosition, float parentLocalScaleX)
     {
         if (playerRelativePosition <= 0 && parentLocalScaleX <= 0)
         {

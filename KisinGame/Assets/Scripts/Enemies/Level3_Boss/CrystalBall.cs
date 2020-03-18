@@ -41,7 +41,6 @@ public class CrystalBall : MonoBehaviour
         }
         Spine.AnimationState spineAnimationState = skeletonAnimation.AnimationState;
         skeleton = skeletonAnimation.skeleton;
-        print(skeleton);
     }
 
     #region WeaknessUpdate
