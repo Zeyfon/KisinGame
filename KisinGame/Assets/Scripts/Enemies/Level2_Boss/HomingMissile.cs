@@ -21,14 +21,20 @@ public class HomingMissile : MonoBehaviour
     Animator animator;
     Coroutine coroutine;
     bool canDamage = true;
+    Vector3 targetPosition;
+    bool collided = false;
 
     //HomingMissile homingMissile;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        StartCoroutine(MovingUpwards());
+        yield return MovingUpwards();
+        yield return Rotation();
+        targetPosition = playerTransform.position;
+        GetComponent<Collider2D>().enabled = true;
+        yield return MovingTowardsPlayer();
     }
 
     #region Actions
@@ -45,34 +51,34 @@ public class HomingMissile : MonoBehaviour
         }
         yield return new WaitForSeconds(0.2f);
         animator.Play("MovetoTarget");
-        yield return new WaitForSeconds(0.3f);
-        GetComponent<Collider2D>().enabled = true;
-        coroutine = StartCoroutine(Rotation());
     }
 
     IEnumerator Rotation()
     {
-        bool changeRotationSpeed = false;
         float timer = 0;
-        float currentRotationSpeed = initialRotateSpeed;
-        
-         while(true)
+         while(timer <timeToStopRotate)
          {
-             yield return new WaitForFixedUpdate();
+            yield return new WaitForFixedUpdate();
+
             Vector2 direction = (Vector2)playerTransform.position - rb.position;
             float rotateAmount = Vector3.Cross(direction, transform.up).z;
-            if (!changeRotationSpeed)
-            {
-                timer += Time.fixedDeltaTime;
-                if (timer > timeToStopRotate)
-                {
-                    currentRotationSpeed = finalRotateSpeed;
-                    changeRotationSpeed = true;
-                }
-            }
-            rb.angularVelocity = -rotateAmount * currentRotationSpeed;
+            rb.angularVelocity = -rotateAmount * initialRotateSpeed;
             rb.velocity = transform.up * targetSpeed;
-         }
+            timer += Time.fixedDeltaTime;
+        }
+    }
+
+    IEnumerator MovingTowardsPlayer()
+    {
+        yield return null;
+        while (!collided)
+        {
+            yield return new WaitForFixedUpdate();
+            Vector2 direction = (Vector2)playerTransform.position - rb.position;
+            float rotateAmount = Vector3.Cross(direction, transform.up).z;
+            rb.angularVelocity = -rotateAmount * finalRotateSpeed;
+            rb.velocity = transform.up * targetSpeed;
+        }
     }
     #endregion
 
@@ -80,40 +86,41 @@ public class HomingMissile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Is checking the missile");
-        StopCoroutine(coroutine);
         if (canDamage)
         {
             StartCoroutine(MissileExplosion(collision));
-            canDamage = false;
         }
 
     }
 
     IEnumerator MissileExplosion(Collider2D coll  )
     {
-        GetComponent<AudioSource>().PlayOneShot(explosionSound);
-        print("Missile Exploded sound played");
         if (coll.CompareTag("PlayerBody"))
         {
+            collided = true;
+            yield return new WaitForEndOfFrame();
+            CollisionEffects();
             animator.Play("PlayerExplosion");
             GetComponent<DamageSender>().SendDamageToPlayer(damage, playerTransform);
+            yield break;
         }
-        if (coll.CompareTag("Floor") || coll.CompareTag("Wall"))
+        else if (coll.CompareTag("Floor") || coll.CompareTag("Wall") && targetPosition.y > transform.position.y)
         {
-            animator.Play("FloorExplosion");
+            collided = true;
+            yield return new WaitForEndOfFrame();
+            CollisionEffects();
+            animator.Play("PlayerExplosion");
+            yield break;
         }
-        else
-        {
-            Debug.LogWarning(gameObject.name + "  is colliding with something not designed to");
-        }
-        yield return new WaitForSeconds(0.1f);
+    }
+
+    private void CollisionEffects()
+    {
+        GetComponent<AudioSource>().PlayOneShot(explosionSound);
         rb.velocity = new Vector2(0, 0);
         rb.angularVelocity = 0;
         transform.rotation = new Quaternion(0, 0, 0, 0);
-        print("Missile Destroyed");
         if (bossTransform) bossTransform.GetComponent<MissilesAttackL2B>().MissileDestroyed();
-
     }
 
     #endregion
