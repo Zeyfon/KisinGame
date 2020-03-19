@@ -28,7 +28,11 @@ public class SceneTransition : MonoBehaviour
 
     public void CheckForActiveSceneChange()
     {
-        if (SceneManager.GetActiveScene().buildIndex == mySceneIndex) return;
+        if (SceneManager.GetActiveScene().buildIndex == mySceneIndex)
+        {
+            return;
+        }
+        print("Wants to change active scene");
         ActiveSceneChange();
     }
 
