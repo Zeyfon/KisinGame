@@ -90,7 +90,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 57
-        y: 222
+        y: 254
         width: 203
         height: 32
       isBreakpoint: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 666
-        y: 182
+        y: 214
         width: 191
         height: 48
       isBreakpoint: 0
@@ -319,14 +319,22 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 684
-        y: 115
+        x: 673.4531
+        y: 103.55469
         width: 311
-        height: 32
+        height: 48
       isBreakpoint: 0
       isSequence: 1
       hideUnused: 0
       transitions:
+      - fsmEvent:
+          name: Loop
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Loop
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
@@ -337,22 +345,36 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.SetFsmBool
+        - HutongGames.PlayMaker.Actions.GetChild
+        - HutongGames.PlayMaker.Actions.GameObjectIsNull
         - HutongGames.PlayMaker.Actions.SetFsmBool
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 68fece0568fece05
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000400000009000000
+        actionHashCodes: 184b57041565620568fece05
         unityObjectParams: []
-        fsmGameObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: gameController
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: gameController
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         fsmOwnerDefaultParams:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: gameController
+            name: player
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -360,7 +382,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: gameManager
+            name: gameController
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -377,19 +399,19 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: GameController
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: inSavePoint
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: MenusController
+          value: GameController
         - useVariable: 0
           name: 
           tooltip: 
@@ -403,12 +425,12 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams: []
         fsmBoolParams:
-        - useVariable: 0
+        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -420,33 +442,39 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
+        stringParams:
+        - Loop
+        - 
         byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000001200000011000000010000001400000012000000120000001100000001000000
+        paramDataType: 1400000012000000120000001300000013000000170000001700000011000000010000001400000012000000120000001100000001000000
         paramName:
         - gameObject
-        - fsmName
-        - variableName
-        - setValue
+        - childName
+        - withTag
+        - storeResult
+        - gameObject
+        - isNull
+        - isNotNull
+        - storeResult
         - everyFrame
         - gameObject
         - fsmName
         - variableName
         - setValue
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000000000000100000002000000030000000100000001000000
-        paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000010000000000000001000000000000000100000000000000000000000100000002000000030000000100000001000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000
     - name: Setup
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 73
-        y: 101.91406
+        y: 133.91406
         width: 100
         height: 32
       isBreakpoint: 0
@@ -554,7 +582,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 650.1172
-        y: 361.46875
+        y: 393.46875
         width: 320
         height: 32
       isBreakpoint: 0
@@ -680,7 +708,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1057.3516
-        y: 223.125
+        y: 255.125
         width: 300
         height: 32
       isBreakpoint: 0
@@ -891,7 +919,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 59
-        y: 161
+        y: 193
         width: 160
         height: 32
       isBreakpoint: 0
@@ -984,7 +1012,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 342
-        y: 187
+        y: 219
         width: 187
         height: 32
       isBreakpoint: 0
@@ -1071,7 +1099,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 319.07812
-        y: 346.97656
+        y: 378.97656
         width: 192
         height: 32
       isBreakpoint: 0
@@ -1158,7 +1186,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1060.9219
-        y: 167.80469
+        y: 199.80469
         width: 139
         height: 32
       isBreakpoint: 0
@@ -1318,7 +1346,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 682.8906
-        y: 279.22656
+        y: 311.22656
         width: 191
         height: 48
       isBreakpoint: 0
@@ -1408,9 +1436,76 @@ MonoBehaviour:
         - storeCollider
         paramDataPos: 0000000000000000000000000000000000000000
         paramByteDataSize: 0000000004000000000000000000000000000000
+    - name: Loop
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1048.6641
+        y: 112.25
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Inform Menu Manager and GameController
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 88611604
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 17000000
+        paramName:
+        - sendEvent
+        paramDataPos: 00000000
+        paramByteDataSize: 00000000
     events:
     - name: FINISHED
       isSystemEvent: 1
+      isGlobal: 0
+    - name: Loop
+      isSystemEvent: 0
       isGlobal: 0
     - name: MenuClosed
       isSystemEvent: 0
