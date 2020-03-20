@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &182481263572633005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640933779292899775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d02fe0df5931cf44a64bd74aea387f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7160428462618927109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,10 +19,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1464379503096587714, guid: 014f1f518ee9f63459b8607d2676222f,
+        type: 3}
+      propertyPath: actorTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464379503096587714, guid: 014f1f518ee9f63459b8607d2676222f,
+        type: 3}
+      propertyPath: conversantTag
+      value: Kisin
+      objectReference: {fileID: 0}
     - target: {fileID: 2337208355144635626, guid: 014f1f518ee9f63459b8607d2676222f,
         type: 3}
       propertyPath: fsm.variables.stringVariables.Array.data[1].value
       value: Level1Dialogue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337208355144635626, guid: 014f1f518ee9f63459b8607d2676222f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[0].actionData.fsmStringParams.Array.data[0].value
+      value: Level1Dialogue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337208355144635626, guid: 014f1f518ee9f63459b8607d2676222f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[1].actionData.fsmVarParams.Array.data[0].stringValue
+      value: Level1Dialogue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337208355144635626, guid: 014f1f518ee9f63459b8607d2676222f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[6].actionData.fsmVarParams.Array.data[0].stringValue
+      value: Level1Dialogue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337208355144635626, guid: 014f1f518ee9f63459b8607d2676222f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[6].actionData.fsmStringParams.Array.data[0].value
+      value: Level1Dialogue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337208355144635626, guid: 014f1f518ee9f63459b8607d2676222f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[6].actionData.fsmFloatParams.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7763078069206788536, guid: 014f1f518ee9f63459b8607d2676222f,
         type: 3}
@@ -74,3 +121,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 014f1f518ee9f63459b8607d2676222f, type: 3}
+--- !u!1 &640933779292899775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7763078069206788538, guid: 014f1f518ee9f63459b8607d2676222f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7160428462618927109}
+  m_PrefabAsset: {fileID: 0}
