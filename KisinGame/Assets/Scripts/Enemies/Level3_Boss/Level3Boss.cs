@@ -310,6 +310,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
     }
     public void DestroyBoss()
     {
+        Debug.Log("Destroys Itself");
         Destroy(gameObject);
     }
 
