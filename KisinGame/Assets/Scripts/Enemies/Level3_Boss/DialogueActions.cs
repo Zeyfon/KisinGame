@@ -24,6 +24,9 @@ public class DialogueActions : MonoBehaviour
     IEnumerator ConversationEndedActions()
     {
         print(gameObject.name + "  Conversation Ended");
+        DialogueEntry dialogueEntry = DialogueManager.CurrentConversationState.subtitle.dialogueEntry;
+        int conversationID = dialogueEntry.conversationID; //<-- This is the conversation ID.
+        if (conversationID == 4) yield break;
         FindObjectOfType<BossRoomController>().StartFightDelayed(mitlanCoverClone);
         izelBoss.GetComponent<Level3Boss>().DestroyBoss();
         yield return null;

@@ -32,18 +32,15 @@ public class BossRoomController : MonoBehaviour
 
         if (!bossDefeated)
         {
-            print("Boss Alive");
             SetDoorsBeforeBossFight();
         }
         else
         {
-            print ("BossDefeated");
             SetDoorsAfterBossDefeated();
             GetComponent<Collider2D>().enabled = false;
         }
         if (WillBeADialogueBeforeTheFight())
         {
-            print("Boss Alive");
             GetComponent<Collider2D>().enabled = false;
         }
     }
@@ -80,7 +77,6 @@ public class BossRoomController : MonoBehaviour
 
     IEnumerator ActivateBoss()
     {
-        print(currentBoss);
         yield return new WaitForSeconds(timeToActivateBoss);
         currentBoss.IStartActions();
     }
@@ -99,16 +95,11 @@ public class BossRoomController : MonoBehaviour
 
     IEnumerator BossDeadC(int dialogueID)
     {
-        print("REaching 1");
         OpenContinueDoor();
         yield return new WaitForSeconds(.5f);
-        print("REaching 2");
         DisableUI();
         yield return new WaitForSeconds(.5f);
-        print("REaching 3");
-
         AfterDefeatingBossDialogue(dialogueID);
-        print("Reached the dialogues");
     }
 
     private void AfterDefeatingBossDialogue(int dialogueID)
@@ -118,11 +109,13 @@ public class BossRoomController : MonoBehaviour
 
     private void DisableUI()
     {
+        print("Disabling UI");
         bossUI.GetComponent<PlayMakerFSM>().Fsm.Event("DisableBossUI");
     }
 
     public void GameFinished()
     {
+        print("GameFinishes");
         PlayMakerFSM gameManagerFSM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayMakerFSM>();
         gameManagerFSM.Fsm.Event("GameHasFinished");
         DisableUI();
