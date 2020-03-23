@@ -5416,7 +5416,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 473.85938
+        x: 489.85938
         y: 114.140625
         width: 103
         height: 48
@@ -5498,7 +5498,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 697.9375
+        x: 713.9375
         y: 294.85156
         width: 253
         height: 16
@@ -5625,7 +5625,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 449.1953
+        x: 465.1953
         y: 306.20312
         width: 100
         height: 16
@@ -5677,7 +5677,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 703.9375
+        x: 719.9375
         y: 221.375
         width: 245
         height: 32
@@ -5778,7 +5778,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 716.15625
+        x: 732.15625
         y: 145.61719
         width: 100
         height: 32
@@ -5921,8 +5921,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 61
-        y: 175
+        x: 60
+        y: 214
         width: 307
         height: 32
       isBreakpoint: 0
@@ -6146,7 +6146,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 464.6797
+        x: 480.6797
         y: 191.53125
         width: 136
         height: 32
@@ -6214,122 +6214,12 @@ MonoBehaviour:
         - sendEvent
         paramDataPos: 0000000000000000
         paramByteDataSize: 0000000000000000
-    - name: Send event to SoundManager
-      description: To Procude Level UpSound
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 57.414062
-        y: 292.82812
-        width: 223
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Listener
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: ba7ea101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: skillsMenu
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: SoundManager
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: LeveledUp
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1f000000120000000f00000001000000
-        paramName:
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000001000000
     - name: Set Initial Element in UI
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 452.7422
+        x: 468.7422
         y: 241.03125
         width: 188
         height: 32
@@ -6398,8 +6288,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 57.976562
-        y: 245
+        x: 56.976562
+        y: 284
         width: 310
         height: 32
       isBreakpoint: 0
@@ -6410,7 +6300,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Send event to SoundManager
+        toState: Listener
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -6667,7 +6557,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0

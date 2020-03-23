@@ -31,6 +31,11 @@ public class PixanShardDroplets : MonoBehaviour
 
         for (int i = 0; i < numEnter; i++)
         {
+            float timer = 0;
+            while (timer < .1f)
+            {
+                timer += Time.deltaTime;
+            }
             pixanShards = FsmVariables.GlobalVariables.GetFsmInt("shards").Value;
             ParticleSystem.Particle p = enter[i];
             pixanShards += 1;
