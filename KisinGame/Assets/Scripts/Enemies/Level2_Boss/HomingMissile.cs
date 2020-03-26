@@ -12,7 +12,7 @@ public class HomingMissile : MonoBehaviour
     [SerializeField] float  initialRotateSpeed = 50f;   [UnityEngine.Tooltip("Speed at which rotates. Faster at first")]
     [SerializeField] float finalRotateSpeed = 5f;       [UnityEngine.Tooltip("Speed at which rotates. Lower to stop it from pursuing too much the player")]
     [SerializeField] float timeToStopRotate = 2f;       [UnityEngine.Tooltip("Time after it begings to rotate towards the player to stop it to rotate")]
-    [SerializeField] int damage = 20;                    [UnityEngine.Tooltip("Damage done to the player")]
+    public int damage = 20;                    [UnityEngine.Tooltip("Damage done to the player")]
     public Transform bossTransform = null;
     public Transform playerTransform = null;
     [SerializeField] AudioClip explosionSound;                
@@ -66,6 +66,7 @@ public class HomingMissile : MonoBehaviour
             rb.velocity = transform.up * targetSpeed;
             timer += Time.fixedDeltaTime;
         }
+
     }
 
     IEnumerator MovingTowardsPlayer()
@@ -79,48 +80,31 @@ public class HomingMissile : MonoBehaviour
             rb.angularVelocity = -rotateAmount * finalRotateSpeed;
             rb.velocity = transform.up * targetSpeed;
         }
+        StopMovement();
     }
     #endregion
 
     #region DamageSender
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void MissileTouchedPlayer()
     {
-        if (canDamage)
-        {
-            StartCoroutine(MissileExplosion(collision));
-        }
-
-    }
-
-    IEnumerator MissileExplosion(Collider2D coll  )
-    {
-        if (coll.CompareTag("PlayerBody"))
-        {
-            collided = true;
-            yield return new WaitForEndOfFrame();
-            CollisionEffects();
-            animator.Play("PlayerExplosion");
-            GetComponent<DamageSender>().SendDamageToPlayer(damage, playerTransform);
-            yield break;
-        }
-        else if (coll.CompareTag("Floor") || coll.CompareTag("Wall") && targetPosition.y > transform.position.y)
-        {
-            collided = true;
-            yield return new WaitForEndOfFrame();
-            CollisionEffects();
-            animator.Play("PlayerExplosion");
-            yield break;
-        }
-    }
-
-    private void CollisionEffects()
-    {
+        collided = true;
+        animator.Play("PlayerExplotion");
         GetComponent<AudioSource>().PlayOneShot(explosionSound);
+    }
+
+    public void MissileTouchedFloor()
+    {
+        collided = true;
+        animator.Play("FloorExplotion");
+        GetComponent<AudioSource>().PlayOneShot(explosionSound);
+    }
+
+
+    private void StopMovement()
+    {
         rb.velocity = new Vector2(0, 0);
         rb.angularVelocity = 0;
         transform.rotation = new Quaternion(0, 0, 0, 0);
-        if (bossTransform) bossTransform.GetComponent<MissilesAttackL2B>().MissileDestroyed();
     }
 
     #endregion

@@ -17,8 +17,20 @@ MonoBehaviour:
   scale: 0.0012
   skeletonJSON: {fileID: 4900000, guid: d06791dff9c595748a94892922178c24, type: 3}
   skeletonDataModifiers: []
-  fromAnimation: []
-  toAnimation: []
-  duration: []
+  fromAnimation:
+  - ZyanaFalling
+  - ZyanaRunnig
+  - ZyanaIdle
+  - ZyanaChargePhase
+  toAnimation:
+  - ZyanaRunnig
+  - ZyanaJumping
+  - ZyanaRunnig
+  - ZyanaIdle
+  duration:
+  - 0
+  - 0.1
+  - 0.1
+  - 0.1
   defaultMix: 0.2
   controller: {fileID: 0}
