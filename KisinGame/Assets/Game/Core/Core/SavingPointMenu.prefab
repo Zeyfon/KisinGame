@@ -2865,62 +2865,41 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.AudioPlay
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: ba7ea101
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 81294e0488611604
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: skillsMenu
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 8123345294527402537}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: skillsMenu
-              tooltip: 
-              showInInspector: 1
-              networkSync: 0
-              value: {fileID: 8123345294527402537}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: SoundManager
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
+        fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
+        fsmStringParams: []
+        fsmObjectParams:
+        - useVariable: 1
+          name: skillCannotLevelUpSound
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
-          value: CannotDoIt
-        fsmObjectParams: []
+          typeName: UnityEngine.AudioClip
+          value: {fileID: 8300000, guid: e2de29a91f7fef64ab2e1dbe71c0826b, type: 3}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
@@ -2930,28 +2909,38 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 0.5
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
+        stringParams:
+        - 
+        - FINISHED
+        byteData: 
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000120000000f00000001000000
+        paramDataType: 140000000f00000018000000110000001700000017000000
         paramName:
-        - eventTarget
+        - gameObject
+        - volume
+        - oneShotClip
+        - WaitForEndOfClip
+        - finishedEvent
         - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 00000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000000000001000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000
     - name: Skill Point Reached
       description: 
       colorIndex: 0
@@ -4524,16 +4513,20 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetFsmFloat
+        - HutongGames.PlayMaker.Actions.AudioStop
         - HutongGames.PlayMaker.Actions.AudioPlay
         - HutongGames.PlayMaker.Actions.NextFrameEvent
+        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000050000000a000000
-        actionHashCodes: 8760450281294e0488611604
+        - 
+        - 
+        actionEnabled: 0101010001
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000005000000060000000b0000000c000000
+        actionHashCodes: 876045028d4bb50381294e048861160448c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -4545,6 +4538,14 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: skillsMenu
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 8123345294527402537}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -4574,7 +4575,7 @@ MonoBehaviour:
           value: inSkillMenuPixanShards
         fsmObjectParams:
         - useVariable: 1
-          name: addingShards
+          name: 
           tooltip: 
           showInInspector: 1
           networkSync: 0
@@ -4596,6 +4597,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.05
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -4612,12 +4619,13 @@ MonoBehaviour:
         stringParams:
         - 
         - FINISHED
-        byteData: 00
+        - 
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000120000000f00000001000000140000000f00000018000000110000001700000017000000
+        paramDataType: 1400000012000000120000000f0000000100000014000000140000000f000000180000001100000017000000170000000f0000001700000001000000
         paramName:
         - gameObject
         - fsmName
@@ -4625,13 +4633,17 @@ MonoBehaviour:
         - setValue
         - everyFrame
         - gameObject
+        - gameObject
         - volume
         - oneShotClip
         - WaitForEndOfClip
         - finishedEvent
         - sendEvent
-        paramDataPos: 0000000000000000010000000000000000000000010000000100000000000000000000000000000001000000
-        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000000000000000000000000000
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000001000000000000000000000001000000020000000100000000000000000000000000000001000000020000000200000001000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: Update skillPointsAvailable
       description: in PlayerDataFSM
       colorIndex: 4
@@ -4711,7 +4723,7 @@ MonoBehaviour:
           showInInspector: 1
           networkSync: 0
           typeName: UnityEngine.AudioClip
-          value: {fileID: 8300000, guid: 44a4c97a36725f04290d92a39bdfd53a, type: 3}
+          value: {fileID: 8300000, guid: 305b94f5b9f8de3419dd2880307211c1, type: 3}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
@@ -5219,21 +5231,28 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: 44a4c97a36725f04290d92a39bdfd53a, type: 3}
+        value: {fileID: 8300000, guid: f71270d563f5e114fa8688356e74c80f, type: 3}
       - useVariable: 1
         name: skillPointAcquired
         tooltip: 
         showInInspector: 1
         networkSync: 0
         typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: 305b94f5b9f8de3419dd2880307211c1, type: 3}
+        value: {fileID: 8300000, guid: 327021789a8eb2d47b7519e056ff4cbd, type: 3}
+      - useVariable: 1
+        name: skillCannotLevelUpSound
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        typeName: UnityEngine.AudioClip
+        value: {fileID: 8300000, guid: e2de29a91f7fef64ab2e1dbe71c0826b, type: 3}
       materialVariables: []
       textureVariables: []
       arrayVariables: []
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -5921,8 +5940,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 60
-        y: 214
+        x: 65
+        y: 277
         width: 307
         height: 32
       isBreakpoint: 0
@@ -5933,7 +5952,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Update SkillPointsAvailable in Player Data
+        toState: Listener
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -6283,99 +6302,6 @@ MonoBehaviour:
         - gameObject
         paramDataPos: 00000000
         paramByteDataSize: 00000000
-    - name: Update SkillPointsAvailable in Player Data
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 56.976562
-        y: 284
-        width: 310
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Listener
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetFsmInt
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 081bbf05
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: gameManager
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: PlayerData
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: skillPointsAvailable
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams:
-        - useVariable: 1
-          name: skillPointsAvailable
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1400000012000000120000001000000001000000
-        paramName:
-        - gameObject
-        - fsmName
-        - variableName
-        - setValue
-        - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -6557,7 +6483,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -6601,8 +6527,9 @@ AudioSource:
   m_GameObject: {fileID: 8123345294527402537}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243920799717435744, guid: acb3527e9c8cec24bb5fb4c0a01a168a,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 44a4c97a36725f04290d92a39bdfd53a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6678,7 +6605,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -7952,6 +7879,16 @@ PrefabInstance:
       propertyPath: fsm.states.Array.data[12].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8432410834308055281, guid: e45462ebbd6fda346a9b3858079aa719,
+        type: 3}
+      propertyPath: fsm.states.Array.data[12].actionData.fsmOwnerDefaultParams.Array.data[1].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8432410834308055281, guid: e45462ebbd6fda346a9b3858079aa719,
+        type: 3}
+      propertyPath: fsm.states.Array.data[12].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8432410834308055284, guid: e45462ebbd6fda346a9b3858079aa719,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8096,6 +8033,26 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.states.Array.data[12].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455734351865643121, guid: ad75fb16a3f50204e8ec991a08ee173b,
+        type: 3}
+      propertyPath: fsm.states.Array.data[12].actionData.fsmOwnerDefaultParams.Array.data[1].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455734351865643121, guid: ad75fb16a3f50204e8ec991a08ee173b,
+        type: 3}
+      propertyPath: fsm.states.Array.data[12].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455734351865643121, guid: ad75fb16a3f50204e8ec991a08ee173b,
+        type: 3}
+      propertyPath: fsm.variables.objectVariables.Array.data[2].value
+      value: 
+      objectReference: {fileID: 8300000, guid: 327021789a8eb2d47b7519e056ff4cbd, type: 3}
+    - target: {fileID: 1455734351865643121, guid: ad75fb16a3f50204e8ec991a08ee173b,
+        type: 3}
+      propertyPath: fsm.editorFlags
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1455734351865643124, guid: ad75fb16a3f50204e8ec991a08ee173b,
         type: 3}
@@ -8345,6 +8302,16 @@ PrefabInstance:
     - target: {fileID: 6049808398701375022, guid: 4b2c64df863289d47816e7a33cb20c6c,
         type: 3}
       propertyPath: fsm.states.Array.data[12].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049808398701375022, guid: 4b2c64df863289d47816e7a33cb20c6c,
+        type: 3}
+      propertyPath: fsm.states.Array.data[12].actionData.fsmOwnerDefaultParams.Array.data[1].gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6049808398701375022, guid: 4b2c64df863289d47816e7a33cb20c6c,
+        type: 3}
+      propertyPath: fsm.states.Array.data[12].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []

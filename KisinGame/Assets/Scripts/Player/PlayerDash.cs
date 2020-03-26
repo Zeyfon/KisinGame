@@ -38,8 +38,7 @@ public class PlayerDash : StateMachineBehaviour
     // OnStateMachineEnter is called when entering a state machine via its Entry Node
     override public void OnStateMachineEnter(Animator animator, int stateMachinePathHash)
     {
-        int dash = animator.GetInteger("Dash");
-        animator.SetInteger("Dash", dash + 1);
+        animator.SetInteger("Dash", 0);
     }
 
     // OnStateMachineExit is called when exiting a state machine via its Exit Node

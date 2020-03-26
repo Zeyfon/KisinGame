@@ -1,4 +1,6 @@
-﻿using HutongGames.PlayMaker.Actions;
+// (c) Copyright HutongGames, LLC 2010-2020. All rights reserved.  
+// License: Attribution 4.0 International(CC BY 4.0)
+using HutongGames.PlayMaker.Actions;
 using HutongGames.PlayMakerEditor;
 using UnityEditor;
 using UnityEditorInternal;
@@ -38,9 +40,10 @@ namespace HutongGames.PlayMakerEditor
 
             action = target as Overlap2d;
 
-            go = action.Fsm.GetOwnerDefaultTarget(action.position);
+            if (action.Fsm != null)
+                go = action.Fsm.GetOwnerDefaultTarget(action.position);
 
-            
+
             if (go)
             {
                 pos = go.transform.position;

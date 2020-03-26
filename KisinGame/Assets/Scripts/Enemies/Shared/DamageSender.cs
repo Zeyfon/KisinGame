@@ -5,11 +5,12 @@ using HutongGames.PlayMaker;
 
 public class DamageSender : MonoBehaviour
 {
-    PlayMakerFSM[] pFSMs;
+    [SerializeField] PlayMakerFSM[] pFSMs;
 
     public void SendDamageToPlayer(int damage, Transform target)
     {
-        if (pFSMs == null)
+        print(target.gameObject);
+        if (pFSMs.Length==0)
         {
             pFSMs = target.GetComponents<PlayMakerFSM>();
             //print("Found Player's Health");
