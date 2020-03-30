@@ -17618,6 +17618,8 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.FloatOperator
         - HutongGames.PlayMaker.Actions.FloatAdd
         - HutongGames.PlayMaker.Actions.ConvertFloatToInt
+        - HutongGames.PlayMaker.Actions.IntOperator
+        - HutongGames.PlayMaker.Actions.IntOperator
         - HutongGames.PlayMaker.Actions.SetFsmInt
         customNames:
         - 
@@ -17625,10 +17627,12 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 0000000003000000080000000c00000010000000
-        actionHashCodes: 4da300050cdb04052a6e8a00e4bc6905081bbf05
+        - 
+        - 
+        actionEnabled: 00000000010101
+        actionIsOpen: 01010101010101
+        actionStartIndex: 0000000003000000080000000c00000010000000150000001a000000
+        actionHashCodes: 4da300050cdb04052a6e8a00e4bc69051418090314180903081bbf05
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -17720,6 +17724,42 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
+          name: attackLevel
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        - useVariable: 1
+          name: currentLevel
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: currentLevel
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 10
+        - useVariable: 1
+          name: lightAttack
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
           name: lightAttack
           tooltip: 
           showInInspector: 0
@@ -17732,12 +17772,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0002000000000000020000000000
+        byteData: 000200000000000002000000000200000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 100000000f000000010000000f0000000f000000070000000f000000010000000f0000000f00000001000000010000000f0000001000000007000000010000001400000012000000120000001000000001000000
+        paramDataType: 100000000f000000010000000f0000000f000000070000000f000000010000000f0000000f00000001000000010000000f000000100000000700000001000000100000001000000007000000100000000100000010000000100000000700000010000000010000001400000012000000120000001000000001000000
         paramName:
         - intVariable
         - floatVariable
@@ -17755,13 +17795,23 @@ MonoBehaviour:
         - intVariable
         - rounding
         - everyFrame
+        - integer1
+        - integer2
+        - operation
+        - storeResult
+        - everyFrame
+        - integer1
+        - integer2
+        - operation
+        - storeResult
+        - everyFrame
         - gameObject
         - fsmName
         - variableName
         - setValue
         - everyFrame
-        paramDataPos: 0000000000000000000000000100000002000000010000000300000005000000040000000500000006000000070000000600000001000000080000000c000000000000000000000001000000020000000d000000
-        paramByteDataSize: 000000000000000001000000000000000000000004000000000000000100000000000000000000000100000001000000000000000000000004000000010000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000000000000100000002000000010000000300000005000000040000000500000006000000070000000600000001000000080000000c00000002000000030000000d000000040000001100000005000000060000001200000007000000160000000000000000000000010000000800000017000000
+        paramByteDataSize: 00000000000000000100000000000000000000000400000000000000010000000000000000000000010000000100000000000000000000000400000001000000000000000000000004000000000000000100000000000000000000000400000000000000010000000000000000000000000000000000000001000000
     - name: Set Sword Attack Values 2
       description: Heavy Attack
       colorIndex: 0
@@ -19028,6 +19078,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: currentLevel
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables:
       - useVariable: 1
         name: initialized?
@@ -19061,7 +19117,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -30989,7 +31045,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0

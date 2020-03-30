@@ -2542,7 +2542,7 @@ MonoBehaviour:
         y: 347.64844
         width: 204
         height: 48
-      isBreakpoint: 1
+      isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
@@ -3013,7 +3013,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 3
         - useVariable: 1
           name: damage
           tooltip: 
@@ -3797,7 +3797,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1.2
+          value: 2
         - useVariable: 1
           name: damageFloat
           tooltip: 
@@ -3874,13 +3874,13 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.IntOperator
+        - HutongGames.PlayMaker.Actions.SetIntValue
         customNames:
         - 
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 14180903
+        actionHashCodes: 603dd905
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3898,19 +3898,13 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: damage
+          name: fillAmountToAdd
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 2
         - useVariable: 1
-          name: fillAmountToAdd
+          name: damage
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3922,20 +3916,18 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0300000000
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1000000010000000070000001000000001000000
+        paramDataType: 100000001000000001000000
         paramName:
-        - integer1
-        - integer2
-        - operation
-        - storeResult
+        - intVariable
+        - intValue
         - everyFrame
-        paramDataPos: 0000000001000000000000000200000004000000
-        paramByteDataSize: 0000000000000000040000000000000001000000
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
     - name: Already Stunned? 2
       description: 
       colorIndex: 0
@@ -7688,7 +7680,7 @@ MonoBehaviour:
         tooltip: seconds
         showInInspector: 1
         networkSync: 0
-        value: 3
+        value: 2
       - useVariable: 1
         name: time
         tooltip: 
@@ -7743,7 +7735,7 @@ MonoBehaviour:
         tooltip: Damage
         showInInspector: 1
         networkSync: 0
-        value: 15
+        value: 20
       - useVariable: 1
         name: myWeaknessProperty
         tooltip: 
@@ -7779,13 +7771,13 @@ MonoBehaviour:
         tooltip: Damage
         showInInspector: 1
         networkSync: 0
-        value: 25
+        value: 40
       - useVariable: 1
         name: maxHealth
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 100
+        value: 70
       - useVariable: 1
         name: 
         tooltip: 

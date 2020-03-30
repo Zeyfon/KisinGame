@@ -25,7 +25,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 824.3281
-        y: 194.60156
+        y: 210.60156
         width: 107
         height: 32
       isBreakpoint: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 810.27344
-        y: 491.5547
+        y: 507.5547
         width: 167
         height: 16
       isBreakpoint: 0
@@ -347,7 +347,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 557.8281
-        y: 138.48438
+        y: 154.48438
         width: 100
         height: 48
       isBreakpoint: 0
@@ -366,7 +366,7 @@ MonoBehaviour:
           name: No
           isSystemEvent: 0
           isGlobal: 0
-        toState: Looking For GameManager
+        toState: State 1
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -429,7 +429,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 220.27344
-        y: 359.35938
+        y: 375.35938
         width: 172
         height: 32
       isBreakpoint: 0
@@ -535,7 +535,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 815.3281
-        y: 268.39062
+        y: 284.39062
         width: 191
         height: 32
       isBreakpoint: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 199.16406
-        y: 235.01562
+        y: 251.01562
         width: 232
         height: 48
       isBreakpoint: 0
@@ -677,7 +677,7 @@ MonoBehaviour:
         customNames:
         - 
         - 
-        actionEnabled: 0101
+        actionEnabled: 0001
         actionIsOpen: 0101
         actionStartIndex: 0000000005000000
         actionHashCodes: 081bbf0509faa102
@@ -771,7 +771,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 471.82812
-        y: 290.59375
+        y: 306.59375
         width: 100
         height: 32
       isBreakpoint: 0
@@ -967,7 +967,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 64
-        y: 293.3125
+        y: 309.3125
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1163,7 +1163,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 217.625
-        y: 445.15625
+        y: 461.15625
         width: 174
         height: 48
       isBreakpoint: 0
@@ -1254,7 +1254,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 188.83594
-        y: 885.9297
+        y: 901.9297
         width: 286
         height: 16
       isBreakpoint: 0
@@ -1457,7 +1457,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 470.14062
-        y: 455.5078
+        y: 471.5078
         width: 130
         height: 32
       isBreakpoint: 0
@@ -1556,7 +1556,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 203.25781
-        y: 708.0703
+        y: 724.0703
         width: 133
         height: 32
       isBreakpoint: 0
@@ -1651,7 +1651,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 211.80469
-        y: 607.5703
+        y: 623.5703
         width: 206.5
         height: 32
       isBreakpoint: 0
@@ -1953,7 +1953,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 810.7344
-        y: 413.6172
+        y: 429.6172
         width: 191
         height: 32
       isBreakpoint: 0
@@ -2173,7 +2173,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 814.40625
-        y: 350.21094
+        y: 366.21094
         width: 293
         height: 32
       isBreakpoint: 0
@@ -2600,7 +2600,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 208.21875
-        y: 111.890625
+        y: 127.890625
         width: 253
         height: 32
       isBreakpoint: 0
@@ -2775,7 +2775,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 194.42188
-        y: 813.72656
+        y: 829.72656
         width: 204
         height: 32
       isBreakpoint: 0
@@ -2995,7 +2995,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 198.91406
-        y: 760.1953
+        y: 776.1953
         width: 306
         height: 32
       isBreakpoint: 0
@@ -3422,7 +3422,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 213.42188
-        y: 526.0547
+        y: 542.0547
         width: 149
         height: 32
       isBreakpoint: 0
@@ -3582,7 +3582,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 831.2422
-        y: 128.07031
+        y: 144.07031
         width: 207
         height: 48
       isBreakpoint: 0
@@ -3671,7 +3671,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1100.0703
-        y: 129.70312
+        y: 145.70312
         width: 100
         height: 32
       isBreakpoint: 0
@@ -3729,6 +3729,78 @@ MonoBehaviour:
         - sendEvent
         paramDataPos: 00000000
         paramByteDataSize: 00000000
+    - name: State 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 834
+        y: 105
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Looking For GameManager
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 48c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.5
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
