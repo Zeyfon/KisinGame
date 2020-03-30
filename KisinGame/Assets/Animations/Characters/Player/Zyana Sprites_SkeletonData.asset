@@ -14,23 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: 7baaff642a6f6614586837441c3af2b2, type: 2}
-  scale: 0.0012
+  scale: 0.00117
   skeletonJSON: {fileID: 4900000, guid: d06791dff9c595748a94892922178c24, type: 3}
   skeletonDataModifiers: []
   fromAnimation:
-  - ZyanaFalling
   - ZyanaRunnig
-  - ZyanaIdle
-  - ZyanaChargePhase
   toAnimation:
-  - ZyanaRunnig
   - ZyanaJumping
-  - ZyanaRunnig
-  - ZyanaIdle
   duration:
-  - 0
-  - 0.1
-  - 0.1
-  - 0.1
+  - 0.025
   defaultMix: 0.2
   controller: {fileID: 0}
