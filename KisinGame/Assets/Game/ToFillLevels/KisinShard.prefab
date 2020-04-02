@@ -206,14 +206,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SendEventByName
-        - HutongGames.PlayMaker.Actions.SetFsmBool
+        - HutongGames.PlayMaker.Actions.SetFsmString
         customNames:
         - 
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
         actionStartIndex: 0000000004000000
-        actionHashCodes: ba7ea10168fece05
+        actionHashCodes: ba7ea10152221a02
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -276,12 +276,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: PlayerData
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: kisinShardKey
         - useVariable: 1
-          name: kisinShardKey
+          name: kisinShardKeyName
           tooltip: 
           showInInspector: 1
           networkSync: 0
-          value: kisinShard1
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -294,13 +300,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -312,7 +312,7 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1f000000120000000f000000010000001400000012000000120000001100000001000000
+        paramDataType: 1f000000120000000f000000010000001400000012000000120000001200000001000000
         paramName:
         - eventTarget
         - sendEvent
@@ -323,7 +323,7 @@ MonoBehaviour:
         - variableName
         - setValue
         - everyFrame
-        paramDataPos: 000000000000000000000000000000000000000001000000020000000000000001000000
+        paramDataPos: 000000000000000000000000000000000000000001000000020000000300000001000000
         paramByteDataSize: 000000000000000000000000010000000000000000000000000000000000000001000000
     - name: Check if already Used
       description: 
@@ -374,11 +374,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: kisinShardKey
+          name: kisinShardKeyName
           tooltip: 
           showInInspector: 1
           networkSync: 0
-          value: kisinShard1
+          value: 
         - useVariable: 0
           name: 
           tooltip: 
@@ -573,6 +573,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: kisinShardKey
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables:
       - useVariable: 1
         name: 
@@ -581,11 +587,11 @@ MonoBehaviour:
         networkSync: 0
         value: 
       - useVariable: 1
-        name: kisinShardKey
+        name: kisinShardKeyName
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: kisinShard1
+        value: 
       vector2Variables: []
       vector3Variables: []
       colorVariables: []
@@ -599,7 +605,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
