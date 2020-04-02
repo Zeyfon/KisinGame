@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: 1268ae18fa4d9f74f95f536c984d047f, type: 2}
-  scale: 0.0058
+  scale: 0.003
   skeletonJSON: {fileID: 4900000, guid: 5c0844bb557cab4499894dffb0ab0dff, type: 3}
   skeletonDataModifiers: []
-  fromAnimation: []
-  toAnimation: []
-  duration: []
-  defaultMix: 0.2
-  controller: {fileID: 0}
+  fromAnimation:
+  - espina
+  toAnimation:
+  - still espina
+  duration:
+  - 0
+  defaultMix: 0
+  controller: {fileID: 9100000, guid: 6a06a99a090bf5c419ff1836a8d1dca8, type: 2}

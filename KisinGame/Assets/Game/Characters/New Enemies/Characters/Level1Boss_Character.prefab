@@ -78,26 +78,16 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c43f63f9b98b48d47a5b67a52586f451, type: 2}
-  - {fileID: 2100000, guid: 5e6f86f3a2f3158438b6934630aebff6, type: 2}
-  - {fileID: 2100000, guid: c43f63f9b98b48d47a5b67a52586f451, type: 2}
-  - {fileID: 2100000, guid: 5e6f86f3a2f3158438b6934630aebff6, type: 2}
-  - {fileID: 2100000, guid: 2c8b0a9a2cec45c40a73c959956e4285, type: 2}
-  - {fileID: 2100000, guid: 5e6f86f3a2f3158438b6934630aebff6, type: 2}
-  - {fileID: 2100000, guid: c43f63f9b98b48d47a5b67a52586f451, type: 2}
   - {fileID: 2100000, guid: e332b52c7f2e7c34c9b0cc4515fb3584, type: 2}
-  - {fileID: 2100000, guid: c43f63f9b98b48d47a5b67a52586f451, type: 2}
+  - {fileID: 2100000, guid: 5e6f86f3a2f3158438b6934630aebff6, type: 2}
   - {fileID: 2100000, guid: 2c8b0a9a2cec45c40a73c959956e4285, type: 2}
-  - {fileID: 2100000, guid: c43f63f9b98b48d47a5b67a52586f451, type: 2}
   - {fileID: 2100000, guid: 5e6f86f3a2f3158438b6934630aebff6, type: 2}
   - {fileID: 2100000, guid: c43f63f9b98b48d47a5b67a52586f451, type: 2}
-  - {fileID: 2100000, guid: 2c8b0a9a2cec45c40a73c959956e4285, type: 2}
-  - {fileID: 2100000, guid: e332b52c7f2e7c34c9b0cc4515fb3584, type: 2}
-  - {fileID: 2100000, guid: c43f63f9b98b48d47a5b67a52586f451, type: 2}
   - {fileID: 2100000, guid: 5e6f86f3a2f3158438b6934630aebff6, type: 2}
-  - {fileID: 2100000, guid: c43f63f9b98b48d47a5b67a52586f451, type: 2}
   - {fileID: 2100000, guid: 2c8b0a9a2cec45c40a73c959956e4285, type: 2}
-  - {fileID: 2100000, guid: c43f63f9b98b48d47a5b67a52586f451, type: 2}
+  - {fileID: 2100000, guid: 5e6f86f3a2f3158438b6934630aebff6, type: 2}
+  - {fileID: 2100000, guid: 2c8b0a9a2cec45c40a73c959956e4285, type: 2}
+  - {fileID: 2100000, guid: 5e6f86f3a2f3158438b6934630aebff6, type: 2}
   - {fileID: 2100000, guid: 2c8b0a9a2cec45c40a73c959956e4285, type: 2}
   - {fileID: 2100000, guid: 5e6f86f3a2f3158438b6934630aebff6, type: 2}
   m_StaticBatchInfo:
@@ -289,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   middleSpot: {fileID: 0}
-  jumpToMiddleTime: 1
+  jumpToMiddleTime: 1.33
 --- !u!114 &781837839548389099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f12750ca91b8349824cef364dcb7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pFSMs: []
 --- !u!114 &2123119315269737945
 MonoBehaviour:
   m_ObjectHideFlags: 0

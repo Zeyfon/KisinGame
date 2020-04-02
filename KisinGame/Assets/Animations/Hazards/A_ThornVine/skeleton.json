@@ -1,10 +1,20 @@
 {
-"skeleton": { "hash": "umtd21dEPneDPB2gmN7t73HCgTM", "spine": "3.8.59", "images": "./EspinaSecuencia/", "audio": "" },
+"skeleton": {
+	"hash": "KzpKMke5/WapXVh3Z1Vwp7Dh3LY",
+	"spine": "3.8.87",
+	"x": -228.67,
+	"y": -0.63,
+	"width": 428,
+	"height": 133,
+	"images": "./EspinaSecuencia/",
+	"audio": ""
+},
 "bones": [
 	{ "name": "root" }
 ],
 "slots": [
-	{ "name": "Espina", "bone": "root" }
+	{ "name": "Espina", "bone": "root" },
+	{ "name": "piedra", "bone": "root", "attachment": "rocas" }
 ],
 "skins": [
 	{
@@ -40,6 +50,9 @@
 				"espina_00026": { "y": 391, "width": 500, "height": 780 },
 				"espina_00027": { "y": 391, "width": 500, "height": 780 },
 				"espina_00028": { "y": 391, "width": 500, "height": 780 }
+			},
+			"piedra": {
+				"rocas": { "x": -14.67, "y": 65.87, "width": 428, "height": 133 }
 			}
 		}
 	}
@@ -79,6 +92,22 @@
 					{ "time": 0.9, "name": "espina_00027" },
 					{ "time": 0.9333, "name": "espina_00028" },
 					{ "time": 1, "name": null }
+				]
+			},
+			"piedra": {
+				"attachment": [
+					{ "name": "rocas" },
+					{ "time": 1, "name": "rocas" }
+				]
+			}
+		}
+	},
+	"still espina": {
+		"slots": {
+			"piedra": {
+				"attachment": [
+					{ "name": "rocas" },
+					{ "time": 0.1, "name": "rocas" }
 				]
 			}
 		}

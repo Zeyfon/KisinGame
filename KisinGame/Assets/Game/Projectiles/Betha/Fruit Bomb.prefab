@@ -114,7 +114,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: BombFruitCreation
+  _animationName: 
   loop: 0
   timeScale: 1
 --- !u!114 &2011747162236294863
@@ -149,31 +149,15 @@ MonoBehaviour:
       hideUnused: 0
       transitions: []
       actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetParent
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: d97b7202
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: fruitBomb
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -199,12 +183,10 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000013000000
-        paramName:
-        - gameObject
-        - storeResult
-        paramDataPos: 0000000000000000
-        paramByteDataSize: 0000000000000000
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     - name: CreationComplete
       description: 
       colorIndex: 0
@@ -248,9 +230,9 @@ MonoBehaviour:
               useVariable: 1
               name: fruitBomb
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
-              value: {fileID: 0}
+              value: {fileID: 2841068061061427593}
           fsmName:
             useVariable: 0
             name: 
@@ -345,9 +327,9 @@ MonoBehaviour:
             useVariable: 1
             name: fruitBomb
             tooltip: 
-            showInInspector: 0
+            showInInspector: 1
             networkSync: 0
-            value: {fileID: 0}
+            value: {fileID: 2841068061061427593}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -470,9 +452,9 @@ MonoBehaviour:
               useVariable: 1
               name: fruitBomb
               tooltip: 
-              showInInspector: 0
+              showInInspector: 1
               networkSync: 0
-              value: {fileID: 0}
+              value: {fileID: 2841068061061427593}
           fsmName:
             useVariable: 0
             name: 
@@ -590,9 +572,9 @@ MonoBehaviour:
       - useVariable: 1
         name: fruitBomb
         tooltip: 
-        showInInspector: 0
+        showInInspector: 1
         networkSync: 0
-        value: {fileID: 0}
+        value: {fileID: 2841068061061427593}
       - useVariable: 1
         name: 
         tooltip: 
@@ -627,7 +609,7 @@ MonoBehaviour:
     RestartOnEnable: 1
     EnableDebugFlow: 0
     EnableBreakpoints: 1
-    editorFlags: 1
+    editorFlags: 3
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
@@ -2163,6 +2145,117 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
+    - name: State 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 662.727
+        y: 239.09088
+        width: 173
+        height: 16
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.DestroySelf
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: ba7ea10162f95203
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 2
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 1
+            gameObject:
+              useVariable: 1
+              name: spawner
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: Spawner
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: BombDestroyed
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000120000000f0000000100000011000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        - detachChildren
+        paramDataPos: 0000000000000000000000000000000000000000
+        paramByteDataSize: 0000000000000000000000000100000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -2182,6 +2275,9 @@ MonoBehaviour:
     - name: FloorReached
       isSystemEvent: 0
       isGlobal: 0
+    - name: GameObject_Destroy
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: BombCreated
@@ -2196,6 +2292,14 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: Begin Falling Anim
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: GameObject_Destroy
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: State 1
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0
