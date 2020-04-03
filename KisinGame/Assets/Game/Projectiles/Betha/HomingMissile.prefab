@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6961154808431011820}
   - component: {fileID: 1414377456249388226}
   - component: {fileID: 224796951992105376}
-  - component: {fileID: 955012669304740808}
   - component: {fileID: 3858109141508031818}
   - component: {fileID: 5991249961931361138}
   - component: {fileID: 2648036663029721626}
@@ -162,32 +161,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &955012669304740808
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224796951992105374}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.24}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.05}
-  m_EdgeRadius: 0
 --- !u!114 &3858109141508031818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +183,8 @@ MonoBehaviour:
   bossTransform: {fileID: 0}
   playerTransform: {fileID: 0}
   explosionSound: {fileID: 8300000, guid: 0c1e1bb0443a3544ebb9a352cd89113a, type: 3}
+  bodyTrigger: {fileID: 7333667518204299980}
+  explosionTrigger: {fileID: 4496741463419114725}
 --- !u!114 &5991249961931361138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f12750ca91b8349824cef364dcb7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pFSMs: []
 --- !u!82 &2648036663029721626
 AudioSource:
   m_ObjectHideFlags: 0
