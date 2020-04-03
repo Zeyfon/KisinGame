@@ -14,8 +14,11 @@ public class HomingMissile : MonoBehaviour
     [SerializeField] float timeToStopRotate = 2f;       [UnityEngine.Tooltip("Time after it begings to rotate towards the player to stop it to rotate")]
     public int damage = 20;                    [UnityEngine.Tooltip("Damage done to the player")]
     public Transform bossTransform = null;
+    //Added by the spawner
     public Transform playerTransform = null;
-    [SerializeField] AudioClip explosionSound;                
+    [SerializeField] AudioClip explotionSound;
+    [SerializeField] Collider2D bodyTrigger;
+    [SerializeField] Collider2D explosionTrigger;
 
     Rigidbody2D rb;
     Animator animator;
@@ -24,16 +27,15 @@ public class HomingMissile : MonoBehaviour
     Vector3 targetPosition;
     bool collided = false;
 
-    //HomingMissile homingMissile;
-    // Start is called before the first frame update
     IEnumerator Start()
     {
+        explosionTrigger.enabled = false;
+        bodyTrigger.enabled = false;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         yield return MovingUpwards();
         yield return Rotation();
         targetPosition = playerTransform.position;
-        GetComponent<Collider2D>().enabled = true;
         yield return MovingTowardsPlayer();
     }
 
@@ -71,6 +73,7 @@ public class HomingMissile : MonoBehaviour
 
     IEnumerator MovingTowardsPlayer()
     {
+        bodyTrigger.enabled = true;
         yield return null;
         while (!collided)
         {
@@ -84,21 +87,18 @@ public class HomingMissile : MonoBehaviour
     }
     #endregion
 
+    public Transform SetPlayerPosition()
+    {
+        return playerTransform;
+    }
+
     #region DamageSender
-    public void MissileTouchedPlayer()
+    public void MissileCollisioned()
     {
         collided = true;
-        animator.Play("PlayerExplotion");
-        GetComponent<AudioSource>().PlayOneShot(explosionSound);
+        animator.Play("Explotion");
+        GetComponent<AudioSource>().PlayOneShot(explotionSound);
     }
-
-    public void MissileTouchedFloor()
-    {
-        collided = true;
-        animator.Play("FloorExplotion");
-        GetComponent<AudioSource>().PlayOneShot(explosionSound);
-    }
-
 
     private void StopMovement()
     {

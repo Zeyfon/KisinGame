@@ -4,22 +4,48 @@ using UnityEngine;
 
 public class MissileBodyTrigger : MonoBehaviour
 {
+    bool positionReached = false;
+    HomingMissile homingMissile;
+    Transform playerTransform;
+
+    IEnumerator Start()
+    {
+        homingMissile = transform.parent.GetComponent<HomingMissile>();
+        playerTransform = homingMissile.SetPlayerPosition();
+        yield return new WaitForSeconds(2);
+        StartCoroutine(CheckPlayerRelativePosition());
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        HomingMissile homingMissile = transform.parent.GetComponent<HomingMissile>();
 
-        GetComponent<Collider2D>().enabled = false;
         if (collision.transform.parent.GetComponent<PlayerIdentifer>())
         {
-            homingMissile.MissileTouchedPlayer();
-            transform.parent.GetComponent<DamageSender>().SendDamageToPlayer(homingMissile.damage, collision.transform.parent.transform);
+            print("Found Player");
+            homingMissile.MissileCollisioned();
+            GetComponent<Collider2D>().enabled = false;
+            return;
         }
-        else
+        if (positionReached)
         {
-            homingMissile.MissileTouchedFloor();
-
+            print("Found Floor");
+            homingMissile.MissileCollisioned();
+            GetComponent<Collider2D>().enabled = false;
+            return;
         }
 
+    }
+    IEnumerator CheckPlayerRelativePosition()
+    {
+        while (!positionReached)
+        {
+            if ((transform.position.x - playerTransform.position.x) > 0.5f || (transform.position.x - playerTransform.position.x) < 0.5f)
+            {
+                positionReached = true;
+                print("Reached Player");
+                yield break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
     }
 }
