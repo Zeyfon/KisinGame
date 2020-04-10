@@ -41,16 +41,17 @@ public class SkillOrb : MonoBehaviour
         dialogueIndex = i;
         rb.simulated = true;
         Transform playerTransform = FindObjectOfType<PlayerIdentifer>().transform;
-        GetComponent<ParabolicJump>().PerformParabolicJump(rb, playerTransform.position, movingTime, 0);
-        StartCoroutine(OrbMoving(rb, playerTransform));
+        Vector3 targetPosition = playerTransform.position + Vector3.up;
+        GetComponent<ParabolicJump>().PerformParabolicJump(rb, targetPosition, movingTime, 0);
+        StartCoroutine(OrbMoving(rb, targetPosition));
     }
-    IEnumerator OrbMoving(Rigidbody2D rb,Transform target)
+    IEnumerator OrbMoving(Rigidbody2D rb,Vector3 targetPosition)
     {
-        float distance = Vector3.Distance(transform.position, target.position);
+        float distance = Vector3.Distance(transform.position+ Vector3.up, targetPosition);
         yield return new WaitForSeconds(movingTime - 0.2f);
         while (distance > 0.4f)
         {
-            distance = Vector3.Distance(transform.position, target.position);
+            distance = Vector3.Distance(transform.position, targetPosition);
             yield return new WaitForEndOfFrame();
         }
         rb.simulated = false;

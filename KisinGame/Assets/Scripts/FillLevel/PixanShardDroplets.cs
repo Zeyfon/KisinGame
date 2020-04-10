@@ -32,7 +32,6 @@ public class PixanShardDroplets : MonoBehaviour
         for (int i = 0; i < numEnter; i++)
         {
             test += 1;
-            print(test);
             ParticleSystem.Particle p = enter[i];
             p.remainingLifetime = -1;
             playMakerFSM.SendEvent("PixanCollected");

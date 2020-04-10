@@ -116,7 +116,7 @@ public class DroneKamikaze : MonoBehaviour
 
     void PixanDrops_Create()
     {
-        Instantiate(pixanDrops, transform.position, Quaternion.identity, transform.parent.GetChild(0));
+        Instantiate(pixanDrops, transform.position, Quaternion.identity, transform.parent.parent.GetChild(0));
     }
     #endregion
 
