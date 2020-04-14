@@ -16,13 +16,15 @@ public class ElectrileTile : MonoBehaviour
     Animator animator;
     GameObject player;
     PlayMakerFSM[] pmFSMs;
-    Collider2D coll;
+    Collider2D coll = null;
     HazardBatch hazardBatch;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         hazardBatch = transform.parent.GetComponent<HazardBatch>();
+        coll = GetComponent<Collider2D>();
+        coll.enabled = false;
     }
     //Function called by the parent (HazardManager)
     public void StartActions()
@@ -32,10 +34,6 @@ public class ElectrileTile : MonoBehaviour
 
     void DamageCollider_Enable()
     {
-        if (!coll)
-        {
-            coll = GetComponent<Collider2D>();
-        }
         coll.enabled = true;
     }
 

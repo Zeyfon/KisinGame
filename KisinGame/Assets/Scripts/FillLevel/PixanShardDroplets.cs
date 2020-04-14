@@ -31,12 +31,13 @@ public class PixanShardDroplets : MonoBehaviour
         int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
         for (int i = 0; i < numEnter; i++)
         {
-            test += 1;
             ParticleSystem.Particle p = enter[i];
-            p.remainingLifetime = -1;
+            p.remainingLifetime = 0;
             playMakerFSM.SendEvent("PixanCollected");
             FsmVariables.GlobalVariables.GetFsmInt("shards").Value +=1;
             enter[i] = p;
         }
+        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
+        
     }
 }

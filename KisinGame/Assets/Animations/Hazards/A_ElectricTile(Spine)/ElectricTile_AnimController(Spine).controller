@@ -229,14 +229,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.1
+  - time: 0.06666667
     functionName: DamageCollider_Enable
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 1
-  - time: 4.6
+  - time: 4.616667
     functionName: DamageCollider_Disable
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -369,9 +369,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.2
   animationName: ET_PrepareAttack
-  loop: 1
+  loop: 0
 --- !u!114 &114347095828335402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -384,9 +384,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f830bed310844b3428470a19291d9004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.2
   animationName: ET_ElectricAttack
-  loop: 1
+  loop: 0
 --- !u!114 &114920237157490510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -454,7 +454,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ElectricAttack
-  m_Speed: 1
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101506236184367086}
@@ -509,7 +509,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PrepareAttack
-  m_Speed: 1
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101734486239944602}

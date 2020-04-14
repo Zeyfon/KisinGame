@@ -1560,13 +1560,13 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -3538,15 +3538,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.FindGameObject
         - HutongGames.PlayMaker.Actions.DestroyObject
+        - HutongGames.PlayMaker.Actions.DestroyObject
         - HutongGames.PlayMaker.Actions.NextFrameEvent
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000006000000
-        actionHashCodes: 786b39029ff80c0288611604
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000030000000600000009000000
+        actionHashCodes: 786b39029ff80c029ff80c0288611604
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -3557,6 +3559,12 @@ MonoBehaviour:
           value: {fileID: 0}
         - useVariable: 1
           name: coreObjects
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: player
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3592,8 +3600,20 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -3612,7 +3632,7 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 120000001200000013000000130000000f0000001100000017000000
+        paramDataType: 120000001200000013000000130000000f00000011000000130000000f0000001100000017000000
         paramName:
         - objectName
         - withTag
@@ -3620,9 +3640,12 @@ MonoBehaviour:
         - gameObject
         - delay
         - detachChildren
+        - gameObject
+        - delay
+        - detachChildren
         - sendEvent
-        paramDataPos: 00000000010000000000000001000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
+        paramDataPos: 00000000010000000000000001000000000000000000000002000000010000000100000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: State 9
       description: 
       colorIndex: 3
@@ -6869,7 +6892,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 2
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -6916,7 +6939,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Camera Fade In 2
+        toState: Camera Fade In 3
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -6985,8 +7008,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1165.3828
-        y: 957.4453
+        x: 711.4844
+        y: 971.21875
         width: 100
         height: 32
       isBreakpoint: 0
@@ -8237,8 +8260,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1212.9844
-        y: 822.21094
+        x: 1212.9531
+        y: 902.9531
         width: 153
         height: 48
       isBreakpoint: 0
@@ -18835,15 +18858,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GameObjectIsNull
         - HutongGames.PlayMaker.Actions.GetFsmInt
+        - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000050000000a000000
-        actionHashCodes: 15656205081bbf0509faa102
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000050000000a0000000d000000
+        actionHashCodes: 15656205081bbf0527fbe10309faa102
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -18889,15 +18914,15 @@ MonoBehaviour:
         - useVariable: 1
           name: skillPointsAvailableFromCheats
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
-          value: 0
+          value: 999
         - useVariable: 1
           name: skillPointsAvailableFromCheats
           tooltip: 
-          showInInspector: 0
+          showInInspector: 1
           networkSync: 0
-          value: 0
+          value: 999
         - useVariable: 0
           name: 
           tooltip: 
@@ -18911,6 +18936,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: doubleJumpSkill
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -18922,12 +18959,12 @@ MonoBehaviour:
         - LoadInitialValues
         - LoadCheatingValue
         - LoadCheatingValue
-        byteData: 000000
+        byteData: 00000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 13000000170000001700000011000000010000001400000012000000120000001000000001000000100000001000000017000000170000001700000001000000
+        paramDataType: 13000000170000001700000011000000010000001400000012000000120000001000000001000000110000001100000001000000100000001000000017000000170000001700000001000000
         paramName:
         - gameObject
         - isNull
@@ -18939,14 +18976,17 @@ MonoBehaviour:
         - variableName
         - storeValue
         - everyFrame
+        - boolVariable
+        - boolValue
+        - everyFrame
         - integer1
         - integer2
         - equal
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000000000000000000000000000010000000000000001000000010000000200000002000000030000000400000002000000
-        paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
+        paramDataPos: 00000000000000000100000000000000000000000000000000000000010000000000000001000000010000000200000002000000010000000200000002000000030000000400000003000000
+        paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000000000001000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: State 6
       description: 
       colorIndex: 0
@@ -18971,12 +19011,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - ES3PlayMaker.Load
+        - ES3PlayMaker.Load
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 48263a02
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 000000000d000000
+        actionHashCodes: 48263a0248263a02
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -18993,6 +19035,30 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: skillPointsAvailable
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: SaveData
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: password
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: doubleJumpSkill
         - useVariable: 0
           name: 
           tooltip: 
@@ -19061,8 +19127,84 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
+        - variableName: doubleJumpSkill
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: used
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 2
+          floatValue: 0
+          intValue: 999
+          boolValue: 1
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          enumName: HutongGames.PlayMaker.None
+          intValue: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          enumName: HutongGames.PlayMaker.None
+          intValue: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          enumName: HutongGames.PlayMaker.None
+          intValue: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          enumName: HutongGames.PlayMaker.None
+          intValue: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -19099,7 +19241,19 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 2048
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2048
         fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -19113,12 +19267,13 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
+        - 
         byteData: 
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 12000000270000002700000011000000120000002a0000002a000000120000002a0000002a000000100000001700000012000000
+        paramDataType: 12000000270000002700000011000000120000002a0000002a000000120000002a0000002a00000010000000170000001200000012000000270000002700000011000000120000002a0000002a000000120000002a0000002a000000100000001700000012000000
         paramName:
         - key
         - value
@@ -19133,8 +19288,21 @@ MonoBehaviour:
         - bufferSize
         - errorEvent
         - errorMessage
-        paramDataPos: 00000000000000000100000000000000010000000000000001000000020000000200000003000000000000000000000003000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        - key
+        - value
+        - defaultValue
+        - overrideDefaultSettings
+        - path
+        - location
+        - encryptionType
+        - encryptionPassword
+        - directory
+        - format
+        - bufferSize
+        - errorEvent
+        - errorMessage
+        paramDataPos: 0000000000000000010000000000000001000000000000000100000002000000020000000300000000000000000000000300000004000000020000000300000001000000050000000400000005000000060000000600000007000000010000000100000007000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: Using Cheats?
       description: 
       colorIndex: 0
@@ -19870,7 +20038,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0

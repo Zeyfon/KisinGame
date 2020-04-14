@@ -9032,7 +9032,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 1
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -9169,8 +9169,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 215.35938
-        y: 147.53906
+        x: 112.86719
+        y: 115.32031
         width: 121
         height: 48
       isBreakpoint: 0
@@ -10320,12 +10320,12 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 206.63281
-        y: 278.9922
+        x: 224.125
+        y: 324.71094
         width: 124
         height: 32
       isBreakpoint: 0
-      isSequence: 0
+      isSequence: 1
       hideUnused: 0
       transitions:
       - fsmEvent:
@@ -10338,13 +10338,15 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.BoolFlip
         - HutongGames.PlayMaker.Actions.RunFSM
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: fe058700
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000001000000
+        actionHashCodes: 62f95203fe058700
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -10370,7 +10372,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: lookingRight
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -10383,20 +10391,21 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 260000001000000017000000
+        paramDataType: 11000000260000001000000017000000
         paramName:
+        - boolVariable
         - fsmTemplateControl
         - storeID
         - finishEvent
-        paramDataPos: 000000000000000000000000
-        paramByteDataSize: 000000000000000000000000
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000000000000
     - name: Check if Flip is needed
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 207.55469
-        y: 213.01562
+        x: 105.0625
+        y: 180.79688
         width: 178
         height: 48
       isBreakpoint: 0
@@ -10404,18 +10413,18 @@ MonoBehaviour:
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: Flip
+          name: LookToLeft
           isSystemEvent: 0
           isGlobal: 0
-        toState: Flip 7
+        toState: LookToLeft
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       - fsmEvent:
-          name: DoNothing
+          name: LookToRight
           isSystemEvent: 0
           isGlobal: 0
-        toState: LookingForPlayer
+        toState: LookToRight
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -10525,10 +10534,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - Flip
-        - Flip
-        - DoNothing
-        byteData: 0000000000010000000000
+        - 
+        - LookToLeft
+        - LookToRight
+        byteData: 0000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
@@ -10556,6 +10565,170 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000000000000100000000000000040000000100000001000000020000000300000005000000090000000400000005000000060000000000000001000000020000000a000000
         paramByteDataSize: 00000000000000000000000000000000040000000100000000000000000000000000000000000000040000000100000000000000000000000000000000000000000000000000000001000000
+    - name: LookToLeft
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 90.08594
+        y: 260.09375
+        width: 104
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Flip
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Flip 7
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: DoNothing
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: LookingForPlayer
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: lookingRight
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Flip
+        - DoNothing
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 11000000170000001700000001000000
+        paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: LookToRight
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 219.04688
+        y: 256.33594
+        width: 112
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Flip
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Flip 7
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: DoNothing
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: LookingForPlayer
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: lookingRight
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Flip
+        - DoNothing
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 11000000170000001700000001000000
+        paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -10591,6 +10764,12 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: Interrupted
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: LookToLeft
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: LookToRight
       isSystemEvent: 0
       isGlobal: 0
     - name: Moving
@@ -10727,6 +10906,12 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: 1
+      - useVariable: 1
+        name: lookingRight
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 1
       stringVariables: []
       vector2Variables:
       - useVariable: 1
@@ -10789,7 +10974,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -10799,7 +10984,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
