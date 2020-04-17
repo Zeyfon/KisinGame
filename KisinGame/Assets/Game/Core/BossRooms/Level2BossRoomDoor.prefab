@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4096883871133699361}
   - component: {fileID: 8241658748868755909}
   - component: {fileID: 9214786108798242598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Level2BossRoomDoor
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ccaaa35d7258fa149bfab41ffc0dbf08, type: 2}
+  - {fileID: 2100000, guid: 19b81f319d542e042bbccb7dc7cf93a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 4429e264a964b0f41b7c7d6c19dc358c, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 22deb5294a6b037409e83b8a89d4ad6e, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: 
+  _animationName: ClosedLoop
   loop: 1
   timeScale: 1
 --- !u!61 &8241658748868755909
@@ -140,7 +140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 5}
+  m_Size: {x: 1.68, y: 6}
   m_EdgeRadius: 0
 --- !u!114 &9214786108798242598
 MonoBehaviour:

@@ -1109,6 +1109,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1348151817}
     m_Modifications:
+    - target: {fileID: 434370651923158339, guid: 0ffe44c3dd5c5ae419548cd851613058,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 770817530208780419, guid: 0ffe44c3dd5c5ae419548cd851613058,
         type: 3}
       propertyPath: m_Mesh
@@ -1266,19 +1271,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5595381641601390189, guid: 0ffe44c3dd5c5ae419548cd851613058,
         type: 3}
-      propertyPath: fsm.variables.intVariables.Array.data[6].value
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 5595381641601390189, guid: 0ffe44c3dd5c5ae419548cd851613058,
-        type: 3}
-      propertyPath: fsm.variables.intVariables.Array.data[9].value
-      value: 1800
-      objectReference: {fileID: 0}
-    - target: {fileID: 5595381641601390189, guid: 0ffe44c3dd5c5ae419548cd851613058,
-        type: 3}
       propertyPath: fsm.editorFlags
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5595381641601390189, guid: 0ffe44c3dd5c5ae419548cd851613058,
+        type: 3}
+      propertyPath: fsm.states.Array.data[9].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 601457994}
+    - target: {fileID: 5595381641601390189, guid: 0ffe44c3dd5c5ae419548cd851613058,
+        type: 3}
+      propertyPath: fsm.states.Array.data[12].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 601457994}
+    - target: {fileID: 5595381641601390189, guid: 0ffe44c3dd5c5ae419548cd851613058,
+        type: 3}
+      propertyPath: fsm.states.Array.data[19].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 601457994}
+    - target: {fileID: 5595381641601390189, guid: 0ffe44c3dd5c5ae419548cd851613058,
+        type: 3}
+      propertyPath: fsm.states.Array.data[29].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 601457994}
+    - target: {fileID: 5595381641601390189, guid: 0ffe44c3dd5c5ae419548cd851613058,
+        type: 3}
+      propertyPath: fsm.states.Array.data[34].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 601457994}
+    - target: {fileID: 5595381641601390189, guid: 0ffe44c3dd5c5ae419548cd851613058,
+        type: 3}
+      propertyPath: fsm.states.Array.data[44].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 601457994}
     - target: {fileID: 6469347862538094084, guid: 0ffe44c3dd5c5ae419548cd851613058,
         type: 3}
       propertyPath: m_Mesh
@@ -1344,11 +1369,6 @@ PrefabInstance:
       propertyPath: middleSpot
       value: 
       objectReference: {fileID: 1441486799}
-    - target: {fileID: 8347659211569154898, guid: 0ffe44c3dd5c5ae419548cd851613058,
-        type: 3}
-      propertyPath: jumpToMiddleTime
-      value: 0.9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ffe44c3dd5c5ae419548cd851613058, type: 3}
 --- !u!1 &576614248
@@ -13976,6 +13996,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BacktrackingLimitDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043163777503327102, guid: 0954ac8773f39ed4db59b5651e35968b,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8387351687471575628, guid: 0954ac8773f39ed4db59b5651e35968b,
         type: 3}

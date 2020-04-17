@@ -51,46 +51,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2841068061061427605, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
-        type: 3}
-      propertyPath: fsm.preprocessed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841068061061427605, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
-        type: 3}
-      propertyPath: fsm.handleTriggerEnter2D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841068061061427605, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
-        type: 3}
-      propertyPath: eventHandlerComponentsAdded
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841068061061427605, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
-        type: 3}
-      propertyPath: fsm.states.Array.data[4].transitions.Array.data[1].toState
-      value: Send event To Spawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841068061061427605, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
-        type: 3}
-      propertyPath: fsm.states.Array.data[8].name
-      value: Send event To Spawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841068061061427605, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
-        type: 3}
-      propertyPath: fsm.states.Array.data[8].description
-      value: Bomb Fully Created event
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841068061061427605, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
-        type: 3}
-      propertyPath: fsm.states.Array.data[8].position.width
-      value: 193.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2841068061061427605, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
-        type: 3}
-      propertyPath: fsm.variables.objectVariables.Array.data[1].typeName
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2841068061061427606, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -179,7 +139,7 @@ PrefabInstance:
     - target: {fileID: 8916730377066824178, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
         type: 3}
       propertyPath: fsm.states.Array.data[3].actionData.actionEnabled.Array.data[0]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8916730377066824178, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
         type: 3}
@@ -260,6 +220,26 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.states.Array.data[6].actionData.fsmIntParams.Array.data[1].value
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916730377066824178, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
+        type: 3}
+      propertyPath: fsm.variables.objectVariables.Array.data[1].typeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916730377066824178, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
+        type: 3}
+      propertyPath: fsm.variables.objectVariables.Array.data[2].typeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916730377066824178, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
+        type: 3}
+      propertyPath: fsm.states.Array.data[4].actionData.actionEnabled.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916730377066824178, guid: b9b0603aaf87a1e4fa8c55671a2f845b,
+        type: 3}
+      propertyPath: fsm.states.Array.data[3].actionData.actionEnabled.Array.data[1]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9b0603aaf87a1e4fa8c55671a2f845b, type: 3}

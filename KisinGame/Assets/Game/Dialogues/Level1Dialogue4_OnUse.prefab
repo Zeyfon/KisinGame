@@ -7,16 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1464379503096587714, guid: 014f1f518ee9f63459b8607d2676222f,
-        type: 3}
-      propertyPath: actorTag
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1464379503096587714, guid: 014f1f518ee9f63459b8607d2676222f,
-        type: 3}
-      propertyPath: conversantTag
-      value: Kisin
-      objectReference: {fileID: 0}
     - target: {fileID: 2337208355144635626, guid: 014f1f518ee9f63459b8607d2676222f,
         type: 3}
       propertyPath: fsm.variables.stringVariables.Array.data[1].value
@@ -36,6 +26,11 @@ PrefabInstance:
         type: 3}
       propertyPath: conversation
       value: Level1/Dialogue4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278948233353457388, guid: 014f1f518ee9f63459b8607d2676222f,
+        type: 3}
+      propertyPath: condition.lastEvaluationValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7763078069206788536, guid: 014f1f518ee9f63459b8607d2676222f,
         type: 3}

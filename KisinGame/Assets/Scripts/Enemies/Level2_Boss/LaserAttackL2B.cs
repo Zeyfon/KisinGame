@@ -35,7 +35,6 @@ public class LaserAttackL2B : MonoBehaviour
         GetComponent<BossesSupActions>().FlipToTarget_SupActions();
         GetComponent<SoundsConnection>().SendSoundEventToFSM("Jump");
         GetComponent<BossesSupActions>().DoParabolicJump(jumpTargetPosition, jumpTimeLaserAttack, false);
-
     }
 
     void StartTargetingTimer_LaserAttack()
@@ -60,17 +59,20 @@ public class LaserAttackL2B : MonoBehaviour
     void LaserBullet_Create()
     {
         Vector3 targetDirection;
-        if (playerTransform.transform.position.x > transform.position.x) targetDirection = new Vector3(1, 0, 0);
+        if (transform.localScale.x == 1) targetDirection = new Vector3(1, 0, 0);
         else targetDirection = new Vector3(-1, 0, 0);
+        /*if (playerTransform.transform.position.x > transform.position.x) targetDirection = new Vector3(1, 0, 0);
+        else targetDirection = new Vector3(-1, 0, 0);*/
         float angle = 0;
-        if (targetDirection.x >= 0) targetDirection = new Vector3(1, 0, 0);
-        else targetDirection = new Vector3(-1, 0, 0);
+        /*if (targetDirection.x >= 0) targetDirection = new Vector3(1, 0, 0);
+        else targetDirection = new Vector3(-1, 0, 0);*/
         angle = GetAngle(targetDirection);
         GetComponent<SoundsConnection>().SendSoundEventToFSM("LaserSpawn");
-
-        GameObject laserBulletClone = Instantiate(laserBulletGO, laserSpawnPosition.position, Quaternion.Euler(0, 0, angle), transform.parent.parent.transform.GetChild(1));
+        print(targetDirection.x);
+        GameObject laserBulletClone = Instantiate(laserBulletGO, laserSpawnPosition.position, Quaternion.Euler(0,0,angle)/*Quaternion.Euler(0, 0, angle)*/, transform.parent.parent.transform.GetChild(1));
         LaserBullet laserBullet = laserBulletClone.GetComponent<LaserBullet>();
         laserBullet.SetParameters(laserBulletDamage, laserBulletSpeed, targetDirection);
+        //Debug.Break();
     }
 
     float GetAngle(Vector3 targetDirection)

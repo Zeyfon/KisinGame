@@ -11,7 +11,6 @@ public class ExplotionTrigger : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         if (collision.transform.parent.GetComponent<PlayerIdentifer>())
         {
-            //homingMissile.MissileTouchedPlayer();
             transform.parent.GetComponent<DamageSender>().SendDamageToPlayer(homingMissile.damage, collision.transform.parent.transform);
         }
     }

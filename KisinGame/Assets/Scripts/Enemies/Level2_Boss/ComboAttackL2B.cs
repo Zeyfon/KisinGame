@@ -22,10 +22,6 @@ public class ComboAttackL2B : MonoBehaviour, IFlipValues
     [SerializeField] int damage3 = 35;
     [SerializeField] int damage4 = 35;
 
-    [Header("Camera Variables")]
-    [UnityEngine.Tooltip("Shake force to the Camera")]
-    [Range(0, 1)]
-    [SerializeField] float cameraShake = 1;
     #endregion
 
     Transform playerTransform;
@@ -33,10 +29,12 @@ public class ComboAttackL2B : MonoBehaviour, IFlipValues
     Rigidbody2D rb;
     AttackTrigger attackTrigger;
     BoxCollider2D attackCollider;
+    CameraShakeController cameraShaker;
 
     private void Start()
     {
         attackCollider = weapon.GetComponent<BoxCollider2D>();
+        print(attackCollider.gameObject);
         attackTrigger = weapon.GetComponent<AttackTrigger>();
         rb = GetComponent<Rigidbody2D>();
         stressReceiver = Camera.main.GetComponent<StressReceiver>();
@@ -72,30 +70,37 @@ public class ComboAttackL2B : MonoBehaviour, IFlipValues
         switch (attackType)
         {
             case 1:
+                print("Attack1");
                 attackTrigger.damage = damage1;
-                attackCollider.offset = new Vector2(1.14f, 0);
-                attackCollider.size = new Vector2(1.5f, 2);
+                attackCollider.offset = new Vector2(2.1f,-0.02f);
+                attackCollider.size = new Vector2(3.01f, 2.46f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack1");
                 break;
             case 2:
+                print("Attack2");
+
                 attackTrigger.damage = damage2;
-                attackCollider.offset = new Vector2(1.52f, 0);
-                attackCollider.size = new Vector2(2, 2);
+                attackCollider.offset = new Vector2(1.71f, 0);
+                attackCollider.size = new Vector2(3.35f, 2.48f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack2");
                 break;
             case 3:
+                print("Attack3");
+
                 attackTrigger.damage = damage3;
-                attackCollider.offset = new Vector2(1.52f, 0);
-                attackCollider.size = new Vector2(2, 2);
+                attackCollider.offset = new Vector2(1.65f, 0.34f);
+                attackCollider.size = new Vector2(3.47f, 3.41f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack3");
                 break;
             case 4:
+                print("Attack4");
+
                 attackTrigger.damage = damage4;
-                attackCollider.offset = new Vector2(1.52f, 0);
-                attackCollider.size = new Vector2(2, 2);
+                attackCollider.offset = new Vector2(1.68f, -0.33f);
+                attackCollider.size = new Vector2(5.66f, 2.36f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack4");
                 break;
@@ -161,7 +166,8 @@ public class ComboAttackL2B : MonoBehaviour, IFlipValues
     IEnumerator CameraShake()
     {
         yield return new WaitForSeconds(airTimeAttack4);
-        stressReceiver.InduceStress(cameraShake);
+        if (!cameraShaker) cameraShaker = transform.parent.transform.parent.GetComponent<CameraShakeController>();
+        cameraShaker.ShakeCamera();
     }
 
     public void FlipValues()

@@ -1486,7 +1486,7 @@ MonoBehaviour:
         customNames:
         - 
         - 
-        actionEnabled: 0101
+        actionEnabled: 0100
         actionIsOpen: 0101
         actionStartIndex: 0000000001000000
         actionHashCodes: 5c004505798f5c04
@@ -1525,13 +1525,13 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -3253,7 +3253,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: camera
+            name: player
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -3433,7 +3433,7 @@ MonoBehaviour:
         y: 700.9297
         width: 100
         height: 16
-      isBreakpoint: 0
+      isBreakpoint: 1
       isSequence: 0
       hideUnused: 0
       transitions: []
@@ -3503,15 +3503,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.FindGameObject
         - HutongGames.PlayMaker.Actions.DestroyObject
+        - HutongGames.PlayMaker.Actions.DestroyObject
         - HutongGames.PlayMaker.Actions.NextFrameEvent
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000006000000
-        actionHashCodes: 786b39029ff80c0288611604
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000030000000600000009000000
+        actionHashCodes: 786b39029ff80c029ff80c0288611604
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -3522,6 +3524,12 @@ MonoBehaviour:
           value: {fileID: 0}
         - useVariable: 1
           name: coreObjects
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: player
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3557,8 +3565,20 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -3577,7 +3597,7 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 120000001200000013000000130000000f0000001100000017000000
+        paramDataType: 120000001200000013000000130000000f00000011000000130000000f0000001100000017000000
         paramName:
         - objectName
         - withTag
@@ -3585,9 +3605,12 @@ MonoBehaviour:
         - gameObject
         - delay
         - detachChildren
+        - gameObject
+        - delay
+        - detachChildren
         - sendEvent
-        paramDataPos: 00000000010000000000000001000000000000000000000000000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000
+        paramDataPos: 00000000010000000000000001000000000000000000000002000000010000000100000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: State 9
       description: 
       colorIndex: 3
@@ -6834,7 +6857,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 2
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -6881,7 +6904,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Camera Fade In 2
+        toState: Camera Fade In 3
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -6950,8 +6973,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1165.3828
-        y: 957.4453
+        x: 711.4844
+        y: 971.21875
         width: 100
         height: 32
       isBreakpoint: 0
@@ -8202,8 +8225,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1212.9844
-        y: 822.21094
+        x: 1212.9531
+        y: 902.9531
         width: 153
         height: 48
       isBreakpoint: 0

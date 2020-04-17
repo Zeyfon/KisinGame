@@ -68,15 +68,20 @@ public class MissilesAttackL2B : MonoBehaviour
     void CreateMissile(Transform missileSpawner)
     {
         GetComponent<SoundsConnection>().SendSoundEventToFSM("MissileSpawn");
-        GameObject missileClone = Instantiate(missile, missileSpawner.position, Quaternion.identity, transform.parent.GetChild(1));
+        GameObject missileClone = Instantiate(missile, missileSpawner.position, Quaternion.identity, transform.parent.parent.transform.GetChild(1));
         HomingMissile homingMissile = missileClone.GetComponent<HomingMissile>();
         homingMissile.bossTransform = transform;
         homingMissile.playerTransform = playerTransform;
+        GetComponent<Level2Boss>().missileCounter++;
+        print(GetComponent<Level2Boss>().missileCounter);
+
     }
 
     public void MissileDestroyed()
     {
-        GetComponent<Level2Boss>().missileCounter++;
+        //GetComponent<Level2Boss>().missileCounter++;
+        //print(GetComponent<Level2Boss>().missileCounter);
+
     }
 
 }

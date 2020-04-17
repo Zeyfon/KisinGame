@@ -57,6 +57,7 @@ public class HomingMissile : MonoBehaviour
 
     IEnumerator Rotation()
     {
+        if (bossTransform != null) bossTransform.GetComponent<MissilesAttackL2B>().MissileDestroyed();
         float timer = 0;
          while(timer <timeToStopRotate)
          {
@@ -73,6 +74,7 @@ public class HomingMissile : MonoBehaviour
 
     IEnumerator MovingTowardsPlayer()
     {
+        transform.GetChild(1).GetComponent<MissileBodyTrigger>().StartLookingForPlayer(playerTransform);
         bodyTrigger.enabled = true;
         yield return null;
         while (!collided)
@@ -86,11 +88,6 @@ public class HomingMissile : MonoBehaviour
         StopMovement();
     }
     #endregion
-
-    public Transform SetPlayerPosition()
-    {
-        return playerTransform;
-    }
 
     #region DamageSender
     public void MissileCollisioned()

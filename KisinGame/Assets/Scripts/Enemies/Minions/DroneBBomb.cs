@@ -10,16 +10,12 @@ public class DroneBBomb : MonoBehaviour
     [SerializeField] AudioClip explosionClip;
     [SerializeField] float volume = 1;
 
-
     Collider2D floorDetector;
     Collider2D playerDetector;
     Coroutine coroutine;
     Animator animator;
     PlayMakerFSM[] pmFSMs;
     GameObject player;
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -69,9 +65,17 @@ public class DroneBBomb : MonoBehaviour
     {
         damage = damage1;
     }
+
+    public int SendDamage()
+    {
+        return damage;
+    }
+    public Transform SendTransform()
+    {
+        return player.transform;
+    }
     void SendDamageToPlayer()
     {
-
         FsmEventData myfsmEventData = new FsmEventData();
         myfsmEventData.IntData = damage;
         myfsmEventData.GameObjectData = gameObject;

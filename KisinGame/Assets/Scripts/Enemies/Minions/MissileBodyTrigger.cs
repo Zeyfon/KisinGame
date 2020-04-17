@@ -6,26 +6,24 @@ public class MissileBodyTrigger : MonoBehaviour
 {
     bool positionReached = false;
     HomingMissile homingMissile;
-    Transform playerTransform;
 
-    IEnumerator Start()
+    void Start()
     {
-        homingMissile = transform.parent.GetComponent<HomingMissile>();
-        playerTransform = homingMissile.SetPlayerPosition();
-        yield return new WaitForSeconds(2);
-        StartCoroutine(CheckPlayerRelativePosition());
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.transform.parent == null) return;
 
-        if (collision.transform.parent.GetComponent<PlayerIdentifer>())
+        if (collision.transform.parent.GetComponent<PlayerIdentifer>()!= null)
         {
             print("Found Player");
             homingMissile.MissileCollisioned();
             GetComponent<Collider2D>().enabled = false;
             return;
         }
+
         if (positionReached)
         {
             print("Found Floor");
@@ -35,11 +33,17 @@ public class MissileBodyTrigger : MonoBehaviour
         }
 
     }
-    IEnumerator CheckPlayerRelativePosition()
+
+    public void StartLookingForPlayer(Transform playerTransform)
+    {   homingMissile = transform.parent.GetComponent<HomingMissile>();
+        StartCoroutine(CheckPlayerRelativePosition(playerTransform));
+    }
+
+    IEnumerator CheckPlayerRelativePosition(Transform playerTransform)
     {
         while (!positionReached)
         {
-            if ((transform.position.x - playerTransform.position.x) > 0.5f || (transform.position.x - playerTransform.position.x) < 0.5f)
+            if (Mathf.Abs(playerTransform.position.y-transform.position.y)<0.5f)
             {
                 positionReached = true;
                 print("Reached Player");

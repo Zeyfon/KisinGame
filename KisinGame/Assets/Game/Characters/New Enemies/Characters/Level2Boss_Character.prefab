@@ -395,14 +395,13 @@ MonoBehaviour:
   weapon: {fileID: 1808941636833784702}
   maxSpeed: 5
   airTimeAttack4: 1
-  impulse1: 700
-  impulse2: 700
-  impulse3: 800
-  damage1: 20
-  damage2: 25
-  damage3: 35
-  damage4: 35
-  cameraShake: 0.5
+  impulse1: 850
+  impulse2: 850
+  impulse3: 950
+  damage1: 40
+  damage2: 40
+  damage3: 45
+  damage4: 60
 --- !u!114 &2486477278514871957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,8 +436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserBulletGO: {fileID: 6294898055663649348, guid: 3277d59a18a0ef34a9370d109c6da0d1,
     type: 3}
-  laserBulletDamage: 20
-  laserBulletSpeed: 5
+  laserBulletDamage: 45
+  laserBulletSpeed: 15
   laserTimerLimit: 50
   laserTargetingTime: 4
   jumpTimeLaserAttack: 1
@@ -469,6 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f12750ca91b8349824cef364dcb7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pFSMs: []
 --- !u!114 &607401159338388573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9797,7 +9797,7 @@ MonoBehaviour:
         tooltip: Time a circle takes to deplete if not stunned
         showInInspector: 1
         networkSync: 0
-        value: 10
+        value: 15
       - useVariable: 1
         name: stunStateTime
         tooltip: time a cirlce takes to deplete when stunned
@@ -9852,7 +9852,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 100
+        value: 200
       - useVariable: 1
         name: twoThirdsHealth
         tooltip: 
@@ -9870,7 +9870,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 100
+        value: 3500
       - useVariable: 1
         name: 
         tooltip: 
@@ -9896,11 +9896,11 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: stunThreshold
+        name: 
         tooltip: Damage
         showInInspector: 1
         networkSync: 0
-        value: 36
+        value: 0
       boolVariables:
       - useVariable: 1
         name: invulnerability
@@ -9938,7 +9938,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 
+        value: level2BossDefeated
       vector2Variables: []
       vector3Variables:
       - useVariable: 1

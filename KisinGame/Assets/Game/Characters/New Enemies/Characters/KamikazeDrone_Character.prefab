@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5247322621257329720}
   m_Layer: 22
   m_Name: KamikazeDrone_Character
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,7 +393,7 @@ MonoBehaviour:
           tooltip: Damage
           showInInspector: 1
           networkSync: 0
-          value: 36
+          value: 40
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -898,7 +898,7 @@ MonoBehaviour:
         y: 347.64844
         width: 204
         height: 48
-      isBreakpoint: 1
+      isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
@@ -1369,7 +1369,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 3
         - useVariable: 1
           name: damage
           tooltip: 
@@ -2153,7 +2153,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1.2
+          value: 2
         - useVariable: 1
           name: damageFloat
           tooltip: 
@@ -2174,7 +2174,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: fillAmountToAdd
+          name: damageToAdd
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2230,13 +2230,13 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.IntOperator
+        - HutongGames.PlayMaker.Actions.SetIntValue
         customNames:
         - 
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 14180903
+        actionHashCodes: 603dd905
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2254,19 +2254,13 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: damage
+          name: damageToAdd
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 2
         - useVariable: 1
-          name: fillAmountToAdd
+          name: damage
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2278,20 +2272,18 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0300000000
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1000000010000000070000001000000001000000
+        paramDataType: 100000001000000001000000
         paramName:
-        - integer1
-        - integer2
-        - operation
-        - storeResult
+        - intVariable
+        - intValue
         - everyFrame
-        paramDataPos: 0000000001000000000000000200000004000000
-        paramByteDataSize: 0000000000000000040000000000000001000000
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
     - name: Already Stunned? 2
       description: 
       colorIndex: 0
@@ -2510,7 +2502,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: fillAmountAcumulated
+          value: damageAcumulated
         - useVariable: 1
           name: 
           tooltip: 
@@ -2563,25 +2555,25 @@ MonoBehaviour:
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: fillAmountToAdd
+          name: damageToAdd
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2723,7 +2715,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2733,7 +2725,7 @@ MonoBehaviour:
           tooltip: Damage
           showInInspector: 1
           networkSync: 0
-          value: 36
+          value: 40
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -2814,7 +2806,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -2824,7 +2816,7 @@ MonoBehaviour:
           tooltip: Damage
           showInInspector: 1
           networkSync: 0
-          value: 36
+          value: 40
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
@@ -4400,7 +4392,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: fillAmountAcumulated
+          value: damageAcumulated
         - useVariable: 1
           name: 
           tooltip: 
@@ -4453,25 +4445,25 @@ MonoBehaviour:
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: fillAmountToAdd
+          name: damageToAdd
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6099,7 +6091,7 @@ MonoBehaviour:
         tooltip: Damage
         showInInspector: 1
         networkSync: 0
-        value: 20
+        value: 30
       - useVariable: 1
         name: myWeaknessProperty
         tooltip: 
@@ -6125,7 +6117,7 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: fillAmountToAdd
+        name: damageToAdd
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -6135,13 +6127,13 @@ MonoBehaviour:
         tooltip: Damage
         showInInspector: 1
         networkSync: 0
-        value: 11
+        value: 24
       - useVariable: 1
         name: maxHealth
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 20
+        value: 26
       - useVariable: 1
         name: 
         tooltip: 
@@ -6149,7 +6141,7 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: fillAmountAcumulated
+        name: damageAcumulated
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -6340,9 +6332,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xLerp: 0.0127
   yLerp: 0.0558
-  damage: 15
+  damage: 20
   yOffset: 0
-  pixanDrops: {fileID: 6102026041918234060, guid: 82c831037622a3f4fafcc62f82cd4a37,
+  pixanDrops: {fileID: 1129109178672986312, guid: 888557c4c58529942be29eaf0dc15c34,
     type: 3}
   sounds: {fileID: 285667779174696955}
   explosionTrigger: {fileID: 4022776791859339741}
@@ -6369,8 +6361,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 71.66406
-        y: 841.25
+        x: 70.90625
+        y: 779.35156
         width: 155
         height: 32
       isBreakpoint: 0
@@ -6452,8 +6444,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 61.554688
-        y: 999.40625
+        x: 60.796875
+        y: 937.5078
         width: 100
         height: 16
       isBreakpoint: 0
@@ -6504,7 +6496,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 706.1328
+        x: 610.1328
         y: 106.14844
         width: 125
         height: 32
@@ -6598,20 +6590,20 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: fillAmountAcumulatedFloat
+          name: damageAcumulatedFloat
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         fsmIntParams:
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6696,7 +6688,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 702.6875
+        x: 606.6875
         y: 169.49219
         width: 241
         height: 48
@@ -6745,7 +6737,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: fillAmountAcumulatedFloat
+          name: damageAcumulatedFloat
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6794,7 +6786,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1016.90625
+        x: 920.90625
         y: 199.83594
         width: 249
         height: 32
@@ -6835,7 +6827,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: fillAmountAcumulatedFloat
+          name: damageAcumulatedFloat
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6871,7 +6863,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 680.53906
+        x: 584.53906
         y: 466.2422
         width: 182
         height: 48
@@ -6883,7 +6875,7 @@ MonoBehaviour:
           name: NoStunned
           isSystemEvent: 0
           isGlobal: 0
-        toState: Set Depletion Rate
+        toState: Waiting Time Before Depletion 2
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -6969,8 +6961,8 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 913.33594
-        y: 995.60156
+        x: 795.1172
+        y: 995.6172
         width: 318.5
         height: 32
       isBreakpoint: 0
@@ -6989,26 +6981,16 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.SetFsmInt
-        - HutongGames.PlayMaker.Actions.SetFsmInt
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010001
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000008000000
-        actionHashCodes: 27fbe103081bbf05081bbf05
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 27fbe103081bbf05
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 1
-            name: animController
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 1
@@ -7029,18 +7011,6 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: AnimatorController
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: stun
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
           value: BackgroundActions
         - useVariable: 0
           name: 
@@ -7054,12 +7024,6 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 5
         - useVariable: 0
           name: 
           tooltip: 
@@ -7085,12 +7049,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 11000000110000000100000014000000120000001200000010000000010000001400000012000000120000001000000001000000
+        paramDataType: 1100000011000000010000001400000012000000120000001000000001000000
         paramName:
         - boolVariable
         - boolValue
@@ -7100,20 +7064,15 @@ MonoBehaviour:
         - variableName
         - setValue
         - everyFrame
-        - gameObject
-        - fsmName
-        - variableName
-        - setValue
-        - everyFrame
-        paramDataPos: 00000000010000000000000000000000000000000100000000000000010000000100000002000000030000000100000002000000
-        paramByteDataSize: 00000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000001000000
+        paramDataPos: 0000000001000000000000000000000000000000010000000000000001000000
+        paramByteDataSize: 0000000000000000010000000000000000000000000000000000000001000000
     - name: State 2
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 66.66406
-        y: 914.3281
+        x: 65.90625
+        y: 852.4297
         width: 100
         height: 32
       isBreakpoint: 0
@@ -7206,7 +7165,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 696.1875
+        x: 600.1875
         y: 319.47656
         width: 142
         height: 32
@@ -7225,104 +7184,29 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.FloatOperator
-        - HutongGames.PlayMaker.Actions.SetEventData
-        - HutongGames.PlayMaker.Actions.SendEventByName
         customNames:
         - 
-        - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000500000012000000
-        actionHashCodes: 0cdb040527ffbc03ba7ea101
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 0cdb0405
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
+        fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: stunCircleUI
-              tooltip: 
-              showInInspector: 1
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: StunCircleUI
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
+        fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: UpdateStunCircle
-        fsmObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: UnityEngine.Object
-          value: {fileID: 0}
+        fsmStringParams: []
+        fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: fillAmountAcumulatedFloat
+          name: damageAcumulatedFloat
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -7339,111 +7223,35 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0}
-        fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {r: 0, g: 0, b: 0, a: 1}
-        fsmRectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value:
-            serializedVersion: 2
-            x: 0
-            y: 0
-            width: 0
-            height: 0
-        fsmQuaternionParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0, w: 0}
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
         stringParams: []
-        byteData: 030000000000
+        byteData: 0300000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f0000000f000000070000000f0000000100000013000000100000000f0000001200000011000000250000001c0000001e00000023000000190000002000000021000000180000001f000000120000000f00000001000000
+        paramDataType: 0f0000000f000000070000000f00000001000000
         paramName:
         - float1
         - float2
         - operation
         - storeResult
         - everyFrame
-        - setGameObjectData
-        - setIntData
-        - setFloatData
-        - setStringData
-        - setBoolData
-        - setVector2Data
-        - setVector3Data
-        - setRectData
-        - setQuaternionData
-        - setColorData
-        - setMaterialData
-        - setTextureData
-        - setObjectData
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 00000000010000000000000002000000040000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000010000000200000000000000010000000400000005000000
-        paramByteDataSize: 00000000000000000400000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 0000000001000000000000000200000004000000
+        paramByteDataSize: 0000000000000000040000000000000001000000
     - name: Initialized
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 77.53906
-        y: 760.71094
+        x: 76.78125
+        y: 698.8125
         width: 100
         height: 48
       isBreakpoint: 0
@@ -7519,444 +7327,13 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: Set Depletion Rate
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 483.60938
-        y: 515.6797
-        width: 153
-        height: 32
-      isBreakpoint: 0
-      isSequence: 1
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Substracting Fill Amount
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.FloatOperator
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 0cdb0405
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: stunThresholdFloat
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: timeToEmptyCircleNoStunned
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          value: 10
-        - useVariable: 1
-          name: currentDepletionRate
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 0300000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000000f000000070000000f00000001000000
-        paramName:
-        - float1
-        - float2
-        - operation
-        - storeResult
-        - everyFrame
-        paramDataPos: 0000000001000000000000000200000004000000
-        paramByteDataSize: 0000000000000000040000000000000001000000
-    - name: Substracting Fill Amount
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 442.8047
-        y: 674.22656
-        width: 191
-        height: 48
-      isBreakpoint: 0
-      isSequence: 1
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: Round
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Round to 0 (1) 2
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: set Stun Circle Image Value 3
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetTimeInfo
-        - HutongGames.PlayMaker.Actions.FloatOperator
-        - HutongGames.PlayMaker.Actions.FloatSubtract
-        - HutongGames.PlayMaker.Actions.ConvertFloatToInt
-        - HutongGames.PlayMaker.Actions.FloatOperator
-        - HutongGames.PlayMaker.Actions.FloatCompare
-        - HutongGames.PlayMaker.Actions.SetEventData
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        customNames:
-        - 
-        - 
-        - 
-        - 
-        - 
-        - 
-        - 
-        - 
-        actionEnabled: 0101010101010101
-        actionIsOpen: 0101010101010101
-        actionStartIndex: 0000000003000000080000000c00000010000000150000001c00000029000000
-        actionHashCodes: 575875010cdb04052a6e8a00e4bc69050cdb04051bcdca0427ffbc03ba7ea101
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: stunCircleUI
-              tooltip: 
-              showInInspector: 1
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: StunCircleUI
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: UpdateStunCircle
-        fsmObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: UnityEngine.Object
-          value: {fileID: 0}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: deltaTime
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: currentDepletionRate
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: deltaTime
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmountToDepletePerFrame
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmountAcumulatedFloat
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmountToDepletePerFrame
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmountAcumulatedFloat
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmountAcumulatedFloat
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: stunThresholdFloat
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams:
-        - useVariable: 1
-          name: fillAmountAcumulated
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0}
-        fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {r: 0, g: 0, b: 0, a: 1}
-        fsmRectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value:
-            serializedVersion: 2
-            x: 0
-            y: 0
-            width: 0
-            height: 0
-        fsmQuaternionParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0, w: 0}
-        stringParams:
-        - Round
-        - Round
-        - 
-        byteData: 000000000002000000000000020000000003000000000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 070000000f000000010000000f0000000f000000070000000f000000010000000f0000000f00000001000000010000000f0000001000000007000000010000000f0000000f000000070000000f000000010000000f0000000f0000000f0000001700000017000000170000000100000013000000100000000f0000001200000011000000250000001c0000001e00000023000000190000002000000021000000180000001f000000120000000f00000001000000
-        paramName:
-        - getInfo
-        - storeValue
-        - everyFrame
-        - float1
-        - float2
-        - operation
-        - storeResult
-        - everyFrame
-        - floatVariable
-        - subtract
-        - everyFrame
-        - perSecond
-        - floatVariable
-        - intVariable
-        - rounding
-        - everyFrame
-        - float1
-        - float2
-        - operation
-        - storeResult
-        - everyFrame
-        - float1
-        - float2
-        - tolerance
-        - equal
-        - lessThan
-        - greaterThan
-        - everyFrame
-        - setGameObjectData
-        - setIntData
-        - setFloatData
-        - setStringData
-        - setBoolData
-        - setVector2Data
-        - setVector3Data
-        - setRectData
-        - setQuaternionData
-        - setColorData
-        - setMaterialData
-        - setTextureData
-        - setObjectData
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 000000000000000004000000010000000200000005000000030000000900000004000000050000000a0000000b00000006000000000000000c0000001000000007000000080000001100000009000000150000000a0000000b0000000c0000000000000001000000020000001600000000000000010000000d0000000000000000000000000000000000000000000000000000000000000000000000010000000200000000000000010000000e00000017000000
-        paramByteDataSize: 040000000000000001000000000000000000000004000000000000000100000000000000000000000100000001000000000000000000000004000000010000000000000000000000040000000000000001000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: Round to 0 (1) 2
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 742.4453
-        y: 692.47656
+        x: 583.6406
+        y: 660.3594
         width: 141
         height: 32
       isBreakpoint: 0
@@ -7975,99 +7352,24 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetFloatValue
         - HutongGames.PlayMaker.Actions.SetIntValue
-        - HutongGames.PlayMaker.Actions.SetEventData
-        - HutongGames.PlayMaker.Actions.SendEventByName
         customNames:
         - 
         - 
-        - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000030000000600000013000000
-        actionHashCodes: 9845b305603dd90527ffbc03ba7ea101
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 9845b305603dd905
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
+        fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: stunCircleUI
-              tooltip: 
-              showInInspector: 1
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: StunCircleUI
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
+        fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: UpdateStunCircle
-        fsmObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: UnityEngine.Object
-          value: {fileID: 0}
+        fsmStringParams: []
+        fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
@@ -8084,21 +7386,9 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmIntParams:
         - useVariable: 1
-          name: fillAmountAcumulated
+          name: damageAcumulated
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -8109,66 +7399,19 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0}
-        fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {r: 0, g: 0, b: 0, a: 1}
-        fsmRectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value:
-            serializedVersion: 2
-            x: 0
-            y: 0
-            width: 0
-            height: 0
-        fsmQuaternionParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0, w: 0}
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f0000000f0000000100000010000000100000000100000013000000100000000f0000001200000011000000250000001c0000001e00000023000000190000002000000021000000180000001f000000120000000f00000001000000
+        paramDataType: 0f0000000f00000001000000100000001000000001000000
         paramName:
         - floatVariable
         - floatValue
@@ -8176,32 +7419,15 @@ MonoBehaviour:
         - intVariable
         - intValue
         - everyFrame
-        - setGameObjectData
-        - setIntData
-        - setFloatData
-        - setStringData
-        - setBoolData
-        - setVector2Data
-        - setVector3Data
-        - setRectData
-        - setQuaternionData
-        - setColorData
-        - setMaterialData
-        - setTextureData
-        - setObjectData
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 0000000001000000000000000000000001000000010000000000000002000000020000000000000000000000000000000000000000000000000000000000000000000000010000000200000000000000010000000300000002000000
-        paramByteDataSize: 0000000000000000010000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000100000000000000000000000100000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000
     - name: set Stun Circle Image Value 3
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 425.60156
-        y: 833.16406
+        x: 278.89844
+        y: 767.96875
         width: 226
         height: 48
       isBreakpoint: 0
@@ -8212,7 +7438,7 @@ MonoBehaviour:
           name: Loop
           isSystemEvent: 0
           isGlobal: 0
-        toState: Substracting Fill Amount
+        toState: Get damageDepletionPerFrame
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -8221,784 +7447,6 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: Listener
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.FloatCompare
-        - HutongGames.PlayMaker.Actions.NextFrameEvent
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000007000000
-        actionHashCodes: 1bcdca0488611604
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - CircleDepleted
-        - CircleDepleted
-        - 
-        - Loop
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000000f0000000f0000001700000017000000170000000100000017000000
-        paramName:
-        - float1
-        - float2
-        - tolerance
-        - equal
-        - lessThan
-        - greaterThan
-        - everyFrame
-        - sendEvent
-        paramDataPos: 0000000001000000020000000000000001000000020000000000000003000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000100000000000000
-    - name: Set Depletion Rate 2
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 923.3672
-        y: 599.8047
-        width: 166
-        height: 32
-      isBreakpoint: 0
-      isSequence: 1
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Substracting Fill Amount 2
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.FloatOperator
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 0cdb0405
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: stunThresholdFloat
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: timeToEmtyCircleStunned
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          value: 3
-        - useVariable: 1
-          name: currentDepletionRate
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 0300000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000000f000000070000000f00000001000000
-        paramName:
-        - float1
-        - float2
-        - operation
-        - storeResult
-        - everyFrame
-        paramDataPos: 0000000001000000000000000200000004000000
-        paramByteDataSize: 0000000000000000040000000000000001000000
-    - name: Substracting Fill Amount 2
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 917.47656
-        y: 673.89844
-        width: 204
-        height: 48
-      isBreakpoint: 0
-      isSequence: 1
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: set Stun Circle Image Value 4
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: Round
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Round to 0 (1) 3
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetTimeInfo
-        - HutongGames.PlayMaker.Actions.FloatOperator
-        - HutongGames.PlayMaker.Actions.FloatSubtract
-        - HutongGames.PlayMaker.Actions.ConvertFloatToInt
-        - HutongGames.PlayMaker.Actions.FloatOperator
-        - HutongGames.PlayMaker.Actions.FloatCompare
-        - HutongGames.PlayMaker.Actions.SetEventData
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        customNames:
-        - 
-        - 
-        - 
-        - 
-        - 
-        - 
-        - 
-        - 
-        actionEnabled: 0101010101010101
-        actionIsOpen: 0101010101010101
-        actionStartIndex: 0000000003000000080000000c00000010000000150000001c00000029000000
-        actionHashCodes: 575875010cdb04052a6e8a00e4bc69050cdb04051bcdca0427ffbc03ba7ea101
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: stunCircleUI
-              tooltip: 
-              showInInspector: 1
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: StunCircleUI
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: UpdateStunCircle
-        fsmObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: UnityEngine.Object
-          value: {fileID: 0}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: deltaTime
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: currentDepletionRate
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: deltaTime
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmountToDepletePerFrame
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmountAcumulatedFloat
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmountToDepletePerFrame
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmountAcumulatedFloat
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmountAcumulatedFloat
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: stunThresholdFloat
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams:
-        - useVariable: 1
-          name: fillAmountAcumulated
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0}
-        fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {r: 0, g: 0, b: 0, a: 1}
-        fsmRectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value:
-            serializedVersion: 2
-            x: 0
-            y: 0
-            width: 0
-            height: 0
-        fsmQuaternionParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0, w: 0}
-        stringParams:
-        - Round
-        - Round
-        - 
-        byteData: 000000000002000000000000020000000003000000000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 070000000f000000010000000f0000000f000000070000000f000000010000000f0000000f00000001000000010000000f0000001000000007000000010000000f0000000f000000070000000f000000010000000f0000000f0000000f0000001700000017000000170000000100000013000000100000000f0000001200000011000000250000001c0000001e00000023000000190000002000000021000000180000001f000000120000000f00000001000000
-        paramName:
-        - getInfo
-        - storeValue
-        - everyFrame
-        - float1
-        - float2
-        - operation
-        - storeResult
-        - everyFrame
-        - floatVariable
-        - subtract
-        - everyFrame
-        - perSecond
-        - floatVariable
-        - intVariable
-        - rounding
-        - everyFrame
-        - float1
-        - float2
-        - operation
-        - storeResult
-        - everyFrame
-        - float1
-        - float2
-        - tolerance
-        - equal
-        - lessThan
-        - greaterThan
-        - everyFrame
-        - setGameObjectData
-        - setIntData
-        - setFloatData
-        - setStringData
-        - setBoolData
-        - setVector2Data
-        - setVector3Data
-        - setRectData
-        - setQuaternionData
-        - setColorData
-        - setMaterialData
-        - setTextureData
-        - setObjectData
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 000000000000000004000000010000000200000005000000030000000900000004000000050000000a0000000b00000006000000000000000c0000001000000007000000080000001100000009000000150000000a0000000b0000000c0000000000000001000000020000001600000000000000010000000d0000000000000000000000000000000000000000000000000000000000000000000000010000000200000000000000010000000e00000017000000
-        paramByteDataSize: 040000000000000001000000000000000000000004000000000000000100000000000000000000000100000001000000000000000000000004000000010000000000000000000000040000000000000001000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
-    - name: Round to 0 (1) 3
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 1244.9141
-        y: 705.66406
-        width: 141
-        height: 32
-      isBreakpoint: 0
-      isSequence: 1
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: set Stun Circle Image Value 4
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetFloatValue
-        - HutongGames.PlayMaker.Actions.SetIntValue
-        - HutongGames.PlayMaker.Actions.SetEventData
-        - HutongGames.PlayMaker.Actions.SendEventByName
-        customNames:
-        - 
-        - 
-        - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000030000000600000013000000
-        actionHashCodes: 9845b305603dd90527ffbc03ba7ea101
-        unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 2
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 1
-            gameObject:
-              useVariable: 1
-              name: stunCircleUI
-              tooltip: 
-              showInInspector: 1
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: StunCircleUI
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: UpdateStunCircle
-        fsmObjectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: 
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: UnityEngine.Object
-          value: {fileID: 0}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: fillAmount
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmIntParams:
-        - useVariable: 1
-          name: fillAmountAcumulated
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0}
-        fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        fsmColorParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {r: 0, g: 0, b: 0, a: 1}
-        fsmRectParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value:
-            serializedVersion: 2
-            x: 0
-            y: 0
-            width: 0
-            height: 0
-        fsmQuaternionParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0, w: 0}
-        stringParams: []
-        byteData: 000000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 0f0000000f0000000100000010000000100000000100000013000000100000000f0000001200000011000000250000001c0000001e00000023000000190000002000000021000000180000001f000000120000000f00000001000000
-        paramName:
-        - floatVariable
-        - floatValue
-        - everyFrame
-        - intVariable
-        - intValue
-        - everyFrame
-        - setGameObjectData
-        - setIntData
-        - setFloatData
-        - setStringData
-        - setBoolData
-        - setVector2Data
-        - setVector3Data
-        - setRectData
-        - setQuaternionData
-        - setColorData
-        - setMaterialData
-        - setTextureData
-        - setObjectData
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 0000000001000000000000000000000001000000010000000000000002000000020000000000000000000000000000000000000000000000000000000000000000000000010000000200000000000000010000000300000002000000
-        paramByteDataSize: 0000000000000000010000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
-    - name: set Stun Circle Image Value 4
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 912.5625
-        y: 823.1094
-        width: 226
-        height: 48
-      isBreakpoint: 0
-      isSequence: 1
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: Loop
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Substracting Fill Amount 2
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: CircleDepleted
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Inform AnimController
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -9080,7 +7528,7 @@ MonoBehaviour:
       colorIndex: 2
       position:
         serializedVersion: 2
-        x: 927.66406
+        x: 831.66406
         y: 474.2578
         width: 161
         height: 32
@@ -9099,14 +7547,12 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetBoolValue
-        - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 27fbe10348c01101
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 27fbe103
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -9121,13 +7567,7 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.1
+        fsmFloatParams: []
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
@@ -9147,29 +7587,25 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 0000
+        stringParams: []
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1100000011000000010000000f0000001700000001000000
+        paramDataType: 110000001100000001000000
         paramName:
         - boolVariable
         - boolValue
         - everyFrame
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 000000000100000000000000000000000000000001000000
-        paramByteDataSize: 000000000000000001000000000000000000000001000000
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
     - name: Set Stunned to False
       description: 
       colorIndex: 2
       position:
         serializedVersion: 2
-        x: 437.53906
+        x: 341.53906
         y: 993.34375
         width: 166
         height: 32
@@ -9279,7 +7715,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 925.9219
+        x: 829.9219
         y: 538.5781
         width: 232
         height: 32
@@ -9291,7 +7727,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Set Depletion Rate 2
+        toState: Get damageDepletionPerFrame 2
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -9324,7 +7760,969 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.3
+          value: 1
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: Get damageDepletionPerFrame
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 286.01562
+        y: 484.6875
+        width: 237
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Get DamageAcumulatedFloat
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetTimeInfo
+        - HutongGames.PlayMaker.Actions.FloatOperator
+        - HutongGames.PlayMaker.Actions.FloatOperator
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000300000008000000
+        actionHashCodes: 575875010cdb04050cdb0405
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: deltaTime
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: deltaTime
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: stunThresholdFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: result
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: result
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: timeToEmptyCircleNoStunned
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 10
+        - useVariable: 1
+          name: damageDepletionPerFrame
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 000000000002000000000300000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 070000000f000000010000000f0000000f000000070000000f000000010000000f0000000f000000070000000f00000001000000
+        paramName:
+        - getInfo
+        - storeValue
+        - everyFrame
+        - float1
+        - float2
+        - operation
+        - storeResult
+        - everyFrame
+        - float1
+        - float2
+        - operation
+        - storeResult
+        - everyFrame
+        paramDataPos: 000000000000000004000000010000000200000005000000030000000900000004000000050000000a000000060000000e000000
+        paramByteDataSize: 04000000000000000100000000000000000000000400000000000000010000000000000000000000040000000000000001000000
+    - name: Set new FillAmount Value
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 282.9375
+        y: 641.7031
+        width: 199
+        height: 48
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Round
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Round to 0 (1) 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: set Stun Circle Image Value 3
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FloatOperator
+        - HutongGames.PlayMaker.Actions.FloatCompare
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 0cdb04051bcdca04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: damageAcumulatedFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: stunThresholdFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: fillAmount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: fillAmount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Round
+        - Round
+        - 
+        byteData: 030000000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000000f000000070000000f000000010000000f0000000f0000000f00000017000000170000001700000001000000
+        paramName:
+        - float1
+        - float2
+        - operation
+        - storeResult
+        - everyFrame
+        - float1
+        - float2
+        - tolerance
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 000000000100000000000000020000000400000003000000040000000500000000000000010000000200000005000000
+        paramByteDataSize: 000000000000000004000000000000000100000000000000000000000000000000000000000000000000000001000000
+    - name: Get DamageAcumulatedFloat
+      description: Substract it the damageDepletionPerFrame
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 285.85156
+        y: 537.21875
+        width: 268
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Set new FillAmount Value
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FloatOperator
+        - HutongGames.PlayMaker.Actions.ConvertFloatToInt
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 0cdb0405e4bc6905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: damageAcumulatedFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: damageDepletionPerFrame
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: damageAcumulatedFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: damageAcumulatedFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 1
+          name: damageAcumulated
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 01000000000200000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000000f000000070000000f000000010000000f000000100000000700000001000000
+        paramName:
+        - float1
+        - float2
+        - operation
+        - storeResult
+        - everyFrame
+        - floatVariable
+        - intVariable
+        - rounding
+        - everyFrame
+        paramDataPos: 000000000100000000000000020000000400000003000000000000000500000009000000
+        paramByteDataSize: 000000000000000004000000000000000100000000000000000000000400000001000000
+    - name: Round to 0 (1) 3
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1113.4219
+        y: 787.8594
+        width: 141
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: set Stun Circle Image Value 4
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetFloatValue
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 9845b305603dd905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: fillAmount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 1
+          name: damageAcumulated
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000000f00000001000000100000001000000001000000
+        paramName:
+        - floatVariable
+        - floatValue
+        - everyFrame
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000000000000100000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000
+    - name: set Stun Circle Image Value 4
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 808.6797
+        y: 895.46875
+        width: 226
+        height: 48
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Loop
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Get damageDepletionPerFrame 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: CircleDepleted
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Inform AnimController
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FloatCompare
+        - HutongGames.PlayMaker.Actions.NextFrameEvent
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000007000000
+        actionHashCodes: 1bcdca0488611604
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: fillAmount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - CircleDepleted
+        - CircleDepleted
+        - 
+        - Loop
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000000f0000000f0000001700000017000000170000000100000017000000
+        paramName:
+        - float1
+        - float2
+        - tolerance
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        - sendEvent
+        paramDataPos: 0000000001000000020000000000000001000000020000000000000003000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000100000000000000
+    - name: Get damageDepletionPerFrame 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 815.7969
+        y: 612.1875
+        width: 250
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Get DamageAcumulatedFloat 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetTimeInfo
+        - HutongGames.PlayMaker.Actions.FloatOperator
+        - HutongGames.PlayMaker.Actions.FloatOperator
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000300000008000000
+        actionHashCodes: 575875010cdb04050cdb0405
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: deltaTime
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: deltaTime
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: stunThresholdFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: result
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: result
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: timeToEmtyCircleStunned
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 3
+        - useVariable: 1
+          name: damageDepletionPerFrame
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 000000000002000000000300000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 070000000f000000010000000f0000000f000000070000000f000000010000000f0000000f000000070000000f00000001000000
+        paramName:
+        - getInfo
+        - storeValue
+        - everyFrame
+        - float1
+        - float2
+        - operation
+        - storeResult
+        - everyFrame
+        - float1
+        - float2
+        - operation
+        - storeResult
+        - everyFrame
+        paramDataPos: 000000000000000004000000010000000200000005000000030000000900000004000000050000000a000000060000000e000000
+        paramByteDataSize: 04000000000000000100000000000000000000000400000000000000010000000000000000000000040000000000000001000000
+    - name: Set new FillAmount Value 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 812.71875
+        y: 769.2031
+        width: 212
+        height: 48
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Round
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Round to 0 (1) 3
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: set Stun Circle Image Value 4
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FloatOperator
+        - HutongGames.PlayMaker.Actions.FloatCompare
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 0cdb04051bcdca04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: damageAcumulatedFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: stunThresholdFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: fillAmount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: fillAmount
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Round
+        - Round
+        - 
+        byteData: 030000000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000000f000000070000000f000000010000000f0000000f0000000f00000017000000170000001700000001000000
+        paramName:
+        - float1
+        - float2
+        - operation
+        - storeResult
+        - everyFrame
+        - float1
+        - float2
+        - tolerance
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 000000000100000000000000020000000400000003000000040000000500000000000000010000000200000005000000
+        paramByteDataSize: 000000000000000004000000000000000100000000000000000000000000000000000000000000000000000001000000
+    - name: Get DamageAcumulatedFloat 2
+      description: Substract it the damageDepletionPerFrame
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 815.6328
+        y: 664.71875
+        width: 274.5
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Set new FillAmount Value 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FloatOperator
+        - HutongGames.PlayMaker.Actions.ConvertFloatToInt
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 0cdb0405e4bc6905
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: damageAcumulatedFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: damageDepletionPerFrame
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: damageAcumulatedFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: damageAcumulatedFloat
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 1
+          name: damageAcumulated
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 01000000000200000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000000f000000070000000f000000010000000f000000100000000700000001000000
+        paramName:
+        - float1
+        - float2
+        - operation
+        - storeResult
+        - everyFrame
+        - floatVariable
+        - intVariable
+        - rounding
+        - everyFrame
+        paramDataPos: 000000000100000000000000020000000400000003000000000000000500000009000000
+        paramByteDataSize: 000000000000000004000000000000000100000000000000000000000400000001000000
+    - name: Waiting Time Before Depletion 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 293.21875
+        y: 421.6328
+        width: 245
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Get damageDepletionPerFrame
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 48c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.5
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -9392,7 +8790,7 @@ MonoBehaviour:
     variables:
       floatVariables:
       - useVariable: 1
-        name: fillAmountAcumulatedFloat
+        name: damageAcumulatedFloat
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -9452,7 +8850,7 @@ MonoBehaviour:
         networkSync: 0
         value: 3
       - useVariable: 1
-        name: currentDepletionRate
+        name: 
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -9464,7 +8862,37 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: fillAmountToDepletePerFrame
+        name: 
+        tooltip: 
+        showInInspector: 1
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: result
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: damageDepletionPerFrame
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -9483,7 +8911,7 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: fillAmountAcumulated
+        name: damageAcumulated
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -9527,7 +8955,7 @@ MonoBehaviour:
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
-        name: stunCircleUI
+        name: 
         tooltip: 
         showInInspector: 1
         networkSync: 0
@@ -9546,7 +8974,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -9603,6 +9031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f12750ca91b8349824cef364dcb7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pFSMs: []
 --- !u!114 &5247322621257329720
 MonoBehaviour:
   m_ObjectHideFlags: 0

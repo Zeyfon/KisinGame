@@ -83,7 +83,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 85.03906
+        x: 81.94531
         y: 102.57031
         width: 100
         height: 32
@@ -288,7 +288,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 74.75781
+        x: 78.03125
         y: 166.125
         width: 176
         height: 16
@@ -314,7 +314,8 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 1
           networkSync: 0
-          value: {fileID: 0}
+          value: {fileID: 1221467800225166496, guid: 7a05ae4082fd80548815835827be8cf8,
+            type: 3}
         - useVariable: 1
           name: spawner
           tooltip: 
@@ -409,11 +410,11 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 337.4375
+        x: 385
         y: 146.71875
         width: 208
         height: 32
-      isBreakpoint: 0
+      isBreakpoint: 1
       isSequence: 0
       hideUnused: 0
       transitions:
@@ -481,8 +482,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 53.445312
-        y: 343.57812
+        x: 240.76562
+        y: 392.53906
         width: 125
         height: 16
       isBreakpoint: 0
@@ -568,14 +569,22 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 320.33594
-        y: 344.6328
+        x: 57.273438
+        y: 249.71094
         width: 143
-        height: 16
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Listener
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.AudioPlay
@@ -628,7 +637,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -655,7 +664,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 554.1953
+        x: 746.1953
         y: 337.04688
         width: 134
         height: 16
@@ -742,7 +751,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 62.164062
+        x: 254.16406
         y: 245.09375
         width: 151
         height: 32
@@ -966,7 +975,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 306.08594
+        x: 498.08594
         y: 256.08594
         width: 196
         height: 16
@@ -1326,7 +1335,8 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: {fileID: 0}
+        value: {fileID: 1221467800225166496, guid: 7a05ae4082fd80548815835827be8cf8,
+          type: 3}
       - useVariable: 1
         name: boss
         tooltip: 
@@ -1380,7 +1390,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -1389,7 +1399,7 @@ MonoBehaviour:
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
-    handleTriggerEnter2D: 1
+    handleTriggerEnter2D: 0
     handleTriggerExit2D: 0
     handleTriggerStay2D: 0
     handleCollisionEnter2D: 0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7578880529803186065}
   - component: {fileID: 2094770849}
-  - component: {fileID: 7578880529803186068}
+  - component: {fileID: 7501069701576298601}
   m_Layer: 17
   m_Name: ExplosionCollider
   m_TagString: Untagged
@@ -62,7 +62,7 @@ PolygonCollider2D:
       - {x: -2.996052, y: 0.010290146}
       - {x: 3.3932927, y: 0.059945345}
       - {x: 2.093121, y: 1.2276342}
---- !u!114 &7578880529803186068
+--- !u!114 &7501069701576298601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7578880529803186064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b799e3c16d26a14d81486b0d23585d3, type: 3}
+  m_Script: {fileID: 11500000, guid: b0581a60b744f664da0676e4e7a8d42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7578880529943495116
@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 7578880529943495118}
   - component: {fileID: 7578880529943495152}
   - component: {fileID: 2019777734765143619}
+  - component: {fileID: 8684609403759761019}
   m_Layer: 19
   m_Name: BomberDrone_Bomb
   m_TagString: Untagged
@@ -262,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7c23ad313f4fc419908ed1165f4b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 20
   explosionClip: {fileID: 8300000, guid: f17391b664b50af429aad6755ba52c65, type: 3}
   volume: 1
 --- !u!82 &2019777734765143619
@@ -361,3 +362,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8684609403759761019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578880529943495116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f12750ca91b8349824cef364dcb7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pFSMs: []

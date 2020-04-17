@@ -34,6 +34,7 @@ public class DialogueActions : MonoBehaviour
 
     public void ActivatePhaseThree()
     {
+        print("Activating Phase3");
         DialogueEntry dialogueEntry = DialogueManager.CurrentConversationState.subtitle.dialogueEntry;
         int conversationID = dialogueEntry.conversationID; //<-- This is the conversation ID.
         if (conversationID != conversationNum) return;
