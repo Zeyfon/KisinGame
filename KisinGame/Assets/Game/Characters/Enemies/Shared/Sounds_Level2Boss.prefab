@@ -23,8 +23,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 381.1875
-        y: 270.29688
+        x: 333.1875
+        y: 158.29688
         width: 100
         height: 32
       isBreakpoint: 0
@@ -83,8 +83,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 371.125
-        y: 346.79688
+        x: 323.125
+        y: 234.79688
         width: 100
         height: 16
       isBreakpoint: 0
@@ -130,298 +130,13 @@ MonoBehaviour:
         paramName: []
         paramDataPos: 
         paramByteDataSize: 
-    - name: Normal Damage
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 55.390625
-        y: 103.3125
-        width: 174
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Listener
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.AudioPlay
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 81294e04
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams:
-        - useVariable: 1
-          name: normalDamage
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          typeName: UnityEngine.AudioClip
-          value: {fileID: 8300000, guid: 9a09e7821f4de184f803bcc686210b34, type: 3}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.7
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 140000000f000000180000001100000017000000
-        paramName:
-        - gameObject
-        - volume
-        - oneShotClip
-        - WaitForEndOfClip
-        - finishedEvent
-        paramDataPos: 0000000000000000000000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000
-    - name: Critical Damage
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 53.390625
-        y: 225.3125
-        width: 173
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Listener
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.AudioPlay
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 81294e04
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams:
-        - useVariable: 1
-          name: criticalDamage
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          typeName: UnityEngine.AudioClip
-          value: {fileID: 8300000, guid: 24680ce04feecc04c86346e1adf72b05, type: 3}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.75
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 140000000f000000180000001100000017000000
-        paramName:
-        - gameObject
-        - volume
-        - oneShotClip
-        - WaitForEndOfClip
-        - finishedEvent
-        paramDataPos: 0000000000000000000000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000
-    - name: Stun Damage
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 70.52344
-        y: 339.33594
-        width: 156
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Listener
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.AudioPlay
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 81294e04
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams:
-        - useVariable: 1
-          name: stunDamage
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          typeName: UnityEngine.AudioClip
-          value: {fileID: 8300000, guid: 0d6e9438c49148649b730033947b4440, type: 3}
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.8
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 140000000f000000180000001100000017000000
-        paramName:
-        - gameObject
-        - volume
-        - oneShotClip
-        - WaitForEndOfClip
-        - finishedEvent
-        paramDataPos: 0000000000000000000000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000
     - name: State 1
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 638.22656
-        y: 212.57812
+        x: 590.22656
+        y: 100.578125
         width: 117
         height: 32
       isBreakpoint: 0
@@ -515,8 +230,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 639.6719
-        y: 443.85938
+        x: 591.6719
+        y: 331.85938
         width: 117
         height: 32
       isBreakpoint: 0
@@ -610,8 +325,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 653.1797
-        y: 534.3047
+        x: 605.1797
+        y: 422.3047
         width: 117
         height: 32
       isBreakpoint: 0
@@ -705,8 +420,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 669.15625
-        y: 626.5
+        x: 86.609375
+        y: 460.98438
         width: 100
         height: 32
       isBreakpoint: 0
@@ -800,8 +515,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 634.9219
-        y: 334.10156
+        x: 586.9219
+        y: 222.10156
         width: 117
         height: 32
       isBreakpoint: 0
@@ -895,8 +610,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 87.44531
-        y: 503.1953
+        x: 63.515625
+        y: 130.78125
         width: 120
         height: 32
       isBreakpoint: 0
@@ -990,8 +705,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 98.30469
-        y: 614.6953
+        x: 74.375
+        y: 242.28125
         width: 112
         height: 32
       isBreakpoint: 0
@@ -1085,8 +800,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 87.734375
-        y: 728.64844
+        x: 63.804688
+        y: 356.23438
         width: 147
         height: 32
       isBreakpoint: 0
@@ -1135,7 +850,7 @@ MonoBehaviour:
           showInInspector: 1
           networkSync: 0
           typeName: UnityEngine.AudioClip
-          value: {fileID: 0}
+          value: {fileID: 8300000, guid: ef429a7f35c52b746b2d539001f88f49, type: 3}
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
@@ -1179,15 +894,6 @@ MonoBehaviour:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
-    - name: Attack1Preparation_Sound
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: Attack2Preparation_Sound
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: Attack3Preparation_Sound
-      isSystemEvent: 0
-      isGlobal: 0
     - name: CloseAttack1
       isSystemEvent: 0
       isGlobal: 0
@@ -1200,19 +906,7 @@ MonoBehaviour:
     - name: CloseAttack4
       isSystemEvent: 0
       isGlobal: 0
-    - name: DamageCriticalAttack
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: DamageNormalAttack
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: DamageStunAttack
-      isSystemEvent: 0
-      isGlobal: 0
     - name: Jump
-      isSystemEvent: 0
-      isGlobal: 0
-    - name: JumpAttackPreparation_Sound
       isSystemEvent: 0
       isGlobal: 0
     - name: LaserSpawn
@@ -1246,30 +940,6 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: State 2
-      linkStyle: 0
-      linkConstraint: 0
-      colorIndex: 0
-    - fsmEvent:
-        name: DamageStunAttack
-        isSystemEvent: 0
-        isGlobal: 0
-      toState: Stun Damage
-      linkStyle: 0
-      linkConstraint: 0
-      colorIndex: 0
-    - fsmEvent:
-        name: DamageCriticalAttack
-        isSystemEvent: 0
-        isGlobal: 0
-      toState: Critical Damage
-      linkStyle: 0
-      linkConstraint: 0
-      colorIndex: 0
-    - fsmEvent:
-        name: DamageNormalAttack
-        isSystemEvent: 0
-        isGlobal: 0
-      toState: Normal Damage
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0
@@ -1351,12 +1021,12 @@ MonoBehaviour:
         typeName: 
         value: {fileID: 0}
       - useVariable: 1
-        name: criticalDamage
+        name: 
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: 24680ce04feecc04c86346e1adf72b05, type: 3}
+        typeName: 
+        value: {fileID: 0}
       - useVariable: 1
         name: 
         tooltip: 
@@ -1365,33 +1035,33 @@ MonoBehaviour:
         typeName: 
         value: {fileID: 0}
       - useVariable: 1
-        name: normalDamage
+        name: 
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: 9a09e7821f4de184f803bcc686210b34, type: 3}
+        typeName: 
+        value: {fileID: 0}
       - useVariable: 1
-        name: stunDamage
+        name: 
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: 0d6e9438c49148649b730033947b4440, type: 3}
+        typeName: 
+        value: {fileID: 0}
       - useVariable: 1
         name: closeAttack1
         tooltip: 
         showInInspector: 1
         networkSync: 0
         typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: 0992382b4c75e6741a123d6895946de2, type: 3}
+        value: {fileID: 8300000, guid: e7f658100d7a67049875bb7f7a6a14c3, type: 3}
       - useVariable: 1
         name: closeAttack3
         tooltip: 
         showInInspector: 1
         networkSync: 0
         typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: db6f4bdd29134fa4684c9615fb6f50e9, type: 3}
+        value: {fileID: 8300000, guid: 35fa4338124d01b4c8f9f6a9488934e6, type: 3}
       - useVariable: 1
         name: 
         tooltip: 
@@ -1405,7 +1075,7 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: 6bcd2cc7a7895fe4e9bb21c47fd253cb, type: 3}
+        value: {fileID: 8300000, guid: 0ee1414642547df41b3e0460ead29538, type: 3}
       - useVariable: 1
         name: 
         tooltip: 
@@ -1419,14 +1089,14 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: 8bfa8f7e92d4dc347a30467dd8182dda, type: 3}
+        value: {fileID: 8300000, guid: f32c913a2331ff04d9a96ac1a950f10a, type: 3}
       - useVariable: 1
         name: closeAttack2
         tooltip: 
         showInInspector: 1
         networkSync: 0
         typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: 0992382b4c75e6741a123d6895946de2, type: 3}
+        value: {fileID: 8300000, guid: 274f281587af17644933e2d77a18d84b, type: 3}
       - useVariable: 1
         name: 
         tooltip: 
@@ -1454,14 +1124,14 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: ad51f3da21707534480db73b0b792fc8, type: 3}
+        value: {fileID: 8300000, guid: 3d950e7abe8e8f1468b4c0a6f9ad2fa7, type: 3}
       - useVariable: 1
         name: laserShot
         tooltip: 
         showInInspector: 1
         networkSync: 0
         typeName: UnityEngine.AudioClip
-        value: {fileID: 8300000, guid: c09b828188352794ba1cfdf03970acac, type: 3}
+        value: {fileID: 8300000, guid: ea1e4417d5de78840b25874ffbd74592, type: 3}
       - useVariable: 1
         name: weaknessChange
         tooltip: 

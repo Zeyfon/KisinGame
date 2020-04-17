@@ -57,6 +57,7 @@ public class HomingMissile : MonoBehaviour
 
     IEnumerator Rotation()
     {
+        if (bossTransform != null) bossTransform.GetComponent<MissilesAttackL2B>().MissileDestroyed();
         float timer = 0;
          while(timer <timeToStopRotate)
          {

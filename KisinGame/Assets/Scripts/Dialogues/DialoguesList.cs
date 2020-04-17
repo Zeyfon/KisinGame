@@ -32,12 +32,28 @@ public class DialoguesList : MonoBehaviour
 
     public void RunDialogue(int index)
     {
+        string conversationDialogue = dialogues[index].GetComponent<DialogueSystemTrigger>().conversation;
+
+        if (conversationDialogue == "Level3/Dialogue1" || conversationDialogue == "Level3/Dialogue2")
+        {
+            dialogues[index].GetComponent<DialogueSystemTrigger>().conversationConversant = GameObject.FindGameObjectWithTag("Izel").transform;
+        }
+        else if(conversationDialogue == "Level3/Dialogue3")
+        {
+            dialogues[index].GetComponent<DialogueSystemTrigger>().conversationConversant = GameObject.FindGameObjectWithTag("Mitlan").transform;
+
+        }
+        else
+        {
+            dialogues[index].GetComponent<DialogueSystemTrigger>().conversationConversant = GameObject.FindGameObjectWithTag("Kisin").transform;
+        }
         print("DialogueList running dialogue");
         dialogues[index].GetComponent<DialogueSystemTrigger>().OnUse();
         string conversation = dialogues[index].GetComponent<DialogueSystemTrigger>().conversation;
         print(conversation);
         if (conversation == "Level3/Dialogue2" || conversation == "Level3/Dialogue1")
         {
+            print("Wants to Continue Boss Fight Level3");
             FindObjectOfType<DialogueSystemController>().GetComponent<PlayMakerFSM>().SendEvent("StartBossFightAfterDialogue");
         }
     }

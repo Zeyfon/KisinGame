@@ -1839,6 +1839,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1395030607}
     m_Modifications:
+    - target: {fileID: 533203568887392424, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 881655529560708451, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
       propertyPath: bossRoomController
@@ -1854,6 +1859,22 @@ PrefabInstance:
       propertyPath: phase
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 881655529560708451, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: pixanDrops
+      value: 
+      objectReference: {fileID: 1129109178672986312, guid: 966711e9292a03f4ebe301f2fdffb006,
+        type: 3}
+    - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: fsm.variables.gameObjectVariables.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: fsm.variables.variableCategoryIDs.Array.size
+      value: 41
+      objectReference: {fileID: 0}
     - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[9].value
@@ -1861,28 +1882,104 @@ PrefabInstance:
       objectReference: {fileID: 888598928}
     - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
-      propertyPath: fsm.variables.intVariables.Array.data[9].value
-      value: 500
+      propertyPath: fsm.variables.intVariables.Array.data[14].name
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
-      propertyPath: fsm.variables.intVariables.Array.data[6].value
-      value: 30
+      propertyPath: fsm.variables.intVariables.Array.data[14].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
-      propertyPath: fsm.variables.stringVariables.Array.data[0].value
-      value: level2BossDefeated
+      propertyPath: fsm.variables.gameObjectVariables.Array.data[14].useVariable
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: fsm.variables.gameObjectVariables.Array.data[14].name
+      value: parent
+      objectReference: {fileID: 0}
+    - target: {fileID: 881655529560708460, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: fsm.editorFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 881971143706807468, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dbb8ea881fb67d94aa9d195446dce70c, type: 2}
+    - target: {fileID: 881971143706807468, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb4c0239aae24e7448413c30298a998f, type: 2}
+    - target: {fileID: 881971143706807468, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: dbb8ea881fb67d94aa9d195446dce70c, type: 2}
+    - target: {fileID: 881971143706807468, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb4c0239aae24e7448413c30298a998f, type: 2}
+    - target: {fileID: 881971143706807468, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: dbb8ea881fb67d94aa9d195446dce70c, type: 2}
+    - target: {fileID: 881971143706807468, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb4c0239aae24e7448413c30298a998f, type: 2}
+    - target: {fileID: 881971143706807468, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[6]
+      value: 
+      objectReference: {fileID: 2100000, guid: dbb8ea881fb67d94aa9d195446dce70c, type: 2}
+    - target: {fileID: 881971143706807468, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[7]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb4c0239aae24e7448413c30298a998f, type: 2}
+    - target: {fileID: 881971143706807468, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[8]
+      value: 
+      objectReference: {fileID: 2100000, guid: dbb8ea881fb67d94aa9d195446dce70c, type: 2}
+    - target: {fileID: 881971143706807469, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: db6a582637a154b4e9033c8e35794aaa,
+        type: 2}
     - target: {fileID: 881971143706807475, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1584894890128867803, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2403801292304358897, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
       propertyPath: m_Name
       value: Level2Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811618714713286220, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811618714713286220, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: 3005842614075435936, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
@@ -1894,10 +1991,30 @@ PrefabInstance:
       propertyPath: leftSpot
       value: 
       objectReference: {fileID: 996643296}
+    - target: {fileID: 3044624405982792862, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044624405982792862, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3822735821599533170, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089742462007964803, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089742462007964803, guid: a06e21b594e80dd48983f937a0287ca6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.46
       objectReference: {fileID: 0}
     - target: {fileID: 7173006788683983413, guid: a06e21b594e80dd48983f937a0287ca6,
         type: 3}
@@ -2159,6 +2276,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1836929601405664826, guid: 1a2de342eeb563b47b7f24fb4ec743b8,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4249853641679467758, guid: 1a2de342eeb563b47b7f24fb4ec743b8,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3564,12 +3686,12 @@ PrefabInstance:
     - target: {fileID: 1871691711732706391, guid: 324d486c245e8ad4a9427293c4c3f583,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.12
+      value: 3.66
       objectReference: {fileID: 0}
     - target: {fileID: 1871691711732706391, guid: 324d486c245e8ad4a9427293c4c3f583,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 2039628224561380427, guid: 324d486c245e8ad4a9427293c4c3f583,
         type: 3}
@@ -3786,15 +3908,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level2BossRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 6399057805118539204, guid: 324d486c245e8ad4a9427293c4c3f583,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399057805881243520, guid: 324d486c245e8ad4a9427293c4c3f583,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.93
+      objectReference: {fileID: 0}
     - target: {fileID: 6926314416529554492, guid: 324d486c245e8ad4a9427293c4c3f583,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.57
+      value: -16.06
       objectReference: {fileID: 0}
     - target: {fileID: 6926314416529554492, guid: 324d486c245e8ad4a9427293c4c3f583,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.27
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 7309678884941825481, guid: 324d486c245e8ad4a9427293c4c3f583,
         type: 3}

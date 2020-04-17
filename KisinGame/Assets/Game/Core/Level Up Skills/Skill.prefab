@@ -1675,57 +1675,29 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetFsmInt
         - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
-        - 
-        actionEnabled: 0001
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 081bbf0509faa102
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 09faa102
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: skillsMenu
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: SkillsMenu
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: skillPointsAvailable
+        fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
-        - useVariable: 1
-          name: skillPoinsAvailable
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         - useVariable: 1
           name: skillPointsReqForNextLevel
           tooltip: 
@@ -1748,26 +1720,21 @@ MonoBehaviour:
         - White
         - White
         - Red
-        byteData: 0000
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000120000001000000001000000100000001000000017000000170000001700000001000000
+        paramDataType: 100000001000000017000000170000001700000001000000
         paramName:
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
-        - everyFrame
         - integer1
         - integer2
         - equal
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 0000000000000000010000000000000000000000010000000200000000000000010000000200000001000000
-        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000100000000000000010000000200000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
     - name: White
       description: 
       colorIndex: 0
@@ -3221,7 +3188,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 25
+              intValue: 999999
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -3349,7 +3316,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 5
+              intValue: 4
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -3381,7 +3348,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 7
+              intValue: 5
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -3413,7 +3380,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 10
+              intValue: 6
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -3445,7 +3412,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 13
+              intValue: 7
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -3477,7 +3444,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 17
+              intValue: 8
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -3509,7 +3476,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 21
+              intValue: 9
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -4043,7 +4010,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 25
+              intValue: 999999
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -4171,7 +4138,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 5
+              intValue: 4
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -4203,7 +4170,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 7
+              intValue: 5
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -4235,7 +4202,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 10
+              intValue: 6
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -4267,7 +4234,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 13
+              intValue: 7
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -4299,7 +4266,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 17
+              intValue: 8
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -4331,7 +4298,7 @@ MonoBehaviour:
               useVariable: 1
               type: 1
               floatValue: 0
-              intValue: 21
+              intValue: 9
               boolValue: 0
               stringValue: 
               vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -4942,7 +4909,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 25
+        value: 999999
       - useVariable: 1
         name: level3PointsRequired
         tooltip: 
@@ -4954,37 +4921,37 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 5
+        value: 4
       - useVariable: 1
         name: level5PointsRequired
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 7
+        value: 5
       - useVariable: 1
         name: level6PointsRequired
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 10
+        value: 6
       - useVariable: 1
         name: level7PointsRequired
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 13
+        value: 7
       - useVariable: 1
         name: level8PointsRequired
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 17
+        value: 8
       - useVariable: 1
         name: level9PointsRequired
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 21
+        value: 9
       boolVariables:
       - useVariable: 1
         name: 

@@ -65,6 +65,15 @@ public class DroneBBomb : MonoBehaviour
     {
         damage = damage1;
     }
+
+    public int SendDamage()
+    {
+        return damage;
+    }
+    public Transform SendTransform()
+    {
+        return player.transform;
+    }
     void SendDamageToPlayer()
     {
         FsmEventData myfsmEventData = new FsmEventData();

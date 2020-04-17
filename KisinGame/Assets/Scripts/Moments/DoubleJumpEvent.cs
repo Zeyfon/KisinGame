@@ -16,6 +16,7 @@ public class DoubleJumpEvent : MonoBehaviour
 
     public void DoubleJumpSkillAcquiringEvent()
     {
+        print("doublejump triggered");
         GetComponent<AudioSource>().Play();
         StartCoroutine(EnableDoubleJumpEventAssets());
         GetComponent<PlayMakerFSM>().SendEvent("UnlockDoubleJumpInPlayerActions");

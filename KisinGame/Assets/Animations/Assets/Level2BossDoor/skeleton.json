@@ -1,0 +1,100 @@
+{
+"skeleton": {
+	"hash": "mjTI3bCj4ZWmb0FXAN+HYgEi1L0",
+	"spine": "3.8.85",
+	"x": -104,
+	"y": -294,
+	"width": 208,
+	"height": 588,
+	"images": "./images/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "PuertaLVL2", "bone": "root", "attachment": "Puerta_LVL2_00000" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"PuertaLVL2": {
+				"Puerta_LVL2_00000": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00001": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00002": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00003": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00004": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00005": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00006": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00007": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00008": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00009": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00010": { "width": 208, "height": 588 },
+				"Puerta_LVL2_00011": { "width": 208, "height": 588 }
+			}
+		}
+	}
+],
+"animations": {
+	"CloseDoor": {
+		"slots": {
+			"PuertaLVL2": {
+				"attachment": [
+					{ "name": "Puerta_LVL2_00000" },
+					{ "time": 0.0333, "name": "Puerta_LVL2_00001" },
+					{ "time": 0.0667, "name": "Puerta_LVL2_00002" },
+					{ "time": 0.1, "name": "Puerta_LVL2_00003" },
+					{ "time": 0.1333, "name": "Puerta_LVL2_00004" },
+					{ "time": 0.1667, "name": "Puerta_LVL2_00005" },
+					{ "time": 0.2, "name": "Puerta_LVL2_00006" },
+					{ "time": 0.2333, "name": "Puerta_LVL2_00007" },
+					{ "time": 0.2667, "name": "Puerta_LVL2_00008" },
+					{ "time": 0.3, "name": "Puerta_LVL2_00009" },
+					{ "time": 0.3333, "name": "Puerta_LVL2_00010" },
+					{ "time": 0.3667, "name": "Puerta_LVL2_00011" }
+				]
+			}
+		}
+	},
+	"ClosedLoop": {
+		"slots": {
+			"PuertaLVL2": {
+				"attachment": [
+					{ "name": "Puerta_LVL2_00011" }
+				]
+			}
+		}
+	},
+	"OpenDoor": {
+		"slots": {
+			"PuertaLVL2": {
+				"attachment": [
+					{ "name": "Puerta_LVL2_00011" },
+					{ "time": 0.0333, "name": "Puerta_LVL2_00010" },
+					{ "time": 0.0667, "name": "Puerta_LVL2_00009" },
+					{ "time": 0.1, "name": "Puerta_LVL2_00008" },
+					{ "time": 0.1333, "name": "Puerta_LVL2_00007" },
+					{ "time": 0.1667, "name": "Puerta_LVL2_00006" },
+					{ "time": 0.2, "name": "Puerta_LVL2_00005" },
+					{ "time": 0.2333, "name": "Puerta_LVL2_00004" },
+					{ "time": 0.2667, "name": "Puerta_LVL2_00003" },
+					{ "time": 0.3, "name": "Puerta_LVL2_00002" },
+					{ "time": 0.3333, "name": "Puerta_LVL2_00001" },
+					{ "time": 0.3667, "name": "Puerta_LVL2_00000" }
+				]
+			}
+		}
+	},
+	"OpenedLoop": {
+		"slots": {
+			"PuertaLVL2": {
+				"attachment": [
+					{ "name": "Puerta_LVL2_00000" },
+					{ "time": 0.3333, "name": "Puerta_LVL2_00000" }
+				]
+			}
+		}
+	}
+}
+}

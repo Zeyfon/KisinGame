@@ -37,8 +37,6 @@ public class TilesManager : MonoBehaviour
         print("Tiling Done");
     }
 
-
-
     public void StartTileLoop()
     {
         if (!startedLooping)
@@ -217,7 +215,7 @@ public class TilesManager : MonoBehaviour
     }
 
     //Called From Health FSM. Dead State
-    void StartDisableElectricTiles()
+    public void StartDisableElectricTiles()
     {
         StartCoroutine(DisableElectricTiles());
     }

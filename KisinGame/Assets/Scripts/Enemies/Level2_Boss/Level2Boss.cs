@@ -120,6 +120,13 @@ public class Level2Boss : MonoBehaviour, IBossStarter
         {
             yield return null;
         }
+        float timer = 0;
+        while(timer < 1.5f)
+        {
+            timer += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
         StartCoroutine(ActionFinished(.5f));
     }
 
@@ -229,6 +236,7 @@ public class Level2Boss : MonoBehaviour, IBossStarter
     }
     IEnumerator AfterBossDiesActions()
     {
+        tileManager.StartDisableElectricTiles();
         //This int is to tell the BossRoomController 
         //to run the item in the index dialogue0 = 0
         yield return new WaitForSeconds(2.8f);
@@ -261,7 +269,7 @@ public class Level2Boss : MonoBehaviour, IBossStarter
     {
         for (int i = 0; i < 6; i++)
         {
-            Instantiate(pixanDrops, transform.position, Quaternion.identity, transform.parent.GetChild(0));
+            Instantiate(pixanDrops, transform.position, Quaternion.identity, transform.parent.parent.transform.GetChild(0));
             yield return new WaitForSeconds(0.2f);
         }
 

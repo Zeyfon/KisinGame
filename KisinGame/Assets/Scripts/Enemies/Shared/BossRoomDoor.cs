@@ -18,6 +18,7 @@ public class BossRoomDoor : MonoBehaviour
     {
         //print("ClosingDoor");
         skeletonAnimation.state.SetAnimation(0, "CloseDoor", false);
+        GetComponent<Collider2D>().enabled = true;
 
     }
 

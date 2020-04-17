@@ -33,6 +33,7 @@ public class DroneBomber : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        projectilePool = transform.parent.parent.GetChild(1);
         target = GameObject.FindGameObjectWithTag("Player").transform;
         if (!target) Debug.LogWarning("Player is not found");
         animator = GetComponent<Animator>();
@@ -102,8 +103,7 @@ public class DroneBomber : MonoBehaviour
     //Animation Event
     void PixanDrops_Create()
     {
-        projectilePool = transform.parent.parent.GetChild(1);
-        Instantiate(pixanDrops, transform.position, Quaternion.identity, projectilePool);
+        Instantiate(pixanDrops, transform.position, Quaternion.identity, transform.parent.parent.GetChild(0));
     }
 
     //Animation Event
