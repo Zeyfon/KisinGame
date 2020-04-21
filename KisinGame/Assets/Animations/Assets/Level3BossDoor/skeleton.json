@@ -1,0 +1,106 @@
+{
+"skeleton": {
+	"hash": "SDyHDpTeS8R9DffXQMhU0EmgK0Y",
+	"spine": "3.8.94",
+	"x": -78,
+	"y": -245,
+	"width": 156,
+	"height": 490,
+	"images": "./images/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "PuertaLVL3", "bone": "root", "attachment": "Puerta_LVL3_00013" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"PuertaLVL3": {
+				"Puerta_LVL3_00001": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00002": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00003": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00004": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00005": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00006": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00007": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00008": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00009": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00010": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00011": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00012": { "width": 156, "height": 490 },
+				"Puerta_LVL3_00013": { "width": 156, "height": 490 }
+			}
+		}
+	}
+],
+"animations": {
+	"CloseDoor": {
+		"slots": {
+			"PuertaLVL3": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.0333, "name": "Puerta_LVL3_00001" },
+					{ "time": 0.0667, "name": "Puerta_LVL3_00002" },
+					{ "time": 0.1, "name": "Puerta_LVL3_00003" },
+					{ "time": 0.1333, "name": "Puerta_LVL3_00004" },
+					{ "time": 0.1667, "name": "Puerta_LVL3_00005" },
+					{ "time": 0.2, "name": "Puerta_LVL3_00006" },
+					{ "time": 0.2333, "name": "Puerta_LVL3_00007" },
+					{ "time": 0.2667, "name": "Puerta_LVL3_00008" },
+					{ "time": 0.3, "name": "Puerta_LVL3_00009" },
+					{ "time": 0.3333, "name": "Puerta_LVL3_00010" },
+					{ "time": 0.3667, "name": "Puerta_LVL3_00011" },
+					{ "time": 0.4, "name": "Puerta_LVL3_00012" },
+					{ "time": 0.4333, "name": "Puerta_LVL3_00013" }
+				]
+			}
+		}
+	},
+	"ClosedLoop": {
+		"slots": {
+			"PuertaLVL3": {
+				"attachment": [
+					{ "name": "Puerta_LVL3_00013" },
+					{ "time": 0.3333, "name": "Puerta_LVL3_00013" }
+				]
+			}
+		}
+	},
+	"OpenDoor": {
+		"slots": {
+			"PuertaLVL3": {
+				"attachment": [
+					{ "name": "Puerta_LVL3_00013" },
+					{ "time": 0.0333, "name": "Puerta_LVL3_00012" },
+					{ "time": 0.0667, "name": "Puerta_LVL3_00011" },
+					{ "time": 0.1, "name": "Puerta_LVL3_00010" },
+					{ "time": 0.1333, "name": "Puerta_LVL3_00009" },
+					{ "time": 0.1667, "name": "Puerta_LVL3_00008" },
+					{ "time": 0.2, "name": "Puerta_LVL3_00007" },
+					{ "time": 0.2333, "name": "Puerta_LVL3_00006" },
+					{ "time": 0.2667, "name": "Puerta_LVL3_00005" },
+					{ "time": 0.3, "name": "Puerta_LVL3_00004" },
+					{ "time": 0.3333, "name": "Puerta_LVL3_00003" },
+					{ "time": 0.3667, "name": "Puerta_LVL3_00002" },
+					{ "time": 0.4, "name": "Puerta_LVL3_00001" },
+					{ "time": 0.4333, "name": null }
+				]
+			}
+		}
+	},
+	"OpenedLoop": {
+		"slots": {
+			"PuertaLVL3": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		}
+	}
+}
+}

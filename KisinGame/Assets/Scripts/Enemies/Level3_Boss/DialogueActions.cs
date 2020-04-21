@@ -54,7 +54,7 @@ public class DialogueActions : MonoBehaviour
 
     IEnumerator ChangeToMitlan()
     {
-        mitlanCoverClone = Instantiate(mitlanCover, izelBoss.transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        mitlanCoverClone = Instantiate(mitlanCover, izelBoss.transform.position + new Vector3(0, 0, 0), Quaternion.identity);
         yield return new WaitForSeconds(1);
         mitlanBoss.transform.position = izelBoss.transform.position;
         mitlanBoss.transform.parent.gameObject.SetActive(true);
