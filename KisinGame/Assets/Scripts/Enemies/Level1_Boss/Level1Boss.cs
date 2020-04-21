@@ -255,7 +255,7 @@ public class Level1Boss : MonoBehaviour, IBossStarter
     {
         for (int i = 0; i < 6; i++)
         {
-            Instantiate(pixanDrops, transform.position, Quaternion.identity, transform.parent.GetChild(0));
+            Instantiate(pixanDrops, transform.position, Quaternion.identity, transform.parent.parent.transform.GetChild(0));
             yield return new WaitForSeconds(0.2f);
         }
 

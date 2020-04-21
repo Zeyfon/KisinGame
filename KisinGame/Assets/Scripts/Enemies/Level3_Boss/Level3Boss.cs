@@ -9,7 +9,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
         IzelDialogue=1, MitlanDialogue=2
     }
     [Header("Internal Values")]
-    [SerializeField] bool mitlanActive = false;
+    [SerializeField] bool isMitlan = false;
     public BossRoomController bossRoomController;
     [SerializeField] Dialogues dialogues;
     public int phase = 1;
@@ -38,16 +38,15 @@ public class Level3Boss : MonoBehaviour, IBossStarter
         rb = GetComponent<Rigidbody2D>();
         animIzel = GetComponent<Animator>();
         animIzel.SetInteger("Phase", phase);
-        if (mitlanActive)
+        if (isMitlan)
         {
             animMitlan = transform.GetChild(4).GetComponent<Animator>();
             animMitlan.SetInteger("Phase", phase);
         }
-
         StartCoroutine(SetVariablesInDependencies());
-        print("Setting " + gameObject.name + "  " + bossRoomController);
         bossRoomController.SetCurrentBoss(this);
     }
+
     IEnumerator SetVariablesInDependencies()
     {
         yield return new WaitForSeconds(1);
@@ -59,7 +58,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
     
     public bool MitlanIsActive()
     {
-        return mitlanActive;
+        return isMitlan;
     }
     #region Control
     // Called from the Dialogue Level3Dialogue 1 Conversation Ended Event
@@ -70,6 +69,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
             canCrystalRain = true;
         }
         StartCoroutine(StartBossCoroutine());
+        print("IStartActions");
     }
 
     IEnumerator StartBossCoroutine()
@@ -128,11 +128,11 @@ public class Level3Boss : MonoBehaviour, IBossStarter
         float distance = GetComponent<ComboAttackL3B>().DistanceFromPlayer();
         while (distance > 1)
         {
-            distance = GetComponent<ComboAttackL3B>().MoveTowardsPlayer(mitlanActive);
+            distance = GetComponent<ComboAttackL3B>().MoveTowardsPlayer(isMitlan);
             yield return new WaitForEndOfFrame();
         }
         animIzel.Play("AttackPrep1");
-        if (mitlanActive) animMitlan.Play("AttackPrep1");
+        if (isMitlan) animMitlan.Play("AttackPrep1");
         while (animIzel.GetInteger("Attack") != 100)
         {
             yield return null;
@@ -143,7 +143,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
 
     IEnumerator CrystalBallsAttack()
     {
-        if(mitlanActive)
+        if(isMitlan)
         {
             animMitlan.SetInteger("Attack", 0);
             animMitlan.Play("JumpToMiddle");
@@ -162,7 +162,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
     IEnumerator ThrustAttack()
     {
         GetComponent<ThrustAttack>().AdjustAttackTrigger();
-        if (mitlanActive)
+        if (isMitlan)
         {
             animMitlan.SetInteger("Attack", 0);
             animMitlan.Play("JumpToSide");
@@ -180,7 +180,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
 
     IEnumerator CrystalRainAttack()
     {
-        if (mitlanActive)
+        if (isMitlan)
         {
             animMitlan.SetInteger("Attack", 0);
             animMitlan.Play("CrystalRainStarts");
@@ -229,13 +229,14 @@ public class Level3Boss : MonoBehaviour, IBossStarter
 
     IEnumerator InterruptionStarts()
     {
-        if (mitlanActive)
+        if (isMitlan)
         {
             animMitlan.SetInteger("Stun", 0);
             animMitlan.Play("Interruption");
         }
         animIzel.SetInteger("Stun", 0);
         animIzel.Play("Interruption");
+
         //print("Interruption Started");
         while (animIzel.GetInteger("Stun") != 100)
         {
@@ -262,13 +263,14 @@ public class Level3Boss : MonoBehaviour, IBossStarter
 
     IEnumerator StunStarts()
     {
-        if (mitlanActive)
+        if (isMitlan)
         {
             animMitlan.SetInteger("Stun", 0);
             animMitlan.Play("StunStarts");
         }
         animIzel.SetInteger("Stun", 0);
         animIzel.Play("StunStarts");
+
         //print("Stun Starts");
         while (animIzel.GetInteger("Stun") != 100)
         {
@@ -283,14 +285,14 @@ public class Level3Boss : MonoBehaviour, IBossStarter
     {
         StoppingOtherCoroutines();
         StartCoroutine(DeadStarts());
-        GetComponent<SoundsConnection>().SendSoundEventToFSM("Dead");
     }
 
     IEnumerator DeadStarts()
     {
-        if (mitlanActive)
+        if (isMitlan)
         {
             animMitlan.Play("Dead");
+
         }
         animIzel.Play("Dead");
         yield return null;
@@ -311,7 +313,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
     public void DestroyBoss()
     {
         Debug.Log("Destroys Itself");
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
     void StoppingOtherCoroutines()
@@ -336,7 +338,6 @@ public class Level3Boss : MonoBehaviour, IBossStarter
         }
 
         bossControlTimers.ReduceTimers(phase);
-        //print("Phase Change");
     }
 
 

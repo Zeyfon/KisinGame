@@ -31,7 +31,6 @@ public class CoreObject : MonoBehaviour
             Destroy(gameObject);
         }
         yield return new WaitForEndOfFrame();
-        print("Wants to Instantiate");
         Instantiate(menus, transform);
 
     }

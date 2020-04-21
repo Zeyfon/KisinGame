@@ -11,16 +11,14 @@ public class CrystalRainSlot : MonoBehaviour
     [SerializeField] Transform upperLimit;
     [SerializeField] Transform lowerLimit;
 
-    [Header("Velocity Lerp Values")]
+    [Header("Timing Values")]
     [Range(0,0.2f)]
     [SerializeField] float upwardLerp;
     [Range(0, 0.2f)]
     [SerializeField] float downwardLerp;
-
-    [Header("Audio Variables")]
     [SerializeField] float timeBetweenUpDown = 1;
 
-
+    [Header("Audio Variables")]
     [SerializeField] AudioClip slideDownSound;
     // Start is called before the first frame update
 
@@ -31,18 +29,20 @@ public class CrystalRainSlot : MonoBehaviour
 
     IEnumerator MoveRainSlot(CrystalRainAttack crystalRainAttack)
     {
+        float timer = 0;
         Vector3 upperLimitPosition = upperLimit.position;
         Vector3 lowerLimitPosition = lowerLimit.position;
         while (transform.position.y <= (upperLimitPosition.y - .05f))
         {
+            timer += Time.deltaTime;
             transform.position = Vector3.Lerp(transform.position, upperLimitPosition, upwardLerp);
             //print("Moving Upwards");
             yield return null;
         }
-        //print("Moved Upwards");
         yield return new WaitForSeconds(timeBetweenUpDown);
-
+        print("falling");
         GetComponent<AudioSource>().PlayOneShot(slideDownSound, 1);
+        Vector3 initialPosition = transform.position;
         while (transform.position.y >= (lowerLimitPosition.y + .05f))
         {
             transform.position = Vector3.Lerp(transform.position, lowerLimitPosition, downwardLerp);

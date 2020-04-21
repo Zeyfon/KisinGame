@@ -6,6 +6,7 @@ public class MovingPlatforms : MonoBehaviour
 {
     [SerializeField] float timeToStart = 3f;
     [SerializeField] float speed = 3;
+    [SerializeField] Transform line = null;
 
     Vector3 pos2;
     Vector3 pos1;
@@ -24,12 +25,11 @@ public class MovingPlatforms : MonoBehaviour
     IEnumerator GetLineReady()
     {
         float distance = Vector3.Distance(pos2, pos1);
-        Transform line = transform.GetChild(3).GetComponent<Transform>();
-        line.localScale = new Vector3(distance,1,1);
+        line.GetComponent<SpriteRenderer>().size = new Vector2(distance, 1);
+        //line.localScale = new Vector3(distance,1,1);
         float x = pos2.x - pos1.x;
         float y = pos2.y - pos1.y;
         float angle = Mathf.Atan2(y,x) * 180 / Mathf.PI;
-        //print(angle + "  " + gameObject.name);
         line.eulerAngles = new Vector3(0, 0, angle);
         yield return null;
     }

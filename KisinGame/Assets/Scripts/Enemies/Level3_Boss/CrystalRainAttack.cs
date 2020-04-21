@@ -47,7 +47,7 @@ public class CrystalRainAttack : MonoBehaviour
 
         List<Transform> currentActiveRainSlots = new List<Transform>();
         int phase = GetComponent<Level3Boss>().phase;
-
+        print("CrystalRain phase " + phase);
         ActivateRainSlots(currentActiveRainSlots, phase);
         yield return new WaitForSeconds(timetoStartRainAttack);
         StartCoroutine(StartRainSlotAttack(currentActiveRainSlots));
@@ -58,7 +58,7 @@ public class CrystalRainAttack : MonoBehaviour
         }
 
         GetComponent<Animator>().SetInteger("Attack", 90);
-        if (mitlanActive) transform.GetChild(5).GetComponent<Animator>().SetInteger("Attack", 90);
+        if (mitlanActive) transform.GetChild(4).GetComponent<Animator>().SetInteger("Attack", 90);
 
     }
 
