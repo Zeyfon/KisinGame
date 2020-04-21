@@ -23,15 +23,12 @@ public class ComboAttackL3B : MonoBehaviour, IFlipValues
     [SerializeField] int damage3 = 35;
     [SerializeField] int damage4 = 35;
 
-    [Header("Camera Variables")]
-    [UnityEngine.Tooltip("Shake force to the Camera")]
-    [Range(0, 1)]
-    [SerializeField] float cameraShake = 1;
     #endregion
 
     Transform playerTransform;
     StressReceiver stressReceiver;
     Rigidbody2D rb;
+    CameraShakeController cameraShaker;
     bool mitlanActive=false;
 
     private void Start()
@@ -90,15 +87,15 @@ public class ComboAttackL3B : MonoBehaviour, IFlipValues
                 break;
             case 3:
                 attackTrigger.damage = damage4;
-                attackCollider.offset = new Vector2(1.95f, 0.35f);
-                attackCollider.size = new Vector2(2.83f, 2.63f);
+                attackCollider.offset = new Vector2(2.15f, 0.53f);
+                attackCollider.size = new Vector2(3.84f, 3.06f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack3");
                 break;
             case 4:
                 attackTrigger.damage = damage3;
-                attackCollider.offset = new Vector2(1.71f, .19f);
-                attackCollider.size = new Vector2(2.44f, 2.34f);
+                attackCollider.offset = new Vector2(2.27f, 0.18f);
+                attackCollider.size = new Vector2(5.52f, 2.55f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack4");
                 break;
@@ -159,7 +156,8 @@ public class ComboAttackL3B : MonoBehaviour, IFlipValues
     IEnumerator CameraShake()
     {
         yield return new WaitForSeconds(jumpAttackAirTime);
-        stressReceiver.InduceStress(cameraShake);
+        if (!cameraShaker) cameraShaker = transform.parent.transform.parent.GetComponent<CameraShakeController>();
+        cameraShaker.ShakeCamera();
     }
 
     public void FlipValues()

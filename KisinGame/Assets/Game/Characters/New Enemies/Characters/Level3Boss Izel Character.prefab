@@ -124,17 +124,27 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.states.Array.data[3].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
       value: 
-      objectReference: {fileID: 2323982065469232976}
+      objectReference: {fileID: 3532611744400747356}
     - target: {fileID: 424738471767054353, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[2].value
       value: 
-      objectReference: {fileID: 2323982065469232976}
+      objectReference: {fileID: 3532611744400747356}
     - target: {fileID: 424738471767054353, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: fsm.editorFlags
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 424738471767054353, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424738471767054353, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: fsm.states.Array.data[5].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 3532611744400747356}
     - target: {fileID: 1147743770025997488, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: m_Mesh
@@ -148,7 +158,7 @@ PrefabInstance:
     - target: {fileID: 1562973251790308888, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: distanceFromOrigin
-      value: 2.2
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 1562973251790308888, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
@@ -169,6 +179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: actor
       value: Conversant3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277438586150793016, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4277438586466591968, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
@@ -235,16 +250,57 @@ PrefabInstance:
       propertyPath: phase
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4277438586466591970, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: af13861f821687d46bccc14b052ae682,
+        type: 2}
     - target: {fileID: 4277438586466591971, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: m_Name
-      value: Boss_Level3 Variant Izel
+      value: Level3Boss Izel Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277438586466591974, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 4277438586466591998, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4277438586466591999, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b84b02486a0d0e488610c1f12c3fd35, type: 2}
+    - target: {fileID: 4277438586466591999, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 560d114c9944da84abf809198f3b2143, type: 2}
+    - target: {fileID: 4277438586466591999, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b84b02486a0d0e488610c1f12c3fd35, type: 2}
+    - target: {fileID: 4277438586466591999, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 560d114c9944da84abf809198f3b2143, type: 2}
+    - target: {fileID: 4277438586466591999, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b84b02486a0d0e488610c1f12c3fd35, type: 2}
+    - target: {fileID: 4277438586466591999, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: 560d114c9944da84abf809198f3b2143, type: 2}
     - target: {fileID: 4630964272634014573, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: fsm.states.Array.data[3].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
@@ -260,11 +316,11 @@ PrefabInstance:
       propertyPath: fsm.editorFlags
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4834612455902124641, guid: 84458362e3d04514ab4edbd94c6053f0,
+    - target: {fileID: 4630964272634014573, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
-      propertyPath: fsm.variables.intVariables.Array.data[9].value
-      value: 1500
-      objectReference: {fileID: 0}
+      propertyPath: fsm.states.Array.data[5].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 3532611744400747356}
     - target: {fileID: 4834612455902124641, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: fsm.variables.gameObjectVariables.Array.data[0].value
@@ -294,10 +350,20 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.states.Array.data[29].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
       value: 
-      objectReference: {fileID: 3532611744400747356}
+      objectReference: {fileID: 0}
     - target: {fileID: 4834612455902124641, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: fsm.states.Array.data[30].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 3532611744400747356}
+    - target: {fileID: 4834612455902124641, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: fsm.variables.intVariables.Array.data[9].value
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834612455902124641, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: fsm.states.Array.data[27].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
       value: 
       objectReference: {fileID: 3532611744400747356}
     - target: {fileID: 7133161973410875539, guid: 84458362e3d04514ab4edbd94c6053f0,
@@ -315,6 +381,11 @@ PrefabInstance:
       propertyPath: fsm.editorFlags
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7133161973410875539, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: fsm.states.Array.data[5].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 3532611744400747356}
     - target: {fileID: 7214400242808525608, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: soundsBoss
@@ -330,6 +401,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sounds_Level3BossIzel
       objectReference: {fileID: 0}
+    - target: {fileID: 8980562827458892411, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnConversationLineEnded
+      objectReference: {fileID: 0}
     - target: {fileID: 9003486117012941913, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: pFSM
@@ -340,12 +416,6 @@ PrefabInstance:
 --- !u!4 &8223034505802863071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4277438586466591968, guid: 84458362e3d04514ab4edbd94c6053f0,
-    type: 3}
-  m_PrefabInstance: {fileID: 5278946551942296895}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2323982065469232976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7566861612345664111, guid: 84458362e3d04514ab4edbd94c6053f0,
     type: 3}
   m_PrefabInstance: {fileID: 5278946551942296895}
   m_PrefabAsset: {fileID: 0}

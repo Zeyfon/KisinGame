@@ -72,8 +72,8 @@ public class Level3BossControlTimers : MonoBehaviour
 
     public void ReduceTimers(float phase)
     {
-        weaknessTimerThreshold -= 1 / phase * weaknessTimerThreshold;
-        thrustTimerThreshold -= 1 / phase * thrustTimerThreshold;
-        rainTimerThreshold -= 1 / phase * rainTimerThreshold;
+        weaknessTimerThreshold -= 5;
+        thrustTimerThreshold -= 20;
+        rainTimerThreshold -= 15;
     }
 }

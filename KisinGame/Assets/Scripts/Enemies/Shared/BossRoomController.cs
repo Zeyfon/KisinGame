@@ -23,7 +23,10 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] AudioClip openDoor;
     [SerializeField] float openDoorsVolume = 1;
 
+    public bool currentBossIsDead = false;
+
     IBossStarter currentBoss;
+
 
     IEnumerator Start()
     {
@@ -39,21 +42,22 @@ public class BossRoomController : MonoBehaviour
             SetDoorsAfterBossDefeated();
             GetComponent<Collider2D>().enabled = false;
         }
-        if (WillBeADialogueBeforeTheFight())
-        {
-            GetComponent<Collider2D>().enabled = false;
-        }
-    }
-
-    private bool WillBeADialogueBeforeTheFight()
-    {
-        if (dialogueList.GetComponent<DialoguesList>().dialogues[0] == null) return false;
-        return true;
     }
 
     public void SetCurrentBoss(IBossStarter boss)
     {
         currentBoss = boss;
+        currentBossIsDead = false;
+    }
+
+    public void InitialAction()
+    {
+        if (CheckForInitialDialogue())
+        {
+            dialogueList.GetComponent<DialoguesList>().RunDialogue(0);
+            return;
+        }
+        StartFight();
     }
 
     //Called from the Dialogue Event in the Dialogue System Trigger
@@ -63,6 +67,23 @@ public class BossRoomController : MonoBehaviour
         CloseDoors();
         ActivateUI();
         StartCoroutine(ActivateBoss());
+    }
+
+    bool CheckForInitialDialogue()
+    {
+        if(dialogueList.GetComponent<DialoguesList>().dialogues[0]!= null)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void AfterConversationEndedActions()
+    {
+        if (!currentBossIsDead)
+        {
+            StartFight();
+        }
     }
     public void StartFightDelayed(GameObject mitlanCover)
     {
@@ -90,7 +111,7 @@ public class BossRoomController : MonoBehaviour
     public void BossDead( int dialogueID)
     {
         StartCoroutine(BossDeadC(dialogueID));
-
+        currentBossIsDead = true;
     }
 
     IEnumerator BossDeadC(int dialogueID)
@@ -154,7 +175,7 @@ public class BossRoomController : MonoBehaviour
         {
             Collider2D collider = GetComponent<BoxCollider2D>();
             collider.enabled = false;
-            StartFight();
+            InitialAction();
         }
     }
 }

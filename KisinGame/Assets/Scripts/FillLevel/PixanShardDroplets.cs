@@ -7,7 +7,7 @@ public class PixanShardDroplets : MonoBehaviour
 {
     PlayMakerFSM playMakerFSM;
     ParticleSystem ps;
-    List<ParticleSystem.Particle> enter = new List<ParticleSystem.Particle>();
+    List<ParticleSystem.Particle> inside = new List<ParticleSystem.Particle>();
     GameObject player;
     static int test = 0;
 
@@ -27,17 +27,15 @@ public class PixanShardDroplets : MonoBehaviour
     }
     private void OnParticleTrigger()
     {
-        // The particle count up must be slower than the counting cycle in the UI to prevent data losses.
-        int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
-        for (int i = 0; i < numEnter; i++)
+        int numInside = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside);
+        for (int i = 0; i < numInside; i++)
         {
-            ParticleSystem.Particle p = enter[i];
+            ParticleSystem.Particle p = inside[i];
             p.remainingLifetime = 0;
             playMakerFSM.SendEvent("PixanCollected");
-            FsmVariables.GlobalVariables.GetFsmInt("shards").Value +=1;
-            enter[i] = p;
+            FsmVariables.GlobalVariables.GetFsmInt("shards").Value += 1;
+            inside[i] = p;
         }
-        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
-        
+        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Inside, inside);  
     }
 }

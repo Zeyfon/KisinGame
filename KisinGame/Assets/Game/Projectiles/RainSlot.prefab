@@ -109,12 +109,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99e165d780ebbf4f8d73531aca9b22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDisable: 0.8
+  timeToDisable: 1.3
   upperLimit: {fileID: 72961371}
   lowerLimit: {fileID: 824996567}
-  upwardLerp: 0.08
-  downwardLerp: 0.115
-  timeBetweenUpDown: 1
+  upwardLerp: 0.153
+  downwardLerp: 0.2
+  timeBetweenUpDown: 0.5
   slideDownSound: {fileID: 8300000, guid: 5ce3efc3493676343a7f67c4ae46e68a, type: 3}
 --- !u!114 &6257990345565760746
 MonoBehaviour:
@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f12750ca91b8349824cef364dcb7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pFSMs: []
 --- !u!82 &5403438620200533436
 AudioSource:
   m_ObjectHideFlags: 0

@@ -171,7 +171,7 @@ public class CrystalBall : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         gameObject.SetActive(false);
-        transform.parent.parent.GetComponent<CrystalBallAttack>().FinishedBallAttack();
+        //transform.parent.parent.GetComponent<CrystalBallAttack>().FinishedBallAttack();
     }
 
     //Event Call from the HealthFSM in the same gameObject

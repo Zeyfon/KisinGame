@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71661a79053631548b2244c11b468587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMitlan: 0
   bossRoomController: {fileID: 0}
   dialogues: 0
   phase: 1
@@ -293,7 +294,7 @@ MonoBehaviour:
   attackCollider: {fileID: 3381156994992072902}
   attackTrigger: {fileID: 3381156994992072903}
   maxSpeed: 5
-  airTimeAttack4: 1
+  jumpAttackAirTime: 1
   impulse1: 800
   impulse2: 800
   impulse3: 900
@@ -301,7 +302,6 @@ MonoBehaviour:
   damage2: 20
   damage3: 30
   damage4: 40
-  cameraShake: 0.7
 --- !u!114 &884710770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,10 +370,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a5d5d11e2b998246a3550d7b2d05430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rainSlots: []
   timeBetweenRainSlotsAttack: 1
   timetoStartRainAttack: 1
-  rainSlotInitialPosition: {fileID: 0}
   disabledRainSlotQuantity: 0
 --- !u!114 &3823229801715127931
 MonoBehaviour:
@@ -401,6 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f12750ca91b8349824cef364dcb7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pFSMs: []
 --- !u!114 &7584630287891052339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3948,8 +3947,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 217.58594
-        y: 645.3594
+        x: 72.625
+        y: 776.03125
         width: 155
         height: 32
       isBreakpoint: 0
@@ -4082,7 +4081,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 488
+        x: 376
         y: 971.4219
         width: 100
         height: 16
@@ -4134,7 +4133,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 780.8672
+        x: 668.8672
         y: 115.13281
         width: 185
         height: 32
@@ -4309,7 +4308,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 768.25
+        x: 656.25
         y: 340.76562
         width: 241
         height: 48
@@ -4366,7 +4365,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: stunThresholdFloat
+          name: circleThresholdFloat
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4432,12 +4431,12 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1081.5625
+        x: 969.5625
         y: 398.17188
         width: 249
         height: 32
       isBreakpoint: 0
-      isSequence: 0
+      isSequence: 1
       hideUnused: 0
       transitions:
       - fsmEvent:
@@ -4481,7 +4480,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: stunThresholdFloat
+          name: circleThresholdFloat
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4526,7 +4525,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 759.7031
+        x: 647.7031
         y: 658.8906
         width: 225
         height: 32
@@ -4598,7 +4597,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 492.8125
+        x: 380.8125
         y: 779.3203
         width: 180
         height: 32
@@ -4795,7 +4794,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: stunThresholdFloat
+          name: circleThresholdFloat
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4867,7 +4866,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 471.3125
+        x: 359.3125
         y: 887.4531
         width: 137
         height: 32
@@ -5063,7 +5062,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1135.0625
+        x: 1023.0625
         y: 808.8281
         width: 193
         height: 32
@@ -5324,7 +5323,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 677.58594
+        x: 565.58594
         y: 1002.7578
         width: 252
         height: 32
@@ -5554,8 +5553,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 201.58594
-        y: 825.4375
+        x: 56.625
+        y: 956.1094
         width: 214
         height: 32
       isBreakpoint: 0
@@ -5595,7 +5594,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: stunThresholdFloat
+          name: circleThresholdFloat
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -5631,7 +5630,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 503
+        x: 391
         y: 625
         width: 183
         height: 32
@@ -5827,7 +5826,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 502
+        x: 390
         y: 710
         width: 114
         height: 32
@@ -6023,7 +6022,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 780
+        x: 668
         y: 210
         width: 269
         height: 32
@@ -6135,7 +6134,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 763
+        x: 651
         y: 510
         width: 169
         height: 48
@@ -6326,7 +6325,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: stunThresholdFloat
+          name: circleThresholdFloat
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6378,7 +6377,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1079.1094
+        x: 967.1094
         y: 548.9375
         width: 232
         height: 48
@@ -6714,7 +6713,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: stunThresholdFloat
+          name: circleThresholdFloat
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6841,7 +6840,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1159.7266
+        x: 1047.7266
         y: 726.25
         width: 100
         height: 32
@@ -6984,7 +6983,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 759.97656
+        x: 647.97656
         y: 604.6406
         width: 202
         height: 32
@@ -7094,7 +7093,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1124.8672
+        x: 1012.8672
         y: 905.33594
         width: 218
         height: 48
@@ -7448,8 +7447,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 207
-        y: 732
+        x: 62.039062
+        y: 862.6719
         width: 242
         height: 32
       isBreakpoint: 0
@@ -7466,17 +7465,41 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.FindGameObject
+        - HutongGames.PlayMaker.Actions.GetChild
+        - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.GetChild
         - HutongGames.PlayMaker.Actions.GetComponent
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: 184b570404d81402
+        - 
+        - 
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000003000000070000000b0000000f000000
+        actionHashCodes: 786b3902184b5704184b5704184b570404d81402
         unityObjectParams: []
         fsmGameObjectParams:
+        - useVariable: 1
+          name: stunCircleUI
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: stunCircleUI
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: stunCircleUI
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: {fileID: 0}
         - useVariable: 1
           name: currentCircle
           tooltip: 
@@ -7484,6 +7507,22 @@ MonoBehaviour:
           networkSync: 0
           value: {fileID: 0}
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: stunCircleUI
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: stunCircleUI
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 1
           gameObject:
             useVariable: 1
@@ -7507,6 +7546,42 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: BossRoomController
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: StunCircle
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
         - useVariable: 0
           name: 
           tooltip: 
@@ -7544,8 +7619,19 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000001200000013000000140000001800000001000000
+        paramDataType: 120000001200000013000000140000001200000012000000130000001400000012000000120000001300000014000000120000001200000013000000140000001800000001000000
         paramName:
+        - objectName
+        - withTag
+        - store
+        - gameObject
+        - childName
+        - withTag
+        - storeResult
+        - gameObject
+        - childName
+        - withTag
+        - storeResult
         - gameObject
         - childName
         - withTag
@@ -7553,8 +7639,8 @@ MonoBehaviour:
         - gameObject
         - storeComponent
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000010000000000000000000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000100000000000000000000000200000003000000010000000100000004000000050000000200000002000000060000000700000003000000030000000000000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -7642,7 +7728,7 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: stunThresholdFloat
+        name: circleThresholdFloat
         tooltip: 
         showInInspector: 0
         networkSync: 0

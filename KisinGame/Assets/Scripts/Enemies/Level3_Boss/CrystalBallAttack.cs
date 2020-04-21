@@ -14,7 +14,7 @@ public class CrystalBallAttack : MonoBehaviour
     [SerializeField] float jumpToInitialPositionTime = 1;
 
     [Header("CrystalBalls Variables")]
-    [Range(0, 5)]
+    [Range(0, 7)]
     [UnityEngine.Tooltip("The rotation velocity of the balls")]
     [SerializeField] float angularVelocity = 8;
     [UnityEngine.Tooltip("The time the balls will be rotating")]
@@ -227,6 +227,7 @@ public class CrystalBallAttack : MonoBehaviour
                 yield return new WaitForSeconds(1f);
             }
         }
+        FinishedBallAttack();
     }
     #endregion
 
@@ -252,15 +253,11 @@ public class CrystalBallAttack : MonoBehaviour
         StopAllCoroutines();
     }
 
-    public void FinishedBallAttack()
+    void FinishedBallAttack()
     {
-        counter++;
-        if(counter == currentActiveBalls)
-        {
             GetComponent<Animator>().SetInteger("Attack", 90);
-            if (mitlanActive) transform.GetChild(5).GetComponent<Animator>().SetInteger("Attack", 90);
-
-        }
+            if (mitlanActive) transform.GetChild(4).GetComponent<Animator>().SetInteger("Attack", 90);
+            print("Recovering from crystal ball attack");
     }
 
     void InvulnerabilityOn()
