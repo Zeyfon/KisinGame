@@ -4,6 +4,7 @@ using UnityEngine;
 using HutongGames.PlayMaker;
 using PixelCrushers.DialogueSystem;
 using System;
+using UnityEngine.SceneManagement;
 
 public class BossRoomController : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class BossRoomController : MonoBehaviour
     [SerializeField] float openDoorsVolume = 1;
 
     public bool currentBossIsDead = false;
+    bool initialClosingDoor = false;
 
     IBossStarter currentBoss;
 
@@ -64,9 +66,12 @@ public class BossRoomController : MonoBehaviour
     public void StartFight()
     {
         print(currentBoss + "  StartFight");
-        CloseDoors();
+
         ActivateUI();
         StartCoroutine(ActivateBoss());
+        if (SceneManager.GetActiveScene().buildIndex == 31 && initialClosingDoor) return;
+        CloseDoors();
+        initialClosingDoor = true;
     }
 
     bool CheckForInitialDialogue()
@@ -87,12 +92,7 @@ public class BossRoomController : MonoBehaviour
     }
     public void StartFightDelayed(GameObject mitlanCover)
     {
-        StartCoroutine(StartFightDelayedC(mitlanCover));
-    }
-    IEnumerator StartFightDelayedC(GameObject mitlanCover)
-    {
         Destroy(mitlanCover);
-        yield return new WaitForSeconds(1);
         StartFight();
     }
 
@@ -116,11 +116,11 @@ public class BossRoomController : MonoBehaviour
 
     IEnumerator BossDeadC(int dialogueID)
     {
-        OpenContinueDoor();
-        yield return new WaitForSeconds(.5f);
         DisableUI();
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1f);
         AfterDefeatingBossDialogue(dialogueID);
+        if (SceneManager.GetActiveScene().buildIndex == 31) yield break;
+        OpenContinueDoor();
     }
 
     private void AfterDefeatingBossDialogue(int dialogueID)

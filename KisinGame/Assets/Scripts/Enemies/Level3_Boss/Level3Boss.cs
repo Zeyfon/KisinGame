@@ -74,7 +74,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
 
     IEnumerator StartBossCoroutine()
     {
-        yield return new WaitForSeconds(1);
+        if(phase==1) yield return new WaitForSeconds(1);
         if (phase == 3)
         {
             bossControlTimers.TimerForNextCrystalRainAttack();
@@ -249,6 +249,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
     //HealthFSM Event Call
     void Stunned()
     {
+        DisableAttackTrigger();
         StoppingOtherCoroutines();
         StartCoroutine(StunStarts());
         GetComponent<SoundsConnection>().SendSoundEventToFSM("Stunned");
@@ -257,6 +258,7 @@ public class Level3Boss : MonoBehaviour, IBossStarter
     //StunCircle EventCall
     void StunFinished()
     {
+        DisableAttackTrigger();
         GetComponent<Animator>().SetInteger("Stun", 90);
         //print("StunCirclesDepleted");
     }
@@ -283,8 +285,14 @@ public class Level3Boss : MonoBehaviour, IBossStarter
     //HealthFSM Event Call
     void Dead()
     {
+        DisableAttackTrigger();
         StoppingOtherCoroutines();
         StartCoroutine(DeadStarts());
+    }
+
+    void DisableAttackTrigger()
+    {
+        transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
     }
 
     IEnumerator DeadStarts()
