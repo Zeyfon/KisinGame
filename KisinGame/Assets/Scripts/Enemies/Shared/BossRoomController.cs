@@ -90,6 +90,7 @@ public class BossRoomController : MonoBehaviour
             StartFight();
         }
     }
+
     public void StartFightDelayed(GameObject mitlanCover)
     {
         Destroy(mitlanCover);
