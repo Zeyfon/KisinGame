@@ -18,7 +18,7 @@ public class DialogueKisin : MonoBehaviour
         
     }
 
-    public void ConversationEndedChecker()
+    public void ConversationEnded()
     {
         int id = DialogueManager.LastConversationID;
         print(id);
@@ -30,7 +30,7 @@ public class DialogueKisin : MonoBehaviour
         }
     }
 
-    public void ConversationStartChecker()
+    public void ConversationStart()
     {
         int id = DialogueManager.LastConversationID;
         print(id);

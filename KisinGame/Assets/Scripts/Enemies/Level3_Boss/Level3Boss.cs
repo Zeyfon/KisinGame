@@ -88,27 +88,27 @@ public class Level3Boss : MonoBehaviour, IBossStarter
     {
         if (!colorChange && !canThrustAttack && !canCrystalRain && attackCounter < (5 - phase))
         {
-            print("Combo Attack");
+            //print("Combo Attack");
             attackCounter++;
             StartCoroutine(CloseAttack());
             return;
         }
         else if (!colorChange && !canThrustAttack && !canCrystalRain)
         {
-            print("CrystalBall Attack");
+           // print("CrystalBall Attack");
             StartCoroutine(CrystalBallsAttack());
             attackCounter = 0;
             return;
         }
         else if (!colorChange && !canCrystalRain)
         {
-            print("Thrust Attack");
+            //print("Thrust Attack");
             StartCoroutine(ThrustAttack());
             return;
         }
         else if (!colorChange)
         {
-            print("CrystalRain Attack");
+            //print("CrystalRain Attack");
             StartCoroutine(CrystalRainAttack());
             return;
         }

@@ -34,16 +34,22 @@ public class DialoguesList : MonoBehaviour
 
     void SetTheConversant(int index, string conversation)
     {
-        if (conversation == "Level3/Dialogue1" || conversation == "Level3/Dialogue2")
+        if (conversation == "Level3/Dialogue1")
         {
+            print("Setting Dialogue 1 conversant");
             dialogues[index].GetComponent<DialogueSystemTrigger>().conversationConversant = GameObject.FindGameObjectWithTag("Izel").transform;
             return;
         }
-        else if (conversation == "Level3/Dialogue3")
+        else if (conversation == "Level3/Dialogue2" || conversation == "Level3/Dialogue3")
         {
+            print("Setting Dialogue 2 Conversant");
             dialogues[index].GetComponent<DialogueSystemTrigger>().conversationConversant = GameObject.FindGameObjectWithTag("Mitlan").transform;
             return;
         }
+        //else if (conversation == "Level3/Dialogue3")
+        //{
+        //    return;
+        //}
         else
         {
             dialogues[index].GetComponent<DialogueSystemTrigger>().conversationConversant = GameObject.FindGameObjectWithTag("Kisin").transform;

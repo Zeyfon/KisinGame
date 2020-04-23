@@ -1553,6 +1553,11 @@ PrefabInstance:
       propertyPath: bossRoomController
       value: 
       objectReference: {fileID: 1067837244}
+    - target: {fileID: 18297531777396551, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 18297531777396570, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
         type: 3}
       propertyPath: m_Mesh
@@ -1596,7 +1601,7 @@ PrefabInstance:
     - target: {fileID: 2659542689049087851, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2907103953085141586, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
         type: 3}
@@ -1773,10 +1778,20 @@ PrefabInstance:
       propertyPath: fsm.states.Array.data[44].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
       value: 
       objectReference: {fileID: 1693679014}
-    - target: {fileID: 8649862720369316293, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
+    - target: {fileID: 8935757727691603955, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
         type: 3}
-      propertyPath: fsm.variables.intVariables.Array.data[9].value
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935757727691603955, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnConversationLineEnded
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935757727691603955, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2, type: 3}
@@ -2465,11 +2480,6 @@ PrefabInstance:
       propertyPath: fsm.states.Array.data[44].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
       value: 
       objectReference: {fileID: 1693679014}
-    - target: {fileID: 8158272383406896827, guid: b5211a2bb0e5bbd4197e924494167a2e,
-        type: 3}
-      propertyPath: fsm.variables.intVariables.Array.data[9].value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8189546985569467547, guid: b5211a2bb0e5bbd4197e924494167a2e,
         type: 3}
       propertyPath: m_Mesh
@@ -2479,6 +2489,31 @@ PrefabInstance:
         type: 3}
       propertyPath: offset.y
       value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935757727691603955, guid: b5211a2bb0e5bbd4197e924494167a2e,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935757727691603955, guid: b5211a2bb0e5bbd4197e924494167a2e,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935757727691603955, guid: b5211a2bb0e5bbd4197e924494167a2e,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnConversationLineEnded
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935757727691603955, guid: b5211a2bb0e5bbd4197e924494167a2e,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8935757727691603955, guid: b5211a2bb0e5bbd4197e924494167a2e,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5211a2bb0e5bbd4197e924494167a2e, type: 3}

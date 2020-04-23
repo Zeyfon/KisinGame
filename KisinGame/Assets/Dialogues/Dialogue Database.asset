@@ -37,7 +37,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Conversant1
+      value: Zyana
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -56,22 +56,15 @@ MonoBehaviour:
       value: '#0020ffff'
       type: 0
       typeString: CustomFieldType_Text
-    - title: Display Name
-      value: 
-      type: 0
-      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: -6967163022132932214, guid: a1164f77f95f62346be90618bf0dd515,
       type: 3}
     alternatePortraits: []
-    spritePortraits:
-    - {fileID: -6152279459341563953, guid: a1164f77f95f62346be90618bf0dd515, type: 3}
-    - {fileID: -3158673657383605495, guid: a1164f77f95f62346be90618bf0dd515, type: 3}
-    - {fileID: 4043539285490732882, guid: a54e3a47ebf4a8a428a2d9028d414f1f, type: 3}
+    spritePortraits: []
   - id: 2
     fields:
     - title: Name
-      value: Conversant2
+      value: Kisin
       type: 0
       typeString: 
     - title: Pictures
@@ -90,21 +83,15 @@ MonoBehaviour:
       value: '#ffffffff'
       type: 0
       typeString: 
-    - title: Display Name
-      value: 
-      type: 0
-      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: -6152279459341563953, guid: a1164f77f95f62346be90618bf0dd515,
       type: 3}
     alternatePortraits: []
-    spritePortraits:
-    - {fileID: -6967163022132932214, guid: a1164f77f95f62346be90618bf0dd515, type: 3}
-    - {fileID: -3158673657383605495, guid: a1164f77f95f62346be90618bf0dd515, type: 3}
+    spritePortraits: []
   - id: 3
     fields:
     - title: Name
-      value: Conversant3
+      value: Izel
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -127,14 +114,11 @@ MonoBehaviour:
     spritePortrait: {fileID: 696629159333842220, guid: 4120603ae44d89d45b197aaefe2d5f8a,
       type: 3}
     alternatePortraits: []
-    spritePortraits:
-    - {fileID: -8029052541367225472, guid: 4120603ae44d89d45b197aaefe2d5f8a, type: 3}
-    - {fileID: -5116019111670992693, guid: 4120603ae44d89d45b197aaefe2d5f8a, type: 3}
-    - {fileID: -4049462050282707827, guid: 4120603ae44d89d45b197aaefe2d5f8a, type: 3}
+    spritePortraits: []
   - id: 4
     fields:
     - title: Name
-      value: Conversant4
+      value: Mitlan
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -157,10 +141,7 @@ MonoBehaviour:
     spritePortrait: {fileID: -4049462050282707827, guid: 4120603ae44d89d45b197aaefe2d5f8a,
       type: 3}
     alternatePortraits: []
-    spritePortraits:
-    - {fileID: -5116019111670992693, guid: 4120603ae44d89d45b197aaefe2d5f8a, type: 3}
-    - {fileID: -8029052541367225472, guid: 4120603ae44d89d45b197aaefe2d5f8a, type: 3}
-    - {fileID: 696629159333842220, guid: 4120603ae44d89d45b197aaefe2d5f8a, type: 3}
+    spritePortraits: []
   items: []
   locations:
   - id: 1
@@ -216,7 +197,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
-      useOverrides: 0
+      useOverrides: 1
       overrideSubtitleSettings: 0
       showNPCSubtitlesDuringLine: 1
       showNPCSubtitlesWithResponses: 1
@@ -300,15 +281,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Actor["Conversant1"].Display_Name = "Zyana";
-
-        Actor["Conversant2"].Display_Name = "????";'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 208.86365
+        x: 210.58777
         y: 18.507462
         width: 160
         height: 30
@@ -588,7 +567,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Actor["Conversant2"].Display_Name = "Kisin";
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -736,7 +715,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 207.67125
+        x: 209.99684
         y: 341.9178
         width: 160
         height: 30
@@ -1234,8 +1213,8 @@ MonoBehaviour:
         y: 710.8833
         width: 160
         height: 30
-    canvasScrollPosition: {x: 35.526398, y: 0}
-    canvasZoom: 0.5800003
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.43000033
   - id: 2
     fields:
     - title: Title
@@ -2025,8 +2004,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 165
-        y: 219
+        x: 161.875
+        y: 217.4375
         width: 160
         height: 30
     - id: 5
@@ -2727,7 +2706,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -2755,7 +2734,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetPortrait(Conversant1, pic=2);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -2898,7 +2877,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetPortrait(Conversant1, pic=1);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -2941,7 +2920,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 3
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -2969,7 +2948,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetPortrait(Conversant3, pic=2);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -3087,7 +3066,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3182,7 +3161,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetPortrait(Conversant3, pic=1);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 4
@@ -3204,8 +3183,8 @@ MonoBehaviour:
         y: 606.91046
         width: 160
         height: 30
-    canvasScrollPosition: {x: 81.704575, y: 10.476303}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 44.261066, y: 0}
+    canvasZoom: 0.7000003
   - id: 5
     fields:
     - title: Title
@@ -3291,7 +3270,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetPortrait(Conversant3, pic=3);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -3406,7 +3385,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 3
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -3435,7 +3414,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetPortrait(Conversant3, pic=2);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -3482,7 +3461,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 3
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3549,7 +3528,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 3
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -3622,7 +3601,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 3
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -3693,7 +3672,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 3
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -3722,8 +3701,6 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Sequence
         value: 'SetContinueMode(false);
-
-          SetPortrait(Conversant3, pic=4);
 
           SetContinueMode(true)@3;'
         type: 0
@@ -3772,7 +3749,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 3
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3839,7 +3816,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 3
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -3867,78 +3844,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetPortrait(Conversant3, pic=4);
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 5
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 5
-        originDialogueID: 8
-        destinationConversationID: 5
-        destinationDialogueID: 9
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 150.1978
-        y: 468.6813
-        width: 160
-        height: 30
-    - id: 9
-      fields:
-      - title: Title
         value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Be ready Zyana, he is coming.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: SetPortrait(Conversant1, pic=2);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 5
@@ -3956,8 +3862,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 151.51358
-        y: 521.3128
+        x: 150.1978
+        y: 468.6813
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 23.897348}
@@ -4047,7 +3953,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetPortrait(Conversant1, pic=1);
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4071,7 +3977,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 299
+        x: 296.9592
         y: 63
         width: 160
         height: 30
@@ -4118,7 +4024,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetPortrait(Conversant1, pic=1);
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4190,7 +4098,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4262,7 +4172,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4333,7 +4245,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4404,7 +4318,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4475,7 +4391,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4499,7 +4417,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 299
+        x: 297.0392
         y: 363
         width: 160
         height: 30
@@ -4547,7 +4465,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4618,7 +4538,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4661,7 +4583,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 4
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -4690,7 +4612,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetPortrait(Conversant4, pic=3);
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4737,7 +4661,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4761,7 +4685,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4785,7 +4711,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 299
+        x: 297.0392
         y: 563
         width: 160
         height: 30
@@ -4804,7 +4730,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 4
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -4832,7 +4758,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4879,7 +4807,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4903,7 +4831,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -4925,8 +4855,8 @@ MonoBehaviour:
         y: 663
         width: 160
         height: 30
-    canvasScrollPosition: {x: 69.79582, y: 47.29585}
-    canvasZoom: 0.49000034
+    canvasScrollPosition: {x: 82.30627, y: 34.56584}
+    canvasZoom: 0.50999993
   - id: 7
     fields:
     - title: Title
@@ -5928,7 +5858,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Actor["Conversant1"].Display_Name = "Zyana"
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
