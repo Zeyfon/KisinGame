@@ -7,11 +7,6 @@ public class MissileBodyTrigger : MonoBehaviour
     bool positionReached = false;
     HomingMissile homingMissile;
 
-    void Start()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.parent == null) return;
@@ -21,6 +16,9 @@ public class MissileBodyTrigger : MonoBehaviour
             print("Found Player");
             homingMissile.MissileCollisioned();
             GetComponent<Collider2D>().enabled = false;
+            homingMissile.PlayerAlreadyDamaged();
+            transform.parent.GetComponent<DamageSender>().SendDamageToPlayer(homingMissile.damage, collision.transform.parent.transform);
+
             return;
         }
 
