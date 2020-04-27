@@ -1497,8 +1497,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: There is a very high Pixan concentration in front, this is an entity
-          like no one before. Be sure you are ready before proceed.
+        value: 'There is a very high Pixan concentration in front.
+
+          This entity is much stronger that the foes we have encounter so far.'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1514,7 +1515,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@6;'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 2
@@ -1528,7 +1531,7 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 3
         destinationConversationID: 2
-        destinationDialogueID: 4
+        destinationDialogueID: 5
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1569,7 +1572,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Izel! I\u2019m coming for you!"
+        value: For Izel I will surpass any challenge I have in front.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1585,7 +1588,155 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3;'
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 4
+        destinationConversationID: 2
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 157.51936
+        y: 334.79324
+        width: 160
+        height: 30
+    - id: 5
+      fields:
+      - title: Title
         value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Proceed with caution Zyana.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3;'
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 5
+        destinationConversationID: 2
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 154.97968
+        y: 281.123
+        width: 160
+        height: 30
+    - id: 6
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "Izel!! I\u2019m coming for you!"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 'SetContinueMode(false);
+
+          SetContinueMode(true)@3;'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 2
@@ -1603,12 +1754,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 150
-        y: 269
+        x: 157.59494
+        y: 394.405
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.94000006
+    canvasScrollPosition: {x: 24.392063, y: 24.275307}
+    canvasZoom: 0.8800001
   - id: 3
     fields:
     - title: Title
@@ -5428,7 +5579,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: AAAAhhhhhh
+        value: AAAAhhhhhh!!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -5500,7 +5651,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: You really impress me, you manage to win against all that Pixan, you
-          really are unique
+          really are unique.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -5571,7 +5722,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I can see that.
+        value: I can see that...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -5683,7 +5834,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8800001
+    canvasZoom: 0.6700003
   - id: 8
     fields:
     - title: Title
@@ -6839,8 +6990,8 @@ MonoBehaviour:
         y: 326
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8800001
+    canvasScrollPosition: {x: 40.999138, y: 47.96125}
+    canvasZoom: 0.8500001
   - id: 10
     fields:
     - title: Title
