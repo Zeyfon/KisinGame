@@ -56,6 +56,10 @@ MonoBehaviour:
       value: '#0020ffff'
       type: 0
       typeString: CustomFieldType_Text
+    - title: Display Name
+      value: 
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: -6967163022132932214, guid: a1164f77f95f62346be90618bf0dd515,
       type: 3}
@@ -84,6 +88,10 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: NodeColor
       value: '#ffffffff'
+      type: 0
+      typeString: 
+    - title: Display Name
+      value: 
       type: 0
       typeString: 
     portrait: {fileID: 0}
@@ -126,7 +134,7 @@ MonoBehaviour:
   - id: 4
     fields:
     - title: Name
-      value: Coinversant4
+      value: Conversant4
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -222,7 +230,7 @@ MonoBehaviour:
       defaultPlayerSequence: 
       defaultResponseMenuSequence: 
       overrideInputSettings: 1
-      alwaysForceResponseMenu: 1
+      alwaysForceResponseMenu: 0
       includeInvalidEntries: 0
       responseTimeout: 0
     nodeColor: 
@@ -242,11 +250,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -292,14 +300,16 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Actor["Conversant1"].Display_Name = "Zyana";
+
+        Actor["Conversant2"].Display_Name = "????";'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 208.86365
-        y: 20
+        y: 18.507462
         width: 160
         height: 30
     - id: 1
@@ -370,7 +380,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 207.72726
-        y: 71.13637
+        y: 72.62891
         width: 160
         height: 30
     - id: 3
@@ -578,13 +588,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Actor["Conversant2"].Display_Name = "Kisin";
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 207.67125
+        x: 209.1638
         y: 241.9178
         width: 160
         height: 30
@@ -1224,8 +1234,8 @@ MonoBehaviour:
         y: 710.8833
         width: 160
         height: 30
-    canvasScrollPosition: {x: 95.279236, y: 20.143158}
-    canvasZoom: 0.6700002
+    canvasScrollPosition: {x: 35.526398, y: 0}
+    canvasZoom: 0.5800003
   - id: 2
     fields:
     - title: Title
@@ -3194,8 +3204,8 @@ MonoBehaviour:
         y: 606.91046
         width: 160
         height: 30
-    canvasScrollPosition: {x: 81.704575, y: 10.476303}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 44.261066, y: 0}
+    canvasZoom: 0.7000003
   - id: 5
     fields:
     - title: Title
@@ -5918,7 +5928,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Actor["Conversant1"].Display_Name = "Zyana"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6401,7 +6411,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'SetContinueMode(false)
+        value: 'SetContinueMode(false);
 
           SetContinueMode(true)@3'
         type: 0

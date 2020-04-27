@@ -180,6 +180,11 @@ PrefabInstance:
       propertyPath: actor
       value: Conversant3
       objectReference: {fileID: 0}
+    - target: {fileID: 3364487885556584527, guid: 84458362e3d04514ab4edbd94c6053f0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4277438586150793016, guid: 84458362e3d04514ab4edbd94c6053f0,
         type: 3}
       propertyPath: m_Size.x
@@ -411,7 +416,8 @@ PrefabInstance:
       propertyPath: pFSM
       value: 
       objectReference: {fileID: 7519488534372456387}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8980562827458892411, guid: 84458362e3d04514ab4edbd94c6053f0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 84458362e3d04514ab4edbd94c6053f0, type: 3}
 --- !u!4 &8223034505802863071 stripped
 Transform:

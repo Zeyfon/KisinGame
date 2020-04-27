@@ -26,7 +26,7 @@ public class BossRoomDoor : MonoBehaviour
     {
         //print("Opening door for " + gameObject.name);
         skeletonAnimation.state.SetAnimation(0, "OpenDoor", false);
-
+        GetComponent<Collider2D>().enabled = false;
     }
 
 

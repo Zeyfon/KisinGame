@@ -48,7 +48,9 @@ public class BossRoomController : MonoBehaviour
 
     public void SetCurrentBoss(IBossStarter boss)
     {
+
         currentBoss = boss;
+        print(currentBoss + "  This Boss is loaded in BossRoomController");
         currentBossIsDead = false;
     }
 

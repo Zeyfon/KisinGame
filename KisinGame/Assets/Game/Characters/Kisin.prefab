@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1449200209129761659}
   - component: {fileID: 1449200209129761658}
   - component: {fileID: 9011567141690518473}
-  - component: {fileID: 5207596732447089153}
+  - component: {fileID: 2447490624321135369}
   m_Layer: 0
   m_Name: Kisin
   m_TagString: Untagged
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actor: Kisin
   persistentDataName: 
-  portrait: {fileID: 2800000, guid: 5c76421111a1a5642ad1910ed2b488f4, type: 3}
+  portrait: {fileID: 0}
   spritePortrait: {fileID: 0}
   barkUISettings:
     barkUI: {fileID: 0}
@@ -81,8 +81,8 @@ MonoBehaviour:
     onConversationStart:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 5207596732447089153}
-          m_MethodName: ConversationStartChecker
+        - m_Target: {fileID: 2447490624321135369}
+          m_MethodName: ConversationStart
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -95,8 +95,8 @@ MonoBehaviour:
     onConversationEnd:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 5207596732447089153}
-          m_MethodName: ConversationEndedChecker
+        - m_Target: {fileID: 2447490624321135369}
+          m_MethodName: ConversationEnded
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
     onDialogueSystemUnpause:
       m_PersistentCalls:
         m_Calls: []
---- !u!114 &5207596732447089153
+--- !u!114 &2447490624321135369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,6 +173,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1449200209129761661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6356f9f8f58ee241abc7c277ad136a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 06e3f148508ca134db8af81ba57ba081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mitlanCover: {fileID: 0}
+  conversationNum: 5
+  dialogueEntryNum: 6

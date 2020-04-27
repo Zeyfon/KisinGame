@@ -70,9 +70,6 @@ GameObject:
   - component: {fileID: 1705863516512640990}
   - component: {fileID: 9003486117012941913}
   - component: {fileID: 4541432397079317809}
-  - component: {fileID: 1686265556490251697}
-  - component: {fileID: 3364487885556584527}
-  - component: {fileID: 8980562827458892411}
   - component: {fileID: 4277438586466591998}
   - component: {fileID: 4277438586466591999}
   - component: {fileID: 4277438586466591970}
@@ -1146,155 +1143,6 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
---- !u!114 &1686265556490251697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4277438586466591971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e3f148508ca134db8af81ba57ba081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mitlanCover: {fileID: 141944322802694485, guid: 7dc7c892379e8e74db8aa4f785c3e145,
-    type: 3}
-  izelBoss: {fileID: 4277438586466591971}
-  mitlanBoss: {fileID: 0}
-  conversationNum: 5
-  dialogueEntryNum: 6
---- !u!114 &3364487885556584527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4277438586466591971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actor: Izel
-  persistentDataName: 
-  portrait: {fileID: 0}
-  spritePortrait: {fileID: 0}
-  barkUISettings:
-    barkUI: {fileID: 0}
-    barkUIOffset: {x: 0, y: 2, z: 0}
-  standardDialogueUISettings:
-    subtitlePanelNumber: 0
-    customSubtitlePanel: {fileID: 0}
-    customSubtitlePanelOffset: {x: 0, y: 0, z: 0}
-    menuPanelNumber: 0
-    customMenuPanel: {fileID: 0}
-    customMenuPanelOffset: {x: 0, y: 0, z: 0}
-    useMenuPanelFor: 0
-    portraitAnimatorController: {fileID: 0}
-    setSubtitleColor: 0
-    applyColorToPrependedName: 0
-    prependActorNameSeparator: ': '
-    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &8980562827458892411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4277438586466591971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1686265556490251697}
-          m_MethodName: ConversationEnded
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1686265556490251697}
-          m_MethodName: ActivatePhaseThree
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!33 &4277438586466591998
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1399,14 +1247,14 @@ MonoBehaviour:
     name: Health
     startState: Initialized
     states:
-    - name: HealthThreshold Setup
+    - name: Generla Boss Setup
       description: General Bosses
-      colorIndex: 0
+      colorIndex: 5
       position:
         serializedVersion: 2
-        x: 590.875
-        y: 337.4453
-        width: 180
+        x: 901.875
+        y: 371.4453
+        width: 159
         height: 32
       isBreakpoint: 0
       isSequence: 1
@@ -6505,8 +6353,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 609.72656
-        y: 107.078125
+        x: 604.72656
+        y: 103.765625
         width: 100
         height: 48
       isBreakpoint: 0
@@ -6525,7 +6373,7 @@ MonoBehaviour:
           name: No
           isSystemEvent: 0
           isGlobal: 0
-        toState: LookingFor GameManager
+        toState: Check which Boss is
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -6793,8 +6641,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 599
-        y: 191
+        x: 910
+        y: 209
         width: 203
         height: 48
       isBreakpoint: 0
@@ -6915,8 +6763,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 878
-        y: 193
+        x: 1168
+        y: 223
         width: 100
         height: 32
       isBreakpoint: 0
@@ -6979,10 +6827,10 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 596
-        y: 255
+        x: 906
+        y: 291
         width: 187
-        height: 80
+        height: 48
       isBreakpoint: 0
       isSequence: 1
       hideUnused: 0
@@ -6999,61 +6847,21 @@ MonoBehaviour:
           name: No
           isSystemEvent: 0
           isGlobal: 0
-        toState: HealthThreshold Setup
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: IzelBossHealthSet
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: HealthThreshold Setup1
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: MitlanBossHealtSet
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: Mitlan Boss
+        toState: Generla Boss Setup
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetOwner
-        - HutongGames.PlayMaker.Actions.GameObjectCompareTag
-        - HutongGames.PlayMaker.Actions.GameObjectCompareTag
         - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
-        - 
-        - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000001000000070000000d000000
-        actionHashCodes: 5c0045057b3126027b312602a4c8bf00
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: a4c8bf00
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 1
-          name: boss
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: boss
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: boss
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
+        fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
@@ -7061,19 +6869,7 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Izel
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Mitlan
+        fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -7081,18 +6877,6 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams: []
         fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         - useVariable: 1
           name: bossDefeated
           tooltip: 
@@ -7105,45 +6889,28 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - IzelBossHealthSet
-        - 
-        - MitlanBossHealtSet
-        - 
         - Yes
         - No
-        byteData: 000000
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1300000013000000120000001700000017000000110000000100000013000000120000001700000017000000110000000100000011000000170000001700000001000000
+        paramDataType: 11000000170000001700000001000000
         paramName:
-        - storeGameObject
-        - gameObject
-        - tag
-        - trueEvent
-        - falseEvent
-        - storeResult
-        - everyFrame
-        - gameObject
-        - tag
-        - trueEvent
-        - falseEvent
-        - storeResult
-        - everyFrame
         - boolVariable
         - isTrue
         - isFalse
         - everyFrame
-        paramDataPos: 0000000001000000000000000000000001000000000000000000000002000000010000000200000003000000010000000100000002000000040000000500000002000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     - name: Destroy Self
       description: Already Defeated
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 892
-        y: 275
+        x: 1140
+        y: 310
         width: 128.5
         height: 16
       isBreakpoint: 0
@@ -9727,7 +9494,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetOwner
+        - HutongGames.PlayMaker.Actions.GetParent
         - HutongGames.PlayMaker.Actions.GameObjectCompareTag
         - HutongGames.PlayMaker.Actions.GameObjectCompareTag
         customNames:
@@ -9736,29 +9503,37 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000000100000007000000
-        actionHashCodes: 5c0045057b3126027b312602
+        actionStartIndex: 000000000200000008000000
+        actionHashCodes: d97b72027b3126027b312602
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: boss
+          name: bossParent
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: boss
+          name: bossParent
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name: boss
+          name: bossParent
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -9812,9 +9587,10 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 13000000130000001200000017000000170000001100000001000000130000001200000017000000170000001100000001000000
+        paramDataType: 1400000013000000130000001200000017000000170000001100000001000000130000001200000017000000170000001100000001000000
         paramName:
-        - storeGameObject
+        - gameObject
+        - storeResult
         - gameObject
         - tag
         - trueEvent
@@ -9827,18 +9603,18 @@ MonoBehaviour:
         - falseEvent
         - storeResult
         - everyFrame
-        paramDataPos: 00000000010000000000000000000000010000000000000000000000020000000100000002000000030000000100000001000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
-    - name: HealthThreshold Setup1
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000020000000100000002000000030000000100000001000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
+    - name: Izel Setup
       description: IzelBoss
-      colorIndex: 0
+      colorIndex: 5
       position:
         serializedVersion: 2
-        x: 833.77344
-        y: 347.9922
-        width: 189
+        x: 595.77344
+        y: 350.9922
+        width: 100
         height: 32
-      isBreakpoint: 0
+      isBreakpoint: 1
       isSequence: 1
       hideUnused: 0
       transitions:
@@ -9948,16 +9724,16 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000001000000000000000200000003000000010000000400000005000000020000000600000006000000
         paramByteDataSize: 0000000000000000010000000000000000000000010000000000000000000000040000000000000001000000
-    - name: Mitlan Boss
+    - name: Mitlan Setup
       description: 
-      colorIndex: 0
+      colorIndex: 5
       position:
         serializedVersion: 2
-        x: 1069.7969
-        y: 324.58594
-        width: 105
+        x: 589.7969
+        y: 303.58594
+        width: 112
         height: 32
-      isBreakpoint: 0
+      isBreakpoint: 1
       isSequence: 0
       hideUnused: 0
       transitions:
@@ -10025,6 +9801,156 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000001000000
+    - name: Check which Boss is
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 599
+        y: 197
+        width: 163
+        height: 64
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: LookingFor GameManager
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: MitlanBossHealtSet
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Mitlan Setup
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: IzelBossHealthSet
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Izel Setup
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetParent
+        - HutongGames.PlayMaker.Actions.GameObjectCompareTag
+        - HutongGames.PlayMaker.Actions.GameObjectCompareTag
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000200000008000000
+        actionHashCodes: d97b72027b3126027b312602
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: bossParent
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: bossParent
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: bossParent
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Izel
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Mitlan
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - IzelBossHealthSet
+        - 
+        - MitlanBossHealtSet
+        - 
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000013000000130000001200000017000000170000001100000001000000130000001200000017000000170000001100000001000000
+        paramName:
+        - gameObject
+        - storeResult
+        - gameObject
+        - tag
+        - trueEvent
+        - falseEvent
+        - storeResult
+        - everyFrame
+        - gameObject
+        - tag
+        - trueEvent
+        - falseEvent
+        - storeResult
+        - everyFrame
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000000000000020000000100000002000000030000000100000001000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -10361,6 +10287,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: bossParent
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -10372,7 +10304,7 @@ MonoBehaviour:
       - Health Thresholds
       - saveKeyName
       - Set GameObjects
-      variableCategoryIDs: 000000000100000001000000000000000000000001000000020000000100000000000000000000000100000002000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000030000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000
+      variableCategoryIDs: 00000000010000000100000000000000000000000100000002000000010000000000000000000000010000000200000001000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0

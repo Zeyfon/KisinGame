@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1013691957143035636, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: actor
+      value: Mitlan
+      objectReference: {fileID: 0}
     - target: {fileID: 1242674954695474966, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -16,6 +21,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level3Boss Mitlan
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067623614171947559, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Mitlan
       objectReference: {fileID: 0}
     - target: {fileID: 4522583929716561828, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
         type: 3}
@@ -82,6 +92,62 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8248559182950814399, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248559182950814399, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248559182950814399, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248559182950814399, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248559182950814399, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8972868205915354271}
+    - target: {fileID: 8248559182950814399, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248559182950814399, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ConversationEnded
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248559182950814399, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248559182950814399, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnConversationLineEnded
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248559182950814399, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285775072336583123, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+        type: 3}
+      propertyPath: mitlanCover
+      value: 
+      objectReference: {fileID: 141944322802694485, guid: 7dc7c892379e8e74db8aa4f785c3e145,
+        type: 3}
     - target: {fileID: 8644751746441013253, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
         type: 3}
       propertyPath: offset.y
@@ -100,6 +166,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1043415165394201932}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8972868205915354271 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8285775072336583123, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1043415165394201932}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e3f148508ca134db8af81ba57ba081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2252972825146446425 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1242674954695474965, guid: 8d8fc16629c878f4fb38c1508ffd10a6,
@@ -251,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 2704911581146703614, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
         type: 3}
       propertyPath: m_TagString
-      value: Mitlan
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3711731242786280787, guid: 44a55bfbb559ebc48aae1c48cce50ee7,
         type: 3}

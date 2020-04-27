@@ -26,6 +26,7 @@ public class HomingMissile : MonoBehaviour
     bool canDamage = true;
     Vector3 targetPosition;
     bool collided = false;
+    bool isPlayerAlreadyDamaged = false;
 
     IEnumerator Start()
     {
@@ -104,10 +105,16 @@ public class HomingMissile : MonoBehaviour
         transform.rotation = new Quaternion(0, 0, 0, 0);
     }
 
+    public void PlayerAlreadyDamaged()
+    {
+        isPlayerAlreadyDamaged = true;
+    }
+
     #endregion
     //Animation Event
     void ExplosionTriggerEnabled_Missile()
     {
+        if (isPlayerAlreadyDamaged) return;
         transform.GetChild(0).GetComponent<Collider2D>().enabled = true;
     }
     //Animation Event
