@@ -17,7 +17,7 @@ public class MovingPlatforms : MonoBehaviour
     {
         pos1 = transform.GetChild(0).transform.position;
         pos2 = transform.GetChild(1).transform.position;
-
+        line.position = pos1;
         platformTrans = transform.GetChild(2).transform;
         StartCoroutine(GetLineReady());
     }
