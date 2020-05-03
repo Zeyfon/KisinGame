@@ -91,23 +91,24 @@ public class ComboAttackL1B : MonoBehaviour, IFlipValues
                 attackCollider.size = new Vector2(3, 2.5f);
                 attackCollider.enabled = true;
                 GetComponent<SoundsConnection>().SendSoundEventToFSM("CloseAttack3");
-                CameraShake();
-
+                StartCoroutine(CameraShake());
                 break;
             default:
                 break;
         }
     }
 
-    private void CameraShake()
+    IEnumerator CameraShake()
     {
         if (!cameraShaker) cameraShaker = transform.parent.transform.parent.GetComponent<CameraShakeController>();
+        yield return new WaitForSeconds(0.2f);
         cameraShaker.ShakeCamera();
     }
 
     //Animation Event
     void AttackTrigger_Disabled()
     {
+        print("Attack Trigger Disabled");
         attackCollider.enabled = false;
     }
     //Animation Event
