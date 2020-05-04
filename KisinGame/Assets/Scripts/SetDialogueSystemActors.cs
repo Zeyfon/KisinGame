@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
+using HutongGames.PlayMaker;
 
 public class SetDialogueSystemActors : MonoBehaviour
 {
@@ -25,6 +26,5 @@ public class SetDialogueSystemActors : MonoBehaviour
         }
         GetComponent<DialogueSystemTrigger>().conversationActor = actor;
         GetComponent<DialogueSystemTrigger>().conversationConversant = conversant;
-
     }
 }
