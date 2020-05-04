@@ -184,7 +184,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   explotionSound: {fileID: 0}
   bodyTrigger: {fileID: 7333667518204299980}
-  explosionTrigger: {fileID: 4496741463419114725}
+  explosionTrigger: {fileID: 0}
 --- !u!114 &5991249961931361138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,8 +303,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4496741463419114723}
-  - component: {fileID: 4496741463419114725}
   - component: {fileID: 7151601272850541262}
+  - component: {fileID: 4131736965157746936}
   m_Layer: 17
   m_Name: ExplosionTrigger
   m_TagString: Untagged
@@ -326,22 +326,6 @@ Transform:
   m_Father: {fileID: 224796951992105377}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &4496741463419114725
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4496741463419114722}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00022099912, y: 0.9}
-  m_Size: {x: 3.4, y: 3}
-  m_Direction: 1
 --- !u!114 &7151601272850541262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +338,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b799e3c16d26a14d81486b0d23585d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &4131736965157746936
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496741463419114722}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.07
 --- !u!1 &4760488500001478547
 GameObject:
   m_ObjectHideFlags: 0

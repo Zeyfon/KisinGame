@@ -148,27 +148,27 @@ public class BossRoomController : MonoBehaviour
     #region BossRoomDoors
     void SetDoorsBeforeBossFight()
     {
-        continueDoor.GetComponent<BossRoomDoor>().OpenedState();
-        backtrackingLimitDoor.GetComponent<BossRoomDoor>().OpenedState();
+        continueDoor.GetComponent<Door>().OpenedState();
+        backtrackingLimitDoor.GetComponent<Door>().OpenedState();
     }
 
     void CloseDoors()
     {
-        backtrackingLimitDoor.GetComponent<BossRoomDoor>().CloseDoor();
-        continueDoor.GetComponent<BossRoomDoor>().CloseDoor();
+        backtrackingLimitDoor.GetComponent<Door>().CloseDoor();
+        continueDoor.GetComponent<Door>().CloseDoor();
         GetComponent<AudioSource>().PlayOneShot(closeDoor, closeDoorsVolume);
     }
 
     void OpenContinueDoor()
     {
-        continueDoor.GetComponent<BossRoomDoor>().OpenDoor();
+        continueDoor.GetComponent<Door>().OpenDoor();
         GetComponent<AudioSource>().PlayOneShot(openDoor, openDoorsVolume);
     }
 
     private void SetDoorsAfterBossDefeated()
     {
-        backtrackingLimitDoor.GetComponent<BossRoomDoor>().ClosedState();
-        continueDoor.GetComponent<BossRoomDoor>().OpenedState();
+        backtrackingLimitDoor.GetComponent<Door>().ClosedState();
+        continueDoor.GetComponent<Door>().OpenedState();
     }
     #endregion
 

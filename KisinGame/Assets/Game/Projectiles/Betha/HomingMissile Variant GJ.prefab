@@ -11,6 +11,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224796951992105374, guid: 694ad3f6f429db44bb1d811fd546b9de,
         type: 3}
       propertyPath: m_Name
@@ -79,7 +95,7 @@ PrefabInstance:
     - target: {fileID: 3858109141508031818, guid: 694ad3f6f429db44bb1d811fd546b9de,
         type: 3}
       propertyPath: height
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3858109141508031818, guid: 694ad3f6f429db44bb1d811fd546b9de,
         type: 3}
@@ -91,6 +107,11 @@ PrefabInstance:
       propertyPath: explotionSound
       value: 
       objectReference: {fileID: 8300000, guid: 0c1e1bb0443a3544ebb9a352cd89113a, type: 3}
+    - target: {fileID: 3858109141508031818, guid: 694ad3f6f429db44bb1d811fd546b9de,
+        type: 3}
+      propertyPath: explosionTrigger
+      value: 
+      objectReference: {fileID: 2205726359120394195}
     - target: {fileID: 4496741463419114724, guid: 694ad3f6f429db44bb1d811fd546b9de,
         type: 3}
       propertyPath: damage
@@ -113,3 +134,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 694ad3f6f429db44bb1d811fd546b9de, type: 3}
+--- !u!58 &2205726359120394195 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4131736965157746936, guid: 694ad3f6f429db44bb1d811fd546b9de,
+    type: 3}
+  m_PrefabInstance: {fileID: 2867298240641224491}
+  m_PrefabAsset: {fileID: 0}

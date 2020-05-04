@@ -21,6 +21,7 @@ public class CrystalBallAttack : MonoBehaviour
     [SerializeField] float rotationTime = 6;
     [UnityEngine.Tooltip("Distance from the Boss")]
     [SerializeField] float distanceFromOrigin = 2;
+    [SerializeField] float timeBetweenActivatingCrystalBalls = 2;
 
     [SerializeField] List<Transform> crystalBalls = new List<Transform>();
     List<int> weaknesses = new List<int> { 1, 2, 3 };
@@ -221,10 +222,11 @@ public class CrystalBallAttack : MonoBehaviour
             {
                 if (crystalBall.gameObject.activeInHierarchy)
                 {
+                    yield return new WaitForSeconds(timeBetweenActivatingCrystalBalls);
                     crystalBall.GetComponent<CrystalBall>().StartAttack();
                     currentActiveBalls++;
                 }
-                yield return new WaitForSeconds(1f);
+
             }
         }
         FinishedBallAttack();

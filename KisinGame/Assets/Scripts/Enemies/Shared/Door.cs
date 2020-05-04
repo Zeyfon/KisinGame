@@ -4,7 +4,7 @@ using UnityEngine;
 using Spine;
 using Spine.Unity;
 
-public class BossRoomDoor : MonoBehaviour
+public class Door : MonoBehaviour
 {
     SkeletonAnimation skeletonAnimation;
 

@@ -23,23 +23,23 @@ public class CrystalRainAttack : MonoBehaviour
         rainSlots = bossController.transform.parent.GetChild(5).GetComponent<CrystalRainAttackList>().crystalRainList;
         initialPosition = rainSlots[0].transform.position;
         mitlanActive = GetComponent<Level3Boss>().MitlanIsActive();
-
     }
 
     //Animation Event. Produce Sound
     void CrystalRain_Starts()
     {
+        SetRainSlotsToInitialPosition();
         GetComponent<SoundsConnection>().SendSoundEventToFSM("CrystalRainAttackStart");
-        ResetPositions();
         StartCoroutine(RainSlotsActions()); 
     }
 
-    void ResetPositions()
+    void SetRainSlotsToInitialPosition()
     {
         foreach(Transform rainSlot2 in rainSlots)
         {
-            rainSlot2.position = new Vector3(rainSlot2.position.x,initialPosition.y,0);
+            rainSlot2.GetComponent<CrystalRainSlot>().SetInitialPosition();
         }
+        Debug.Break();
     }
 
     IEnumerator RainSlotsActions()
@@ -47,7 +47,7 @@ public class CrystalRainAttack : MonoBehaviour
 
         List<Transform> currentActiveRainSlots = new List<Transform>();
         int phase = GetComponent<Level3Boss>().phase;
-        print("CrystalRain phase " + phase);
+        //print("CrystalRain phase " + phase);
         ActivateRainSlots(currentActiveRainSlots, phase);
         yield return new WaitForSeconds(timetoStartRainAttack);
         StartCoroutine(StartRainSlotAttack(currentActiveRainSlots));

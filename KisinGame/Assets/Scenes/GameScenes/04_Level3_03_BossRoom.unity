@@ -1738,6 +1738,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7867795066175516604, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
+        type: 3}
+      propertyPath: rainTimerThreshold
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8189546985569467547, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
         type: 3}
       propertyPath: m_Mesh
@@ -1778,6 +1783,11 @@ PrefabInstance:
       propertyPath: fsm.states.Array.data[44].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
       value: 
       objectReference: {fileID: 1693679014}
+    - target: {fileID: 8649862720369316293, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
+        type: 3}
+      propertyPath: fsm.variables.intVariables.Array.data[9].value
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 8935757727691603955, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
         type: 3}
       propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.size
@@ -2019,10 +2029,45 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4803869400340907691, guid: d10975d2368b4054ca32e2ae62513833,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803869400497459364, guid: d10975d2368b4054ca32e2ae62513833,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803869400938616224, guid: d10975d2368b4054ca32e2ae62513833,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803869401141871759, guid: d10975d2368b4054ca32e2ae62513833,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803869402181513937, guid: d10975d2368b4054ca32e2ae62513833,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803869402340017626, guid: d10975d2368b4054ca32e2ae62513833,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5158072342594150193, guid: d10975d2368b4054ca32e2ae62513833,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158072342931992006, guid: d10975d2368b4054ca32e2ae62513833,
+        type: 3}
+      propertyPath: m_Name
+      value: CrystalRainElements
       objectReference: {fileID: 0}
     - target: {fileID: 5158072343058642161, guid: d10975d2368b4054ca32e2ae62513833,
         type: 3}
@@ -2182,7 +2227,7 @@ PrefabInstance:
     - target: {fileID: 8424040949908728589, guid: d10975d2368b4054ca32e2ae62513833,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9165215403642344035, guid: d10975d2368b4054ca32e2ae62513833,
         type: 3}
@@ -2229,11 +2274,6 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.editorFlags
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684215261263322304, guid: b5211a2bb0e5bbd4197e924494167a2e,
-        type: 3}
-      propertyPath: timeBetweenRainSlotsAttack
-      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2252972825146446426, guid: b5211a2bb0e5bbd4197e924494167a2e,
         type: 3}
@@ -2480,6 +2520,11 @@ PrefabInstance:
       propertyPath: fsm.states.Array.data[44].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
       value: 
       objectReference: {fileID: 1693679014}
+    - target: {fileID: 8158272383406896827, guid: b5211a2bb0e5bbd4197e924494167a2e,
+        type: 3}
+      propertyPath: fsm.variables.intVariables.Array.data[9].value
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 8189546985569467547, guid: b5211a2bb0e5bbd4197e924494167a2e,
         type: 3}
       propertyPath: m_Mesh

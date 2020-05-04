@@ -1,0 +1,104 @@
+{
+"skeleton": {
+	"hash": "Ste3xN0LCKxU2EMDvKrhqo8EcAo",
+	"spine": "3.8.95",
+	"x": -111.48,
+	"y": -52.22,
+	"width": 223.48,
+	"height": 140.22,
+	"images": "./images/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "y": 18 },
+	{ "name": "bone2", "parent": "root", "y": 10 }
+],
+"slots": [
+	{ "name": "flecha", "bone": "bone", "attachment": "flecha" },
+	{ "name": "brillo", "bone": "bone2", "attachment": "brillo" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"brillo": {
+				"brillo": { "x": 0.02, "y": 7.28, "width": 223, "height": 139 }
+			},
+			"flecha": {
+				"flecha": { "x": 0.5, "y": 0.5, "width": 223, "height": 139 }
+			}
+		}
+	}
+],
+"animations": {
+	"flecha_brillo": {
+		"slots": {
+			"brillo": {
+				"color": [
+					{ "color": "ffffffff", "curve": 0.108, "c2": 0.34, "c3": 0.626, "c4": 0.9 },
+					{ "time": 1, "color": "ffffff7f", "curve": 0.613, "c2": 0.24, "c3": 0.405, "c4": 0.89 },
+					{ "time": 2, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				],
+				"translate": [
+					{ "curve": 0.108, "c2": 0.34, "c3": 0.626, "c4": 0.9 },
+					{ "time": 1, "y": -1.94, "curve": 0.613, "c2": 0.24, "c3": 0.405, "c4": 0.89 },
+					{ "time": 2 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				],
+				"shear": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				]
+			},
+			"bone": {
+				"rotate": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				],
+				"shear": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				],
+				"shear": [
+					{ "curve": "stepped" },
+					{ "time": 2 }
+				]
+			}
+		}
+	}
+}
+}
