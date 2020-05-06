@@ -1,8 +1,8 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated May 1, 2019. Replaces all prior versions.
+ * Last updated January 1, 2020. Replaces all prior versions.
  *
- * Copyright (c) 2013-2019, Esoteric Software LLC
+ * Copyright (c) 2013-2020, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
@@ -15,16 +15,16 @@
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
  *
- * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
- * NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, BUSINESS
- * INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
+ * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #if UNITY_2018_3 || UNITY_2019 || UNITY_2018_3_OR_NEWER
@@ -70,6 +70,10 @@ namespace Spine.Unity {
 
 		public static PolygonCollider2D AddBoundingBoxGameObject (string name, BoundingBoxAttachment box, Slot slot, Transform parent, bool isTrigger = true) {
 			var go = new GameObject("[BoundingBox]" + (string.IsNullOrEmpty(name) ? box.Name : name));
+#if UNITY_EDITOR
+			if (!Application.isPlaying)
+				UnityEditor.Undo.RegisterCreatedObjectUndo(go, "Spawn BoundingBox");
+# endif
 			var got = go.transform;
 			got.parent = parent;
 			got.localPosition = Vector3.zero;
@@ -124,19 +128,74 @@ namespace Spine.Unity {
 		public delegate void SkeletonUtilityDelegate ();
 		public event SkeletonUtilityDelegate OnReset;
 		public Transform boneRoot;
+		/// <summary>
+		/// If true, <see cref="Skeleton.ScaleX"/> and <see cref="Skeleton.ScaleY"/> are followed
+		/// by 180 degree rotation. If false, negative Transform scale is used.
+		/// Note that using negative scale is consistent with previous behaviour (hence the default),
+		/// however causes serious problems with rigidbodies and physics. Therefore, it is recommended to
+		/// enable this parameter where possible. When creating hinge chains for a chain of skeleton bones
+		/// via <see cref="SkeletonUtilityBone"/>, it is mandatory to have <c>flipBy180DegreeRotation</c> enabled.
+		/// </summary>
+		public bool flipBy180DegreeRotation = false;
 
 		void Update () {
-			var skeleton = skeletonRenderer.skeleton;
+			var skeleton = skeletonComponent.Skeleton;
 			if (skeleton != null && boneRoot != null) {
-				boneRoot.localScale = new Vector3(skeleton.ScaleX, skeleton.ScaleY, 1f);
+
+				if (flipBy180DegreeRotation) {
+					boneRoot.localScale = new Vector3(Mathf.Abs(skeleton.ScaleX), Mathf.Abs(skeleton.ScaleY), 1f);
+					boneRoot.eulerAngles = new Vector3(skeleton.ScaleY > 0 ? 0 : 180,
+																	skeleton.ScaleX > 0 ? 0 : 180,
+																	0);
+				}
+				else {
+					boneRoot.localScale = new Vector3(skeleton.ScaleX, skeleton.ScaleY, 1f);
+				}
+			}
+
+			if (canvas != null) {
+				positionScale = canvas.referencePixelsPerUnit;
 			}
 		}
 
 		[HideInInspector] public SkeletonRenderer skeletonRenderer;
-		[HideInInspector] public ISkeletonAnimation skeletonAnimation;
+		[HideInInspector] public SkeletonGraphic skeletonGraphic;
+		private Canvas canvas;
+		[System.NonSerialized] public ISkeletonAnimation skeletonAnimation;
+
+		private ISkeletonComponent skeletonComponent;
 		[System.NonSerialized] public List<SkeletonUtilityBone> boneComponents = new List<SkeletonUtilityBone>();
 		[System.NonSerialized] public List<SkeletonUtilityConstraint> constraintComponents = new List<SkeletonUtilityConstraint>();
 
+
+		public ISkeletonComponent SkeletonComponent {
+			get {
+				if (skeletonComponent == null) {
+					skeletonComponent = skeletonRenderer != null ? skeletonRenderer.GetComponent<ISkeletonComponent>() :
+										skeletonGraphic != null ? skeletonGraphic.GetComponent<ISkeletonComponent>() :
+										GetComponent<ISkeletonComponent>();
+				}
+				return skeletonComponent;
+			}
+		}
+		public Skeleton Skeleton {
+			get {
+				if (SkeletonComponent == null)
+					return null;
+				return skeletonComponent.Skeleton;
+			}
+		}
+
+		public bool IsValid {
+			get {
+				return (skeletonRenderer != null && skeletonRenderer.valid) ||
+					(skeletonGraphic != null && skeletonGraphic.IsValid);
+			}
+		}
+
+		public float PositionScale { get { return positionScale; } }
+
+		float positionScale = 1.0f;
 		bool hasOverrideBones;
 		bool hasConstraints;
 		bool needToReprocessBones;
@@ -145,18 +204,38 @@ namespace Spine.Unity {
 			OnDisable();
 			OnEnable();
 		}
-		
+
 		void OnEnable () {
 			if (skeletonRenderer == null) {
 				skeletonRenderer = GetComponent<SkeletonRenderer>();
 			}
-
+			if (skeletonGraphic == null) {
+				skeletonGraphic = GetComponent<SkeletonGraphic>();
+			}
 			if (skeletonAnimation == null) {
-				skeletonAnimation = GetComponent(typeof(ISkeletonAnimation)) as ISkeletonAnimation;
+				skeletonAnimation = skeletonRenderer != null ? skeletonRenderer.GetComponent<ISkeletonAnimation>() :
+									skeletonGraphic != null ? skeletonGraphic.GetComponent<ISkeletonAnimation>() :
+									GetComponent<ISkeletonAnimation>();
+			}
+			if (skeletonComponent == null) {
+				skeletonComponent = skeletonRenderer != null ? skeletonRenderer.GetComponent<ISkeletonComponent>() :
+									skeletonGraphic != null ? skeletonGraphic.GetComponent<ISkeletonComponent>() :
+									GetComponent<ISkeletonComponent>();
 			}
 
-			skeletonRenderer.OnRebuild -= HandleRendererReset;
-			skeletonRenderer.OnRebuild += HandleRendererReset;
+			if (skeletonRenderer != null) {
+				skeletonRenderer.OnRebuild -= HandleRendererReset;
+				skeletonRenderer.OnRebuild += HandleRendererReset;
+			}
+			else if (skeletonGraphic != null) {
+				skeletonGraphic.OnRebuild -= HandleRendererReset;
+				skeletonGraphic.OnRebuild += HandleRendererReset;
+				canvas = skeletonGraphic.canvas;
+				if (canvas == null)
+					canvas = skeletonGraphic.GetComponentInParent<Canvas>();
+				if (canvas == null)
+					positionScale = 100.0f;
+			}
 
 			if (skeletonAnimation != null) {
 				skeletonAnimation.UpdateLocal -= UpdateLocal;
@@ -172,7 +251,10 @@ namespace Spine.Unity {
 		}
 
 		void OnDisable () {
-			skeletonRenderer.OnRebuild -= HandleRendererReset;
+			if (skeletonRenderer != null)
+				skeletonRenderer.OnRebuild -= HandleRendererReset;
+			if (skeletonGraphic != null)
+				skeletonGraphic.OnRebuild -= HandleRendererReset;
 
 			if (skeletonAnimation != null) {
 				skeletonAnimation.UpdateLocal -= UpdateLocal;
@@ -182,6 +264,11 @@ namespace Spine.Unity {
 		}
 
 		void HandleRendererReset (SkeletonRenderer r) {
+			if (OnReset != null) OnReset();
+			CollectBones();
+		}
+
+		void HandleRendererReset (SkeletonGraphic g) {
 			if (OnReset != null) OnReset();
 			CollectBones();
 		}
@@ -213,7 +300,7 @@ namespace Spine.Unity {
 		}
 
 		public void CollectBones () {
-			var skeleton = skeletonRenderer.skeleton;
+			var skeleton = skeletonComponent.Skeleton;
 			if (skeleton == null) return;
 
 			if (boneRoot != null) {
@@ -229,7 +316,10 @@ namespace Spine.Unity {
 				var boneComponents = this.boneComponents;
 				for (int i = 0, n = boneComponents.Count; i < n; i++) {
 					var b = boneComponents[i];
-					if (b.bone == null) continue;
+					if (b.bone == null) {
+						b.DoUpdate(SkeletonUtilityBone.UpdatePhase.Local);
+						if (b.bone == null) continue;
+					}
 					hasOverrideBones |= (b.mode == SkeletonUtilityBone.Mode.Override);
 					hasConstraints |= constraintTargets.Contains(b.bone);
 				}
@@ -290,8 +380,16 @@ namespace Spine.Unity {
 			if (boneRoot != null)
 				return boneRoot;
 
-			boneRoot = new GameObject("SkeletonUtility-SkeletonRoot").transform;
-			boneRoot.parent = transform;
+			var boneRootObject = new GameObject("SkeletonUtility-SkeletonRoot");
+#if UNITY_EDITOR
+			if (!Application.isPlaying)
+				UnityEditor.Undo.RegisterCreatedObjectUndo(boneRootObject, "Spawn Bone");
+#endif
+			if (skeletonGraphic != null)
+				boneRootObject.AddComponent<RectTransform>();
+
+			boneRoot = boneRootObject.transform;
+			boneRoot.SetParent(transform);
 			boneRoot.localPosition = Vector3.zero;
 			boneRoot.localRotation = Quaternion.identity;
 			boneRoot.localScale = Vector3.one;
@@ -301,7 +399,7 @@ namespace Spine.Unity {
 
 		public GameObject SpawnRoot (SkeletonUtilityBone.Mode mode, bool pos, bool rot, bool sca) {
 			GetBoneRoot();
-			Skeleton skeleton = this.skeletonRenderer.skeleton;
+			Skeleton skeleton = this.skeletonComponent.Skeleton;
 
 			GameObject go = SpawnBone(skeleton.RootBone, boneRoot, mode, pos, rot, sca);
 			CollectBones();
@@ -310,7 +408,7 @@ namespace Spine.Unity {
 
 		public GameObject SpawnHierarchy (SkeletonUtilityBone.Mode mode, bool pos, bool rot, bool sca) {
 			GetBoneRoot();
-			Skeleton skeleton = this.skeletonRenderer.skeleton;
+			Skeleton skeleton = this.skeletonComponent.Skeleton;
 			GameObject go = SpawnBoneRecursively(skeleton.RootBone, boneRoot, mode, pos, rot, sca);
 			CollectBones();
 			return go;
@@ -330,8 +428,15 @@ namespace Spine.Unity {
 
 		public GameObject SpawnBone (Bone bone, Transform parent, SkeletonUtilityBone.Mode mode, bool pos, bool rot, bool sca) {
 			GameObject go = new GameObject(bone.Data.Name);
+		#if UNITY_EDITOR
+			if (!Application.isPlaying)
+				UnityEditor.Undo.RegisterCreatedObjectUndo(go, "Spawn Bone");
+		#endif
+			if (skeletonGraphic != null)
+				go.AddComponent<RectTransform>();
+
 			var goTransform = go.transform;
-			goTransform.parent = parent;
+			goTransform.SetParent(parent);
 
 			SkeletonUtilityBone b = go.AddComponent<SkeletonUtilityBone>();
 			b.hierarchy = this;
@@ -347,7 +452,7 @@ namespace Spine.Unity {
 
 			if (mode == SkeletonUtilityBone.Mode.Override) {
 				if (rot) goTransform.localRotation = Quaternion.Euler(0, 0, b.bone.AppliedRotation);
-				if (pos) goTransform.localPosition = new Vector3(b.bone.X, b.bone.Y, 0);
+				if (pos) goTransform.localPosition = new Vector3(b.bone.X * positionScale, b.bone.Y * positionScale, 0);
 				goTransform.localScale = new Vector3(b.bone.scaleX, b.bone.scaleY, 0);
 			}
 

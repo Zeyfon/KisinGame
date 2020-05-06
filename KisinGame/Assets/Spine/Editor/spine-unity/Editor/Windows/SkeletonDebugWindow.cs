@@ -1,8 +1,8 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated May 1, 2019. Replaces all prior versions.
+ * Last updated January 1, 2020. Replaces all prior versions.
  *
- * Copyright (c) 2013-2019, Esoteric Software LLC
+ * Copyright (c) 2013-2020, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
@@ -15,16 +15,16 @@
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
  *
- * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
- * NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, BUSINESS
- * INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
+ * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 // With contributions from: Mitch Thompson
@@ -101,7 +101,7 @@ namespace Spine.Unity.Editor {
 			if (bone != null) {
 				SpineHandles.DrawBone(skeletonRenderer.transform, bone, 1.5f, Color.cyan);
 				Handles.Label(bone.GetWorldPosition(skeletonRenderer.transform) + (Vector3.down * 0.15f), bone.Data.Name, SpineHandles.BoneNameStyle);
-			}			
+			}
 		}
 
 		void OnSelectionChange () {
@@ -123,7 +123,7 @@ namespace Spine.Unity.Editor {
 				if (selectedSkeletonRenderer == null) {
 					noSkeletonRenderer = true;
 				} else if (skeletonRenderer != selectedSkeletonRenderer) {
-					
+
 					bone = null;
 					if (skeletonRenderer != null && skeletonRenderer.SkeletonDataAsset != selectedSkeletonRenderer.SkeletonDataAsset)
 						boneName = null;
@@ -139,7 +139,7 @@ namespace Spine.Unity.Editor {
 #endif
 					UpdateAttachments();
 				}
-			} 
+			}
 
 			if (noSkeletonRenderer) Clear();
 			Repaint();
@@ -194,7 +194,7 @@ namespace Spine.Unity.Editor {
 
 			EditorGUILayout.Space();
 			EditorGUI.BeginDisabledGroup(true);
-			EditorGUILayout.ObjectField(SpineInspectorUtility.TempContent("Debug Selection", Icons.spine), skeletonRenderer,  typeof(SkeletonRenderer), true);
+			EditorGUILayout.ObjectField(SpineInspectorUtility.TempContent("Debug Selection", Icons.spine), skeletonRenderer, typeof(SkeletonRenderer), true);
 			EditorGUI.EndDisabledGroup();
 
 			if (skeleton == null || skeletonRenderer == null) {
@@ -209,7 +209,7 @@ namespace Spine.Unity.Editor {
 
 			if (!skeletonRenderer.valid) {
 				EditorGUILayout.HelpBox("Spine Component is invalid. Check SkeletonData Asset.", MessageType.Error);
-				return;	
+				return;
 			}
 
 			if (activeSkin != skeleton.Skin)
@@ -471,7 +471,7 @@ namespace Spine.Unity.Editor {
 
 				showDrawOrderTree.target = EditorGUILayout.Foldout(showDrawOrderTree.target, SpineInspectorUtility.TempContent("Draw Order and Separators", Icons.slotRoot), BoldFoldoutStyle);
 
-				//var separatorSlotNamesField = 
+				//var separatorSlotNamesField =
 				//SpineInspectorUtility.ge
 				if (showDrawOrderTree.faded > 0) {
 					using (new SpineInspectorUtility.IndentScope()) {
@@ -501,7 +501,7 @@ namespace Spine.Unity.Editor {
 									}
 								}
 							}
-								
+
 						}
 					}
 				}
@@ -582,7 +582,7 @@ namespace Spine.Unity.Editor {
 				attachmentTable.Add(skeleton.Slots.Items[i], attachments);
 				// Add skin attachments.
 				skin.GetAttachments(i, attachments);
-				if (notDefaultSkin) // Add default skin attachments.
+				if (notDefaultSkin && defaultSkin != null) // Add default skin attachments.
 					defaultSkin.GetAttachments(i, attachments);
 			}
 

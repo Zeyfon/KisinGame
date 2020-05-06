@@ -1,8 +1,8 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated May 1, 2019. Replaces all prior versions.
+ * Last updated January 1, 2020. Replaces all prior versions.
  *
- * Copyright (c) 2013-2019, Esoteric Software LLC
+ * Copyright (c) 2013-2020, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
@@ -15,16 +15,16 @@
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
  *
- * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
- * NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, BUSINESS
- * INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
+ * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #if UNITY_2018_3 || UNITY_2019 || UNITY_2018_3_OR_NEWER
@@ -59,11 +59,14 @@ namespace Spine.Unity {
 		public bool freeze;
 		public bool unscaledTime;
 
+		private bool wasUpdatedAfterInit = true;
+		private Texture baseTexture = null;
+
 		#if UNITY_EDITOR
 		protected override void OnValidate () {
 			// This handles Scene View preview.
 			base.OnValidate ();
-			if (this.IsValid) { 
+			if (this.IsValid) {
 				if (skeletonDataAsset == null) {
 					Clear();
 				} else if (skeletonDataAsset.skeletonJSON == null) {
@@ -84,14 +87,14 @@ namespace Spine.Unity {
 							else
 								skeleton.SetSkin(skin);
 						}
-							
+
 					}
 
 					// Only provide visual feedback to inspector changes in Unity Editor Edit mode.
 					if (!Application.isPlaying) {
 						skeleton.ScaleX = this.initialFlipX ? -1 : 1;
 						skeleton.ScaleY = this.initialFlipY ? -1 : 1;
-						
+
 						state.ClearTrack(0);
 						skeleton.SetToSetupPose();
 						if (!string.IsNullOrEmpty(startingAnimation)) {
@@ -113,7 +116,7 @@ namespace Spine.Unity {
 
 			base.Reset();
 			if (material == null || material.shader != Shader.Find("Spine/SkeletonGraphic"))
-				Debug.LogWarning("SkeletonGraphic works best with the SkeletonGraphic material.");			
+				Debug.LogWarning("SkeletonGraphic works best with the SkeletonGraphic material.");
 		}
 		#endif
 		#endregion
@@ -151,10 +154,9 @@ namespace Spine.Unity {
 			}
 		}
 		public override Texture mainTexture {
-			get { 
-				// Fail loudly when incorrectly set up.
+			get {
 				if (overrideTexture != null) return overrideTexture;
-				return skeletonDataAsset == null ? null : skeletonDataAsset.atlasAssets[0].PrimaryMaterial.mainTexture;
+				return baseTexture;
 			}
 		}
 
@@ -205,15 +207,18 @@ namespace Spine.Unity {
 
 			skeleton.UpdateWorldTransform();
 
-			if (UpdateWorld != null) { 
+			if (UpdateWorld != null) {
 				UpdateWorld(this);
 				skeleton.UpdateWorldTransform();
 			}
 
 			if (UpdateComplete != null) UpdateComplete(this);
+			wasUpdatedAfterInit = true;
 		}
 
 		public void LateUpdate () {
+			// instantiation can happen from Update() after this component, leading to a missing Update() call.
+			if (!wasUpdatedAfterInit) Update(0);
 			if (freeze) return;
 			//this.SetVerticesDirty(); // Which is better?
 			UpdateMesh();
@@ -226,6 +231,15 @@ namespace Spine.Unity {
 		public SkeletonData SkeletonData { get { return skeleton == null ? null : skeleton.data; } }
 		public bool IsValid { get { return skeleton != null; } }
 
+		public delegate void SkeletonRendererDelegate (SkeletonGraphic skeletonGraphic);
+
+		/// <summary>OnRebuild is raised after the Skeleton is successfully initialized.</summary>
+		public event SkeletonRendererDelegate OnRebuild;
+
+		/// <summary>OnMeshAndMaterialsUpdated is at the end of LateUpdate after the Mesh and
+		/// all materials have been updated.</summary>
+		public event SkeletonRendererDelegate OnMeshAndMaterialsUpdated;
+
 		protected Spine.AnimationState state;
 		public Spine.AnimationState AnimationState { get { return state; } }
 
@@ -236,6 +250,34 @@ namespace Spine.Unity {
 
 		public Mesh GetLastMesh () {
 			return meshBuffers.GetCurrent().mesh;
+		}
+
+		public bool MatchRectTransformWithBounds () {
+			UpdateMesh();
+
+			Mesh mesh = this.GetLastMesh();
+			if (mesh == null) {
+				return false;
+			}
+
+			if (mesh.vertexCount == 0) {
+				this.rectTransform.sizeDelta = new Vector2(50f, 50f);
+				this.rectTransform.pivot = new Vector2(0.5f, 0.5f);
+				return false;
+			}
+
+			mesh.RecalculateBounds();
+			var bounds = mesh.bounds;
+			var size = bounds.size;
+			var center = bounds.center;
+			var p = new Vector2(
+				0.5f - (center.x / size.x),
+				0.5f - (center.y / size.y)
+			);
+
+			this.rectTransform.sizeDelta = size;
+			this.rectTransform.pivot = p;
+			return true;
 		}
 
 		public event UpdateBonesDelegate UpdateLocal;
@@ -272,12 +314,14 @@ namespace Spine.Unity {
 			};
 
 			meshBuffers = new DoubleBuffered<MeshRendererBuffers.SmartMesh>();
+			baseTexture = skeletonDataAsset.atlasAssets[0].PrimaryMaterial.mainTexture;
 			canvasRenderer.SetTexture(this.mainTexture); // Needed for overwriting initializations.
 
 			// Set the initial Skin and Animation
 			if (!string.IsNullOrEmpty(initialSkinName))
 				skeleton.SetSkin(initialSkinName);
 
+			wasUpdatedAfterInit = false;
 			if (!string.IsNullOrEmpty(startingAnimation)) {
 				var animationObject = skeletonDataAsset.GetSkeletonData(false).FindAnimation(startingAnimation);
 				if (animationObject != null) {
@@ -288,6 +332,9 @@ namespace Spine.Unity {
 					#endif
 				}
 			}
+
+			if (OnRebuild != null)
+				OnRebuild(this);
 		}
 
 		public void UpdateMesh () {
@@ -296,12 +343,11 @@ namespace Spine.Unity {
 			skeleton.SetColor(this.color);
 			var smartMesh = meshBuffers.GetNext();
 			var currentInstructions = this.currentInstructions;
-
-			MeshGenerator.GenerateSingleSubmeshInstruction(currentInstructions, skeleton, this.material);
+			MeshGenerator.GenerateSingleSubmeshInstruction(currentInstructions, skeleton, null);
 			bool updateTriangles = SkeletonRendererInstruction.GeometryNotEqual(currentInstructions, smartMesh.instructionUsed);
 
 			meshGenerator.Begin();
-			if (currentInstructions.hasActiveClipping) {
+			if (currentInstructions.hasActiveClipping && currentInstructions.submeshInstructions.Count > 0) {
 				meshGenerator.AddSubmesh(currentInstructions.submeshInstructions.Items[0], updateTriangles);
 			} else {
 				meshGenerator.BuildMeshWithArrays(currentInstructions, updateTriangles);
@@ -312,14 +358,25 @@ namespace Spine.Unity {
 
 			var mesh = smartMesh.mesh;
 			meshGenerator.FillVertexData(mesh);
-			if (updateTriangles) meshGenerator.FillTrianglesSingle(mesh);
+			if (updateTriangles) meshGenerator.FillTriangles(mesh);
 			meshGenerator.FillLateVertexData(mesh);
 
 			canvasRenderer.SetMesh(mesh);
 			smartMesh.instructionUsed.Set(currentInstructions);
 
+			if (currentInstructions.submeshInstructions.Count > 0) {
+				var material = currentInstructions.submeshInstructions.Items[0].material;
+				if (material != null && baseTexture != material.mainTexture) {
+					baseTexture = material.mainTexture;
+					if (overrideTexture == null)
+						canvasRenderer.SetTexture(this.mainTexture);
+				}
+			}
+
 			//this.UpdateMaterial(); // TODO: This allocates memory.
+			if (OnMeshAndMaterialsUpdated != null)
+				OnMeshAndMaterialsUpdated(this);
 		}
 		#endregion
-	} 
+	}
 }

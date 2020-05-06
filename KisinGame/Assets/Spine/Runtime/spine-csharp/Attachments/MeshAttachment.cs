@@ -1,8 +1,8 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated May 1, 2019. Replaces all prior versions.
+ * Last updated January 1, 2020. Replaces all prior versions.
  *
- * Copyright (c) 2013-2019, Esoteric Software LLC
+ * Copyright (c) 2013-2020, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
@@ -15,16 +15,16 @@
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
  *
- * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
- * NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, BUSINESS
- * INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
+ * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using System;
@@ -38,7 +38,7 @@ namespace Spine {
 		internal int[] triangles;
 		internal float r = 1, g = 1, b = 1, a = 1;
 		internal int hulllength;
-		
+
 		public int HullLength { get { return hulllength; } set { hulllength = value; } }
 		public float[] RegionUVs { get { return regionUVs; } set { regionUVs = value; } }
 		/// <summary>The UV pair for each vertex, normalized within the entire texture. <seealso cref="MeshAttachment.UpdateUVs"/></summary>
@@ -96,7 +96,7 @@ namespace Spine {
 			float[] regionUVs = this.regionUVs;
 			if (this.uvs == null || this.uvs.Length != regionUVs.Length) this.uvs = new float[regionUVs.Length];
 			float[] uvs = this.uvs;
-            float u = RegionU, v = RegionV, width = 0, height = 0;
+			float u = RegionU, v = RegionV, width = 0, height = 0;
 
 			if (RegionDegrees == 90) {
 				float textureHeight = this.regionWidth / (RegionV2 - RegionV);
@@ -160,12 +160,19 @@ namespace Spine {
 			copy.regionHeight = regionHeight;
 			copy.regionOriginalWidth = regionOriginalWidth;
 			copy.regionOriginalHeight = regionOriginalHeight;
+			copy.RegionRotate = RegionRotate;
+			copy.RegionDegrees = RegionDegrees;
+			copy.RegionU = RegionU;
+			copy.RegionV = RegionV;
+			copy.RegionU2 = RegionU2;
+			copy.RegionV2 = RegionV2;
+
 			copy.Path = Path;
 			copy.r = r;
 			copy.g = g;
 			copy.b = b;
 			copy.a = a;
-			
+
 			CopyTo(copy);
 			copy.regionUVs = new float[regionUVs.Length];
 			Array.Copy(regionUVs, 0, copy.regionUVs, 0, regionUVs.Length);
@@ -174,7 +181,7 @@ namespace Spine {
 			copy.triangles = new int[triangles.Length];
 			Array.Copy(triangles, 0, copy.triangles, 0, triangles.Length);
 			copy.HullLength = HullLength;
-			
+
 			// Nonessential.
 			if (Edges != null) {
 				copy.Edges = new int[Edges.Length];
@@ -195,12 +202,19 @@ namespace Spine {
 			mesh.regionHeight = regionHeight;
 			mesh.regionOriginalWidth = regionOriginalWidth;
 			mesh.regionOriginalHeight = regionOriginalHeight;
+			mesh.RegionDegrees = RegionDegrees;
+			mesh.RegionRotate = RegionRotate;
+			mesh.RegionU = RegionU;
+			mesh.RegionV = RegionV;
+			mesh.RegionU2 = RegionU2;
+			mesh.RegionV2 = RegionV2;
 
 			mesh.Path = Path;
 			mesh.r = r;
 			mesh.g = g;
 			mesh.b = b;
 			mesh.a = a;
+
 			mesh.deformAttachment = deformAttachment;
 			mesh.ParentMesh = parentMesh != null ? parentMesh : this;
 			mesh.UpdateUVs();

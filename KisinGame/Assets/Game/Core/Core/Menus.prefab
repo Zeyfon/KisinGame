@@ -2722,7 +2722,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -2996,6 +2996,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3361639291288384731, guid: bc8197e240fe58041b343e4efcf30ab7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[5].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.name
+      value: initialInfoButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361639291288384731, guid: bc8197e240fe58041b343e4efcf30ab7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[5].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.showInInspector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361639291288384731, guid: bc8197e240fe58041b343e4efcf30ab7,
+        type: 3}
+      propertyPath: fsm.states.Array.data[5].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
+      value: 
+      objectReference: {fileID: 9105052278960854620}
     - target: {fileID: 7969889648668445212, guid: bc8197e240fe58041b343e4efcf30ab7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3112,6 +3127,12 @@ GameObject:
 --- !u!224 &4496819736226897303 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7969889648668445212, guid: bc8197e240fe58041b343e4efcf30ab7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5835915049003587467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9105052278960854620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3361639290410205655, guid: bc8197e240fe58041b343e4efcf30ab7,
     type: 3}
   m_PrefabInstance: {fileID: 5835915049003587467}
   m_PrefabAsset: {fileID: 0}

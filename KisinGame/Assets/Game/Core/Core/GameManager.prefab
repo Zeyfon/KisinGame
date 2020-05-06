@@ -2654,7 +2654,7 @@ MonoBehaviour:
           useVariable: 1
           type: 1
           floatValue: 0
-          intValue: 4
+          intValue: 1
           boolValue: 0
           stringValue: 
           vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -2702,7 +2702,7 @@ MonoBehaviour:
           useVariable: 1
           type: 1
           floatValue: 0
-          intValue: 2
+          intValue: 1
           boolValue: 0
           stringValue: 
           vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -2750,7 +2750,7 @@ MonoBehaviour:
           useVariable: 1
           type: 1
           floatValue: 0
-          intValue: 7
+          intValue: 1
           boolValue: 0
           stringValue: 
           vector4Value: {x: 0, y: 0, z: 0, w: 0}
@@ -7784,19 +7784,19 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 4
+        value: 1
       - useVariable: 1
         name: initialDefenseLevel
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 2
+        value: 1
       - useVariable: 1
         name: initialStaminaRegenLevel
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 7
+        value: 1
       - useVariable: 1
         name: initialPixanShards
         tooltip: 
@@ -8005,7 +8005,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -12901,8 +12901,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 910.46094
-        y: 470.40625
+        x: 909.46094
+        y: 483.40625
         width: 140
         height: 32
       isBreakpoint: 0
@@ -13011,10 +13011,10 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 914.91406
-        y: 423.14062
+        x: 913.91406
+        y: 420.14062
         width: 158
-        height: 32
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -13024,6 +13024,14 @@ MonoBehaviour:
           isSystemEvent: 0
           isGlobal: 0
         toState: Close Main Menu
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: InfoMenuOpened
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: In InfoMenu
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -14593,11 +14601,85 @@ MonoBehaviour:
         - sendEvent
         paramDataPos: 00000000
         paramByteDataSize: 00000000
+    - name: In InfoMenu
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1164.4141
+        y: 431.5
+        width: 136
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: InfoMenuClosed
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Main Menu Listener
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: CloseMenu
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Close Main Menu
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
     - name: CloseMenu
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: InfoMenuClosed
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: InfoMenuOpened
       isSystemEvent: 0
       isGlobal: 0
     - name: MenusDisabled
