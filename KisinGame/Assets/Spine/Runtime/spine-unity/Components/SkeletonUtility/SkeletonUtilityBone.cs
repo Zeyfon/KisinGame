@@ -1,8 +1,8 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated May 1, 2019. Replaces all prior versions.
+ * Last updated January 1, 2020. Replaces all prior versions.
  *
- * Copyright (c) 2013-2019, Esoteric Software LLC
+ * Copyright (c) 2013-2020, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
@@ -15,16 +15,16 @@
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
  *
- * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
- * NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, BUSINESS
- * INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
+ * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #if UNITY_2018_3 || UNITY_2019 || UNITY_2018_3_OR_NEWER
@@ -40,7 +40,7 @@ namespace Spine.Unity {
 	#else
 	[ExecuteInEditMode]
 	#endif
-	[AddComponentMenu("Spine/SkeletonGameObjectsBone")]
+	[AddComponentMenu("Spine/SkeletonUtilityBone")]
 	public class SkeletonUtilityBone : MonoBehaviour {
 		public enum Mode {
 			Follow,
@@ -63,7 +63,7 @@ namespace Spine.Unity {
 		public float overrideAlpha = 1;
 		#endregion
 
-		[System.NonSerialized] public SkeletonUtility hierarchy;
+		public SkeletonUtility hierarchy;
 		[System.NonSerialized] public Bone bone;
 		[System.NonSerialized] public bool transformLerpComplete;
 		[System.NonSerialized] public bool valid;
@@ -75,7 +75,7 @@ namespace Spine.Unity {
 		public void Reset () {
 			bone = null;
 			cachedTransform = transform;
-			valid = hierarchy != null && hierarchy.skeletonRenderer != null && hierarchy.skeletonRenderer.valid;
+			valid = hierarchy != null && hierarchy.IsValid;
 			if (!valid)
 				return;
 			skeletonTransform = hierarchy.transform;
@@ -85,7 +85,7 @@ namespace Spine.Unity {
 		}
 
 		void OnEnable () {
-			hierarchy = transform.GetComponentInParent<SkeletonUtility>();
+			if (hierarchy == null) hierarchy = transform.GetComponentInParent<SkeletonUtility>();
 			if (hierarchy == null) return;
 
 			hierarchy.RegisterBone(this);
@@ -109,7 +109,7 @@ namespace Spine.Unity {
 				return;
 			}
 
-			var skeleton = hierarchy.skeletonRenderer.skeleton;
+			var skeleton = hierarchy.Skeleton;
 
 			if (bone == null) {
 				if (string.IsNullOrEmpty(boneName)) return;
@@ -119,6 +119,9 @@ namespace Spine.Unity {
 					return;
 				}
 			}
+			if (!bone.Active) return;
+
+			float positionScale = hierarchy.PositionScale;
 
 			var thisTransform = cachedTransform;
 			float skeletonFlipRotation = Mathf.Sign(skeleton.ScaleX * skeleton.ScaleY);
@@ -126,7 +129,7 @@ namespace Spine.Unity {
 				switch (phase) {
 					case UpdatePhase.Local:
 						if (position)
-							thisTransform.localPosition = new Vector3(bone.x, bone.y, 0);
+							thisTransform.localPosition = new Vector3(bone.x * positionScale, bone.y * positionScale, 0);
 
 						if (rotation) {
 							if (bone.data.transformMode.InheritsRotation()) {
@@ -150,7 +153,7 @@ namespace Spine.Unity {
 						}
 
 						if (position)
-							thisTransform.localPosition = new Vector3(bone.ax, bone.ay, 0);
+							thisTransform.localPosition = new Vector3(bone.ax * positionScale, bone.ay * positionScale, 0);
 
 						if (rotation) {
 							if (bone.data.transformMode.InheritsRotation()) {
@@ -167,14 +170,14 @@ namespace Spine.Unity {
 						}
 						break;
 				}
-				
+
 			} else if (mode == Mode.Override) {
 				if (transformLerpComplete)
 					return;
 
 				if (parentReference == null) {
 					if (position) {
-						Vector3 clp = thisTransform.localPosition;
+						Vector3 clp = thisTransform.localPosition / positionScale;
 						bone.x = Mathf.Lerp(bone.x, clp.x, overrideAlpha);
 						bone.y = Mathf.Lerp(bone.y, clp.y, overrideAlpha);
 					}
@@ -196,7 +199,7 @@ namespace Spine.Unity {
 						return;
 
 					if (position) {
-						Vector3 pos = parentReference.InverseTransformPoint(thisTransform.position);
+						Vector3 pos = parentReference.InverseTransformPoint(thisTransform.position) / positionScale;
 						bone.x = Mathf.Lerp(bone.x, pos.x, overrideAlpha);
 						bone.y = Mathf.Lerp(bone.y, pos.y, overrideAlpha);
 					}
@@ -229,10 +232,10 @@ namespace Spine.Unity {
 			SkeletonUtility.AddBoundingBoxGameObject(bone.skeleton, skinName, slotName, attachmentName, transform);
 		}
 
-		#if UNITY_EDITOR
+#if UNITY_EDITOR
 		void OnDrawGizmos () {
 			if (IncompatibleTransformMode)
-				Gizmos.DrawIcon(transform.position + new Vector3(0, 0.128f, 0), "icon-warning");		
+				Gizmos.DrawIcon(transform.position + new Vector3(0, 0.128f, 0), "icon-warning");
 		}
 		#endif
 	}

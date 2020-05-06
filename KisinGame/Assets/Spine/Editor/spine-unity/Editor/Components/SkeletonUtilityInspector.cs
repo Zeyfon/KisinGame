@@ -1,8 +1,8 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated May 1, 2019. Replaces all prior versions.
+ * Last updated January 1, 2020. Replaces all prior versions.
  *
- * Copyright (c) 2013-2019, Esoteric Software LLC
+ * Copyright (c) 2013-2020, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
@@ -15,16 +15,16 @@
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
  *
- * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
- * NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, BUSINESS
- * INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
+ * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #if UNITY_2018_3 || UNITY_2019 || UNITY_2018_3_OR_NEWER
@@ -47,8 +47,9 @@ namespace Spine.Unity.Editor {
 		SkeletonUtility skeletonUtility;
 		Skeleton skeleton;
 		SkeletonRenderer skeletonRenderer;
-		
-		#if !NEW_PREFAB_SYSTEM
+		SkeletonGraphic skeletonGraphic;
+
+#if !NEW_PREFAB_SYSTEM
 		bool isPrefab;
 		#endif
 
@@ -56,23 +57,32 @@ namespace Spine.Unity.Editor {
 
 		void OnEnable () {
 			skeletonUtility = (SkeletonUtility)target;
-			skeletonRenderer = skeletonUtility.GetComponent<SkeletonRenderer>();
-			skeleton = skeletonRenderer.Skeleton;
+			skeletonRenderer = skeletonUtility.skeletonRenderer;
+			skeletonGraphic = skeletonUtility.skeletonGraphic;
+			skeleton = skeletonUtility.Skeleton;
 
 			if (skeleton == null) {
-				skeletonRenderer.Initialize(false);
-				skeletonRenderer.LateUpdate();
-				skeleton = skeletonRenderer.skeleton;
+				if (skeletonRenderer != null) {
+					skeletonRenderer.Initialize(false);
+					skeletonRenderer.LateUpdate();
+				}
+				else if (skeletonGraphic != null) {
+					skeletonGraphic.Initialize(false);
+					skeletonGraphic.LateUpdate();
+				}
+				skeleton = skeletonUtility.Skeleton;
 			}
 
-			if (!skeletonRenderer.valid) return;
+			if ((skeletonRenderer != null && !skeletonRenderer.valid) ||
+				(skeletonGraphic != null && !skeletonGraphic.IsValid)) return;
 
 			#if !NEW_PREFAB_SYSTEM
 			isPrefab |= PrefabUtility.GetPrefabType(this.target) == PrefabType.Prefab;
 			#endif
 		}
-			
+
 		public override void OnInspectorGUI () {
+
 			#if !NEW_PREFAB_SYSTEM
 			if (isPrefab) {
 				GUILayout.Label(new GUIContent("Cannot edit Prefabs", Icons.warning));
@@ -80,12 +90,22 @@ namespace Spine.Unity.Editor {
 			}
 			#endif
 
-			if (!skeletonRenderer.valid) {
+			serializedObject.Update();
+
+			if ((skeletonRenderer != null && !skeletonRenderer.valid) ||
+				(skeletonGraphic != null && !skeletonGraphic.IsValid)) {
 				GUILayout.Label(new GUIContent("Spine Component invalid. Check Skeleton Data Asset.", Icons.warning));
-				return;	
+				return;
 			}
 
 			EditorGUILayout.PropertyField(serializedObject.FindProperty("boneRoot"), SpineInspectorUtility.TempContent("Skeleton Root"));
+			EditorGUILayout.PropertyField(serializedObject.FindProperty("flipBy180DegreeRotation"), SpineInspectorUtility.TempContent("Flip by Rotation", null,
+				"If true, Skeleton.ScaleX and Skeleton.ScaleY are followed " +
+				"by 180 degree rotation. If false, negative Transform scale is used. " +
+				"Note that using negative scale is consistent with previous behaviour (hence the default), " +
+				"however causes serious problems with rigidbodies and physics. Therefore, it is recommended to " +
+				"enable this parameter where possible. When creating hinge chains for a chain of skeleton bones " +
+				"via SkeletonUtilityBone, it is mandatory to have this parameter enabled."));
 
 			bool hasRootBone = skeletonUtility.boneRoot != null;
 
@@ -104,6 +124,8 @@ namespace Spine.Unity.Editor {
 					skeletonUtility.boneRoot = null;
 				}
 			}
+
+			serializedObject.ApplyModifiedProperties();
 		}
 
 		void SpawnHierarchyContextMenu () {
@@ -119,7 +141,7 @@ namespace Spine.Unity.Editor {
 		}
 
 		public static void AttachIcon (SkeletonUtilityBone boneComponent) {
-			Skeleton skeleton = boneComponent.hierarchy.skeletonRenderer.skeleton;
+			Skeleton skeleton = boneComponent.hierarchy.Skeleton;
 			Texture2D icon = boneComponent.bone.Data.Length == 0 ? Icons.nullBone : Icons.boneNib;
 
 			foreach (IkConstraint c in skeleton.IkConstraints)
@@ -143,21 +165,25 @@ namespace Spine.Unity.Editor {
 		}
 
 		void SpawnFollowHierarchy () {
+			Undo.RegisterCompleteObjectUndo(skeletonUtility, "Spawn Hierarchy");
 			Selection.activeGameObject = skeletonUtility.SpawnHierarchy(SkeletonUtilityBone.Mode.Follow, true, true, true);
 			AttachIconsToChildren(skeletonUtility.boneRoot);
 		}
 
 		void SpawnFollowHierarchyRootOnly () {
+			Undo.RegisterCompleteObjectUndo(skeletonUtility, "Spawn Root");
 			Selection.activeGameObject = skeletonUtility.SpawnRoot(SkeletonUtilityBone.Mode.Follow, true, true, true);
 			AttachIconsToChildren(skeletonUtility.boneRoot);
 		}
 
 		void SpawnOverrideHierarchy () {
+			Undo.RegisterCompleteObjectUndo(skeletonUtility, "Spawn Hierarchy");
 			Selection.activeGameObject = skeletonUtility.SpawnHierarchy(SkeletonUtilityBone.Mode.Override, true, true, true);
 			AttachIconsToChildren(skeletonUtility.boneRoot);
 		}
 
 		void SpawnOverrideHierarchyRootOnly () {
+			Undo.RegisterCompleteObjectUndo(skeletonUtility, "Spawn Root");
 			Selection.activeGameObject = skeletonUtility.SpawnRoot(SkeletonUtilityBone.Mode.Override, true, true, true);
 			AttachIconsToChildren(skeletonUtility.boneRoot);
 		}

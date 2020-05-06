@@ -1,8 +1,8 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated May 1, 2019. Replaces all prior versions.
+ * Last updated January 1, 2020. Replaces all prior versions.
  *
- * Copyright (c) 2013-2019, Esoteric Software LLC
+ * Copyright (c) 2013-2020, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
@@ -15,16 +15,16 @@
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
  *
- * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
- * NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, BUSINESS
- * INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
+ * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 using System;
@@ -84,7 +84,7 @@ namespace Spine {
 			foreach (BoneData boneData in data.bones) {
 				Bone bone;
 				if (boneData.parent == null) {
-					bone = new Bone(boneData, this, null);				
+					bone = new Bone(boneData, this, null);
 				} else {
 					Bone parent = bones.Items[boneData.parent.index];
 					bone = new Bone(boneData, this, parent);
@@ -214,7 +214,7 @@ namespace Spine {
 			if (skin != null) SortPathConstraintAttachment(skin, slotIndex, slotBone);
 			if (data.defaultSkin != null && data.defaultSkin != skin)
 				SortPathConstraintAttachment(data.defaultSkin, slotIndex, slotBone);
-			
+
 			Attachment attachment = slot.attachment;
 			if (attachment is PathAttachment) SortPathConstraintAttachment(attachment, slotBone);
 
@@ -477,12 +477,12 @@ namespace Spine {
 		/// <para>Sets the skin used to look up attachments before looking in the <see cref="SkeletonData.DefaultSkin"/>. If the
 		/// skin is changed, <see cref="UpdateCache()"/> is called.
 		/// </para>
-	 	/// <para>Attachments from the new skin are attached if the corresponding attachment from the old skin was attached. 
+	 	/// <para>Attachments from the new skin are attached if the corresponding attachment from the old skin was attached.
 		/// If there was no old skin, each slot's setup mode attachment is attached from the new skin.
 		/// </para>
-		/// <para>After changing the skin, the visible attachments can be reset to those attached in the setup pose by calling 
-		/// <see cref="Skeleton.SetSlotsToSetupPose()"/>. 
-		/// Also, often <see cref="AnimationState.Apply(Skeleton)"/> is called before the next time the 
+		/// <para>After changing the skin, the visible attachments can be reset to those attached in the setup pose by calling
+		/// <see cref="Skeleton.SetSlotsToSetupPose()"/>.
+		/// Also, often <see cref="AnimationState.Apply(Skeleton)"/> is called before the next time the
 		/// skeleton is rendered to allow any attachment keys in the current animation(s) to hide or show attachments from the new skin.</para>
 		/// </summary>
 		/// <param name="newSkin">May be null.</param>
@@ -543,7 +543,7 @@ namespace Spine {
 			}
 			throw new Exception("Slot not found: " + slotName);
 		}
-			
+
 		/// <returns>May be null.</returns>
 		public IkConstraint FindIkConstraint (string constraintName) {
 			if (constraintName == null) throw new ArgumentNullException("constraintName", "constraintName cannot be null.");

@@ -1,8 +1,8 @@
 /******************************************************************************
  * Spine Runtimes License Agreement
- * Last updated May 1, 2019. Replaces all prior versions.
+ * Last updated January 1, 2020. Replaces all prior versions.
  *
- * Copyright (c) 2013-2019, Esoteric Software LLC
+ * Copyright (c) 2013-2020, Esoteric Software LLC
  *
  * Integration of the Spine Runtimes into software or otherwise creating
  * derivative works of the Spine Runtimes is permitted under the terms and
@@ -15,16 +15,16 @@
  * Spine Editor license and redistribution of the Products in any form must
  * include this license and copyright notice.
  *
- * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
- * NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, BUSINESS
- * INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES,
+ * BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 #if UNITY_2018_3 || UNITY_2019 || UNITY_2018_3_OR_NEWER
@@ -34,7 +34,7 @@
 using UnityEngine;
 
 namespace Spine.Unity {
-	
+
 	#if NEW_PREFAB_SYSTEM
 	[ExecuteAlways]
 	#else
@@ -45,13 +45,14 @@ namespace Spine.Unity {
 
 		#region IAnimationStateComponent
 		/// <summary>
-		/// This is the Spine.AnimationState object of this SkeletonAnimation. You can control animations through it. 
+		/// This is the Spine.AnimationState object of this SkeletonAnimation. You can control animations through it.
 		/// Note that this object, like .skeleton, is not guaranteed to exist in Awake. Do all accesses and caching to it in Start</summary>
 		public Spine.AnimationState state;
 		/// <summary>
-		/// This is the Spine.AnimationState object of this SkeletonAnimation. You can control animations through it. 
+		/// This is the Spine.AnimationState object of this SkeletonAnimation. You can control animations through it.
 		/// Note that this object, like .skeleton, is not guaranteed to exist in Awake. Do all accesses and caching to it in Start</summary>
 		public Spine.AnimationState AnimationState { get { return this.state; } }
+		private bool wasUpdatedAfterInit = true;
 		#endregion
 
 		#region Bone Callbacks ISkeletonAnimation
@@ -96,8 +97,11 @@ namespace Spine.Unity {
 				}
 			}
 			set {
-				if (_animationName == value)
-					return;
+				if (_animationName == value) {
+					TrackEntry entry = state.GetCurrent(0);
+					if (entry != null && entry.loop == loop)
+						return;
+				}
 				_animationName = value;
 
 				if (string.IsNullOrEmpty(value)) {
@@ -146,14 +150,13 @@ namespace Spine.Unity {
 		public override void Initialize (bool overwrite) {
 			if (valid && !overwrite)
 				return;
-
 			base.Initialize(overwrite);
 
 			if (!valid)
 				return;
-
 			state = new Spine.AnimationState(skeletonDataAsset.GetAnimationStateData());
-		
+			wasUpdatedAfterInit = false;
+
 			if (!string.IsNullOrEmpty(_animationName)) {
 				var animationObject = skeletonDataAsset.GetSkeletonData(false).FindAnimation(_animationName);
 				if (animationObject != null) {
@@ -179,7 +182,7 @@ namespace Spine.Unity {
 
 		/// <summary>Progresses the AnimationState according to the given deltaTime, and applies it to the Skeleton. Use Time.deltaTime to update manually. Use deltaTime 0 to update without progressing the time.</summary>
 		public void Update (float deltaTime) {
-			if (!valid)
+			if (!valid || state == null)
 				return;
 
 			deltaTime *= timeScale;
@@ -200,8 +203,14 @@ namespace Spine.Unity {
 			if (_UpdateComplete != null) {
 				_UpdateComplete(this);
 			}
+			wasUpdatedAfterInit = true;
 		}
 
+		public override void LateUpdate () {
+			// instantiation can happen from Update() after this component, leading to a missing Update() call.
+			if (!wasUpdatedAfterInit) Update(0);
+			base.LateUpdate();
+		}
 	}
 
 }
