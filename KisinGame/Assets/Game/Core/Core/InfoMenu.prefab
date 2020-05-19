@@ -1924,15 +1924,15 @@ RectTransform:
   m_GameObject: {fileID: 8611024019376005706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99, y: 0.99, z: 1}
   m_Children: []
   m_Father: {fileID: 8611024018638048691}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 167, y: -1}
-  m_SizeDelta: {x: 1556, y: 1041}
+  m_AnchoredPosition: {x: 172, y: 0}
+  m_SizeDelta: {x: 1555, y: 1042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8611024019376005705
 CanvasRenderer:
@@ -1960,7 +1960,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 52f709874da94e243b3952d0315b5ad2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9431ba6c1c3a17548a51f806400dc9d0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1999,12 +1999,17 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[0].value
       value: 
-      objectReference: {fileID: 21300000, guid: aeec82622c57b484196f959e876d3938,
+      objectReference: {fileID: 21300000, guid: 9431ba6c1c3a17548a51f806400dc9d0,
         type: 3}
+    - target: {fileID: 100437952987937875, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100437952987937878, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
       propertyPath: m_Name
-      value: Button
+      value: GameScreen
       objectReference: {fileID: 0}
     - target: {fileID: 100437952987937879, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
@@ -2146,10 +2151,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2022953839196350113, guid: d6d38ec657f53444ab4fb219535aa084,
         type: 3}
+    - target: {fileID: 100437952987937875, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
+        type: 3}
+      propertyPath: fsm.variables.objectVariables.Array.data[0].value
+      value: 
+      objectReference: {fileID: 21300000, guid: 3c67ecd9b0180bf47bbf9e041f3fda26,
+        type: 3}
+    - target: {fileID: 100437952987937875, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100437952987937878, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
       propertyPath: m_Name
-      value: Button (1)
+      value: ControlJoystick
       objectReference: {fileID: 0}
     - target: {fileID: 100437952987937879, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
@@ -2289,12 +2305,17 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[0].value
       value: 
-      objectReference: {fileID: 21300000, guid: c23e0a588c56f4342aed4706eab33307,
+      objectReference: {fileID: 21300000, guid: f4583a2700631ac4c8fe7c0cbfe748e8,
         type: 3}
+    - target: {fileID: 100437952987937875, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100437952987937878, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
       propertyPath: m_Name
-      value: Button (6)
+      value: Stun Circle
       objectReference: {fileID: 0}
     - target: {fileID: 100437952987937879, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
@@ -2434,12 +2455,17 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[0].value
       value: 
-      objectReference: {fileID: 21300000, guid: eafd793e345f99a45833b4d629336cb6,
+      objectReference: {fileID: 21300000, guid: a5f6643eafcd7ac4cb5e75c8ff88b494,
         type: 3}
+    - target: {fileID: 100437952987937875, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100437952987937878, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
       propertyPath: m_Name
-      value: Button (8)
+      value: Glossary
       objectReference: {fileID: 0}
     - target: {fileID: 100437952987937879, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
@@ -2579,12 +2605,17 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[0].value
       value: 
-      objectReference: {fileID: 21300000, guid: e009d5aa9ecd64d449d7960d9566d032,
+      objectReference: {fileID: 21300000, guid: 265f0273cd787b24b8ba2e86789d6758,
         type: 3}
+    - target: {fileID: 100437952987937875, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100437952987937878, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
       propertyPath: m_Name
-      value: Button (7)
+      value: Critical Damage
       objectReference: {fileID: 0}
     - target: {fileID: 100437952987937879, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
@@ -2724,12 +2755,17 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[0].value
       value: 
-      objectReference: {fileID: 21300000, guid: aa2a4773261a21941a330d39f1947f0e,
+      objectReference: {fileID: 21300000, guid: c76d528e693b1cd42bf9fc6c04bc1f95,
         type: 3}
+    - target: {fileID: 100437952987937875, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100437952987937878, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
       propertyPath: m_Name
-      value: Button (5)
+      value: ColorScheme
       objectReference: {fileID: 0}
     - target: {fileID: 100437952987937879, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
@@ -2869,12 +2905,17 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[0].value
       value: 
-      objectReference: {fileID: 21300000, guid: 7d6fa8acda7cd0247b4b37cd6fc11a27,
+      objectReference: {fileID: 21300000, guid: b79dec36aa06e93498b516ea2dcf854d,
         type: 3}
+    - target: {fileID: 100437952987937875, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100437952987937878, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
       propertyPath: m_Name
-      value: Button (3)
+      value: Attacks
       objectReference: {fileID: 0}
     - target: {fileID: 100437952987937879, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
@@ -3014,12 +3055,17 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[0].value
       value: 
-      objectReference: {fileID: 21300000, guid: a66e59127eb55e449b4632ef5848703e,
+      objectReference: {fileID: 21300000, guid: e62555384d9c310439799b79d6b87bd2,
         type: 3}
+    - target: {fileID: 100437952987937875, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100437952987937878, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
       propertyPath: m_Name
-      value: Button (4)
+      value: Charge Attacks
       objectReference: {fileID: 0}
     - target: {fileID: 100437952987937879, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
@@ -3159,12 +3205,17 @@ PrefabInstance:
         type: 3}
       propertyPath: fsm.variables.objectVariables.Array.data[0].value
       value: 
-      objectReference: {fileID: 21300000, guid: 52f709874da94e243b3952d0315b5ad2,
+      objectReference: {fileID: 21300000, guid: ac9d2c16d93adff46a802258ecf2b549,
         type: 3}
+    - target: {fileID: 100437952987937875, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
+        type: 3}
+      propertyPath: fsm.preprocessed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100437952987937878, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}
       propertyPath: m_Name
-      value: Button (2)
+      value: Control Keyboard
       objectReference: {fileID: 0}
     - target: {fileID: 100437952987937879, guid: 94380ecb9f357084faa3a8b5a25e1b0e,
         type: 3}

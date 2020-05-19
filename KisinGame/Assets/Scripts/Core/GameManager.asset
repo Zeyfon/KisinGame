@@ -3433,7 +3433,7 @@ MonoBehaviour:
         y: 700.9297
         width: 100
         height: 16
-      isBreakpoint: 1
+      isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions: []
@@ -10079,7 +10079,7 @@ MonoBehaviour:
           name: LoadingActionFinished
           isSystemEvent: 0
           isGlobal: 0
-        toState: Destroy Persistant Objects
+        toState: RunningCredits
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -10278,8 +10278,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 2063.8516
-        y: 423.32812
+        x: 2062.6328
+        y: 481.375
         width: 208
         height: 16
       isBreakpoint: 0
@@ -12942,6 +12942,58 @@ MonoBehaviour:
         - detachChildren
         paramDataPos: 0000000000000000010000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000
+    - name: RunningCredits
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 2063.5938
+        y: 417.91406
+        width: 130
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -12968,6 +13020,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: DemoHasFinished
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: DestroyPersistantObjects
       isSystemEvent: 0
       isGlobal: 0
     - name: FastTravel

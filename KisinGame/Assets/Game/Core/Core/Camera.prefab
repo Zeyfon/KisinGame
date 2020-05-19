@@ -306,20 +306,20 @@ MonoBehaviour:
         width: 168
         height: 16
       isBreakpoint: 0
-      isSequence: 0
+      isSequence: 1
       hideUnused: 0
       transitions: []
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.DrawFullscreenColor
         - HutongGames.PlayMaker.Actions.SendEventByName
+        - HutongGames.PlayMaker.Actions.DrawFullscreenColor
         customNames:
         - 
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000001000000
-        actionHashCodes: 6fa53600ba7ea101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: ba7ea1016fa53600
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -398,15 +398,15 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 190000001f000000120000000f00000001000000
+        paramDataType: 1f000000120000000f0000000100000019000000
         paramName:
-        - color
         - eventTarget
         - sendEvent
         - delay
         - everyFrame
+        - color
         paramDataPos: 0000000000000000000000000000000000000000
-        paramByteDataSize: 0000000000000000000000000000000001000000
+        paramByteDataSize: 0000000000000000000000000100000000000000
     - name: Fade In
       description: 
       colorIndex: 0
