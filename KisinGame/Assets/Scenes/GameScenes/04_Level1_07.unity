@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2741,6 +2741,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7087757756119198963}
     m_Modifications:
+    - target: {fileID: 2704920638243663611, guid: c45f9152a93444643b744e946a76be0f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5250369157284095908, guid: c45f9152a93444643b744e946a76be0f,
         type: 3}
       propertyPath: fsm.states.Array.data[5].actionData.fsmOwnerDefaultParams.Array.data[0].gameObject.value
@@ -3076,7 +3081,7 @@ PrefabInstance:
     - target: {fileID: 4167365707189723724, guid: 4c1656a322d6ba5499f28655d95af76d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c1656a322d6ba5499f28655d95af76d, type: 3}

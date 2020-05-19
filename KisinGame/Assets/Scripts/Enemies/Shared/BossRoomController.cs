@@ -140,9 +140,9 @@ public class BossRoomController : MonoBehaviour
     public void GameFinished()
     {
         print("GameFinishes");
-        PlayMakerFSM gameManagerFSM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayMakerFSM>();
-        gameManagerFSM.Fsm.Event("GameHasFinished");
         DisableUI();
+        FindObjectOfType<MusicManager>().FadeOut();
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<PlayMakerFSM>().SendEvent("GameHasFinished");
     }
 
     #region BossRoomDoors

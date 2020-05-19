@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -469,6 +469,7 @@ MonoBehaviour:
   clearStateOnDisable: 0
   tintBlack: 0
   singleSubmesh: 0
+  fixDrawOrder: 0
   addNormals: 0
   calculateTangents: 0
   maskInteraction: 0
@@ -1783,11 +1784,6 @@ PrefabInstance:
       propertyPath: fsm.states.Array.data[44].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
       value: 
       objectReference: {fileID: 1693679014}
-    - target: {fileID: 8649862720369316293, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
-        type: 3}
-      propertyPath: fsm.variables.intVariables.Array.data[9].value
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 8935757727691603955, guid: f16ec3bb3f3741f4a910a2bd3a1f48e2,
         type: 3}
       propertyPath: conversationEvents.onConversationLine.m_PersistentCalls.m_Calls.Array.size
@@ -2520,11 +2516,6 @@ PrefabInstance:
       propertyPath: fsm.states.Array.data[44].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
       value: 
       objectReference: {fileID: 1693679014}
-    - target: {fileID: 8158272383406896827, guid: b5211a2bb0e5bbd4197e924494167a2e,
-        type: 3}
-      propertyPath: fsm.variables.intVariables.Array.data[9].value
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 8189546985569467547, guid: b5211a2bb0e5bbd4197e924494167a2e,
         type: 3}
       propertyPath: m_Mesh
